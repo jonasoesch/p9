@@ -1,3 +1,7 @@
+
+
+
+
 # Narrative visualization
 
 ## Explorative and explanative visualization
@@ -301,21 +305,103 @@ Better learning on concrete representations. No difference on abstract represent
 
 # Transition techniques
 
-### Contrast characters of the same type
+None of the classifications described in the section >>Transitions are based on how readers make sense of transitions by comparing targets (see >>Comparison). They are either very much concerned with the technical aspects of a transition or with the semantic aspects. We therefore propose another view which is on one hand based on a simplified model of how readers make sense of transitions and on the other hand on a review of transition techniques that can be found in narrative visualization.
 
-![technique-contrast](/Users/jonas/Desktop/P9/bericht/img/technique-contrast.png)
+## A simplified model of how readers perceive transitions
 
-### Contrast characters of a differing type
+We argue that readers extract information from a transition based on a comparison of the initial and the final state. As discussed in section >>Comparison, readers first identify a target in on of the states. Then they try to locate the matching target in the other state. When a relationship is thus identified, it is further analyzed.
+
+In any visualization there are three distinct types of targets, we will call them *characters*, *attributes* and *context.*
+
+**Characters**: A character is an identifiable and nameable visual entity in the chart. It can be a dot, a line or any other shape. In visualization these entities are very often identified by one or more independent, categorical variables. For example countries, genders, age groups, etc. Even though this definition might seem abstract at first, it is in most cases very easy to identify in narrative visualization. That is because the narrative will typically talk about them.
+
+Characters can also be grouped into a unifying character. Switzerland, Italy and France could form the group *European countries* while Japan, China and Korea might be combined into *Asian countries*.
+
+**Attributes**: Is used to describe all the other independent variables as well as all dependent variables. Attributes are showing different aspects of the characters. Country-characters can have population numbers over time. Gender-characters might have differing PISA-test success rates or might marry at at different ages.
+
+**Context**: The context of the whole state is often not depicted in the chart. Often it is given in the title or in the text. A state might for example show the PISA-test success rates for a certain revision of the PISA-test or give country statistics according to a certain source. 
+
+This classification roughly mirror Cohn's [@Cohn-10:limitstime] categories of *subject*, *scene*, *time*. Based on his work and our own observation we think that there is also a hierarchy in our proposed categories. Readers will first identify the characters in a state and look for the corresponding characters in the following state. If they find them and they visually differ between the states, the reader will look for reasons. At first the reader will assume that a different attribute of the character is shown. She will therefore check the axes. If they conclude that the changing appearance of the character is not due to different attributes being shown they will assume that a change of context has happened.
 
 
 
-### Show a different measure for the same characters
+## Method
 
-![technique-different measure](/Users/jonas/Desktop/P9/bericht/img/technique-different measure.png)
+### Selection of examples
+
+The test the proposed model, we have applied it to a collection of transition techniques commonly found in narrative visualization. We have started by compiling a corpus of narrative visualizations from online sources. The corpus combines two collections from other authors [@Riche-18:datadrivenstorytelling, @Mckenna-17:visualnarrative] with our own examples. The corpus thus includes 144 narrative visualizations published between 2008 and 2019 by a variety of new organizations as well as individuals.
+
+In a first step we excluded stories that were not clearly focused on data visualization. These include for example infographics and scrollytelling stories that were included because they were important in McKenna et al.'s [@Mckenna-17:visualnarrative] work. On the other hand, some examples only contained a single visualization and no transition. We also excluded certain examples based on media type for practical purposes: everything in flash and all the videos. Finally, we excluded everything that was not accessible anymore. After this first round of filtering, 79 examples remained.
+
+From these we selected subset of 40 to reduce the workload of the analysis.
+
+### Analysis
+
+For each example, a screenshot of each visualization state was pasted on a canvas in order. First we identified the characters in the first screenshot. For each transition we annotated if the characters, scene or context changed from the previous state and how it changed. This was usually straightforward which was an encouraging sign. Finally, we unified very similar transitions into 10 categories.
+
+
+
+## Techniques
+
+### Exploring character attributes
+
+![Two examples of transitions exploring different attributes of the same characters. On the left side from a story of TODO and on the right side a story of TODO  \label{technique-diffent-measure}](/Users/jonas/Desktop/P9/bericht/img/technique-different%20measure.png)
+
+| Characters    | Attributes |
+| ------------- | ---------- |
+| Stay the same | Differ     |
+
+This is probably the most obvious transition type for storytelling. Here the author explores different aspects of the same character(s). In many cases this will be done by mapping a different attribute to one of the axis, like on the left side of figure \ref{technique-diffent-measure}. Here the author compares incarceration rates  (attribute) for black and white men (characters) by income of their parents in the first chart. In the second, the incarceration rate gets replaced with the percentage of children who are married. To show that you're more likely to get incarcerated and less likely to get married when your from a black family.
+
+Note how the character changes technically between the two states as its first "black men" and after that "black men and women". This will likely get unnoticed by a majority of the readers by design. Choosing the same colors for semantically very similar character shows that the author intended them to be perceived as "the same".
+
+The example on the right side of figure \ref{technique-diffent-measure} shows to interesting things: characters need not be explicit and characters can stay the same between chart types.
+
+In the first chart, the characters are not identified by the author but emerge from the visualization through a combination of *identification through visual statistics* and *implicit identification*. More specifically the reader will perceive two clusters of very different color on the map. If she has some knowledge about the geography and history of Germany, she will identify them as Former East and West Germany.
+
+These characters are named in the next state. In contrast to the example on the left, the second chart here is completely different from the first. While the first depicts a map, the second is a timeseries chart. Nonetheless, the transition is still between two states showing different measures for the same characters.
+
+
+
+### Contrasting characters
+
+![technique-contrast \ref{technique-contrast}](/Users/jonas/Desktop/P9/bericht/img/technique-contrast.png)
+
+| Characters | Attributes    |
+| ---------- | ------------- |
+| Differ     | Stay the same |
+
+We call this technique contrasting because it highlights the difference between characters. It's typical for these transitions to keep the exact same layout between two states and just switching characters. Only like this, visual comparison is possible. This is the case for the example on the right in figure \ref{technique-contrast}. The income gap between black and white men becomes very clear in comparison the obvious lack of the gap for women when plotted in the same coordinate system.
+
+But also in contrasting transitions there is subtlety as visible on the left side of figure \ref{technique-contrast}. Here the x-axis is actually being shifted between the states. But the shift has no other reason than saving space. It may take a little more effort from the reader to understand that the first chart shows states that have below average proportions of women and the second chart shows states that have above average proportions of women. Yet this *pan* (see >>Visualization parameters) could have been left out without changing the interpretation of the transition at all. This leads us directly to the next technique: *Reconfigure*.
+
+
+
+### Reconfigure
+
+![\label{technique-reconfigure}](/Users/jonas/Desktop/P9/bericht/img/technique-reconfigure.png)
+
+| Characters    | Attributes                                                   |
+| ------------- | ------------------------------------------------------------ |
+| Stay the same | Stay the same but get remapped to different visual variables |
+
+The defining characteristic of this transition is, that no new information is shown from the first to the second states. The information is just shown in a different way to clarify different aspects. The left example in figure \ref{technique-reconfigure} first shows the reader just how much the cases of measles have been  reduced through vaccination. It then *zooms* in on the portion of the chart showing the cases in recent times. They were too small to be visible in the first chart but technically present. This sort of transition is a good replacement for a log-transformed axis which few people understand anyway (TODO:source)
+
+The right example in figure \ref{technique-reconfigure} shows a more drastic reconfiguration of a map into a scatterplot. While the first chart makes it easy to see how for example the south of Italy is underdeveloped and while the north is above average, the same split can be found in the scatterplot when hovering over the dots, representing the individual regions of Italy. Conversely, the ranking and uniformity of countries can be extracted through visual statistics (>>Comparison) from the first chart. It's just much, much clearer in the second.
+
+
 
 ### Split characters
 
 ![technique-split](/Users/jonas/Desktop/P9/bericht/img/technique-split.png)
+
+| Characters                                      | Attributes    |
+| ----------------------------------------------- | ------------- |
+| Visible characters are split into subcharacters | Stay the same |
+
+As described in (>>A simplified model) characters need not be atomic units. Groups of similar characters can be perceived as a character themselves. But sometimes the author wants to convey how characters in a group differ from each other and thus how homogeneous a group is.
+
+Splitting characters is an essential device in narrative visualization because it nicely fits the general-to-specific pattern often used in storytelling (TODO:source). When splitting characters, the attributes will usually stay the same to serve as a frame of reference. A kind of shadow or contour of the "parent"-group will often remain too for reference. This is the case for both examples in figure \ref{technique-split} one who splits measles cases by states into years and one who splits European countries into regions.
 
 
 
@@ -323,29 +409,47 @@ Better learning on concrete representations. No difference on abstract represent
 
 ![technique-merge](/Users/jonas/Desktop/P9/bericht/img/technique-merge.png)
 
+| Characters                    | Attributes    |
+| ----------------------------- | ------------- |
+| Visible characters are merged | Stay the same |
+
+Where there is splitting, there needs to be merging. But merging is conceptually more complicated than splitting. Splitting shows more information in the second chart while merging summarizes information from the first chart. In the second case it is much more important for the reader to understand the summary operation. Is the new character the mean, the sum or even the difference of the characters previously seen? Both examples in figure \ref{technique-merge} illustrate this problem very well. Visually, the natural factors presented in the second chart could very well be the mean of volcanic, solar and orbital change. But it's actually the sum. In the second example, the pink bars might well represent the sum of the dots on the left but it's actually the difference. (TODO:paper on this topic)
+
+Although merging is complex it can be very useful for a storytelling approach that has been called *ladder of abstraction*-storytelling[@Victor-11:ladderabstraction]. It starts with very concrete, down to earth characters (like volcanoes or skill importance) and moves "up" towards more abstract concepts (like natural factors or skill importance difference).
+
+
+
+### Contrast characters of a differing type
+
+| Characters | Attributes    |
+| ---------- | ------------- |
+| Differ     | Stay the same |
+
+
+
+
+
 
 
 ### Move through time
 
+| Characters    | Attributes                               |
+| ------------- | ---------------------------------------- |
+| Stay the same | Movement along a temporal attribute axis |
+
+
+
 ![technique-temporal](/Users/jonas/Desktop/P9/bericht/img/technique-temporal.png)
 
-### Reconfigure
-
-The defining characteristic of this transition is, that no new information is shown from the first to the second states. The information is just shown in a different way so that it becomes clearer.
-
-![technique-reconfigure](/Users/jonas/Desktop/P9/bericht/img/technique-reconfigure.png)
-
 ### Focus on one character
+
+|Characters       |Attributes   |
+|-----------------|-------------|
+|Get filtered down|Stay the same|
 
 ![technique-focus](/Users/jonas/Desktop/P9/bericht/img/technique-focus.png)
 
 ### Progressive disclosure
-
-
-
-
-
-
 
 ### 
 
