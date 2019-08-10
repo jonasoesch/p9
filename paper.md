@@ -361,6 +361,8 @@ In the first chart, the characters are not identified by the author but emerge f
 
 These characters are named in the next state. In contrast to the example on the left, the second chart here is completely different from the first. While the first depicts a map, the second is a timeseries chart. Nonetheless, the transition is still between two states showing different measures for the same characters.
 
+The corresponding transition in Hullman et al. is a *measure walk*. [@Hullman-13:deeperunderstanding] A congruent *animation* for this type of transition is morphing a characters shape in the first chart into its shape in the second chart.
+
 
 
 ### Contrasting characters
@@ -374,6 +376,8 @@ These characters are named in the next state. In contrast to the example on the 
 We call this technique contrasting because it highlights the difference between characters. It's typical for these transitions to keep the exact same layout between two states and just switching characters. Only like this, visual comparison is possible. This is the case for the example on the right in figure \ref{technique-contrast}. The income gap between black and white men becomes very clear in comparison the obvious lack of the gap for women when plotted in the same coordinate system.
 
 But also in contrasting transitions there is subtlety as visible on the left side of figure \ref{technique-contrast}. Here the x-axis is actually being shifted between the states. But the shift has no other reason than saving space. It may take a little more effort from the reader to understand that the first chart shows states that have below average proportions of women and the second chart shows states that have above average proportions of women. Yet this *pan* (see >>Visualization parameters) could have been left out without changing the interpretation of the transition at all. This leads us directly to the next technique: *Reconfigure*.
+
+The corresponding transition in Hullman et all. is a *dimension walk*. [@Hullman-13:deeperunderstanding] A congruent *animation* for this transition would be fading out the characters from the previous chart and fading in the new characters.
 
 
 
@@ -389,6 +393,8 @@ The defining characteristic of this transition is, that no new information is sh
 
 The right example in figure \ref{technique-reconfigure} shows a more drastic reconfiguration of a map into a scatterplot. While the first chart makes it easy to see how for example the south of Italy is underdeveloped and while the north is above average, the same split can be found in the scatterplot when hovering over the dots, representing the individual regions of Italy. Conversely, the ranking and uniformity of countries can be extracted through visual statistics (>>Comparison) from the first chart. It's just much, much clearer in the second.
 
+Reconfigure subsumes the *pan*, *zoom*, *reorder* and *visualization change* transitions from section (>>Visualization parameters). We have note found reconfigure transitions to be common enough to deserve further specification into these subcategories. Still, the subcategories have some use when considering trying to define what a congruent *animation* for this transition might look like. A discussion can be found in [@Heer-07:animatedtransitions].
+
 
 
 ### Split characters
@@ -402,6 +408,8 @@ The right example in figure \ref{technique-reconfigure} shows a more drastic rec
 As described in (>>A simplified model) characters need not be atomic units. Groups of similar characters can be perceived as a character themselves. But sometimes the author wants to convey how characters in a group differ from each other and thus how homogeneous a group is.
 
 Splitting characters is an essential device in narrative visualization because it nicely fits the general-to-specific pattern often used in storytelling (TODO:source). When splitting characters, the attributes will usually stay the same to serve as a frame of reference. A kind of shadow or contour of the "parent"-group will often remain too for reference. This is the case for both examples in figure \ref{technique-split} one who splits measles cases by states into years and one who splits European countries into regions.
+
+Splitting characters is what Hullman et al. [@Hullman-13:deeperunderstanding] call a *general-to-specific* transition. As it typically happens "in-place", a congruent *animation* might be fading in the sub-characters while fading out the parent.
 
 
 
@@ -417,41 +425,67 @@ Where there is splitting, there needs to be merging. But merging is conceptually
 
 Although merging is complex it can be very useful for a storytelling approach that has been called *ladder of abstraction*-storytelling[@Victor-11:ladderabstraction]. It starts with very concrete, down to earth characters (like volcanoes or skill importance) and moves "up" towards more abstract concepts (like natural factors or skill importance difference).
 
+Hullman et al. [@Hullman-13:deeperunderstanding] call this transition *specific to general*
+
+### Highlighting
+
+![\label{technique-focus}](/Users/jonas/Desktop/P9/bericht/img/technique-focus.png)
+
+| Characters        | Attributes    |
+| ----------------- | ------------- |
+| Get filtered down | Stay the same |
+
+This technique again serves the very common *general-to-specific*-pattern (TODO:source). It focuses the reader a specific character or on a special group of characters. The most common way to do this is by hiding the other characters. An example of this can be found in the right example in figure \ref{technique-focus} where all the second chart only shows Hungary from all the EU countries. In the example on the left side of figure \ref{technique-focus} the transition only fades out the other age groups to highlight the 25 to 44 group. Many other ways of highlighting one character are imaginable.
+
+This transition is conceptually quite easy because attributes as well as characters stay essentially the same with the exception of the removal or deemphasis/emphasis of some characters.
 
 
-### Contrast characters of a differing type
-
-| Characters | Attributes    |
-| ---------- | ------------- |
-| Differ     | Stay the same |
-
-
-
-
-
-
-
-### Move through time
-
-| Characters    | Attributes                               |
-| ------------- | ---------------------------------------- |
-| Stay the same | Movement along a temporal attribute axis |
-
-
-
-![technique-temporal](/Users/jonas/Desktop/P9/bericht/img/technique-temporal.png)
-
-### Focus on one character
-
-|Characters       |Attributes   |
-|-----------------|-------------|
-|Get filtered down|Stay the same|
-
-![technique-focus](/Users/jonas/Desktop/P9/bericht/img/technique-focus.png)
 
 ### Progressive disclosure
 
-### 
+![\label{technique-disclosure}](/Users/jonas/Desktop/P9/bericht/img/technique-disclosure.png)
+
+| Characters                           | Attributes    |
+| ------------------------------------ | ------------- |
+| More or more of them becomes visible | Stay the same |
+
+Similar to split and merge, this is the counterpart of highlighting. And equally, to merge it is a useful device for *ladder of abstraction*-storytelling. [@Victor-11:ladderabstraction] One version of this technique introduces new characters in the second chart as seen on the right in figure \ref{technique-disclosure}. Another variant shows more of the same character(s) in the second chart. The example on the left shows more and more of the course of the game between the Miami Heats and the Houston Rockets with each transition.
+
+A particular case of progressive disclosure are what Hullman et al. call *spatial transitions*. A story might for example explore the mountainous terrain of the Alps and disclose more and more of it with each transition. 
+
+What is congruent for progressive disclosure depends on the question if more characters are disclosed or more of the characters is disclosed. In the first case, a simple fade-in of the new characters is the most congruent. In the second case, some sort of movement is typically used.
+
+
+
+### Contrasting contexts
+
+![technique-temporal](/Users/jonas/Desktop/P9/bericht/img/technique-temporal.png)
+
+| Characters     | Attributes    |
+| -------------- | ------------- |
+| Stay the same* | Stay the same |
+
+The interest of the context transition is to show how the "situation" (the form of characters according to the same attributes) changes when the context changes. The most common case is comparing the situation at different points in time. In the right example in figure \ref{technique-temporal}, the author wants to convey how made up most of the world's poor in the 90s and is now home to a large part of the worlds middle class.
+
+The example on the left shows how a changing context may lead to a change in characters. Here the formerly single large administrative region around Budapest has split into the rich Budapest and the poor Pest (notice how poor Pest only gets half of the name).
+
+Hullman et al[@Hullman-13:deeperunderstanding]. identified the very prevalent change in temporal context but ignore the fact that other contexts like countries. As contexts contain groups of characters, they can become characters themselves at certain points of the story. That is why contrasting contexts has a close relationship to contrasting characters and the distinction is not always 100% clear.
+
+
+
+### Movement through a semantic field
+
+![technique-semantic](/Users/jonas/Desktop/P9/bericht/img/technique-semantic.png)
+
+| Characters | Attributes |
+| ---------- | ---------- |
+| Differ     | Differ     |
+
+This is probably the hardest transition for readers to follow as none of the elements are shared between the charts. The only thing that connects the two charts is that their characters are connected through a similar meaning as described by Cohn [@Cohn-12:peanuts]. The reader therefore needs to move up in the conceptual hierarchy to find the relationship between the characters depicted.
+
+*Causal* and *Question & answer* transitions identified in Hullman et al. [@Hullman-13:deeperunderstanding] would fall into that category. Because nothing is shared between the two states, there is no possible congruent *animation*. 
+
+
 
 
 
