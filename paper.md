@@ -487,5 +487,55 @@ This is probably the hardest transition for readers to follow as none of the ele
 
 
 
+## Implications
+
+The strength of viewing transitions in terms of characters and their attributes is that they can directly be related to the concept of *object constancy*. As discussed in section TODO, object constancy is a the central concept from visualization perception research when it comes to transitions and especially animated transitions.
+
+In cases where animation helps with object constancy, it should reduce the transition cost. This is the case for *exploring character attributes*, *reconfigure*, *split characters*, *merge characters*, and *contrasting contexts*. In short, whenever a character is present in both states but its shape changes.
+
+To check whether this hypothesis is true is the main concern of the proposed experiment which will be described hereafter.
+
+
+
+## Experiment
+
+### Design
+
+
+
+
+
+### Measure
+
+One of the biggest questions then is how to measure if object constancy is higher and if so, what it's effect on the interpretation of a transition will be. We propose multiple measures for this.
+
+**Relationship**: When the perception of object constancy of the characters is better, we presume that it would be more obvious to readers that they are related in some way. In our experiment we have asked them after seeing both states what they concluded from them. If they mentioned any kind of relationship between the two states, we coded this as 1, otherwise as 0.
+
+**Number of transitions**: If animation supports object constancy, the number of transitions needed to identify the targets in both states should be less when the transition is animated. 
+
+**Correct relationship**: We also checked in their answers, if their conclusions were what the author intended. This was most interesting for transitions that included highlighting or splitting. Presumably, this should focus the reader on the character the author intended and lead readers to interpret the relationship the way the author intended.
+
+**Number of characters mentioned**: Along similar lines, we assumed that readers who saw the animated transitions would be more focused on certain characters as animation would have cued them.
+
+**Causal relationship**: The literature suggests (TODO:Source), that animation implies causality. We measured therefore if the participants mentioned some sort of causal relationship between the two charts.
+
+**Engagement**: The literature also suggests, that animated transitions create a higher engagement in readers. We have included ways to measure engagement via two proxies: *flow* and *number of words in the answer*. To measure flow we have used the short form of O'Brien et al. [@Obrien-18:practicalapproach] user engagement questionnaire (see annex).
+
+**False memories**: In an earlier pilot, we hypothesized that the in-between states of a transition might interfere in the interpretation of the relationship by creating "false memories". This assumption was based on some remarks in the literature [@Heer-07:animatedtransitions] TODO:source. We tested this hypothesis by showing participants screenshots of real and in-between states of the transitions. We presumed that participants who hadn't seen the animations would notice that they saw them for the first time. This turned out not to be the case. A surprisingly large number of participants in the static condition, fell for these screenshots. We concluded that the visual memory of the charts was not as strong as we imagined and that they would therefore most probably not interfere with the understanding of the transition. (TODO:find data on that.)
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
 
 
