@@ -343,7 +343,7 @@ For each example, a screenshot of each visualization state was pasted on a canva
 
 ## Techniques
 
-### Exploring character attributes
+### Explore attributes
 
 ![Two examples of transitions exploring different attributes of the same characters. On the left side from a story of TODO and on the right side a story of TODO  \label{technique-diffent-measure}](/Users/jonas/Desktop/P9/bericht/img/technique-different%20measure.png)
 
@@ -365,7 +365,7 @@ The corresponding transition in Hullman et al. is a *measure walk*. [@Hullman-13
 
 
 
-### Contrasting characters
+### Contrast characters
 
 ![technique-contrast \ref{technique-contrast}](/Users/jonas/Desktop/P9/bericht/img/technique-contrast.png)
 
@@ -457,7 +457,7 @@ What is congruent for progressive disclosure depends on the question if more cha
 
 
 
-### Contrasting contexts
+### Contrast contexts
 
 ![technique-temporal](/Users/jonas/Desktop/P9/bericht/img/technique-temporal.png)
 
@@ -473,7 +473,7 @@ Hullman et al[@Hullman-13:deeperunderstanding]. identified the very prevalent ch
 
 
 
-### Movement through a semantic field
+### Move through a semantic field
 
 ![technique-semantic](/Users/jonas/Desktop/P9/bericht/img/technique-semantic.png)
 
@@ -499,9 +499,65 @@ To check whether this hypothesis is true is the main concern of the proposed exp
 
 ## Experiment
 
+### Overview
+
+In the experiment, each participant is shown two narrative visualizations, *mortality* and *energy*, each consisting of four transitions.  One of the narrative visualization was shown to the participant with *animated transitions*. The other narrative with what we have called *static transitions* where one chart is simply replace with the other. We will briefly present them and after that explain the design decisions that have led to them.
+
+#### Mortality
+
+![mortality-demographics](/Users/jonas/Desktop/P9/bericht/img/mortality-demographics.png)
+
+The first transition in the mortality narrative moves the reader through a semantic field. It begins with a chart showing how the population has gotten older over time. The following chart shows how the mortality rates of both genders have been reduced drastically over the same period of time. The transition conveys how reducing mortality rate leads to an aging population.
+
+The transition is animated by merging all the age groups into the grey "Everyone"-line and shows the lines for men and women subsequently.
+
+![mortality-absolute](/Users/jonas/Desktop/P9/bericht/img/mortality-absolute.png)
+
+The second transition contrasts the mortality rate of different characters. It starts with the last chart from the previous transition showing the mean mortality rates for men, women and everyone. This is contrasted to the evolution of the mortality rates of different age groups. From this transition, the reader can see that the mortality rate is dominated (unsurprisingly) by elderly people. An apparent slowdown in mortality rate reduction in the first chart is therefore mostly due to to the development in the "Over 84" group.
+
+
+
+![mortality-relative](/Users/jonas/Desktop/P9/bericht/img/mortality-relative.png)
+
+This point is reinforced in the third transitions. It picks up the last chart from the previous transition and normalizes the y-axis so that the mortality rate of each age groups starts 100% in 1968. The evolution is then shown relative to this starting point. It becomes apparent that, even though in absolute numbers the reductions have mainly benefitted the elderly, younger age groups have made the most significant progress. This transition is animated by morphing the line of each character into its new shape.
+
+![mortality-causes](/Users/jonas/Desktop/P9/bericht/img/mortality-causes.png)
+
+The final transition in mortality splits the "25–44" year old age group by their causes of death and changes the y-axis from the relative mortality rate to the total number of deaths. This helps explain the strange peak for this age group between 1985 and 1995 and shows that it's due to the AIDS-epidemic in the same time. The animation first hides all the other age groups, splits the "25–44"-line and morphs them into the different age groups.
+
+#### Energy
+
+![energy-A](/Users/jonas/Desktop/P9/bericht/img/energy-A.png)
+
+The energy story starts by showing the evolution of different means of energy production in the U.S. In the second chart the y-axis is reconfigured to show the contribution each energy source had to total energy production. From comparing the two charts it becomes clear that while the output has risen for each source, the energy mix is significantly changed over the years with greener sources on the rise. The animated transition morphs the lines into their respective areas in the second chart.
+
+![energy-B](/Users/jonas/Desktop/P9/bericht/img/energy-B.png)
+
+As in the mortality narrative, the second transition starts out with the last chart from the previous transition. It splits the mean of wind energy by state to show how differently this source has evolved depending on the place to show how differently wind energy has evolved depending on location. It shows that while wind energy might be a small contributor to total U.S. energy production it is a major source of energy in certain (great plains) states. The animation first hides everything except the area for "wind" which is then split and morphed into the lines of the individual states.
+
+
+
+![energy-C](/Users/jonas/Desktop/P9/bericht/img/energy-C.png)
+
+The third transition focuses on the strange decline of wind energy in California after 2013. The second chart therefore shows the proportions of the other energy sources. A marked rise in solar power after 2013 implies that the state has decided to invest in this renewable instead of wind. The animation first highlights California and then expands it into the other sources.
+
+
+
+![energy-D](/Users/jonas/Desktop/P9/bericht/img/energy-D.png)
+
+Finally, this transition explores one of the possible reasons for Californias decision to focus on solar energy from 2013 on. While wind energy has been consistently inexpensive, the price of solar power has fallen substantially over time. It even reached the price level of wind energy in 2013. The animation morphs the areas representing the share of different energy sources into the line showing its price evolution.
+
+
+
 ### Design
 
+#### Introduction
 
+There is a fundamental tension when researching visualization design techniques like animated transitions. On one hand, quantitative research tries to remove every possible confounder when doing experiments. On the other hand it's precisely the interplay between different variables that make effective visualization designs. 
+
+![experiment-conflict](/Users/jonas/Desktop/P9/bericht/img/experiment-conflict.png)
+
+Obviously this mirrors the fundamental difference between disciplines that use quantitative methods and those where only qualitative methods can sensibly by applied. Both cases can be found in the visualization literature. Placed on the left side of the spectrum, research on visual perception like Franconeri et al.'s work on object tracking [@Franconeri-10:trackingmultiple]. On the other end of the spectrum, new design approaches to, for example, compare phylogenetic trees[@Munzner-03:treejuxtaposerscalable], can only be properly evaluated in context through qualitative usability studies. We have decided to situate our study somewhere in the middle between these two poles for two reasons: First, the study aims at providing generalizable insight. Second, the topic researched, namely narrative visualization, is high context as readers can only make sense of transitions in context (see >>Comparison).
 
 
 
