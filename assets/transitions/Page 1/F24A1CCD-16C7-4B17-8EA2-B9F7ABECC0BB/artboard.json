@@ -1,0 +1,172 @@
+{
+  "_class": "artboard",
+  "backgroundColor": {
+    "_class": "color",
+    "alpha": 1,
+    "blue": 1,
+    "do_objectID": "C3E6CD8C-FB39-4584-8FBE-0F68E46614A0",
+    "green": 1,
+    "red": 1
+  },
+  "booleanOperation": -1,
+  "clippingMaskMode": 0,
+  "do_objectID": "F24A1CCD-16C7-4B17-8EA2-B9F7ABECC0BB",
+  "exportOptions": {
+    "_class": "exportOptions",
+    "do_objectID": "A1AF3B2A-0393-449F-809E-9303521D3C7B",
+    "exportFormats": [
+    ],
+    "includedLayerIds": [
+    ],
+    "layerOptions": 0,
+    "shouldTrim": false
+  },
+  "frame": {
+    "_class": "rect",
+    "constrainProportions": false,
+    "do_objectID": "BB3C6D39-D512-4D0B-905A-6C63DBB5A9EA",
+    "height": 3120,
+    "width": 17904,
+    "x": -4340,
+    "y": 9363
+  },
+  "groupLayout": {
+    "_class": "MSImmutableFreeformGroupLayout",
+    "do_objectID": "0F7D1D85-0C08-433A-9884-6B063DB394F3"
+  },
+  "hasBackgroundColor": false,
+  "hasClickThrough": true,
+  "hasClippingMask": false,
+  "horizontalRulerData": {
+    "_class": "rulerData",
+    "base": 0,
+    "do_objectID": "A878F406-8D68-4237-8835-CBD6AB41E51B",
+    "guides": [
+    ]
+  },
+  "includeBackgroundColorInExport": true,
+  "includeInCloudUpload": true,
+  "isFixedToViewport": false,
+  "isFlippedHorizontal": false,
+  "isFlippedVertical": false,
+  "isFlowHome": false,
+  "isLocked": false,
+  "isVisible": true,
+  "layerListExpandedType": 2,
+  "layers": [
+    {
+      "class": "bitmap",
+      "id": "415644CB-5566-42B4-BE3D-D2FD9506ED04"
+    },
+    {
+      "class": "bitmap",
+      "id": "AFAF0E3E-914F-4846-B590-A7B0908C4F4A"
+    },
+    {
+      "class": "bitmap",
+      "id": "6608BA8A-82DD-490F-B21B-D5220DD38783"
+    },
+    {
+      "class": "bitmap",
+      "id": "21B5936C-CC6E-44D8-A552-6347B88A3CC7"
+    },
+    {
+      "class": "bitmap",
+      "id": "BB8E63EC-EFA3-47EE-93AB-BC2255042615"
+    },
+    {
+      "class": "bitmap",
+      "id": "DBCBDCC9-D457-4C00-A850-E312F00024DC"
+    },
+    {
+      "class": "bitmap",
+      "id": "6439B629-29E4-4223-B3A7-6B00FA57E107"
+    },
+    {
+      "class": "bitmap",
+      "id": "C7E9B63F-AF41-460C-BCDE-C0872DD2229C"
+    },
+    {
+      "class": "bitmap",
+      "id": "26DB5A72-4662-48DE-8824-FC850253A648"
+    },
+    {
+      "class": "bitmap",
+      "id": "6420A4AE-A3BE-4CAD-9D7A-138FDBB21E5D"
+    },
+    {
+      "class": "bitmap",
+      "id": "08BFDC1B-A23B-4027-8B3A-F6C70B4053C0"
+    },
+    {
+      "class": "bitmap",
+      "id": "F786B05F-A4C1-46B7-B57F-A87F875080A5"
+    },
+    {
+      "class": "bitmap",
+      "id": "1A04EEC7-FB60-41D4-99EE-701FD6C11D20"
+    },
+    {
+      "class": "bitmap",
+      "id": "84DC48E0-5F2C-46AF-BCDD-19EEF5228442"
+    },
+    {
+      "class": "bitmap",
+      "id": "F7EE6CA2-55E4-4106-BAB3-FF4DE5398410"
+    },
+    {
+      "class": "bitmap",
+      "id": "ED7B421E-B608-424C-AFF2-C9D1A1667B62"
+    },
+    {
+      "class": "bitmap",
+      "id": "5E076F33-ECC6-40B0-9C1A-A6045B4FD014"
+    },
+    {
+      "class": "bitmap",
+      "id": "EBE9C804-3A05-43F9-803F-E19677C5CCB0"
+    },
+    {
+      "class": "bitmap",
+      "id": "96A8313E-D8B6-4E0F-AA84-458A30B76690"
+    },
+    {
+      "class": "bitmap",
+      "id": "6EF2F387-36B7-4B44-B92C-B163AB410434"
+    },
+    {
+      "class": "bitmap",
+      "id": "58A1EF0F-7E90-422A-A3D2-EE801E4BD119"
+    },
+    {
+      "class": "bitmap",
+      "id": "A04F57EC-035E-4E87-844D-A5DD298DA41C"
+    },
+    {
+      "class": "bitmap",
+      "id": "A4BDB643-599F-47CF-BE0D-C555057C2901"
+    }
+  ],
+  "name": "buildup copy 2",
+  "nameIsFixed": true,
+  "resizesContent": false,
+  "resizingConstraint": 63,
+  "resizingType": 0,
+  "rotation": 0,
+  "shouldBreakMaskChain": true,
+  "style": {
+    "_class": "style",
+    "do_objectID": "E6E3CCE8-8AA7-4580-BC78-4975C580A948",
+    "endMarkerType": 0,
+    "miterLimit": 10,
+    "startMarkerType": 0,
+    "windingRule": 1
+  },
+  "verticalRulerData": {
+    "_class": "rulerData",
+    "base": 0,
+    "do_objectID": "9662B6CD-1658-4A33-9333-E45D0256422D",
+    "guides": [
+    ]
+  }
+}

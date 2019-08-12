@@ -1,0 +1,61 @@
+{
+  "_class": "group",
+  "booleanOperation": -1,
+  "clippingMaskMode": 0,
+  "do_objectID": "5D044217-FF78-4EE2-82E1-7F7237A93442",
+  "exportOptions": {
+    "_class": "exportOptions",
+    "do_objectID": "1688AF62-5DF8-4C41-A075-3F5A02676864",
+    "exportFormats": [
+    ],
+    "includedLayerIds": [
+    ],
+    "layerOptions": 0,
+    "shouldTrim": false
+  },
+  "frame": {
+    "_class": "rect",
+    "constrainProportions": false,
+    "do_objectID": "533ED41D-655A-4EC5-A0B7-6DB8BD75D868",
+    "height": 88,
+    "width": 304,
+    "x": 2423,
+    "y": 903
+  },
+  "groupLayout": {
+    "_class": "MSImmutableFreeformGroupLayout",
+    "do_objectID": "37ED2189-7720-41AE-8B17-4D631FBEFABB"
+  },
+  "hasClickThrough": false,
+  "hasClippingMask": false,
+  "isFixedToViewport": false,
+  "isFlippedHorizontal": false,
+  "isFlippedVertical": false,
+  "isLocked": false,
+  "isVisible": true,
+  "layerListExpandedType": 0,
+  "layers": [
+    {
+      "class": "rectangle",
+      "id": "040A3B8B-037E-469B-B48E-2C13146846F2"
+    },
+    {
+      "class": "text",
+      "id": "EB1F338F-527C-4633-94FA-8AEBC90D1803"
+    }
+  ],
+  "name": "Group Copy 19",
+  "nameIsFixed": false,
+  "resizingConstraint": 63,
+  "resizingType": 0,
+  "rotation": 0,
+  "shouldBreakMaskChain": false,
+  "style": {
+    "_class": "style",
+    "do_objectID": "86A33C63-85C1-44CD-85B0-0AFC54B23146",
+    "endMarkerType": 0,
+    "miterLimit": 10,
+    "startMarkerType": 0,
+    "windingRule": 1
+  }
+}

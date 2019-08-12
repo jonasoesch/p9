@@ -1,0 +1,121 @@
+{
+  "_class": "artboard",
+  "backgroundColor": {
+    "_class": "color",
+    "alpha": 1,
+    "blue": 1,
+    "do_objectID": "E6428BD7-1E0D-438D-846F-3FADC7E51038",
+    "green": 1,
+    "red": 1
+  },
+  "booleanOperation": -1,
+  "clippingMaskMode": 0,
+  "do_objectID": "7BAB2CB7-F66D-45FC-99F8-3BB440FBD68E",
+  "exportOptions": {
+    "_class": "exportOptions",
+    "do_objectID": "DEA421A3-CCE7-4933-8971-6A859941561C",
+    "exportFormats": [
+      {
+        "_class": "exportFormat",
+        "absoluteSize": 0,
+        "fileFormat": "png",
+        "name": "",
+        "namingScheme": 0,
+        "scale": 2,
+        "visibleScaleType": 0
+      }
+    ],
+    "includedLayerIds": [
+    ],
+    "layerOptions": 0,
+    "shouldTrim": false
+  },
+  "frame": {
+    "_class": "rect",
+    "constrainProportions": false,
+    "do_objectID": "60D8ADCD-6B3B-47E1-B514-AECFBFB8EB9A",
+    "height": 443,
+    "width": 1932.943687442628,
+    "x": 2353,
+    "y": 3672
+  },
+  "groupLayout": {
+    "_class": "MSImmutableFreeformGroupLayout",
+    "do_objectID": "ACEFE55E-9D8E-426E-AC64-3DF8AC4342A4"
+  },
+  "hasBackgroundColor": false,
+  "hasClickThrough": false,
+  "hasClippingMask": false,
+  "horizontalRulerData": {
+    "_class": "rulerData",
+    "base": 0,
+    "do_objectID": "AE24EAD3-6184-4BE5-B8A6-7EB30C0D6FAF",
+    "guides": [
+    ]
+  },
+  "includeBackgroundColorInExport": true,
+  "includeInCloudUpload": true,
+  "isFixedToViewport": false,
+  "isFlippedHorizontal": false,
+  "isFlippedVertical": false,
+  "isFlowHome": false,
+  "isLocked": false,
+  "isVisible": true,
+  "layerListExpandedType": 2,
+  "layers": [
+    {
+      "class": "bitmap",
+      "id": "0F7C2788-511C-4272-8E5A-45123B2B738F"
+    },
+    {
+      "class": "bitmap",
+      "id": "9FBB6D51-3D17-44D2-9934-ED922E2A8984"
+    },
+    {
+      "class": "group",
+      "id": "0AA2BF68-97BD-4724-B0C3-F622864C35AC"
+    },
+    {
+      "class": "group",
+      "id": "5A92A605-E057-480B-9654-8085C50C702C"
+    },
+    {
+      "class": "text",
+      "id": "21C39CD8-F7BD-4DE1-8874-73ECFF9FABC2"
+    },
+    {
+      "class": "text",
+      "id": "B174D7CE-CBAD-441A-95FB-B014B24256B8"
+    },
+    {
+      "class": "text",
+      "id": "9BC63BCF-0F63-475F-B8E0-6DDCCAE48891"
+    },
+    {
+      "class": "bitmap",
+      "id": "FD0C96C7-26F4-46D1-8B75-19C49FF72C63"
+    }
+  ],
+  "name": "Measure walk",
+  "nameIsFixed": true,
+  "resizesContent": false,
+  "resizingConstraint": 63,
+  "resizingType": 0,
+  "rotation": 0,
+  "shouldBreakMaskChain": true,
+  "style": {
+    "_class": "style",
+    "do_objectID": "0A807EA3-CD0D-463C-B040-B7D5781DAF6A",
+    "endMarkerType": 0,
+    "miterLimit": 10,
+    "startMarkerType": 0,
+    "windingRule": 1
+  },
+  "verticalRulerData": {
+    "_class": "rulerData",
+    "base": 0,
+    "do_objectID": "4DC3F35B-AF56-4133-B8BE-2B2D1CEF2003",
+    "guides": [
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "_class": "group",
+  "booleanOperation": -1,
+  "clippingMaskMode": 0,
+  "do_objectID": "790E96B1-B679-4154-9281-116800FB2BAC",
+  "exportOptions": {
+    "_class": "exportOptions",
+    "do_objectID": "B33AF4C9-5973-49EF-836F-556B07212AA2",
+    "exportFormats": [
+    ],
+    "includedLayerIds": [
+    ],
+    "layerOptions": 0,
+    "shouldTrim": false
+  },
+  "frame": {
+    "_class": "rect",
+    "constrainProportions": false,
+    "do_objectID": "9F648801-7A1B-496F-9C0B-5B5B4A228E38",
+    "height": 222,
+    "width": 303,
+    "x": 897,
+    "y": 142
+  },
+  "groupLayout": {
+    "_class": "MSImmutableFreeformGroupLayout",
+    "do_objectID": "2B3B48A9-20AD-47EC-BDB6-0D766897E94F"
+  },
+  "hasClickThrough": false,
+  "hasClippingMask": false,
+  "isFixedToViewport": false,
+  "isFlippedHorizontal": false,
+  "isFlippedVertical": false,
+  "isLocked": false,
+  "isVisible": true,
+  "layerListExpandedType": 0,
+  "layers": [
+    {
+      "class": "rectangle",
+      "id": "E9FED58A-2A54-4432-B4AD-EC977E162545"
+    },
+    {
+      "class": "shapePath",
+      "id": "6DA13BFD-57B9-43DF-AB2D-386B0A84DFB2"
+    },
+    {
+      "class": "shapePath",
+      "id": "4BD0D626-236B-4801-B6BA-5E7FA21E147D"
+    },
+    {
+      "class": "rectangle",
+      "id": "F37410F1-C483-40DA-A352-E9BC03ED0811"
+    },
+    {
+      "class": "rectangle",
+      "id": "64569B74-F670-4190-BC21-3F0B87C1CE01"
+    },
+    {
+      "class": "text",
+      "id": "FF599C96-3A42-4547-81EE-D00CA0AB6D85"
+    },
+    {
+      "class": "text",
+      "id": "D2DA143C-951D-4C27-AD8D-55CC9AABB77A"
+    }
+  ],
+  "name": "Group Copy 2",
+  "nameIsFixed": false,
+  "resizingConstraint": 63,
+  "resizingType": 0,
+  "rotation": 0,
+  "shouldBreakMaskChain": false,
+  "style": {
+    "_class": "style",
+    "blur": {
+      "_class": "blur",
+      "center": "{0.5, 0.5}",
+      "do_objectID": "431C957D-8C25-48F4-847B-D9BCCB101405",
+      "isEnabled": false,
+      "motionAngle": 0,
+      "radius": 5.600000000000001,
+      "saturation": 1,
+      "type": 0
+    },
+    "do_objectID": "AF410336-2C21-499A-BDDE-44C006EB830D",
+    "endMarkerType": 0,
+    "miterLimit": 10,
+    "startMarkerType": 0,
+    "windingRule": 1
+  }
+}

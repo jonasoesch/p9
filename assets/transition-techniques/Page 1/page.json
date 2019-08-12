@@ -1,0 +1,98 @@
+{
+  "_class": "page",
+  "booleanOperation": -1,
+  "clippingMaskMode": 0,
+  "do_objectID": "027C3910-B05B-41A1-B7B2-E03BF4236C49",
+  "exportOptions": {
+    "_class": "exportOptions",
+    "exportFormats": [
+    ],
+    "includedLayerIds": [
+    ],
+    "layerOptions": 0,
+    "shouldTrim": false
+  },
+  "frame": {
+    "_class": "rect",
+    "constrainProportions": false,
+    "height": 0,
+    "width": 0,
+    "x": 0,
+    "y": 0
+  },
+  "groupLayout": {
+    "_class": "MSImmutableFreeformGroupLayout"
+  },
+  "hasClickThrough": true,
+  "hasClippingMask": false,
+  "horizontalRulerData": {
+    "_class": "rulerData",
+    "base": 0,
+    "guides": [
+    ]
+  },
+  "includeInCloudUpload": true,
+  "isFixedToViewport": false,
+  "isFlippedHorizontal": false,
+  "isFlippedVertical": false,
+  "isLocked": false,
+  "isVisible": true,
+  "layerListExpandedType": 0,
+  "layers": [
+    {
+      "class": "artboard",
+      "id": "74B3BAD0-8A1F-49DE-98C0-C6909BBD408A"
+    },
+    {
+      "class": "artboard",
+      "id": "52DFA57E-157A-46EC-9395-8A02A91EC5D4"
+    },
+    {
+      "class": "artboard",
+      "id": "BFC5B547-7725-4C6B-8C20-446F1F397CC7"
+    },
+    {
+      "class": "artboard",
+      "id": "6D22C91F-7E10-4F69-ABFC-FBC29CACBD22"
+    },
+    {
+      "class": "artboard",
+      "id": "B199F51C-B152-4674-AF66-F58ABB8EB1DD"
+    },
+    {
+      "class": "artboard",
+      "id": "C971127D-4C87-4ED7-ADB7-0290F3045BF6"
+    },
+    {
+      "class": "artboard",
+      "id": "1F4B7CA3-079A-4F01-9AF6-D2E11C3B0560"
+    },
+    {
+      "class": "artboard",
+      "id": "7BA01225-C36F-4E9A-8F65-86130FB6BA36"
+    },
+    {
+      "class": "artboard",
+      "id": "73346A2D-9BDC-4177-8B74-22727D11A2ED"
+    }
+  ],
+  "name": "Page 1",
+  "nameIsFixed": false,
+  "resizingConstraint": 63,
+  "resizingType": 0,
+  "rotation": 0,
+  "shouldBreakMaskChain": false,
+  "style": {
+    "_class": "style",
+    "endMarkerType": 0,
+    "miterLimit": 10,
+    "startMarkerType": 0,
+    "windingRule": 1
+  },
+  "verticalRulerData": {
+    "_class": "rulerData",
+    "base": 0,
+    "guides": [
+    ]
+  }
+}

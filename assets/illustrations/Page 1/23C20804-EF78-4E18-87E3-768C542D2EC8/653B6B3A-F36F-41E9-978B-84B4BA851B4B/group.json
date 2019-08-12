@@ -1,0 +1,85 @@
+{
+  "_class": "group",
+  "booleanOperation": -1,
+  "clippingMaskMode": 0,
+  "do_objectID": "653B6B3A-F36F-41E9-978B-84B4BA851B4B",
+  "exportOptions": {
+    "_class": "exportOptions",
+    "do_objectID": "6663DB31-62D7-4E39-82A0-D2677679FD75",
+    "exportFormats": [
+    ],
+    "includedLayerIds": [
+    ],
+    "layerOptions": 0,
+    "shouldTrim": false
+  },
+  "frame": {
+    "_class": "rect",
+    "constrainProportions": false,
+    "do_objectID": "988BA1AF-0B76-4E6A-8983-1F4B6C14C16B",
+    "height": 200,
+    "width": 289,
+    "x": 1326,
+    "y": 29
+  },
+  "groupLayout": {
+    "_class": "MSImmutableFreeformGroupLayout",
+    "do_objectID": "72989692-BDD9-4D65-A6F7-8CEF022FB9B7"
+  },
+  "hasClickThrough": false,
+  "hasClippingMask": false,
+  "isFixedToViewport": false,
+  "isFlippedHorizontal": false,
+  "isFlippedVertical": false,
+  "isLocked": false,
+  "isVisible": true,
+  "layerListExpandedType": 0,
+  "layers": [
+    {
+      "class": "rectangle",
+      "id": "B17524DA-CE4D-47EB-AC22-C6427AC10DCB"
+    },
+    {
+      "class": "oval",
+      "id": "D92E983C-3636-40B2-95E1-686972C2338A"
+    },
+    {
+      "class": "oval",
+      "id": "5371CB52-DE33-40EA-861B-A1E2FD7CEA9C"
+    },
+    {
+      "class": "oval",
+      "id": "B580389F-79CB-4F7F-A1B7-0B167BD965FC"
+    },
+    {
+      "class": "oval",
+      "id": "997BE262-DDC5-4A68-B928-770161D91F2D"
+    },
+    {
+      "class": "oval",
+      "id": "4CAA51DB-7AA8-4E6D-BDBA-5A8618C7DDDE"
+    },
+    {
+      "class": "oval",
+      "id": "4E97707E-3DBB-48CD-BEA0-340E9E63D22C"
+    },
+    {
+      "class": "oval",
+      "id": "89E6D35A-75FB-4099-A1CC-A773A3E09491"
+    }
+  ],
+  "name": "Group 2 Copy 3",
+  "nameIsFixed": false,
+  "resizingConstraint": 63,
+  "resizingType": 0,
+  "rotation": 0,
+  "shouldBreakMaskChain": false,
+  "style": {
+    "_class": "style",
+    "do_objectID": "A2D7E79F-0048-4E9F-90C4-485DFF94E505",
+    "endMarkerType": 0,
+    "miterLimit": 10,
+    "startMarkerType": 0,
+    "windingRule": 1
+  }
+}
