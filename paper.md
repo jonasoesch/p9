@@ -365,16 +365,6 @@ This is probably the hardest transition for readers to follow as none of the ele
 
 ## Implications
 
-The strength of viewing transitions in terms of characters and their attributes is that they can directly be related to the concept of *object constancy*. As discussed in section TODO, object constancy is a the central concept from visualization perception research when it comes to transitions and especially animated transitions.
-
-In cases where animation helps with object constancy, it should reduce the transition cost. This is the case for *exploring character attributes*, *reconfigure*, *split characters*, *merge characters*, and *contrasting contexts*. In short, whenever a character is present in both states but its shape changes.
-
-To check whether this hypothesis is true is the main concern of the proposed experiment which will be described hereafter.
-
-
-
-
-
 
 
 
@@ -401,17 +391,41 @@ Especially for animation, there are also perceptual constraints to consider. Ign
 
 # Animation
 
-Animation has been used for very different purposes in information visualization. This needs to be considered when looking at research to find out how and when animation can reduce the transition cost. One useful overview has been proposed by Chevalier et al. [@Chevalier-16:animations25]
+Animation has been portrayed to provide many benefits to UX-design in general and visualization design in particular. Chevalier et al. have identified 23 different "purposes" of animation in visualization. Things like "Staying oriented during navigation" or "Hooking the user" which are finally classified into five meta-classes. Although this overview shows the popularity of animation in todays practice, it does not discuss any evidence that animation *actually* serves the given purposes.
 
-## Purpose of animation
+To understand why designers might think that animation helps in these specific circumstances, we have mapped some lower level "strengths" of animation described in Heer et al. [@Heer-07:animatedtransitions] to all each of the purposes (see figure \ref{animation-purposes}).
 
-The authors identify 23 different purposes for animation in visualization, which they group into five categories: *Keeping in context*, *Teaching aid*, *User experience*, *Data encoding* and *Visual discourse*.
+![The purposes of animation found by Chevalier et al. [@Chevalier:2014] each employ one or more of the strenghts of animation.\label{animation-purposes}](/Users/jonas/Desktop/P9/bericht/img/animation-purposes.png)
 
-In all the presented cases animation is used for "a transition between two states". But only about half of them transition between *informationally distinct states* which is the kind of transition we are interested in.
 
-![The purposes of animation found by Chevalier et al. [@Chevalier:2014] can be distinguished into an animation that transitions between informationally distinct states and others. Both categories capitalize on different strengths of animation.](/Users/jonas/Desktop/P9/bericht/img/animation-uses.png)
 
-This observation couples well with the four strengths of animation presented in Heer et al.[@Heer-07:animatedtransitions]: animation facilitates *object constancy* (keeping context), communicates *causality* and *intentionality*, easily *attracts attention* and that it is *engaging*. "Hooking the user" for example exploits animation for its potential to engage. When using animation to "illustrate an algorithm", its strength to communicate causality is employed.
+#### Object constancy
+
+Object constancy describes the ability two identify the objects as being the same entity between two states.  This is probably strength most often invoked for animation [@Chalbi-18:understandingdesigning, @Wu-16:graphicalperception, @Bederson:doesanimation, @Heer-07:animatedtransitions] It is also closely related to the previously presented model and *characters* . If animation indeed supports object constancy, it would simplify the *location* of the target in the second state (>>Comparison) and this simplify the essential comparison task. A deeper look into object constancy can be found in section (>>Object constancy)
+
+#### Attract attention
+
+Movement very strongly attracts attention. This view is undisputed in the literature [@Munzner-15:visualizationanalysis, p. 238] and there is some solid evidence that motion is more effective in highlighting elements than simply a different visual appearance [@Ware-04:motionsupport]
+
+#### Communicate causality and intentionality
+
+In nature, we observe a certain smooth flow of cause and effect. When a rolling billiard ball hits another, the second ball will smoothly continue its transition. This leads to the intuition that smooth animation would some sort of cause and effect relationship. This has been found to be true when depicting naturalist phenomena like the formation of lightning. [@Betrancourt-08:displaykey] Other authors have found that animation also conveys causality in more abstract displays but that it doesn't perform better than symbolic depictions of causality. [@Kadaba-07:visualizingcausal]
+
+#### Engage
+
+Many authors have remarked how readers where "excited" about animation in interfaces and that it thus led to higher engagement [@Tversky-02:animationcan, @Heer-07:animatedtransitions] The ability of animation to engage and excite is often presupposed based on anecdotal evidence. But few studies have used validated questionnaires to explicitly measure engagement. One study who did found very mixed results [@Amini-18:hookeddata]. In their findings animation only led to higher engagement when coupled with pictorial representations of data. The main factor that led to higher engagement was "Aesthetics". We suspect that in many cases there might be a "novelty" effect of animation that excites readers. There is little evidence that yesterdays fashionable animation would still lead to higher engagement. Furthermore, the novelty effect might lead readers and designers astray and they might confuse their positive feelings about it with actual understanding.[@Hassenzahl-10:inferenceperceived]
+
+#### Data encoding
+
+Similar to color or shape, motion can be used to encode data. Although the precision in interpreting it is very limited. [@Munzner-15:visualizationanalysis, p. 95] This property of animation is not listed in Heer et al. but we have decided to include it because it is well studied.
+
+
+
+## 
+
+
+
+
 
 Although we do not consider animation for its strengths to *attract attention* and to *engage*, they will be present in all uses of animation.[@Chevalier-14:notsostaggeringeffect] This can make it hard to differentiate between effects. Readers might, for example, confuse higher engagement with better understanding [@Baudisch-06:phosphorexplaining] This confusion poses also a risk of designers of animated transitions as they might not be able to rely on their perception as to how effective an animated transition is. The power of animation to *attract attention* might distract the reader from the important parts of a transition, or the readers might change their goal from understanding what is being conveyed to simply enjoying the animation.[@Fischer-10:comprehendinganimations] These effects will be further discussed in the [section on "apprehension"](#Apprehension).
 
@@ -439,7 +453,7 @@ Congruence is closely related to the idea of *object constancy* [@Wu-16:graphica
 
 *Granularity transitions*: Animation has also shown to help with object constancy when zooming in and out of visualizations. [@Shanmugasundaram-08:effectanimated]
 
-*Causal transitions*: In one experiment, Bétrancourt et al. [@Betrancourt-08:displaykey] tested the effectiveness of animated transitions to establish causal relationships. They tested retention and transfer learning of participants on a story about the formation of lightning. Participants who saw the animated transitions significantly outperformed those who saw a static slideshow with the same narration.
+
 
 *Rotating dimension walk*: Ruchikachorn et al. found that animation helped establish object constancy when a known visualization idiom was transformed into an unknown idiom. [@Ruchikachorn-15:learningvisualizations] Going for example from a linear chart to a spiral.
 
@@ -501,7 +515,7 @@ The last point also illustrates an important distinction in visual tracking task
 
 Staggered animation delays the start time animations incrementally for some objects. An example: out of 7 objects, 4 will start to move right away, 3 other objects will start to move only a bit later. The delay between the starts is called *dwell*. A dwell of zero means no staggering.
 
-Staggered animation has been proposed to *reduce occlusion* as well as *complexity* during animation and therefore lead to a higher tracking performance but [@Heer:2007] the effect has been shown to be negligible. [@Chevalier:2014]
+Staggered animation has been proposed to *reduce occlusion* as well as *complexity* during animation and therefore lead to a higher tracking performance  [@Heer:2007]  but the effect has been shown to be negligible. [@Chevalier:2014]
 
 ### Staged animation
 
@@ -525,8 +539,6 @@ Most of these examples show how perceptual properties, which are often not intui
 
 
 
-
-
 ## Effect of animation
 
 Better learning on concrete representations. No difference on abstract representation. [@Berney-16:doesanimation]
@@ -543,11 +555,11 @@ Based on the discussions on transitions and animation, we establish the followin
 
 #### H1: Relationship
 
-Animated transitions between two charts will in general more often imply a relationship between them than static transitions. (TODO: see work on causality)
+Based on the findings that animation can communicate causality and intentionality (see section >>Communicate causality and intentionality), we believe that it might also imply a relationship in a more general sense. Our first hypothesis is therefore that animated transitions will more often lead participants to assume a relationship between two charts.
 
 #### H2: Causality
 
-The literature suggests that animation implies causality in certain situations. We therefore assumed that animated transitions would favor a causal interpretation of the relationship.
+Again based on the findings described in section (>>Communicate causality and intentionality), we believe that when readers assume a relationship between two charts, they will more often conclude that the relationship is causal when the transition is animated.
 
 #### H3: Cueing
 
