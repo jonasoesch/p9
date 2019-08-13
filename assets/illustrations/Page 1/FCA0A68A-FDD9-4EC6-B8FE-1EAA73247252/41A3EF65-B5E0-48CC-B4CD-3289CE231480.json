@@ -16,7 +16,7 @@
           "MSAttributedStringFontAttribute": {
             "_class": "fontDescriptor",
             "attributes": {
-              "name": "AdobeTextPro-It",
+              "name": "DINNextLTPro-Regular",
               "size": 40
             }
           },
@@ -52,11 +52,11 @@
     "constrainProportions": false,
     "do_objectID": "2A5D0DDE-7AF7-4150-9A55-17CF91312BC9",
     "height": 40,
-    "width": 76,
+    "width": 74,
     "x": 557,
-    "y": 641
+    "y": 640
   },
-  "glyphBounds": "{{-1, 2}, {76, 28}}",
+  "glyphBounds": "{{3, 2}, {69, 29}}",
   "hasClippingMask": false,
   "isFixedToViewport": false,
   "isFlippedHorizontal": false,
@@ -91,7 +91,7 @@
         "MSAttributedStringFontAttribute": {
           "_class": "fontDescriptor",
           "attributes": {
-            "name": "AdobeTextPro-It",
+            "name": "DINNextLTPro-Regular",
             "size": 40
           }
         },
