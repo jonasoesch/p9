@@ -544,31 +544,33 @@ Readers will be more engaged by the visualizations with animated transitions.
 
 # Experiment
 
+In order to test the above hypotheses we have conducted an experiment on Amazon Mechanical Turk which will be described in the following sections.
+
 ## Overview
 
-In the experiment, each participant is shown two narrative visualizations, *mortality* and *energy*, each consisting of four transitions.  One of the narrative visualization was shown to the participant with *animated transitions*. The other narrative with what we have called *static transitions* where one chart is simply replace with the other. We will briefly present them and after that explain the design decisions that have led to them.
+Before we will go on to discuss the specifics of the experiment, we will present the stimuli. Each participant has seen two two stories consisting of four "mini-stories" each. Each of these mini-stories contained two charts and a transition between them. In one of the stories, the transition was animated. In the other it was static. The participants could transition between the two charts by scrolling up and down. At the end of each mini-story, we asked them to answer a set of questions about what the had just seen. While answering, the were free to scroll back up and see the charts again. We will now present the two stories in more detail.
 
 ### Mortality
+
+The first story is about the evolution of mortality rates in the U.S. It is a modification of an article published by Bloomberg in 2014.[@Klein-14:howamericans]
 
 #### Mortality A
 
 ![mortality-demographics](/Users/jonas/Desktop/P9/bericht/img/mortality-demographics.png)
 
-The first transition in the mortality narrative moves the reader through a semantic field. It begins with a chart showing how the population has gotten older over time. The following chart shows how the mortality rates of both genders have been reduced drastically over the same period of time. The transition conveys how reducing mortality rate leads to an aging population.
-
-The transition is animated by merging all the age groups into the grey "Everyone"-line and shows the lines for men and women subsequently.
+The first mini-story in the mortality story moves the reader through a semantic field. It begins with a chart showing how the population has gotten older over time. The following chart shows how the mortality rates of both genders have been reduced drastically over the same period of time. The transition thus conveys how reducing mortality rate leads to an aging population. The transition is animated by merging all the age groups into the grey "Everyone"-line and shows the lines for men and women subsequently.
 
 #### Mortality B
 
 ![mortality-absolute](/Users/jonas/Desktop/P9/bericht/img/mortality-absolute.png)
 
-The second transition contrasts the mortality rate of different characters. It starts with the last chart from the previous transition showing the mean mortality rates for men, women and everyone. This is contrasted to the evolution of the mortality rates of different age groups. From this transition, the reader can see that the mortality rate is dominated (unsurprisingly) by elderly people. An apparent slowdown in mortality rate reduction in the first chart is therefore mostly due to to the development in the "Over 84" group.
+The second transition contrasts the mortality rate of different characters. It starts with the last chart from the previous transition showing the mean mortality rates for "Men", "Women" and "Everyone". This is contrasted to the evolution of the mortality rates of different age groups. From this transition, the reader can see that the mortality rate is dominated (unsurprisingly) by elderly people. An apparent slowdown in mortality rate reduction in the first chart is therefore mostly due to to the development in the "Over 84" group. In the animated transition "Men" and "Women" characters are first hidden, the the "Everyone" character is being split and morphed into the different age groups.
 
 #### Mortality C
 
 ![mortality-relative](/Users/jonas/Desktop/P9/bericht/img/mortality-relative.png)
 
-This point is reinforced in the third transitions. It picks up the last chart from the previous transition and normalizes the y-axis so that the mortality rate of each age groups starts 100% in 1968. The evolution is then shown relative to this starting point. It becomes apparent that, even though in absolute numbers the reductions have mainly benefitted the elderly, younger age groups have made the most significant progress. This transition is animated by morphing the line of each character into its new shape.
+Again, this mini-story starts with the last chart of the previous mini-story. In the second chart, the same data is shown but with the mortality rate of each character normalized to its rate in 1968. Thanks to this it becomes apparent that even though the elderly have made most progress in absolute numbers, the relative reduction is highest for younger age groups. This transition is animated by morphing each character into its new shape.
 
 
 
@@ -576,21 +578,25 @@ This point is reinforced in the third transitions. It picks up the last chart fr
 
 ![mortality-causes](/Users/jonas/Desktop/P9/bericht/img/mortality-causes.png)
 
-The final transition in mortality splits the "25–44" year old age group by their causes of death and changes the y-axis from the relative mortality rate to the total number of deaths. This helps explain the strange peak for this age group between 1985 and 1995 and shows that it's due to the AIDS-epidemic in the same time. The animation first hides all the other age groups, splits the "25–44"-line and morphs them into the different age groups.
+Some readers might have wondered why the mortality rate for "25–44" year olds was rising  at the beginning of the 90s. This mini-story introduces their causes of death in the second chart which quickly answers the question: it was precisely at this point that the AIDS-epidemic was at its peak and has most strongly affected this age group. The animation first hides all the other age groups, splits the "25–44"-line and morphs it into the different causes of death.
+
+
 
 ### Energy
+
+This story talks about the evolution of energy sources in the U.S: since the beginning of the century. It combines a story from the New York Times  [@Popovich-18:howdoes] with one from Forbes [@Mahajan-18:plungingprices].
 
 #### Energy A
 
 ![energy-A](/Users/jonas/Desktop/P9/bericht/img/energy-A.png)
 
-The energy story starts by showing the evolution of different means of energy production in the U.S. In the second chart the y-axis is reconfigured to show the contribution each energy source had to total energy production. From comparing the two charts it becomes clear that while the output has risen for each source, the energy mix is significantly changed over the years with greener sources on the rise. The animated transition morphs the lines into their respective areas in the second chart.
+The energy story starts by showing the evolution of different energy sources in the U.S in absolute numbers. In the second chart it shows how the proportions have changed over time. From comparing the two charts it becomes clear that while the absolute output has either risen or stagnated, coal has been used significantly less while the focus seems to be shifting to natural gas and the renewables. The animated transition morphs the lines into their respective areas in the second chart.
 
 #### Energy B
 
 ![energy-B](/Users/jonas/Desktop/P9/bericht/img/energy-B.png)
 
-As in the mortality narrative, the second transition starts out with the last chart from the previous transition. It splits the mean of wind energy by state to show how differently this source has evolved depending on the place to show how differently wind energy has evolved depending on location. It shows that while wind energy might be a small contributor to total U.S. energy production it is a major source of energy in certain (great plains) states. The animation first hides everything except the area for "wind" which is then split and morphed into the lines of the individual states.
+As in the mortality narrative, the second transition starts out with the last chart from the previous transition. In the second chart it shows how wind has become a major energy source in certain (great plain states). The transition leads to the conclusion that, although the rise of wind energy looks unspectacular on a national scale, growth has been exponential in some places. The animation first hides everything except the area for "wind" which is then split and morphed into the lines of the individual states.
 
 #### Energy C
 
@@ -598,17 +604,17 @@ As in the mortality narrative, the second transition starts out with the last ch
 
 ![energy-C](/Users/jonas/Desktop/P9/bericht/img/energy-C.png)
 
-The third transition focuses on the strange decline of wind energy in California after 2013. The second chart therefore shows the proportions of the other energy sources. A marked rise in solar power after 2013 implies that the state has decided to invest in this renewable instead of wind. The animation first highlights California and then expands it into the other sources.
+The third transition focuses on the strange stagnation of wind energy in California after 2013. To find out where the focus might have shifted, the second chart shows the energy mix of California over time. A marked rise in solar power after 2013 implies that the state has decided to invest in this renewable instead of wind. The animation first highlights California and then expands it into the other sources.
 
 #### Energy D
 
 ![energy-D](/Users/jonas/Desktop/P9/bericht/img/energy-D.png)
 
-Finally, this transition explores one of the possible reasons for Californias decision to focus on solar energy from 2013 on. While wind energy has been consistently inexpensive, the price of solar power has fallen substantially over time. It even reached the price level of wind energy in 2013. The animation morphs the areas representing the share of different energy sources into the line showing its price evolution.
+Finally, this transition explores one of the possible reasons for Californias decision to focus on solar energy from 2013 on. The second chart shows the price evolution for different energy sources. While wind energy has been consistently inexpensive, the price of solar power has fallen substantially over time. It even reached the price level of wind energy in 2013. Which implies that Californias focus on solar rather than wind energy might have economic reasons. The animation morphs the areas representing the share of different energy sources into the line showing its price evolution.
 
 
 
-## Design considerations
+## Experiment design
 
 ### Introduction
 
@@ -616,47 +622,22 @@ There is a fundamental tension when researching visualization design techniques 
 
 ![experiment-conflict](/Users/jonas/Desktop/P9/bericht/img/experiment-conflict.png)
 
-Obviously this mirrors the fundamental difference between disciplines that use quantitative methods and those where only qualitative methods can sensibly by applied. Both cases can be found in the visualization literature. Placed on the left side of the spectrum, research on visual perception like Franconeri et al.'s work on object tracking [@Franconeri-10:trackingmultiple]. On the other end of the spectrum, new design approaches to, for example, compare phylogenetic trees[@Munzner-03:treejuxtaposerscalable], can only be properly evaluated in context through qualitative usability studies. We have decided to situate our study somewhere in the middle between these two poles for two reasons: First, the study aims at providing generalizable insight. Second, the topic researched, namely narrative visualization, is high context as readers can only make sense of transitions in context (see >>Comparison). These consideration will make some of the following design decisions much clearer.
+Obviously this mirrors the fundamental difference between disciplines that use quantitative methods and those where only qualitative methods make sense. Both cases can be found in the visualization literature. Placed on the left side of the spectrum, we find research on visual perception like Franconeri et al.'s work on object tracking [@Franconeri-10:trackingmultiple]. On the other end of the spectrum, new design approaches to, for example, compare phylogenetic trees [@Munzner-03:treejuxtaposerscalable], can only be properly evaluated in context through qualitative usability studies. We have decided to situate our study somewhere in the middle between these two poles for two reasons: First, the study aims at providing generalizable insight on the strengths of animation. Second, the topic researched, namely narrative visualization, is high context as readers can only make sense of transitions in context (see >>Comparison). These consideration will make some of the following design decisions much clearer.
 
 
 
-### Story selection
+### Independent variable and conditions
 
-Selecting or creating the right story was one of the most delicate parts of the experiment design. The characters and the broader context needed to be familiar to a wide audience because visualization interpretation is highly dependent on context knowledge (TODO:source) and the experiment did not provide an introduction to the topic. While a narrative on paratransit (a special means of transport for disabled people in the U.S.) was planned to be included in early versions of the experiment, it was removed because the topic was not familiar to a large enough portion of people.
+The main concern of the experiment was finding differences between *animated* and *static* transitions which was the independent variable. We tried to counterbalance for some of the confounders like topic and visualization design by testing stories on two different topics with different designs. This has led us to a full latin-square within-subject design:
 
-The story also had to avoid showing conflicting views on highly controversial topics. We feared that implicit reader knowledge might interfere with the interpretation of the visualizations. We have seen this happen in both stories but it was less prevalent than we feared.
+| Condition 1                             | Condition 2                               | Condition 3                               | Condition 4                             |
+| --------------------------------------- | ----------------------------------------- | ----------------------------------------- | --------------------------------------- |
+| Mortality story with static transitions | Mortality story with animated transitions | Energy story with static transitions      | Energy story with animated transitions  |
+| Energy story with animated transitions  | Energy story with static transitions      | Mortality story with animated transitions | Mortality story with static transitions |
 
-Finally, the story needed to be told mainly through the visualizations. This turned out to be to most constraining of our considerations. In most examples we have found, the textual narrative was essential to understand the story.
+By its nature, each story consisted of a number of different transitions but we did not counterbalance them.
 
-We selected and modified the highly visual "How Americans die"-story by Matthew Klein  [@Klein-14:howamericans] to create the *mortality* narrative visualization. The *energy* story was built as a combination of multiple stories [@Popovich-18:howdoes, @Mahajan-18:plungingprices] found online.
-
-
-
-### Minimal textual narrative
-
-Textual narrative was excluded from the experiment because it is a huge confounder (TODO:source). In typical narrative visualization the story is presented through textual or audio narrative. The visualizations mostly serve to reinforce the point. But, when presented like this, relating the participants answers to any differences in the visualizations would be very difficult. On the other hand, narrative visualization is not interpretable without labels and other text. We decided to include the minimal amount of text necessary to interpret the individual charts in the form of labels and chart titles. On the other hand, any hints at a relationship between the two charts was excluded to not pollute this measure.
-
-### Visualization literacy
-
-Previous studies have found that the majority of people are unable to correctly interpret complex visualizations. (TODO:source) According to these authors, the "safe" visualizations are bar charts, line charts, scatterplots and maps. This finding is supported by our analysis of narrative visualization online who also almost exclusively use these simpler visualizations. But we did not want participants to fail to see relationships between the charts because the already failed at interpreting the individual charts correctly. The chart types used were therefore limited to line charts and area charts of time series. Pilot studies have shown that the line charts were correctly interpreted by all of the participants while the stacked area charts posed problems to some of them. The pilot led to the exclusion of slope charts because many participants had trouble with them.
-
-### Interactivity
-
-Another factor to control was interactivity. Prior work who has demonstrated positive effects of animated transitions often involved higher levels of interactivity compared to the static transitions. (TODO:source) But interactivity has been shown to have benefits in itself, for example for learning. (TODO:source) All transitions were therefore designed to be totally reader controlled. By scrolling down, readers could advance to the next chart, by scrolling up, they could go back to the previous chart. There are also discussions about the proper duration of animated transitions in the literature (TODO:sources), which we intended to avoid equally by making the animation duration controllable through scrolling. This is coherent with what we have found in our analysis of narrative visualization (>>Analysis of narrative visualizations)
-
-### Axis interpolation animation
-
-In the first pilot study, we have included axis interpolation for some transitions according to the principle laid out in. [@Heer-07:animatedtransitions] But they were excluded from the final experiment as they introduced another confounder and were not directly related to the research question. (TODO: check again) Additionally, we have found a variety of ways how axis interpolation was animated in our narrative visualization corpus. Something that would clearly be worthy of further research in a future study.
-
-### Interpolation
-
-![\label{design-interpolation}](/Users/jonas/Desktop/P9/bericht/img/Interpolation.png)
-
-For all interpolations, we implemented “slow-in-slow-out”-easing as recommended in [@Dragicevic-12:temporaldistortion] for all interpolations. For interpolating between colors, we used a perceptually uniform HCL-interpolation because it “intuitively looks right”. [@Sarifuddin-05:newperceptually] Notice in figure \ref{design-interpolation} how RGB and LAB tend to desaturate while HSL and CubeHelix tend to oversaturate, HCL strikes a good balance.
-
-
-
-## Measures
+### Dependent variables
 
 To test the hypotheses described in chapter (>>Research hypotheses), we have established a number of measures:
 
@@ -690,25 +671,102 @@ We considered **word count** to be another proxy for engagement. As the particip
 
 
 
+### Other factors considered
+
+#### Screen size
+
+To exclude effects that would result in differences in layout and element size, the experiment was designed for a fixed viewport size of 1280px × 720px. Participants with viewports that were smaller than this were blocked from the experiment.
+
+#### Browser capability
+
+Equally, participants with browsers that did not support the technologies we used for the animated transitions were blocked from participating in the experiment. This had the positive side-effect of equally blocking slower browsers.
+
+#### Performance
+
+For each mini-story viewed by a participant the drawing mean drawing performance was calculated. Participants with a drawing performance of less than 20fps were excluded from the analysis.
+
+#### Age
+
+In the final survey we asked the participants about their age to better understand the diversity of population that was participating in the experiment.
+
+#### Gender
+
+We equally asked the participants about their gender in the final survey to help us understand how divers our population was.
+
+#### Level of education
+
+Also asked in the final survey, this would be a rough proxy for visualization understanding. We assumed certain outliers might potentially be explained by a low level of education.
+
+#### Vision
+
+Equally, if the participants reported weak and uncorrected vision, we could potentially exclude them from the analysis if we found that the factor skewed the results.
+
+#### Colorblindness
+
+![experiment-colorblindness](/Users/jonas/Desktop/P9/bericht/img/experiment-colorblindness.png)
+
+A final criterion we considered for explaining outliers was color blindness. Instead of asking participants to report that they were colorblind, we presented them with three plates from the Ishihara colorblindness test  [@Ishihara-17:ishiharatest] which tested for the for the red-green blindness that affects about 8% of men and 0.4% of women. [@-19:colorblindness]
 
 
-False memories.
 
- This turned out not to be the case. A surprisingly large number of participants in the static condition, fell for these screenshots. We concluded that the visual memory of the charts was not as strong as we imagined and that they would therefore most probably not interfere with the understanding of the transition. (TODO:find data on that.)
+## Visualization design
 
+### Story selection
 
+Selecting or creating the right story was one of the most delicate parts of the experiment design. The characters and the broader context needed to be familiar to a wide audience because visualization interpretation is highly dependent on context knowledge (>>Narrative visualization) and the experiment did not provide an introduction to the topic. While a narrative on paratransit (a special means of transport for disabled people in the U.S.) was planned to be included in early versions of the experiment, it was removed because the topic was not known to a large portion of people.
 
- 
+The story also had to avoid highly controversial topics because we feared that implicit reader knowledge might interfere with the interpretation of the visualizations (>>Comparison). We have seen this happen in both stories but it was less prevalent than we feared.
 
-
-
-
-
+Finally, the story needed to be told mainly through the visualizations. This turned out to be to most constraining factior. In most examples we have found, that textual narrative was essential to understand the story. The story on the evolution of mortality[@Klein-14:howamericans] was chosen exactly because it contained very little text. The story about the energy sources was specifically created in a way that we hoped would be self-explanatory with very little text.
 
 
 
+### Minimal textual narrative
+
+Textual narrative was excluded from the experiment because it is a huge confounder (TODO:source). In typical narrative visualization the story is presented through textual or audio narrative. The visualizations mostly serve to reinforce the point. But, when presented like this, relating the participants answers to any differences in the visualizations would be very difficult. On the other hand, narrative visualization is impossible to interpret a visualization without labels or a title. We therefore decided to include labels as well as a chart title. But we made sure that there was nothing hinting at a relationship in any of these. The charts are completely self-contained and can be understood even without the surrounding narrative.
+
+### Visualization literacy
+
+![experiment-charttypes](/Users/jonas/Desktop/P9/bericht/img/experiment-charttypes.png)
+
+Previous studies have found that the majority of people are unable to correctly interpret complex visualizations. (TODO:source) According to these authors, the "safe" visualizations are bar charts, line charts, scatterplots and maps (>>see visualization literacy) This finding is supported by our analysis of narrative visualization online who also almost exclusively use these simpler visualizations (>>see a simple model) As we didn't want participants to fail because they couldn't read the single charts in the first place, we have decided to limit the experiment to line charts and stacked area charts. In our pilot studies, these chart types have been "safe", even though the stacked area chart posed problems to some of the participants in the experiment (>> see Results). One chart type that was excluded based on pilot data was the *slope chart*.
+
+### Design differences
+
+In order to counterbalance for effects
 
 
 
+### Interactivity
+
+Another factor to control was interactivity. Prior work who has demonstrated positive effects of animated transitions often involved higher levels of interactivity compared to the static transitions. (TODO:source) But interactivity has been shown to have benefits in itself, for example for learning. (TODO:source) All transitions were therefore designed to be totally reader controlled. By scrolling down, readers could advance to the next chart, by scrolling up, they could go back to the previous chart. There are also discussions about the proper duration of animated transitions in the literature (TODO:sources), which we intended to avoid equally by making the animation duration controllable through scrolling. This is coherent with what we have found in our analysis of narrative visualization (>>Analysis of narrative visualizations)
 
 
+
+### Animation design
+
+Three different kinds of animated transitions where used throughout the experiment which were all concerned with supporting *object constancy* in different scenarios: 
+
+#### One-to-many
+
+A good example for this is case is >>"Mortality D". There, the animation needed to convey that the "causes of death" in the second chart only concerned the "25–44" year old age group. This is done through a *staged transition* (>>see staged transition). We first highlight the "25–44" year old age group by hiding all the others and then splitting and morphing this character into the the different causes of death. The same approach was applied in >>"Mortality B",>> "Energy B" and ">>Energy C".
+
+#### Many to one
+
+This case can only be found in >>"Mortality A". Here the characters of the different age groups are being morphed into a single line that represents "Everyone". The other characters "Men" and "Women" in the second chart were subsequently shown.
+
+#### Many to many
+
+This case is well illustrated by >>"Energy D" where the characters representing different energy source where morphed to represent the price evolution instead of their proportion in energy production. Many-to-many animations are also being used in >>"Mortality C" and >>"Energy A".
+
+
+
+### Animated axis interpolation
+
+In the first pilot study, we have included axis interpolation for some transitions according to the principle laid out in. [@Heer-07:animatedtransitions] But they were excluded from the final experiment as they introduced another confounder and were not directly related to the research question. (TODO: check again) Additionally, we have found a variety of ways how axis interpolation was animated in our narrative visualization corpus. Something that would clearly be worthy of further research in a future study.
+
+### Interpolation
+
+![\label{design-interpolation}](/Users/jonas/Desktop/P9/bericht/img/Interpolation.png)
+
+For all interpolations, we implemented “slow-in-slow-out”-easing as recommended in [@Dragicevic-12:temporaldistortion] for all interpolations. For interpolating between colors, we used a perceptually uniform HCL-interpolation because it “intuitively looks right”. [@Sarifuddin-05:newperceptually] Notice in figure \ref{design-interpolation} how RGB and LAB tend to desaturate while HSL and CubeHelix tend to oversaturate, HCL strikes a good balance.
