@@ -628,7 +628,9 @@ Obviously this mirrors the fundamental difference between disciplines that use q
 
 ### Independent variable and conditions
 
-The main concern of the experiment was finding differences between *animated* and *static* transitions which was the independent variable. We tried to counterbalance for some of the confounders like topic and visualization design by testing stories on two different topics with different designs. This has led us to a full latin-square within-subject design:
+(TODO:illustration of the different transitions)
+
+The main concern of the experiment was finding differences between *animated* and *static* transitions which was the independent variable. We tried to counterbalance for some of the confounders like topic and visualization design by testing stories on two different topics with different designs. This has led us to the following within-subject design:
 
 | Condition 1                             | Condition 2                               | Condition 3                               | Condition 4                             |
 | --------------------------------------- | ----------------------------------------- | ----------------------------------------- | --------------------------------------- |
@@ -637,9 +639,15 @@ The main concern of the experiment was finding differences between *animated* an
 
 By its nature, each story consisted of a number of different transitions but we did not counterbalance them.
 
+Initially we intended to include another independent variable to more throughly test H4. This independent variable compared the design where only one chart is visible at a time (*superposed*) with a design where both charts are visible at the same time (*juxtaposed*). We hypothesized that animation would have help with object constancy but only when one chart was replaced with the other (*superposed*). We decided to exclude this variable from the current experiment because it would have required two more stories to do a within-subject design or an order of magnitude more participants to achieve the desired statistical power. For both of these we lacked resources. Because both pilot studies included the *juxtaposed* and *superposed* distinction, we can still contribute some observations which will also be presented in the (>>Results) section.
+
+Before each story, we added a screen that simply showed the initial chart of the first mini-story and asked the participant to report on her understanding of this single chart. This was to account for the fact that for mini-stores B to D, the participants had already seen the first chart in the previous mini-story and we did not want mini-story A to be an exception in this regard.
+
+
+
 ### Dependent variables
 
-To test the hypotheses described in chapter (>>Research hypotheses), we have established a number of measures:
+To test the hypotheses described in chapter (>>Research hypotheses), we have established a number of measures. A part of them was based on a set of six questions that were displayed at the end of each mini-story which is included in the annex.
 
 #### H1: Relationship
 
@@ -731,12 +739,6 @@ Textual narrative was excluded from the experiment because it is a huge confound
 
 Previous studies have found that the majority of people are unable to correctly interpret complex visualizations. (TODO:source) According to these authors, the "safe" visualizations are bar charts, line charts, scatterplots and maps (>>see visualization literacy) This finding is supported by our analysis of narrative visualization online who also almost exclusively use these simpler visualizations (>>see a simple model) As we didn't want participants to fail because they couldn't read the single charts in the first place, we have decided to limit the experiment to line charts and stacked area charts. In our pilot studies, these chart types have been "safe", even though the stacked area chart posed problems to some of the participants in the experiment (>> see Results). One chart type that was excluded based on pilot data was the *slope chart*.
 
-### Design differences
-
-In order to counterbalance for effects
-
-
-
 ### Interactivity
 
 Another factor to control was interactivity. Prior work who has demonstrated positive effects of animated transitions often involved higher levels of interactivity compared to the static transitions. (TODO:source) But interactivity has been shown to have benefits in itself, for example for learning. (TODO:source) All transitions were therefore designed to be totally reader controlled. By scrolling down, readers could advance to the next chart, by scrolling up, they could go back to the previous chart. There are also discussions about the proper duration of animated transitions in the literature (TODO:sources), which we intended to avoid equally by making the animation duration controllable through scrolling. This is coherent with what we have found in our analysis of narrative visualization (>>Analysis of narrative visualizations)
@@ -751,11 +753,11 @@ Three different kinds of animated transitions where used throughout the experime
 
 A good example for this is case is >>"Mortality D". There, the animation needed to convey that the "causes of death" in the second chart only concerned the "25–44" year old age group. This is done through a *staged transition* (>>see staged transition). We first highlight the "25–44" year old age group by hiding all the others and then splitting and morphing this character into the the different causes of death. The same approach was applied in >>"Mortality B",>> "Energy B" and ">>Energy C".
 
-#### Many to one
+#### Many-to-one
 
 This case can only be found in >>"Mortality A". Here the characters of the different age groups are being morphed into a single line that represents "Everyone". The other characters "Men" and "Women" in the second chart were subsequently shown.
 
-#### Many to many
+#### Many-to-many
 
 This case is well illustrated by >>"Energy D" where the characters representing different energy source where morphed to represent the price evolution instead of their proportion in energy production. Many-to-many animations are also being used in >>"Mortality C" and >>"Energy A".
 
@@ -770,3 +772,14 @@ In the first pilot study, we have included axis interpolation for some transitio
 ![\label{design-interpolation}](/Users/jonas/Desktop/P9/bericht/img/Interpolation.png)
 
 For all interpolations, we implemented “slow-in-slow-out”-easing as recommended in [@Dragicevic-12:temporaldistortion] for all interpolations. For interpolating between colors, we used a perceptually uniform HCL-interpolation because it “intuitively looks right”. [@Sarifuddin-05:newperceptually] Notice in figure \ref{design-interpolation} how RGB and LAB tend to desaturate while HSL and CubeHelix tend to oversaturate, HCL strikes a good balance.
+
+
+
+### Design process
+
+To refine the stories and their design, we have applied an iterative design process including user testing as described by Melican. [@Melican-04:userstudies] Each design iteration was implemented and presented to readers who had not previously seen the story. We observed them while they were making sense of the visualizations and asked them what they understood and where they experienced difficulties. While these tests have been very informal, they have again and again uncovered design flaws that were completely obvious in hindsight and led to the creation of a new version of the prototype. For example, during testing we have observed that readers typically scrolled much faster than we expected. Being the designers we knew that we needed to scroll slowly to properly see the transitions which was naturally not the case for the unsuspecting reader. Also the decision to exclude the slope chart or the decision to highlight the character initially/at the end in one-to-many/many-to-one animations where direct results of user testing
+
+
+
+## Results
+
