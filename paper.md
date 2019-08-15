@@ -6,7 +6,7 @@
 
 ## Explorative and explanative visualization
 
-![Munzner[@munzner:14] uses the words "discover" for explorative and "present" for explanative visualization](/Users/jonas/Library/Application Support/typora-user-images/image-20190213162158465.png)
+![Munzner[@Munzner-15:visualizationanalysis] uses the words "discover" for explorative and "present" for explanative visualization](/Users/jonas/Library/Application Support/typora-user-images/image-20190213162158465.png)
 
 The focus of early visualization research has mostly been on *explorative visualization* as opposed to *explanative visualization*. Explorative visualization deals with three major constraints: *system resources* like memory and processing power, *display capacity* given for example by screen size and pixel density, and finally human *perceptual* and *cognitive* like preattentive mechanisms or working memory. Most of the research visualization is therefore concerned with maximizing information throughput regarding these limitations.[@Munzner-15:visualizationanalysis, pp 14–15]
 
@@ -40,7 +40,7 @@ According to Stolper et al. [@Riche-18:datadrivenstorytelling, pp. 85] there are
 
 Segel et al. [@Segel-10:narrativevisualization] describe how such exploration is integrated into the typically linear structure of storytelling. The *martini glass* structure starts with a sequence of states and leaves the reader to explore a visualization at the end. The *drill down*  structure starts with exploration until the reader chooses a topic and is led through a sub-story sequentially. Finally, the *interactive slideshow* is structured by an overarching sequence of states and integrates exploration at every step.
 
-![The different structures of non-linear storytelling in narrative visualization described by Segel et al.[@Segel:2010uj]](/Users/jonas/Desktop/P9/bericht/img/storytelling structure.png)
+![The different structures of non-linear storytelling in narrative visualization described by Segel et al.[@Segel-10:narrativevisualization]](/Users/jonas/Desktop/P9/bericht/img/storytelling structure.png)
 
 Even though exploration is often a part of narrative visualization, it always contains one or many author-defined sequences of states that contain the major insights the author wants to convey. This intent to communicate a set story puts narrative visualization into the *explanative visualization* category discussed previously. Its quality is therefore measured by the readers understanding of the story the author wants to convey.
 
@@ -391,7 +391,7 @@ Animation has been portrayed to provide many benefits to UX-design in general an
 
 To understand why designers might think that animation helps in these specific circumstances, we have mapped some lower level "strengths" of animation described in Heer et al. [@Heer-07:animatedtransitions] to all each of the purposes (see figure \ref{animation-purposes}).
 
-![The purposes of animation found by Chevalier et al. [@Chevalier:2014] each employ one or more of the strenghts of animation.\label{animation-purposes}](/Users/jonas/Desktop/P9/bericht/img/animation-purposes.png)
+![The purposes of animation found by Chevalier et al. [@Chevalier-14:notsostaggeringeffect] each employ one or more of the strenghts of animation.\label{animation-purposes}](/Users/jonas/Desktop/P9/bericht/img/animation-purposes.png)
 
 
 
@@ -419,7 +419,7 @@ Similar to color or shape, motion can be used to encode data. Although the preci
 
 ## Congruence
 
-![Congruence as defined by Tversky et al. [@Tversky:2002] means that the representation should correspond to the concepts that are conveyed. Apprehension means that the representation should be accurately perceived.](/Users/jonas/Desktop/P9/bericht/img/congruence-apprehension.png)
+![Congruence as defined by Tversky et al. [@Tversky-02:animationcan] means that the representation should correspond to the concepts that are conveyed. Apprehension means that the representation should be accurately perceived.](/Users/jonas/Desktop/P9/bericht/img/congruence-apprehension.png)
 
 The question if animation is a natural fit for certain types of transitions has been described as the principle of *congruence* in  [@Tversky-02:animationcan, p. 247]:
 
@@ -478,25 +478,25 @@ Multiple design approaches have been proposed for better apprehension.
 
 Staggered animation delays the start time animations incrementally for some objects. An example: out of 7 objects, 4 will start to move right away, 3 other objects will start to move only a bit later. The delay between the starts is called *dwell*. A dwell of zero means no staggering.
 
-Staggered animation has been proposed to *reduce occlusion* as well as *complexity* during animation and therefore lead to a higher tracking performance  [@Heer:2007]  but the effect has been shown to be negligible. [@Chevalier:2014]
+Staggered animation has been proposed to *reduce occlusion* as well as *complexity* during animation and therefore lead to a higher tracking performance  [@Heer-07:animatedtransitions]  but the effect has been shown to be negligible. [@Chevalier-14:notsostaggeringeffect]
 
 ### Staged animation
 
 Staged animation splits complex animations between multiple visual variables into stages. An animation the interpolates between positions as well as between two colors, might, for example, be split into two animation stages. One where the objects move from position a to position b. Another, where they change color.
 
-Heer et al. explicitly recommend the use of staged animation [@Heer:2007] even though they found only modest benefits. In situations where staging led to complex and long animations, the authors found it even detrimental for tracking performance.
+Heer et al. explicitly recommend the use of staged animation [@Heer-07:animatedtransitions] even though they found only modest benefits. In situations where staging led to complex and long animations, the authors found it even detrimental for tracking performance.
 
 ### Animation duration
 
-Multiple authors observe that the duration of animation has a major impact on perception. [@Shanmugasundaram:2007] Animation that is too slow has been shown to be strongly disliked by readers.[@Baudisch:2006] Others argue that very fast animation might lead to higher error rates [@Heer:2007]. Interestingly, others have shown that in situations where the distances between objects remained large enough during animation, higher speeds had no effect on tracking performance. [@Franconeri:2010ela] Other authors observe that faster animations might have the benefit of reducing *change blindness*. [@Fischer:2010iw], [@Shanmugasundaram:2008]
+Multiple authors observe that the duration of animation has a major impact on perception. [@Shanmugasundaram-07:cansmooth] Animation that is too slow has been shown to be strongly disliked by readers.[@Baudisch-06:phosphorexplaining] Others argue that very fast animation might lead to higher error rates [@Heer-07:animatedtransitions]. Interestingly, others have shown that in situations where the distances between objects remained large enough during animation, higher speeds had no effect on tracking performance. [@Franconeri:2010ela] Other authors observe that faster animations might have the benefit of reducing *change blindness*. [@Fischer:2010iw], [@Shanmugasundaram:2008]
 
 ### Direct manipulation
 
-Readers typically perform better at recall and problem solving, when they can control animation themselves. Multiple authors have shown this for cases where readers could start and stop animated transitions [@Chan:2005vx],[@Hasler:2007]. But here too, it is hard to separate different effects. Tversky et al. point out, that interaction has been shown to benefit learning in itself and just happens to be coupled with animation often. [@Tversky:2002]
+Readers typically perform better at recall and problem solving, when they can control animation themselves. Multiple authors have shown this for cases where readers could start and stop animated transitions [@Chan:2005vx],[@Hasler:2007]. But here too, it is hard to separate different effects. Tversky et al. point out, that interaction has been shown to benefit learning in itself and just happens to be coupled with animation often. [@Tversky-02:animationcan]
 
 ### Easing
 
-John Lasseter in his classic paper on the principles of computer animation describes that animators developed a preference for "slow-in-slow-out" over linear easing over time. This recommendation has been confirmed in more formal experiments. [@Dragicevic:2012]
+John Lasseter in his classic paper on the principles of computer animation describes that animators developed a preference for "slow-in-slow-out" over linear easing over time. This recommendation has been confirmed in more formal experiments. [@Dragicevic-12:temporaldistortion]
 
 Most of these examples show how perceptual properties, which are often not intuitive in their most basic forms, interact to form phenomena which are very hard to generalize in real-world applications.
 
@@ -782,4 +782,121 @@ To refine the stories and their design, we have applied an iterative design proc
 
 
 ## Results
+
+
+
+
+
+
+
+# Implementation
+
+In its essence, the mathematics of visualization is very simple. It is only concerned with creating functions that map values from the data domain to screen pixels:
+
+$$ \mathit{f}: Data → Pixels  $$
+
+Unfortunately, this function $$\mathit{f}$$ is not injective which leads to some problems that will be discussed later on in this part.
+
+## Requirements
+
+#### Online narrative visualization
+
+Much the specification of the experiment has already been described in a previous section (>>Experiment). Essentially, we needed a way to build web-based narrative visualizations with animated transitions for the experiment. It was therefore an obvious choice to use the common HTML, CSS , SVG and ECMAScript stack for the implementation; also because the author is familiar with it. For increased programmer convenience through type checks, we have used TypeScript to generate the final ECMAScript.
+
+The D3 library [@Bostock-11:datadrivendocuments] was used to generate the final SVG-code from the data. D3 was chosen because, again, the author is familiar with it; it has become the de-facto standard for data visualization on the web; and it is general enough to stay out of the way when a custom implementation is preferable.
+
+#### Rapid prototyping
+
+Because the stories and the design were developed alongside with the implementation, we wanted a system the would allow us to quickly test different design choices or modify the story. We therefore decided to build an application generator the would interpret a domain specific language (DSL) perfectly tailored to our needs. An in depth-depth discussion can be found in section (>>Declarative language for narrative visualization)
+
+#### Limited range of chart types
+
+As discussed in section (>>Visualization design/Visualization literacy), the range of charts that the general public easily understands is very limited. We therefore limited our ambitions to a system that would be able to generate simple 2D chart types like the line charts and stacked are charts mentioned in section  (>>Visualization design/Visualization literacy).
+
+#### Transitions focused on characters
+
+Based on the discussion on *object constancy* (section >>Animation/Object constancy) and the findings in (>>Techniques), we decided to base all of the animated transitions on the concept of *characters*.
+
+#### Performance
+
+Performance needed to be good enough to not impair the perception of the animated transitions. We made some informal user tests to find out what would be an acceptable performance. For this, we presented to versions of the same narrative visualization to participants (n=4). One which presented the animation at about 15 frames per second (fps), the other at about 40 fps. After much consideration, two of the subject correctly identified the slow animation. We therefore gave it some margin and set the lower performance limit to 20 fps which is in line with the 25 fps typically used for movies.
+
+#### Reliable logging of user interaction and answers
+
+Finally, the implementation needed to provide reliable way to collect data on scrolling (H4) and make sure that all the answers were transmitted and that everything was reliably connected to the right participant.
+
+
+
+## Prior art
+
+Visualization is an obvious candidate for domain specific languages and many approaches to configuring visualization exist. [@Wickham-16:ggplot2elegant, @Heer-10:declarativelanguage, @Satyanarayan-16:vegalitegrammar] The reason for this prevalence is that there is a limited number of chart types that are being used over and over again. A typical number is something between 40 [@Holtz:dataviz] and 150 [@:dataviz] DSLs are especially well suited for problems that are encountered repeatedly and they make them quicker to solve [@Mernik-05:whenhow] 
+
+![code-vega.pdf](img/code-vega.pdf) 
+
+One very recent example of a declarative language for visualization on the web is Vega-Lite. [@Satyanarayan-16:vegalitegrammar] Vega-Lite's DSL builds on JSON and on the concept of the "Grammar of Graphics" (TODO:citation). In addition, it provides an elegant way to configure interactions within its syntax. As you will see, this served as a heavy inspiration for our own DSL.
+
+
+
+* [@Satyanarayan:vegalitegrammar]: Introduced interaction to the grammar of graphics
+* [@Heer-10:declarativelanguage]: Separate specification from execution → simplify development, enable unobtrusive optimization. They already have
+* [@Bostock-11:datadrivendocuments]: 
+
+
+
+
+
+## Declarative syntax
+
+### Anatomy of a chart
+
+![code-chart adsf](img/code-chart-anatomy.pdf)
+
+
+
+ ![code-chart adsf](img/code-chart.pdf)
+
+Some text is here waiting to be filled in.
+
+
+
+ ![code-characters.pdf](img/code-characters.pdf) 
+
+
+
+### Anatomy of a transitions
+
+ ![code-transition](img/code-transition.pdf) 
+
+### Directing all of them
+
+ ![Director asdfa asdf asdf asdf asdf](img/code-director.pdf) 
+
+
+
+### Pipeline
+
+* Interpreting the chart, transition, and director definitions
+* Generating the charts
+  * Stage: the drawing canvas
+  * Visual elements: Axes, Annotations, Characters
+  * Each visual element has a draw()-method which will draw itself into the canvas
+* Generate transitions
+  * Transitions generate Axes, Annotations and Characters that have a draw method that takes an additional parameter t which will interpolate the axes, shapes, label positions or opacity between the two charts
+* Bind t of transitions to the advancement in its step
+
+
+
+### Styling
+
+* Layout is defined by the surrounding html
+* Styling is controlled through CSS
+
+
+
+### Optimization
+
+* requestAnimation frame
+* interpolation algorithm
+* caching and pre-calculating values (don't redraw if nothing has changed)
+* parallelization [@Heer-10:declarativelanguage]
 
