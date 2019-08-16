@@ -18,19 +18,19 @@ Very little is known about how novices try to make sense of visualizations they 
 
 Exceptions exist, where very complex and creative visualizations seem to be liked by readers [@Lupi-:visualdata]. We hypothesize that these are probably due to a shift in the readers' goals. Instead of trying to understand the story, the readers now challenge themselves to understand the mechanics of the visualization. [@Manjoo-13:wholelot],  This would correspond to the third type of visualization, who are primarily *enjoyed* for their artistic appeal.[@Munzner-15:visualizationanalysis, p. 48]
 
-Based on this observation, textbooks, and newspapers are typically rather conservative when using visualization, defaulting to well-known idioms. This stance is supported by a study from Boy et al. [@Boy-15:suggestedinteractivity]. The authors asked participants to answer a question based on a text and an interactive visualization. In their experiment it was quicker to find the answer in the interactive visualization. Yet, only 30% of the participants ended up using it. The proportion did not change when they added cues like an animated mouse-cursor hovering over the visualization or when the visualization was pulsating. The authors also found, that a so called *feedforward*-cue led to higher rates of interaction. A *feedforward*-cue displays the outcome of an interaction to the reader. In the case of Boy et al. it was a mouse cursor hovering over the visualization which would highlight the hovered regions.
+Based on this observation, textbooks, and newspapers are typically rather conservative when using visualization, defaulting to well-known idioms. This stance is supported by a study from Boy et al. [@Boy-15:suggestedinteractivity]. The authors asked participants to answer questions based on a text and an interactive visualization. The experiment was set up so that it was quicker to find the right answer through interacting with the visualization. Yet, only 30% of the participants ended up using it. The proportion did not change when they added cues like an animated mouse-cursor hovering over the visualization or when the visualization was pulsating. 
 
-Similarly, some authors have started to use storytelling techniques to demonstrate how a visualization could be explored. [@Parlapiano-14:howrecession] Or to progressively build topic knowledge and explain complex visualization idioms. [@Dworkin-18:whytech] The latter approach also finds some support in a study by Ruchikachorn et al. [@Ruchikachorn-15:learningvisualizations]. Here the authors started with simple visualizations and built more complex idioms step-by-step which led to higher understanding of the complex idioms.
+On the other hand, the authors found that  *feedforward*-cues led to higher rates of interaction. A *feedforward*-cue displays the outcome of an interaction to the reader. For example through an animation of a mouse cursor that was showing how the visualization responds to interaction.
 
-![image-20190807110218952](/Users/jonas/Library/Application Support/typora-user-images/image-20190807110218952.png)
+A much more nuanced way to implement *feedforwarding* is to use storytelling techniques to to give an example of how a visualization could be explored. [@Parlapiano-14:howrecession] Storytelling also helps to progressively build topic knowledge and explain complex visualization idioms. [@Dworkin-18:whytech] 
 
 ## Narrative visualization
 
-This idea, of using storytelling techniques to introduce powerful visualization idioms to an audience with low visualization literacy, has led to the formation of a branch of research in *narrative visualization* [@Segel-10:narrativevisualization, @Hullman-13:deeperunderstanding, @Satyanarayan-14:authoringnarrative] Narrative visualization follows in many aspects the same principles as other, established means of storytelling. Multiple publications have explored the usage of these principles in the context of narrative visualization. Examples being videos [@Amini-15:understandingdata], comics [@Bach-16:tellingstories] or narrated sketching [@Lee-13:sketchstorytelling].
+The idea of using storytelling techniques to introduce powerful visualization idioms to an audience with low visualization literacy, has led to the formation of a branch of research in *narrative visualization* [@Segel-10:narrativevisualization, @Hullman-13:deeperunderstanding, @Satyanarayan-14:authoringnarrative] Narrative visualization follows the same principles as other, established means of storytelling  in many aspects. Multiple publications have explored the use of narrative visualization in the form of videos [@Amini-15:understandingdata], comics [@Bach-16:tellingstories] or narrated sketching [@Lee-13:sketchstorytelling].
 
 ![The Washington Post uses annotation extensively to show how smaller counties had a tendency to swing to the right while cities were swinging left between 2004 and 2016. [@Gamio-16:urbanrural] \label{narrative-annotation}](/Users/jonas/Desktop/P9/bericht/img/narrative-annotation.png)
 
-According to Stolper et al. [@Riche-18:datadrivenstorytelling, pp. 85] there are four characteristics that can be observed in narrative visualizations: they **narrate and comment** a visualization through text, audio and annotations (figure \ref{narrative-annotation}); they **link separate states** through color, animation and/or interaction; they provide **navigation aids** like timelines, maps, breadcrumbs, etc. (figure \ref{narrative-navigation}); and they provide **controlled exploration**  through embedded interactive visualization or dynamic queries.
+According to Stolper et al. [@Riche-18:datadrivenstorytelling, pp. 85] there are four characteristics to narrative visualization: they **narrate and comment** a visualization through text, audio and annotations (figure \ref{narrative-annotation}); they **link separate states** through color, animation and/or interaction; they provide **navigation aids** like timelines, maps, breadcrumbs, etc. (figure \ref{narrative-navigation}); and they provide **controlled exploration**  through embedded interactive visualization or dynamic queries.
 
 ![In this New York Times story about rural Russia[@Barry-13:russialeft], a map is used as a navigational aid. \label{narrative-navigation}](/Users/jonas/Desktop/P9/bericht/img/narrative-navigation.png)
 
@@ -837,6 +837,8 @@ Finally, the implementation needed to provide reliable way to collect data on sc
 
 #### Level of abstraction
 
+(TODO:chart that shows different visualization tools and their level of abstraction)
+
 Visualization is an obvious candidate for domain specific languages and many approaches to configuring visualization exist. [@Wickham-16:ggplot2elegant, @Heer-10:declarativelanguage, @Satyanarayan-16:vegalitegrammar] The reason for this prevalence is that there is a limited number of chart types that are being used over and over again. A typical number is something between 40 [@Holtz:dataviz] and 150 [@:dataviz] DSLs are especially well suited for problems that are encountered repeatedly and they make them quicker to solve [@Mernik-05:whenhow] 
 
 ![code-vega.pdf](img/code-vega.pdf) 
@@ -972,10 +974,35 @@ For all interpolations we have used *slow-in-slow-out* easing as recommended by 
 
 
 
-### Optimization
+### Performance
 
-* requestAnimation frame
-* interpolation algorithm
-* caching and pre-calculating values (don't redraw if nothing has changed)
-* parallelization [@Heer-10:declarativelanguage]
+![\label{code-framerate}](img/code-framerate.png)
+
+Animation on the web typically has very mediocre performance. But there are a few strategies make it faster which we will present briefly.
+
+#### Synchronize repaint timing
+
+There is no connection between the time when a "scroll" event is being fired on the DOM and when the browser is ready to repaint the page. But thanks to the `requestAnimationFrame`-method, we can register a callback-function that the browser will execute before the next repaint. In this callback, the director checks if the vertical position of the viewport has changed since the last call. If so, the DOM for this position is recalculated. Thanks to this, such a recalculation only ever happens when it will actually be painted by the browser. Typically, this is at 60fps but the rate is automatically toggled when calculations and repainting take more time. This approach has been implemented
+
+#### Conditional redrawing
+
+Every component is responsible for drawing itself. `draw`methods could therefore easily be modified to only manipulate the DOM when something has changed (for example based on a "dirty"-flag). Based on our performance tests, we strongly suspect that browsers already implement this mechanism themselves and don't repaint elements whose subtree has simply been replaced with an identical subtree. We therefore did not implement this approach.
+
+#### Parameter-based caching
+
+Because the system is highly decoupled, expensive calculations could easily be cached based on the input parameters. One very good candidate for this is the calculation of additional points for SVG shapes that will be interpolated. Because in our tests, the frame rates have always been much better then our baseline of 20fps, we did not take the time to implement this optimization. This decision was unfortunate because about 20% of the sessions with animated transition turned out to have a frame rate that was below this baseline (see figure \ref{code-framerate})
+
+#### Canvas
+
+Finally, we could handle the rendering of the pixels ourselves by using HTML `canvas` instead of SVG. While canvas has a more or less linear rendering performance, SVG gets exponentially slower with the number of elements that need to be rendered. Typically, this only starts to matter when 1000+ elements need to be rendered. A number that is far greater than the handful of characters, labels and lines that were needed in our visualization.
+
+
+
+### Logging
+
+Every interaction with the experiment was logged. Whenever the director detected scrolling, a log entry was created. Every keystroke too was recorded. And naturally, the participants answers where recorded. Logging is also the directors responsibility. Log entries are appended to a list which is sent to a server every 5 seconds as a CSV to minimize the potential for data loss. The data is also sent, when the participant submits the answer form.
+
+Every entry stores a timestamp, an identifier for the participant and for the current mini-story, the URL, the scroll position and infos about the participants browser like window size or user agent (>> full documentation in supplementary material)
+
+
 
