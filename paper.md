@@ -185,6 +185,10 @@ We believe that none of the taxonomies described in section >>Transitions approp
 
 We therefore propose a synthesis of these three models that directly links transitions to  *elements in working memory* described by cognitive load theory. We call these *characters*, *attributes* and *context*.
 
+
+
+
+
 ##  A simplified model of how readers perceive transitions
 
 (TODO:graphic)
@@ -204,6 +208,8 @@ This classification roughly mirror Cohn's [@Cohn-10:limitstime] categories of *s
 
 
 ## Method
+
+Similar to Hullman (42) (TODO) and [@Segel-10:narrativevisualization] (58)
 
 ### Selection of examples
 
@@ -829,16 +835,59 @@ Finally, the implementation needed to provide reliable way to collect data on sc
 
 ## Prior art
 
+#### Level of abstraction
+
 Visualization is an obvious candidate for domain specific languages and many approaches to configuring visualization exist. [@Wickham-16:ggplot2elegant, @Heer-10:declarativelanguage, @Satyanarayan-16:vegalitegrammar] The reason for this prevalence is that there is a limited number of chart types that are being used over and over again. A typical number is something between 40 [@Holtz:dataviz] and 150 [@:dataviz] DSLs are especially well suited for problems that are encountered repeatedly and they make them quicker to solve [@Mernik-05:whenhow] 
 
 ![code-vega.pdf](img/code-vega.pdf) 
 
-One very recent example of a declarative language for visualization on the web is Vega-Lite. [@Satyanarayan-16:vegalitegrammar] Vega-Lite's DSL builds on JSON and on the concept of the "Grammar of Graphics" (TODO:citation). In addition, it provides an elegant way to configure interactions within its syntax. As you will see, this served as a heavy inspiration for our own DSL.
+One very recent example of a declarative language for visualization on the web is Vega-Lite. [@Satyanarayan-16:vegalitegrammar] Vega-Lite's DSL builds on JSON and on the concept of the "Grammar of Graphics" (TODO:citation). As you will see in (>>declarative syntax), Vega-Lite provided heavy inspiration for the development of the chart creation DSL described in (>>Anatomy of a chart). DSLs for visualizaiton specification have not been a topic of visualization research practice and design from the start. A 2006 paper by Heer and Agrawala that reviews common design patterns in visualization software only mentions DSLs for data transformation but not for visualization specification. [@Heer-06:softwaredesign].
 
 
 
-* [@Satyanarayan:vegalitegrammar]: Introduced interaction to the grammar of graphics
-* [@Heer-10:declarativelanguage]: Separate specification from execution → simplify development, enable unobtrusive optimization. They already have
+#### Animated transitions between charts
+
+Even less research has been conducted on how to best describe animated transitions. Heer and Bostock, who later went to create the before mentioned D3 [@Bostock-11:datadrivendocuments], have described one approach in an earlier paper. [@Heer-10:declarativelanguage] Their system is based on marks like lines and bars. To create animations, the author explicitly defines start and end states of a mark, as well as a duration and the system creates the necessary interpolation states and a time-based redraw. But it seems that the authors merely look at it as a toy.
+
+Most close to our problem domain is Ellipsis. An authoring tool for narrative visualization. [@Satyanarayan-14:authoringnarrative] JavaScript based DSL.
+
+Decouples narrative structure and visualization for easier authoring. [@Satyanarayan-14:authoringnarrative]
+
+Uses the p-set model to parametrize visualization and make it stateful. (we only have one parameter: scroll position, would be easy to introduce clicks or other)
+
+They observe tight coupling between narrative and visualization implementation. (states)
+
+We adopted their core abstractions of scenes, annotations and interaction triggers. We contribute the idea of characters.
+
+Elipsis does not allow to animate transitions between two independently declared visualizations. That's why we chose to interpolate between the character shapes instead of visualization parameters.[@Satyanarayan-14:authoringnarrative]
+
+
+
+Degree of abstraction
+
+1. Graphical librarires
+2. Declarative language
+3. Chart typologies with pre-defined templates [@Mei-18:designspace]
+
+
+
+There is no declarative framework for explanative visualization [@Mei-18:designspace]
+
+
+
+An earlier paper byThis shows that DSLs for visualization specification are not that old and probably still have some research potential.
+
+
+
+### Annotations
+
+
+
+
+
+
+
+* : Separate specification from execution → simplify development, enable unobtrusive optimization. They already have
 * [@Bostock-11:datadrivendocuments]: 
 
 
@@ -847,49 +896,79 @@ One very recent example of a declarative language for visualization on the web i
 
 ## Declarative syntax
 
+Annotations are character or scene bound.
+
+Tradeoff between convention and configuration
+
+Reasonable defaults, configuration if necessary.
+
 ### Anatomy of a chart
 
-![code-chart adsf](img/code-chart-anatomy.pdf)
+![code-chart adsf](img/code-chart.pdf)
+
+- ![](img/1.pdf) Each chart has a `name` which is used to identify it. If there is a HTML element with an ID that corresponds to the chart it will be used to render the chart there. The chart dimensions as well es its position on the page are thus completely defined by the layout of the surrounding page.
+- ![](img/2.pdf) The `type` defines the basic chart type (>>level of abstraction) that should be used. Behind the scenes, each chart type is implemented as a subclass of an abstract `Chart`-class that implements its own `draw`-method.
+- ![](img/3.pdf)The path to a `CSV`-file with data. We don't implement any kind of data transformation functionality and expect the data to be in the right format. This is because tool is presentation-oriented, so there is no need to explore the data through filtering or other transformations.
+- ![](img/4.pdf)The chart title is implemented as an `annotation`. Annotations can be bound to different elements throughout the DSL and positioned relative to their `start` or `end` through the `offset`-property.
+- ![](img/5.pdf)In the axis-definitions, different attributes (`field`) of the data are mapped to different axes. The axes are identified by their `name` which can differ depending on the chart `type`. Slope charts for example have three axes:  `x`, `from` and `to`.  The advantage of defining each axis explicitly like this is, that again `annotations` can be bound to them.
+- ![](img/6.pdf)The `type`-property of an axis defines how that data should be parsed. Is the data domain continuous numbers (`quantitative`), ordered discrete values (`ordinal`), unordered discrete values (`categorical`), or timestamps (`temporal`). [@Munzner-15:visualizationanalysis, @Satyanarayan-16:vegalitegrammar] The `domain`-property defines the corresponding start and end values of the axis. Often, the minimal and maximal values in the data are simply used. When using visualization for storytelling, sometimes that author wants values to "overshoot" the axis, or to fix the axis at a certain domain for dramatic or clarity reasons, which is why we give allow explicit control of this parameter.
+- ![](img/7.pdf)Based on the model developed in section (>>Simplified model), we look at narrative visualization through the lense of characters. This is why our DSL contains an explicit declaration of the whole `cast` of characters in each chart. We assume that individual characters are identified by a `categorical` attribute in the data which is defined in the `field`-property.
+- ![](img/8.pdf)Because characters have such a high importance in this view, they are defined individually:
+
+![code-characters.pdf](img/code-characters.pdf)
+
+- ![](img/8.1.pdf)In the three chart types we have implemented, characters are uniformly distinguished by `color` which is also what is typically used in narrative visualization. Other options like symbols or textures are naturally imaginable. The necessary data to `draw` each character is found via its `name` property.
+- ![](img/8.2.pdf) Shows an example of the use of multiple `annotations`. Two are used to indicate the initial and the final share of each energy source, the third one to label the energy source itself. This approach has proven to provide a lot of flexibility. Especially when coupled with CSS `class`es that make individual styling of characters possible.
+- ![](img/8.3.pdf)Such flexibility comes at the price of verbosity as each character needs to be specified individually. 
+- ![](img/9.pdf)Finally, some basic visual properties of the chart can be defined in the `design`-section of the specification.
 
 
 
- ![code-chart adsf](img/code-chart.pdf)
+### Anatomy of a transition
 
-Some text is here waiting to be filled in.
+![code-transition](img/code-transition.pdf) 
+
+- ![](img/1.pdf) A transition is not treated very differently from a chart. It also has a `name` and is rendered into an HTML element with the corresponding ID.
+- ![](img/2.pdf)+ ![](img/3.pdf) But such a transition chart is defined by the charts it transitions between in the `from` and `to` property.
+- ![](img/4.pdf)In our analysis of narrative visualization (>>a simplified model) we have concluded, that `morphing` is only sensible for transitions between charts that share at least one character. In the other cases, we use a `fading` transition.
+- ![](img/5.pdf)While some transition types like "Explore attributes" have a one-to-one relationship between the characters of the two charts, transition types like "Split characters" and "Merge characters" will have a one-to-many or many-to-one relationship. This is modeled by mapping the same character in the `from` property to multiple characters in the `to` property or the inverse.
+- ![](img/6.pdf) The system also supports axis interpolation, even though we did not use it in the end. Any axis in the initial chart can be mapped to any axis in the final chart. This makes especially "Reconfigure" transitions possible.
 
 
-
- ![code-characters.pdf](img/code-characters.pdf) 
-
-
-
-### Anatomy of a transitions
-
- ![code-transition](img/code-transition.pdf) 
 
 ### Directing all of them
 
- ![Director asdfa asdf asdf asdf asdf](img/code-director.pdf) 
+In the experiment, the visibility of charts and the animations was solely controlled by scrolling. We therefore introduced another structure which we have called the `director` to continue with the cinematographic vocabulary. It is responsible to show and hide the appropriate charts and animations at the given scroll positions.
+
+![Director asdfa asdf asdf asdf asdf](img/code-director.pdf)
+
+* ![](img/1.pdf) The directors `name`is used in the experiment to identify the mini-story and the configuration the participant was looking at.
+* ![](img/2.pdf) A `type` property was introduced to account for some differences in behavior between *juxtaposed* and *superposed* layouts. Namely, if the initial chart should be hidden or not.
+* ![](img/3.pdf) The steps define a range of scroll positions and a chart or transition that should be displayed within this range.
 
 
 
-### Pipeline
+### Program generation
 
-* Interpreting the chart, transition, and director definitions
-* Generating the charts
-  * Stage: the drawing canvas
-  * Visual elements: Axes, Annotations, Characters
-  * Each visual element has a draw()-method which will draw itself into the canvas
-* Generate transitions
-  * Transitions generate Axes, Annotations and Characters that have a draw method that takes an additional parameter t which will interpolate the axes, shapes, label positions or opacity between the two charts
-* Bind t of transitions to the advancement in its step
+1. In a first step, the system generates objects for all the charts with their axes, characters and annotations from the specification. Wherever something is not defined, it assumes a sensible default if possible.
+2. Only then, the system generates the objects who represent the transitions which reference the chart objects.
+3. Finally, a director object is generated with references to all the charts and transitions. The director continually checks if the viewer has been scrolling.
+4. When the scroll position changes, the director calls the `draw`-method on the charts/transitions that should be visible at this position. It calls the `hide`-method on all the others. If at the current position, a transition should be displayed, the `draw`-method an additional `position` parameter between 0 and 1 is set to indicate the state of the interpolation.
+5. This sets in motion a rendering cascade where every object also calls the `draw` methods of its children to render the final display. This corresponds to the *render*-pattern described in  [@Heer-06:softwaredesign])
 
 
 
-### Styling
+### Interpolation
 
-* Layout is defined by the surrounding html
-* Styling is controlled through CSS
+A few remarks on how we have handled the interpolation described above. While previous work has usually interpolated between visualization parameters [@Heer-10:declarativelanguage, @Satyanarayan-14:authoringnarrative], our system interpolates between SVG-shapes. Thanks to this, our system can generate animated transitions between two completely different visualizations. The only condition is that a character needs to be represented by a single, closed SVG shape, a moderate constraint in our eyes. Other system only permit transitions "within" the same chart.
+
+One problem when interpolating directly between SVG-shapes is that they need to have a one-to-one correspondence between their anchor points. If this is not the case, there needs to be some method to add points the simple shape. For this we have used an algorithm that splits segments of the simpler shape until it both shapes have the same amount of anchors. This has produced visually good results in all our cases. But it had the downside of making the calculation of interpolated states slower.
+
+![\label{interpolation}](img/Interpolation-5967203.png)
+
+For interpolating between colors, we used a perceptually uniform HCL-interpolation because it "intuitively looks right".[@Sarifuddin:2005] Notice in figure \ref{interpolation} how RGB and LAB tend to desaturate while HSL and CubeHelix tend to oversaturate, HCL strikes a good balance.
+
+For all interpolations we have used *slow-in-slow-out* easing as recommended by previous authors. [@Dragicevic:2012]
 
 
 
