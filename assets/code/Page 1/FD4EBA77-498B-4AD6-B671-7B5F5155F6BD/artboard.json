@@ -1,0 +1,103 @@
+{
+  "_class": "artboard",
+  "backgroundColor": {
+    "_class": "color",
+    "alpha": 1,
+    "blue": 1,
+    "do_objectID": "E203828F-BD2F-4985-93E7-08EF7C4716F9",
+    "green": 1,
+    "red": 1
+  },
+  "booleanOperation": -1,
+  "clippingMaskMode": 0,
+  "do_objectID": "FD4EBA77-498B-4AD6-B671-7B5F5155F6BD",
+  "exportOptions": {
+    "_class": "exportOptions",
+    "do_objectID": "5D4C4B54-4784-47D0-88D0-EB0560C1117D",
+    "exportFormats": [
+      {
+        "_class": "exportFormat",
+        "absoluteSize": 0,
+        "fileFormat": "pdf",
+        "name": "",
+        "namingScheme": 0,
+        "scale": 1,
+        "visibleScaleType": 0
+      }
+    ],
+    "includedLayerIds": [
+    ],
+    "layerOptions": 0,
+    "shouldTrim": false
+  },
+  "frame": {
+    "_class": "rect",
+    "constrainProportions": false,
+    "do_objectID": "8A4DB34D-36EF-4AB5-B8C0-D7E5C7B4BC0F",
+    "height": 12,
+    "width": 16,
+    "x": 556,
+    "y": 1439
+  },
+  "groupLayout": {
+    "_class": "MSImmutableFreeformGroupLayout",
+    "do_objectID": "22AAB9B1-E15E-48EB-89B0-2B559DCA55B1"
+  },
+  "hasBackgroundColor": false,
+  "hasClickThrough": false,
+  "hasClippingMask": false,
+  "horizontalRulerData": {
+    "_class": "rulerData",
+    "base": 0,
+    "do_objectID": "7CF7E41F-D033-410D-B654-B24780BC6984",
+    "guides": [
+    ]
+  },
+  "includeBackgroundColorInExport": true,
+  "includeInCloudUpload": true,
+  "isFixedToViewport": false,
+  "isFlippedHorizontal": false,
+  "isFlippedVertical": false,
+  "isFlowHome": false,
+  "isLocked": false,
+  "isVisible": true,
+  "layerListExpandedType": 0,
+  "layers": [
+    {
+      "class": "symbolInstance",
+      "id": "1318C276-264D-4F8B-A8E0-913342AF5C5C"
+    }
+  ],
+  "name": "9",
+  "nameIsFixed": true,
+  "resizesContent": false,
+  "resizingConstraint": 63,
+  "resizingType": 0,
+  "rotation": 0,
+  "shouldBreakMaskChain": true,
+  "style": {
+    "_class": "style",
+    "blur": {
+      "_class": "blur",
+      "center": "{0.5, 0.5}",
+      "do_objectID": "EDBE6288-EAB9-4E91-91C9-1BEE5BF08FE2",
+      "isEnabled": false,
+      "motionAngle": 0,
+      "radius": 4.600000000000001,
+      "saturation": 1,
+      "type": 0
+    },
+    "do_objectID": "F26DAFB7-7BF8-4643-B76A-6393C3472B0C",
+    "endMarkerType": 0,
+    "miterLimit": 10,
+    "startMarkerType": 0,
+    "windingRule": 1
+  },
+  "verticalRulerData": {
+    "_class": "rulerData",
+    "base": 0,
+    "do_objectID": "BCC2BBC0-523A-4A19-AB8F-03601B288A40",
+    "guides": [
+    ]
+  }
+}

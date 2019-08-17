@@ -1,0 +1,111 @@
+{
+  "_class": "group",
+  "booleanOperation": -1,
+  "clippingMaskMode": 0,
+  "do_objectID": "B0C0DED3-FF6D-4B57-B4DE-8268511A80F9",
+  "exportOptions": {
+    "_class": "exportOptions",
+    "do_objectID": "2937AAEB-C783-4B36-9AE7-04199EAF7280",
+    "exportFormats": [
+    ],
+    "includedLayerIds": [
+    ],
+    "layerOptions": 0,
+    "shouldTrim": false
+  },
+  "frame": {
+    "_class": "rect",
+    "constrainProportions": false,
+    "do_objectID": "46E3DAE0-DEE0-4053-99B3-38670D172691",
+    "height": 235,
+    "width": 199,
+    "x": 20,
+    "y": 5
+  },
+  "groupLayout": {
+    "_class": "MSImmutableFreeformGroupLayout",
+    "do_objectID": "711450B5-5660-454A-9DB1-9115A645A2CB"
+  },
+  "hasClickThrough": false,
+  "hasClippingMask": false,
+  "isFixedToViewport": false,
+  "isFlippedHorizontal": false,
+  "isFlippedVertical": false,
+  "isLocked": false,
+  "isVisible": true,
+  "layerListExpandedType": 0,
+  "layers": [
+    {
+      "class": "shapePath",
+      "id": "5542BAA4-CB2D-459B-A95B-3DE1D9D8222C"
+    },
+    {
+      "class": "shapePath",
+      "id": "90EA8B97-B30C-4DCC-9F74-FF425F50B9C7"
+    },
+    {
+      "class": "shapePath",
+      "id": "DADAB4DA-1FC6-44CE-A624-12726909254F"
+    },
+    {
+      "class": "shapePath",
+      "id": "C1B09EA7-4ACB-4DF2-8461-851B97AB89C1"
+    },
+    {
+      "class": "shapePath",
+      "id": "F2674C4A-4030-4AE1-9730-4C68B458A26C"
+    },
+    {
+      "class": "shapePath",
+      "id": "FE93BD60-DB0D-470C-B1C5-E5607573E16D"
+    },
+    {
+      "class": "shapePath",
+      "id": "EB33B80A-2B03-49C0-A636-4E3122EED19D"
+    },
+    {
+      "class": "shapePath",
+      "id": "A61C3F36-ACE3-4FCA-934D-742C7E41F5B0"
+    },
+    {
+      "class": "shapePath",
+      "id": "DD45C78A-2933-4FF1-AF20-CCB603DB912E"
+    },
+    {
+      "class": "shapePath",
+      "id": "A39E351B-34CA-4D2D-A307-15351544CE12"
+    }
+  ],
+  "name": "Group",
+  "nameIsFixed": false,
+  "resizingConstraint": 63,
+  "resizingType": 0,
+  "rotation": 0,
+  "shouldBreakMaskChain": false,
+  "style": {
+    "_class": "style",
+    "do_objectID": "1ADDF3FC-7956-4B02-88C1-CA957DE86C38",
+    "endMarkerType": 0,
+    "fills": [
+      {
+        "_class": "fill",
+        "color": {
+          "_class": "color",
+          "alpha": 1,
+          "blue": 0,
+          "green": 0,
+          "red": 0
+        },
+        "fillType": 0,
+        "isEnabled": true,
+        "noiseIndex": 0,
+        "noiseIntensity": 0,
+        "patternFillType": 1,
+        "patternTileScale": 1
+      }
+    ],
+    "miterLimit": 10,
+    "startMarkerType": 0,
+    "windingRule": 1
+  }
+}

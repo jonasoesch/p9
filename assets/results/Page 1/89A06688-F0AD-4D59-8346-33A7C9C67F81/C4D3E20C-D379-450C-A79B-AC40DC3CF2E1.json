@@ -1,0 +1,58 @@
+{
+  "_class": "symbolInstance",
+  "booleanOperation": -1,
+  "clippingMaskMode": 0,
+  "do_objectID": "C4D3E20C-D379-450C-A79B-AC40DC3CF2E1",
+  "exportOptions": {
+    "_class": "exportOptions",
+    "do_objectID": "C3E7F608-8757-4951-9F02-039076F63341",
+    "exportFormats": [
+    ],
+    "includedLayerIds": [
+    ],
+    "layerOptions": 0,
+    "shouldTrim": false
+  },
+  "frame": {
+    "_class": "rect",
+    "constrainProportions": false,
+    "do_objectID": "9C803194-288A-41C3-B322-34180ACE64A3",
+    "height": 27,
+    "width": 27,
+    "x": 98.99999999999989,
+    "y": 573
+  },
+  "hasClippingMask": false,
+  "horizontalSpacing": 0,
+  "isFixedToViewport": false,
+  "isFlippedHorizontal": false,
+  "isFlippedVertical": false,
+  "isLocked": false,
+  "isVisible": true,
+  "layerListExpandedType": 0,
+  "name": "Tag Copy 8",
+  "nameIsFixed": false,
+  "overrideValues": [
+    {
+      "_class": "overrideValue",
+      "do_objectID": "E5DABB27-3FEF-43F8-9130-BF1F52BBF5D1",
+      "overrideName": "0A7CABE5-FDA6-4CEC-9FE7-2E707BB3A5A0_stringValue",
+      "value": "H5"
+    }
+  ],
+  "resizingConstraint": 63,
+  "resizingType": 0,
+  "rotation": 0,
+  "scale": 1,
+  "shouldBreakMaskChain": false,
+  "style": {
+    "_class": "style",
+    "do_objectID": "7DB14AA0-B431-4697-B4D0-9A18749DD70C",
+    "endMarkerType": 0,
+    "miterLimit": 10,
+    "startMarkerType": 0,
+    "windingRule": 1
+  },
+  "symbolID": "10E529B1-92E5-4C97-95F8-3EEF69665033",
+  "verticalSpacing": 0
+}

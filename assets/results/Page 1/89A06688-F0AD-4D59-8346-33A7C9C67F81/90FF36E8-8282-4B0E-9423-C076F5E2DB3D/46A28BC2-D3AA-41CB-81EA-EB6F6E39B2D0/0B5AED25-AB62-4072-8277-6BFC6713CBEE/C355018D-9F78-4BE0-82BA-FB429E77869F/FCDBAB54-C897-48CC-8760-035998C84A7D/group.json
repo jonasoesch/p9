@@ -1,0 +1,107 @@
+{
+  "_class": "group",
+  "booleanOperation": -1,
+  "clippingMaskMode": 0,
+  "do_objectID": "FCDBAB54-C897-48CC-8760-035998C84A7D",
+  "exportOptions": {
+    "_class": "exportOptions",
+    "do_objectID": "BBF70E40-38D3-4E05-8129-CD6B384FF823",
+    "exportFormats": [
+    ],
+    "includedLayerIds": [
+    ],
+    "layerOptions": 0,
+    "shouldTrim": false
+  },
+  "frame": {
+    "_class": "rect",
+    "constrainProportions": false,
+    "do_objectID": "53EABD60-898B-437A-99EB-DE9807E5301B",
+    "height": 15,
+    "width": 403,
+    "x": 0.9999999999999996,
+    "y": 6.999999999999996
+  },
+  "groupLayout": {
+    "_class": "MSImmutableFreeformGroupLayout",
+    "do_objectID": "00A44DE7-3E9D-4A8C-AE40-02EE1F195AB9"
+  },
+  "hasClickThrough": false,
+  "hasClippingMask": false,
+  "isFixedToViewport": false,
+  "isFlippedHorizontal": false,
+  "isFlippedVertical": false,
+  "isLocked": false,
+  "isVisible": true,
+  "layerListExpandedType": 0,
+  "layers": [
+    {
+      "class": "text",
+      "id": "6E4A9212-E9C9-4BF3-8C3F-42AFA1D9E739"
+    },
+    {
+      "class": "text",
+      "id": "F3E95B5F-2C6E-4718-B163-9DA91815001A"
+    },
+    {
+      "class": "text",
+      "id": "E6009191-937F-4ED7-B56A-DF33F63DC4BC"
+    },
+    {
+      "class": "text",
+      "id": "4D103A7D-95CA-4F3A-B1C6-AF7BA4A52EA8"
+    },
+    {
+      "class": "text",
+      "id": "9EF284A2-6A2B-460E-86BF-E7E4DEEB684B"
+    },
+    {
+      "class": "text",
+      "id": "32155E88-45F2-4C2F-8628-8D72DC14BC23"
+    },
+    {
+      "class": "text",
+      "id": "3F4ED25E-5DCA-4405-B73D-FF90FB596897"
+    },
+    {
+      "class": "text",
+      "id": "EEB42AA4-F48F-4105-81AF-C347FE864EE6"
+    },
+    {
+      "class": "text",
+      "id": "EC7125DD-8AC0-46F9-9D7F-4CB8F5AB1A9F"
+    }
+  ],
+  "name": "Group",
+  "nameIsFixed": false,
+  "resizingConstraint": 63,
+  "resizingType": 0,
+  "rotation": 0,
+  "shouldBreakMaskChain": false,
+  "style": {
+    "_class": "style",
+    "do_objectID": "9BE9447D-35B4-4182-8CCF-FB6711C6B49D",
+    "endMarkerType": 0,
+    "fills": [
+      {
+        "_class": "fill",
+        "color": {
+          "_class": "color",
+          "alpha": 1,
+          "blue": 0,
+          "green": 0,
+          "red": 0
+        },
+        "fillType": 0,
+        "isEnabled": true,
+        "noiseIndex": 0,
+        "noiseIntensity": 0,
+        "patternFillType": 1,
+        "patternTileScale": 1
+      }
+    ],
+    "miterLimit": 10,
+    "startMarkerType": 0,
+    "windingRule": 1
+  }
+}
