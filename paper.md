@@ -789,6 +789,56 @@ To refine the stories and their design, we have applied an iterative design proc
 
 ## Results
 
+### Demographics of the participants
+
+![results-demographics.pdf](img/results-demographics.pdf) 
+
+Because the experiment was conducted on Amazon Mechanical Turk, the participants were quite varied. Although there was a tendency towards men and younger people. We were surprised that the level of education of our participants was in general rather high. We assume that a lot of people with lower levels of education self-selected out of the experiment. 173 persons saw the initial, explanatory screen but 117 stopped there or after the first few screens, many probably because they could not read the visualizations.
+
+The Ishihara plates found three participants who were colorblind. All of the men. Which is close enough to the 8% known in the literature (>> colorblindness)
+
+
+
+### Differences between the stories
+
+![results-stories](img/results-stories.png)
+
+As discussed in section (>>Story selection), one of the main challenges was to design narrative visualization that a large part of the participants would understand. In this we only succeeded partially. The target was to design the stories so that about 40–50% of the participants would interpret them correctly. Arguably this only worked for energy D and mortality A and D. Interestingly, these are also the mini-stories that contained  a cause-and-effect relationship between the two charts.
+
+The most confusing story of all was mortality C where the characters were simply rescaled (a "Reconfigure"-transition). This is also visible in the unusually high transition count. The differences in *characters* mentioned is easy to explain: some mini-stories contained simply many more characters than others.
+
+
+
+### Hypotheses
+
+ ![results-hypotheses.pdf](img/results-hypotheses.pdf) 
+
+#### H1: Relationship
+
+Animated transitions did not lead the participants to assume a relationship between the two charts more often than the non-animated ones.
+
+#### H2: Causality
+
+Neither did we find that animated transitions in themselves implied a causal relationship. This is even more interesting than the refutation of H1 as other authors have found that animation can imply causality. We believe that the difference exists because their content was less abstract and contained bubbles that would grow and shrink because they exchanged matter. The finding would thus confirm (abstract vs. naturalistic) [@Berney-16:doesanimation]
+
+#### H3: Cueing
+
+We found that animation focused participants on a smaller group of characters. But this seemingly did not help them interpret the relationship according to the authors intention. One explanation might be that the animation design was not clear enough. Another explanation might be the following: interpreting the relationship between two charts is certainly a process that happens after identifying a relationship (>>Comparison). It is therefore even further removed from the levels of visual perception that are affected by the animated-static distinction. It would therefore be surprising to find a difference in this measure while not finding one in the *relationship*-measure.
+
+#### H4: Object constancy
+
+Participants who saw an animated transitions didn't switch back and forth as often as the ones who saw the static transitions. The difference was highly significant. We conclude from this that animated transitions helped maintain object constancy between the charts. Interestingly, this did not lead to shorter but rather to longer viewing durations. The ...
+
+#### H5: Engagement
+
+
+
+
+
+
+
+
+
 
 
 
