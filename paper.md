@@ -692,27 +692,23 @@ We considered **word count** to be another proxy for engagement. As the particip
 
 #### Screen size
 
-To exclude effects that would result in differences in layout and element size, the experiment was designed for a fixed viewport size of 1280px × 720px. Participants with viewports that were smaller than this were blocked from the experiment.
+To exclude effects that would result from differences in layout and element size, the experiment was designed for a fixed viewport size of 1280px × 720px. Participants with viewports that were smaller than this were blocked from the experiment.
 
 #### Browser capability
 
-Equally, participants with browsers that did not support the technologies we used for the animated transitions were blocked from participating in the experiment. This had the positive side-effect of equally blocking slower browsers.
-
-#### Performance
-
-For each mini-story viewed by a participant the drawing mean drawing performance was calculated. Participants with a drawing performance of less than 20fps were excluded from the analysis.
+Equally, participants with browsers that did not support the technologies we used for the animated transitions were blocked from the experiment. This had the positive side-effect of equally blocking slower browsers.
 
 #### Age
 
-In the final survey we asked the participants about their age to better understand the diversity of population that was participating in the experiment.
+In the final survey we asked the participants about their age to better understand the diversity of the population that was participating in the experiment.
 
 #### Gender
 
-We equally asked the participants about their gender in the final survey to help us understand how divers our population was.
+We equally asked the participants about their gender in the final survey to help us understand how diverse our population was.
 
 #### Level of education
 
-Also asked in the final survey, this would be a rough proxy for visualization understanding. We assumed certain outliers might potentially be explained by a low level of education.
+Also asked in the final survey, this would act as a rough proxy for visualization understanding. We assumed certain outliers might potentially be explained by a low level of education.
 
 #### Vision
 
@@ -722,11 +718,7 @@ Equally, if the participants reported weak and uncorrected vision, we could pote
 
 ![experiment-colorblindness](/Users/jonas/Desktop/P9/bericht/img/experiment-colorblindness.png)
 
-A final criterion we considered for explaining outliers was color blindness. Instead of asking participants to report that they were colorblind, we presented them with three plates from the Ishihara colorblindness test  [@Ishihara-17:ishiharatest] which tested for the for the red-green blindness that affects about 8% of men and 0.4% of women. [@-19:colorblindness]
-
-
-
-
+A final criterion we considered for explaining outliers was color blindness. We did not ask participants to report on their colorblindness, because not all people who are colorblind know about it. Instead, we presented them three plates from the Ishihara colorblindness test  [@Ishihara-17:ishiharatest]. The plates we have selected, tested for red-green blindness. The most common form of colorblindness, that affects about 8% of men and 0.4% of women. [@-19:colorblindness]
 
 
 
@@ -734,29 +726,29 @@ A final criterion we considered for explaining outliers was color blindness. Ins
 
 ### Story selection
 
-Selecting or creating the right story was one of the most delicate parts of the experiment design. The characters and the broader context needed to be familiar to a wide audience because visualization interpretation is highly dependent on context knowledge (>>Narrative visualization) and the experiment did not provide an introduction to the topic. While a narrative on paratransit (a special means of transport for disabled people in the U.S.) was planned to be included in early versions of the experiment, it was removed because the topic was not known to a large portion of people.
+Selecting or designing the stories was one of the most delicate parts of the experiment design. The characters and the broader context needed to be familiar to a wide audience because visualization interpretation is highly dependent on context knowledge (>>Narrative visualization and >>Comparison) and the experiment did not provide an introduction to the topic. A story on paratransit (a special means of transport for disabled people in the U.S.) for example, was initially planned to be included but was soon removed because the topic was not familiar to most people.
 
-The story also had to avoid highly controversial topics because we feared that implicit reader knowledge might interfere with the interpretation of the visualizations (>>Comparison). We have seen this happen in both stories but it was less prevalent than we feared.
+The stories also had to avoid highly controversial topics because we feared that implicit reader knowledge might interfere with the interpretation of the visualizations (>>Comparison). We have seen this happen in both stories but it was less prevalent than we feared.
 
-Finally, the story needed to be told mainly through the visualizations. This turned out to be to most constraining factior. In most examples we have found, that textual narrative was essential to understand the story. The story on the evolution of mortality[@Klein-14:howamericans] was chosen exactly because it contained very little text. The story about the energy sources was specifically created in a way that we hoped would be self-explanatory with very little text.
+Finally, the story needed to be told mainly through the visualizations. This turned out to be to most constraining factor. In most existing narrative visualization we have found, that the textual narration was essential to understand the story. The story on the evolution of mortality[@Klein-14:howamericans] was chosen exactly because it contained very little text in its original version. The story about the energy sources was specifically created in a way that we hoped would be self-explanatory with very little text.
 
 
 
 ### Minimal textual narrative
 
-Textual narrative was excluded from the experiment because it is a huge confounder (TODO:source). In typical narrative visualization the story is presented through textual or audio narrative. The visualizations mostly serve to reinforce the point. But, when presented like this, relating the participants answers to any differences in the visualizations would be very difficult. On the other hand, narrative visualization is impossible to interpret a visualization without labels or a title. We therefore decided to include labels as well as a chart title. But we made sure that there was nothing hinting at a relationship in any of these. The charts are completely self-contained and can be understood even without the surrounding narrative.
+Textual narrative was excluded from the experiment because it is a huge confounder [@Kong-18:framesslants]. In typical narrative visualization the story is presented through textual or audio narrative. The visualizations mostly serve to reinforce the point. But, when presented like this, relating the participants answers to any differences in the visualizations would be very difficult. On the other hand, charts are impossible to interpret without at least some text. We therefore decided to include labels as well as a chart title. But we made sure that there was nothing hinting at a relationship in any of these. Each chart is completely self-contained and provides interesting information even without the other chart.
 
 ### Visualization literacy
 
-![experiment-charttypes](/Users/jonas/Desktop/P9/bericht/img/experiment-charttypes.png)
+![\label{experiment-charttypes}](/Users/jonas/Desktop/P9/bericht/img/experiment-charttypes.png)
 
-Previous studies have found that the majority of people are unable to correctly interpret complex visualizations. (TODO:source) According to these authors, the "safe" visualizations are bar charts, line charts, scatterplots and maps (>>see visualization literacy) This finding is supported by our analysis of narrative visualization online who also almost exclusively use these simpler visualizations (>>see a simple model) As we didn't want participants to fail because they couldn't read the single charts in the first place, we have decided to limit the experiment to line charts and stacked area charts. In our pilot studies, these chart types have been "safe", even though the stacked area chart posed problems to some of the participants in the experiment (>> see Results). One chart type that was excluded based on pilot data was the *slope chart*.
+Previous studies have found that the majority of people are unable to correctly interpret complex visualizations. (TODO:source) According to these authors, the "safe" visualizations are bar charts, line charts, scatterplots and maps (>>see visualization literacy) This finding is supported by our analysis of narrative visualization who also almost exclusively use these simpler visualizations (>>Perception-oriented classificationl) As we did not want participants to fail because they were unable to read the individual  charts, we have decided to limit the experiment to line charts and stacked area charts. In our pilot studies, these chart types have been "safe", even though the stacked area chart posed problems to some of the participants in the experiment (>> see Results). One chart type that was excluded based on pilot data was the *slope chart*. (see \ref{experiment-charttypes} )
 
-### Interactivity
+### Reader-controlled animation
 
-Another factor to control was interactivity. Prior work who has demonstrated positive effects of animated transitions often involved higher levels of interactivity compared to the static transitions. (TODO:source) But interactivity has been shown to have benefits in itself, for example for learning. (TODO:source) All transitions were therefore designed to be totally reader controlled. By scrolling down, readers could advance to the next chart, by scrolling up, they could go back to the previous chart. There are also discussions about the proper duration of animated transitions in the literature (TODO:sources), which we intended to avoid equally by making the animation duration controllable through scrolling. This is coherent with what we have found in our analysis of narrative visualization (>>Analysis of narrative visualizations)
+Another factor to consider was the amount of reader control or interactivity. Prior work has demonstrated positive effects of animated transitions often involved higher levels of interactivity compared to the static transitions. (TODO:source) But interactivity has been shown to have benefits in itself, for example for learning. (TODO:source) All transitions were therefore designed to be totally reader controlled. By scrolling down, readers could advance to the next chart, by scrolling up, they could go back to the previous chart. 
 
-
+We also tried to avoid discussions about the proper duration of animated transitions by making the animations completely controllable through scrolling. Interestingly we have not found this to be common practice in our analysis of narrative visualizations. The most prevalent case is a fixed-duration animation that is triggered by scrolling to a certain point.
 
 ### Animation design
 
@@ -764,33 +756,37 @@ Three different kinds of animated transitions where used throughout the experime
 
 #### One-to-many
 
-A good example for this is case is >>"Mortality D". There, the animation needed to convey that the "causes of death" in the second chart only concerned the "25–44" year old age group. This is done through a *staged transition* (>>see staged transition). We first highlight the "25–44" year old age group by hiding all the others and then splitting and morphing this character into the the different causes of death. The same approach was applied in >>"Mortality B",>> "Energy B" and ">>Energy C".
+A good example for this is case is >>"Mortality D". There, the animation needed to convey that the "causes of death" ![](img/char.pdf) in the second chart only concerned the "25–44" year old age group ![](img/ctxt.pdf) . This is done through a *staged transition* (>>see staged transition). We first highlight the "25–44" year old age group by hiding all the others and then splitting and morphing this character into the the different causes of death. The same approach was applied in >>"Mortality B",>> "Energy B" and ">>Energy C".
 
 #### Many-to-one
 
-This case can only be found in >>"Mortality A". Here the characters of the different age groups are being morphed into a single line that represents "Everyone". The other characters "Men" and "Women" in the second chart were subsequently shown.
+This case can only be found in >>"Mortality A". Here the the different age groups ![](img/char.pdf) are being morphed into a single line that represents "Everyone" ![](img/char.pdf). After the morphing was finished, the characters ("Men" ![](img/char.pdf) and "Women" ![](img/char.pdf)) were shown.
 
 #### Many-to-many
 
-This case is well illustrated by >>"Energy D" where the characters representing different energy source where morphed to represent the price evolution instead of their proportion in energy production. Many-to-many animations are also being used in >>"Mortality C" and >>"Energy A".
+This case is well illustrated by >>"Energy D" where the marks for proportions ![](img/attr.pdf)  of different energy sources ![](img/char.pdf)  where morphed to represent the price evolution ![](img/attr.pdf) of these same energy sources ![](img/char.pdf). Many-to-many animations are also being used in >>"Mortality C" and >>"Energy A".
 
 
 
 ### Animated axis interpolation
 
-In the first pilot study, we have included axis interpolation for some transitions according to the principle laid out in. [@Heer-07:animatedtransitions] But they were excluded from the final experiment as they introduced another confounder and were not directly related to the research question. (TODO: check again) Additionally, we have found a variety of ways how axis interpolation was animated in our narrative visualization corpus. Something that would clearly be worthy of further research in a future study.
+In the first pilot study, we have included axis interpolation for some transitions according to the principles laid out in. [@Heer-07:animatedtransitions] But they were excluded from the final experiment as they introduced another confounder and were not directly related to the research question. In our analysis of transitions in narrative visualization we have found a number of different approaches to animating axis interpolation. A topic that would certainly merit further research.
 
 ### Interpolation
 
 ![\label{design-interpolation}](/Users/jonas/Desktop/P9/bericht/img/Interpolation.png)
 
-For all interpolations, we implemented “slow-in-slow-out”-easing as recommended in [@Dragicevic-12:temporaldistortion] for all interpolations. For interpolating between colors, we used a perceptually uniform HCL-interpolation because it “intuitively looks right”. [@Sarifuddin-05:newperceptually] Notice in figure \ref{design-interpolation} how RGB and LAB tend to desaturate while HSL and CubeHelix tend to oversaturate, HCL strikes a good balance.
+For all interpolations, we implemented “slow-in-slow-out”-easing as recommended in [@Dragicevic-12:temporaldistortion]. For interpolating between colors, we used a perceptually uniform HCL-interpolation because it “intuitively looks right”. [@Sarifuddin-05:newperceptually] Notice in figure \ref{design-interpolation} how RGB and LAB tend to desaturate while HSL and CubeHelix tend to oversaturate, HCL strikes a good balance.
 
 
 
 ### Design process
 
-To refine the stories and their design, we have applied an iterative design process including user testing as described by Melican. [@Melican-04:userstudies] Each design iteration was implemented and presented to readers who had not previously seen the story. We observed them while they were making sense of the visualizations and asked them what they understood and where they experienced difficulties. While these tests have been very informal, they have again and again uncovered design flaws that were completely obvious in hindsight and led to the creation of a new version of the prototype. For example, during testing we have observed that readers typically scrolled much faster than we expected. Being the designers we knew that we needed to scroll slowly to properly see the transitions which was naturally not the case for the unsuspecting reader. Also the decision to exclude the slope chart or the decision to highlight the character initially/at the end in one-to-many/many-to-one animations where direct results of user testing
+To refine the stories and their design, we have applied an iterative design process including user testing as described by Melican. [@Melican-04:userstudies] Each design iteration was implemented and presented to readers who had not previously seen the story. We observed them while they were making sense of the visualizations and asked them what they understood and where they experienced difficulties. While these tests have been very informal, they have again and again uncovered design flaws that were completely obvious in hindsight and led to the creation of a new version of the prototype. 
+
+We observed, for example, that readers typically scrolled much faster than we expected. Knowing how our scrolling controlled animated transitions, we tended to scroll slowly when testing the visualizations. Readers who were unsuspecting were naturally less careful. Based on this observation we made the scroll distances longer and displayed a "Scroll slowly" at the beginning of each page. 
+
+Also the decision to exclude the slope chart or the decision to highlight the character initially/at the end in one-to-many/many-to-one animations where direct results of user testing. 
 
 
 
@@ -800,7 +796,7 @@ To refine the stories and their design, we have applied an iterative design proc
 
 ![results-demographics.pdf](img/results-demographics.pdf) 
 
-Because the experiment was conducted on Amazon Mechanical Turk, the participants were quite varied. Although there was a tendency towards men and younger people. We were surprised that the level of education of our participants was in general quite high. We assume that a lot of people with lower levels of education self-selected out of the experiment. 173 persons saw the initial, explanatory screen but 117 stopped there or after the first few screens, many probably because they realized that they could not read the visualizations.
+Because the experiment was conducted on Amazon Mechanical Turk, the participants were quite varied though there was a tendency towards men and younger people. We were surprised that the level of education of our participants was in general quite high. We assume that a lot of people with lower levels of education self-selected out of the experiment. 173 persons saw the initial, explanatory screen but 117 stopped there or after the first few screens. Many probably because they realized that they could not read the visualizations.
 
 The Ishihara plates found three participants who were colorblind. All of them men. This is close enough to the 8% known in the literature (>> colorblindness) to assume that the test worked properly.
 
@@ -810,13 +806,9 @@ The Ishihara plates found three participants who were colorblind. All of them me
 
 ![results-stories](img/results-stories.png)
 
-As discussed in section (>>Story selection), one of the main challenges was to design narrative visualizations that a large part of the participants would understand. We only succeeded partially in this. The target was to design the stories so that about 40–50% of the participants would interpret them according to the authors intentions (**correct relationship**). Arguably this only worked for *energy D* and *mortality A* and *D*. Interestingly, these are also the mini-stories that contained  a cause-and-effect relationship between the two charts. We wonder if readers are just more prone to talk about cause-and-effect relationships or if they truly notice them more readily.
+As discussed in section (>>Story selection), one of the main challenges was to design narrative visualizations that a large part of the participants would understand. We only succeeded partially in this. The target was to design the stories so that about 40–50% of the participants would interpret them according to the authors intentions (**correct relationship**). Arguably this only worked for *energy D* and *mortality A* and *D*. Interestingly, these are also the mini-stories that contained a cause-and-effect relationship between the two charts. We wonder if readers are just more prone to talk about cause-and-effect relationships or if they truly notice them more readily.
 
-The most confusing story of all was *mortality C* where the characters were simply rescaled, which is a Reconfigure-transition according to our classification (>>A simplified model).
-
- This is also visible in the unusually high transition count. The differences in *characters* mentioned is easy to explain: some mini-stories contained simply many more characters than others.
-
-
+The most confusing story of all was *mortality C* where the characters were simply rescaled, which is a Reconfigure-transition according to our classification (>>Perception oriented/Transition types). The difficulty of this transition is also visible in the unusually high transition count. The differences in *characters* mentioned is easy to explain: some mini-stories contained simply many more characters than others.
 
 
 
@@ -826,7 +818,7 @@ The most confusing story of all was *mortality C* where the characters were simp
 
 #### H1: Relationship
 
-Animated transitions did not lead the participants to assume a relationship between the two charts more often than the non-animated ones.
+Animated transitions did not lead the participants to assume a relationship between the two charts more often than the non-animated ones. H1 can therefore be rejected.
 
 #### H2: Causality
 
@@ -834,45 +826,37 @@ Neither did we find that animated transitions in themselves implied a causal rel
 
 #### H3: Cueing
 
-We found that animation focused participants on a smaller group of characters. But this seemingly did not help them interpret the relationship according to the authors intention. One explanation might be that the animation design was not clear enough. Another explanation might be the following: interpreting the relationship between two charts is certainly a process that happens after identifying a relationship (>>Comparison). It is therefore even further removed from the levels of visual perception that are affected by the animated-static distinction. It would therefore be surprising to find a difference in this measure while not finding one in the *relationship*-measure.
+We found that animation focused participants on a smaller group of characters. But this seemingly did not help them correctly interpret the relationship. One explanation might be that the animation design was not clear enough. Another explanation might be the following: interpreting the relationship between two charts is certainly a process that happens after identifying a relationship (>>Comparison). It is therefore even further removed from the levels of visual perception that are affected by the animated-static distinction. It would therefore be surprising to find a difference in this measure while not finding one in the *relationship*-measure.
 
 #### H4: Object constancy
 
-Participants who saw an animated transitions didn't switch back and forth as often as the ones who saw the static transitions. The difference was highly significant. We conclude from this that animated transitions helped maintain object constancy between the charts. Interestingly, this did not lead to shorter but rather to longer viewing durations. The ...
+Participants who saw an animated transitions didn't switch back and forth as often as the ones who saw the static transitions. The difference was highly significant. We conclude from this that animated transitions helped maintain object constancy between the charts. Interestingly, this did not lead to shorter but rather to longer viewing durations. This might either imply that the readers had difficulties to interpret animated transitions or that they were more engaging. Which leads us to the last hypothesis.
 
 #### H5: Engagement
 
-We were surprised to find that participants did not report a higher level of *flow* when they saw animated transitions. Especially because we enjoyed them a lot ourselves. One explanation might be the setting which was very task-oriented. Participants got paid a fixed amount for the experiment and were probably focused on efficiency. Interestingly, the participants who saw animated transitions wrote significantly longer answers (*answer length*) in the same time (*typing duration*) when they saw animated transitions. Which may indicate that they were more engaged but that we have chosen the wrong sub-scale (*flow*) to be able to find it.
-
-
+We were surprised to find that participants did not report a higher level of *focused attention* when they saw animated transitions. Especially because we enjoyed them a lot ourselves. One explanation might be the setting which was very task-oriented. Participants got paid a fixed amount for the experiment and were probably focused on efficiency. Interestingly, the participants who saw animated transitions wrote significantly longer answers (*answer length*) in the same time (*typing duration*) when they saw animated transitions. Which may indicate that they were more engaged but that we have chosen the wrong sub-scale (*focused attention*) to be able to find it.
 
 ### Conclusions
 
-Based on the literature and the above findings we arrive at several conclusions about how the nature of transitions and animation. We came to believe that animation indeed guides the readers eye between transitions and therefore supports object constancy and cueing at the level of perception. But the results also show that relationships are interpreted at a much higher level and perceptual differences don't directly influence this interpretation. Finally, we are still unsure about how animation precisely influences engagement.
+Based on the literature and the above findings we arrive at several conclusions about  the nature of transitions and animation. We came to believe that animation indeed guides the readers eye between transitions and therefore supports object constancy and cueing at the level of perception. But the results also indicate that relationships are interpreted at a much higher level and perceptual differences don't directly influence this interpretation. Finally, we are still unsure about how animation precisely influences engagement.
 
+###Limitations
 
-
-### Analysis methods
-
-TODO
-
-
-
-
-
-
+Much of the stories were designed before our conceptual understanding of transitions and animation was as clear as it is presented in this work. The types of transitions that are present in the experiment are therefore more strongly driven by the needs of the story than by our theoretical understanding of the properties of different transitions. This weakens the link between our results and the theoretical framework we have proposed.
 
 
 
 # Implementation
 
+To quickly create narrative visualizations and animated transitions for the experiment, we have built a visualization tool that would simplify this task. The solution presented in this chapter might look simple, even obvious to the reader. But our first attempts to implement animated transitions resulted in a tangled mess of spaghetti code and attest that the problem does not have a straightforward solution. We conclude that the simplicity of the proposed solution is therefore more a sign of conceptual clarity than a sign for the  mundanity of the problem.
+
 ## Requirements
 
 #### Online narrative visualization
 
-Much the specification of the experiment has already been described in a previous section (>>Experiment). Essentially, we needed a way to build web-based narrative visualizations with animated transitions for the experiment. It was therefore an obvious choice to use the common HTML, CSS , SVG and ECMAScript stack for the implementation; also because the author is familiar with it. For increased programmer convenience through type checks, we have used TypeScript to generate the final ECMAScript.
+Much the specification of the experiment has already been described in a previous section (>>Experiment). To run it on Amazon Mechanical Turk we needed to build web-based narrative visualizations with animated transitions. It was therefore an obvious choice to use common web-technologies like HTML, CSS , SVG and ECMAScript for the implementation. For increased programmer convenience through type checking, we have used TypeScript to generate the final ECMAScript.
 
-The D3 library [@Bostock-11:datadrivendocuments] was used to generate the final SVG-code from the data. D3 was chosen because, again, the author is familiar with it; it has become the de-facto standard for data visualization on the web; and it is general enough to stay out of the way when a custom implementation is preferable.
+The D3 library [@Bostock-11:datadrivendocuments] was used because it abstracts some of the more tedious parts of generating SVG-code from data. D3 was chosen because it is currently the de-facto standard for data visualization on the web and it does not impose a certain structure in the code like many frameworks do.
 
 #### Rapid prototyping
 
@@ -898,11 +882,13 @@ Finally, the implementation needed to provide reliable way to collect data on sc
 
 ## Prior art
 
+Many visualization tools have been created over the years and every tool addresses a different set of requirements and has different strengths and weaknesses. A recent overview [@Mei-18:designspace] classifies visualization tools according to eight dimensions. Based on the above requirements, the dimension that was most relevant to our work was *level of abstraction*.
+
 ### Level of abstraction of visualization tools
 
  ![\label{code-abstraction}](img/code-abstraction.pdf)
 
-The number of useful chart types in data visualization is surprisingly limited. A review of some catalogs of chart type shows that it lies somewhere in the range between 40 and 200. [@Holtz:dataviz, @Ribecca:datavisualisation, @Schwabish:visualvocabulary, @:dataviz, @Russo-18:microsoftpower] When developing software for data visualization, an obvious approach is therefore to implement these basic chart types and make them configurable. A recent study on visualization tools [@Mei-18:designspace] shows that over last three decades a majority of tools mentioned in the literature have used some sort of chart typology (see figure \ref{code-abstraction}). Graphic libraries inhabit the other end of the spectrum. They usually only provide functionality for drawing basic shapes. They are thus the most general and flexible visualization tools. But building visualization out of basic shapes is very laborious, which is the reason why "chart configurators" are so popular. More recently, visualization researchers have started to explore the middle ground: declarative, domain specific languages (DSLs). [@Wickham-16:ggplot2elegant, @Heer-10:declarativelanguage, @Satyanarayan-16:vegalitegrammar] DSLs try to maintain a maximum of flexibility while significantly simplifying the creation process. [@Heer-10:declarativelanguage] One very recent example of a declarative language for visualization on the web is Vega-Lite. [@Satyanarayan-16:vegalitegrammar] Vega-Lite's DSL builds on JSON and on the concept of the *Grammar of Graphics*. The grammar of graphics separates different parts of a visualization into separate "layers" which are independent and can be recombined at will (see figure \ref{code-vega}) Vega-Lite also introduced a way to define interactive visualization in a declarative manner.
+The number of useful chart types in data visualization is surprisingly limited. A review of some catalogs of chart type shows that it lies somewhere in the range between 40 and 200. [@Holtz:dataviz, @Ribecca:datavisualisation, @Schwabish:visualvocabulary, @:dataviz, @Russo-18:microsoftpower] When developing software for data visualization, an obvious approach is therefore to implement these basic chart types and make them configurable. A recent study on visualization tools [@Mei-18:designspace] shows that over last three decades a majority of tools mentioned in the literature have used some sort of chart typology (see figure \ref{code-abstraction}). Graphic libraries inhabit the other end of the spectrum. They usually only provide functionality for drawing basic shapes. They are thus the most general and flexible visualization tools. But building visualization out of basic shapes is very laborious, which is the reason why "chart configurators" are so popular. More recently, visualization researchers have started to explore the middle ground: declarative, domain specific languages (DSLs). [@Wickham-16:ggplot2elegant, @Heer-10:declarativelanguage, @Satyanarayan-16:vegalitegrammar] DSLs try to maintain a maximum of flexibility while significantly simplifying the creation process. [@Heer-10:declarativelanguage] One very recent example of a declarative language for visualization on the web is Vega-Lite. [@Satyanarayan-16:vegalitegrammar] Vega-Lite's DSL builds on JSON and on the concept of the *Grammar of Graphics*. The grammar of graphics separates different parts of a visualization into separate "layers" which are independent and can be recombined as desired (see figure \ref{code-vega}) Vega-Lite also introduced a way to define interactive visualization in a declarative manner.
 
 ![\label{code-vega}](img/code-vega.pdf) 
 
@@ -912,9 +898,9 @@ The number of useful chart types in data visualization is surprisingly limited. 
 
 Even less research has been conducted on DSLs who describe animated transitions between visualizations. Heer and Bostock, who later went to create the already mentioned D3 [@Bostock-11:datadrivendocuments], have described one approach in an earlier paper. [@Heer-10:declarativelanguage] Their system is based on marks like lines and bars. To create animations, the author defines the data for the initial state and the data for the final state. Their tool then interpolates between the two to generate an animated transition.
 
-Very recently, Tableau, one of the largest providers of commercial visualization software has released a preview of their future implementation of animated transitions. [@Isaacs-18:tableaumotion] But in their concept, the animations are predetermined by the type of transition and not configurable by the author.
+Very recently, Tableau, one of the largest providers of commercial visualization software has released a preview of their future implementation of animated transitions. [@Isaacs-18:tableaumotion] In their concept, animations are predetermined by the type of transition and not configurable by the author.
 
-The tool that most closely addresses the problems of narrative visualization is *Ellipsis* by Satyanarayan and Heer [@Satyanarayan-14:authoringnarrative] Ellipsis is a tool to create narrative visualization through a graphical interface. It wraps existing visualizations and adds an *annotation* layer, *parameters* for dynamic queries (>narrative visualization) and a layer for defining *transitions* between charts. Ellipsis this effectively decouples the narrative structure from the individual charts and lets authors quickly explore alternative narrative structures.
+The tool that most closely addresses the problems of narrative visualization is *Ellipsis* by Satyanarayan and Heer [@Satyanarayan-14:authoringnarrative] Ellipsis is a tool to create narrative visualization through a graphical interface. It wraps existing visualizations and adds an *annotation* layer, *parameters* for dynamic queries (>>narrative visualization) and a layer for defining *transitions* between charts. Ellipsis thus effectively decouples the narrative structure from the individual charts and lets authors quickly explore alternative narrative structures.
 
 
 
@@ -924,70 +910,45 @@ Heer et al. [@Heer-10:declarativelanguage] mention another advantage of DSLs for
 
 
 
-### Annotations
-
-Finally, an essential part of narrative visualization are annotations. Some authors have proposed alogrithms to automatically generate and place annotations for salient features of charts. [@Bryan-17:temporalsummary, @Hullman-13:contextifierautomatic]. Typically, these features are local and global maxima/minima, crossings, clusters, and initial/final values.  
-
-[@Amini-17:authoringdatadriven] 
-
-[] : Kinds of annotation. Addditive and observational
-
-[@Bigelow-17:iteratingtools] : It is not easy to infer a designers intent
-
-[@Bostock-09:protovisgraphical] : Uses a "label" mark type independently of the data
-
-[@Bryan-17:temporalsummary] :
-
-[@Satyanarayan-14:authoringnarrative]
-
-
-
-* : Separate specification from execution → simplify development, enable unobtrusive optimization. They already have
-* [@Bostock-11:datadrivendocuments]: 
-
-
-
-
-
 ## Declarative syntax
 
-Based in the requirements described in section (>>requirements), we decided to design a domain specific language (DSL) for narrative visualization with animated transitions. A DSL allows for *rapid prototyping* by making the definition of charts and transitions quick. Yet it can provide a lot of flexibility in terms of annotations and in *how characters should morph between the charts*. Finally, *slow animations can be optimized* without changing the visualizations that were already created for the experiment.
+Based in the requirements described in section (>>requirements) and the review of existing tools, we decided to design a domain specific language (DSL) for narrative visualization with animated transitions. A DSL allows for *rapid prototyping* by making the definition of charts and transitions quick. Yet it can provide a lot of flexibility in terms of annotations and in *how characters should morph between the charts*. Finally, *slow animations can be optimized* without changing the visualizations that were already created for the experiment.
 
 ### Anatomy of a chart
 
-The first part of the DSL is concerned with defining charts to be used. The syntax based on JSON and strongly inspired by Vega-Lite. [@Satyanarayan-16:vegalitegrammar] Vega-Lite is more powerful in inferring a multitude of chart types based solely on the configuration. As we only required a very limited number of chart types, we resorted to the "Chart typology"-approach which is less flexible but much easier to implement. Two other differences is the focus on *characters* and the possibility to *annotate* them.
+The first part of the DSL is concerned with defining the basic charts. The syntax is based on JSON and strongly inspired by Vega-Lite. [@Satyanarayan-16:vegalitegrammar] Vega-Lite is more powerful in inferring a multitude of chart types based solely on the configuration than our proposed solution. As we only required a very limited number of chart types, we resorted to the "Chart typology"-approach which is less flexible but much easier to implement. Two other differences to Vega-Lite are the focus on *characters* and the possibility to *annotate* them.
 
 ![code-chart adsf](img/code-chart.pdf)
 
-- ![](img/1.pdf) Each chart has a `name` which is used to identify it. If there is a HTML element with an ID that corresponds to the chart it will be used to render the chart there. The chart dimensions as well es its position on the page are thus completely defined by the layout of the surrounding page.
+- ![](img/1.pdf) Each chart has a `name` which is used to identify it. If there is a HTML element with an ID that corresponds to the chart it will be used to render the chart there. The chart dimensions as well es its position on the page are therefore completely defined by the layout of the surrounding page.
 - ![](img/2.pdf) The `type` defines the basic chart type (>>level of abstraction) that should be used. Behind the scenes, each chart type is implemented as a subclass of an abstract `Chart`-class that implements its own `draw`-method.
-- ![](img/3.pdf)The path to a `CSV`-file with data. We don't implement any kind of data transformation functionality and expect the data to be in the right format. This is because tool is presentation-oriented, so there is no need to explore the data through filtering or other transformations.
+- ![](img/3.pdf)The path to a `CSV`-file with data. We don't implement any kind of data transformation functionality and expect the data to be in the right format. This is because our tool is presentation-oriented and there is no need to explore the data through filtering or other transformations.
 - ![](img/4.pdf)The chart title is implemented as an `annotation`. Annotations can be bound to different elements throughout the DSL and positioned relative to their `start` or `end` through the `offset`-property.
-- ![](img/5.pdf)In the axis-definitions, different attributes (`field`) of the data are mapped to different axes. The axes are identified by their `name` which can differ depending on the chart `type`. Slope charts for example have three axes:  `x`, `from` and `to`.  The advantage of defining each axis explicitly like this is, that again `annotations` can be bound to them.
-- ![](img/6.pdf)The `type`-property of an axis defines how that data should be parsed. Is the data domain continuous numbers (`quantitative`), ordered discrete values (`ordinal`), unordered discrete values (`categorical`), or timestamps (`temporal`). [@Munzner-15:visualizationanalysis, @Satyanarayan-16:vegalitegrammar] The `domain`-property defines the corresponding start and end values of the axis. Often, the minimal and maximal values in the data are simply used. When using visualization for storytelling, sometimes that author wants values to "overshoot" the axis, or to fix the axis at a certain domain for dramatic or clarity reasons, which is why we give allow explicit control of this parameter.
-- ![](img/7.pdf)Based on the model developed in section (>>Simplified model), we look at narrative visualization through the lense of characters. This is why our DSL contains an explicit declaration of the whole `cast` of characters in each chart. We assume that individual characters are identified by a `categorical` attribute in the data which is defined in the `field`-property.
+- ![](img/5.pdf)In the axis-definitions, different attributes (`field`) of the data are mapped to different axes. The axes are identified by their `name` which can differ depending on the chart `type`. Slope charts for example have three axes:  `x`, `from` and `to`.  The advantage of defining each axis explicitly like this is, that, again, `annotations` can be bound to them.
+- ![](img/6.pdf)The `type`-property of an axis defines how the data that is mapped to this axis should be parsed. The data domain can either be continuous numbers (`quantitative`), ordered discrete values (`ordinal`), unordered discrete values (`categorical`), or timestamps (`temporal`). [@Munzner-15:visualizationanalysis, @Satyanarayan-16:vegalitegrammar] The `domain`-property defines the corresponding start and end values of the axis. Often, the minimal and maximal values in the data are  used to determine the start and end of an axis. But when using visualization for storytelling, sometimes that author wants values to "overshoot" the axis, or to fix the axis at a certain domain for dramatic or clarity reasons, which is why we allowed explicit control of this parameter.
+- ![](img/7.pdf)Coherent with the model developed in section (>>Perception-oriented classification), we look at narrative visualization through the lense of characters. This is why our DSL contains an explicit declaration of the whole `cast` of characters in each chart. We assume that individual characters are identified by a `categorical` attribute in the data which is defined in the `field`-property.
 - ![](img/8.pdf)Because characters have such a high importance in this view, they are defined individually:
 
 ![code-characters.pdf](img/code-characters.pdf)
 
-- ![](img/8.1.pdf)In the three chart types we have implemented, characters are uniformly distinguished by `color` which is also what is typically used in narrative visualization. Other options like symbols or textures are naturally imaginable. The necessary data to `draw` each character is found via its `name` property.
+- ![](img/8.1.pdf)In the three chart types we have implemented, characters are uniformly distinguished by `color` which is also what is often used in the narrative visualizations in our analysis (>>Perception-oriented classification). Other options like symbols or textures are naturally imaginable. The necessary data to `draw` each character is found via its `name` property.
 - ![](img/8.2.pdf) Shows an example of the use of multiple `annotations`. Two are used to indicate the initial and the final share of each energy source, the third one to label the energy source itself. This approach has proven to provide a lot of flexibility. Especially when coupled with CSS `class`es that make individual styling of characters possible.
-- ![](img/8.3.pdf)Such flexibility comes at the price of verbosity as each character needs to be specified individually. 
+- ![](img/8.3.pdf)Such flexibility comes at the price of verbosity, as each character needs to be specified individually. 
 - ![](img/9.pdf)Finally, some basic visual properties of the chart can be defined in the `design`-section of the specification.
 
 
 
 ### Anatomy of a transition
 
-Together with the `director` (see >>Directing all of them), this is our main contribution in terms of software architecture. Because we have identified character and attribute changes as the main concern for transitions, the DSL focuses on them. Characters as well as axes (which represent attributes), can be mapped between two charts which will create a third chart (transition chart) that interpolates between them.
+Together with the `director` (see >>Directing all of them), this is our main contribution in terms of software architecture. Because we have identified character and attribute changes as the main concern for transitions, the DSL focuses on them. Characters as well as axes (which represent attributes), can be mapped between two charts which will create a third transition chart that interpolates between them.
 
 ![code-transition](img/code-transition.pdf) 
 
 - ![](img/1.pdf) A transition is not treated very differently from a chart. It also has a `name` and is rendered into an HTML element with the corresponding ID.
-- ![](img/2.pdf)+ ![](img/3.pdf) But such a transition chart is defined by the charts it transitions between in the `from` and `to` property.
-- ![](img/4.pdf)In our analysis of narrative visualization (>>a simplified model) we have concluded, that `morphing` is only sensible for transitions between charts that share at least one character. In the other cases, we use a `fading` transition.
+- ![](img/2.pdf)+ ![](img/3.pdf) But such a transition chart is solely defined by the charts it transitions between. This is done through the `from` and `to` properties.
+- ![](img/4.pdf)In our analysis of narrative visualization (>>Perception-oriented classificationl) we have concluded, that `morphing` is only sensible for transitions between charts that share at least one character. In the other cases, we use a `fading` transition.
 - ![](img/5.pdf)While some transition types like "Explore attributes" have a one-to-one relationship between the characters of the two charts, transition types like "Split characters" and "Merge characters" will have a one-to-many or many-to-one relationship. This is modeled by mapping the same character in the `from` property to multiple characters in the `to` property or the inverse.
-- ![](img/6.pdf) The system also supports axis interpolation, even though we did not use it in the end. Any axis in the initial chart can be mapped to any axis in the final chart. This makes especially "Reconfigure" transitions possible.
+- ![](img/6.pdf) The system also supports axis interpolation, even though we did not use it in the end. Any axis in the initial chart can be mapped to any axis in the final chart. This makes particulariy "Reconfigure" transitions possible.
 
 
 
@@ -997,7 +958,7 @@ Finally, the `director` contains a kind of "scroll-timeline" of charts. Based on
 
 ![Director asdfa asdf asdf asdf asdf](img/code-director.pdf)
 
-* ![](img/1.pdf) The directors `name`is used in the experiment to identify the mini-story and the configuration the participant was looking at.
+* ![](img/1.pdf) The directors `name` is used in the experiment to identify the mini-story and the configuration the participant was looking at.
 * ![](img/2.pdf) A `type` property was introduced to account for some differences in behavior between *juxtaposed* and *superposed* layouts. Namely, if the initial chart should be hidden or not.
 * ![](img/3.pdf) The steps define a range of scroll positions and a chart or transition that should be displayed within this range. The `-1000` value is in there because some browsers permit scrolling above the start of the page, which would hide the first chart.
 
@@ -1019,13 +980,7 @@ Finally, the `director` contains a kind of "scroll-timeline" of charts. Based on
 
 A few remarks on how we have handled the interpolation described above. While previous work has usually interpolated between visualization parameters [@Heer-10:declarativelanguage, @Satyanarayan-14:authoringnarrative], our system interpolates between SVG-shapes. Thanks to this, our system can generate animated transitions between two completely different visualizations. The only condition is that a character needs to be represented by a single, closed SVG shape, a moderate constraint in our eyes. Other system only permit transitions "within" the same chart.
 
-One problem when interpolating directly between SVG-shapes is that they need to have a one-to-one correspondence between their anchor points. If this is not the case, there needs to be some method to add points the simple shape. For this we have used an algorithm that splits segments of the simpler shape until it both shapes have the same amount of anchors. This has produced visually good results in all our cases. But it had the downside of making the calculation of interpolated states slower.
-
-![\label{interpolation}](img/Interpolation-5967203.png)
-
-For interpolating between colors, we used a perceptually uniform HCL-interpolation because it "intuitively looks right".[@Sarifuddin:2005] Notice in figure \ref{interpolation} how RGB and LAB tend to desaturate while HSL and CubeHelix tend to oversaturate, HCL strikes a good balance.
-
-For all interpolations we have used *slow-in-slow-out* easing as recommended by previous authors. [@Dragicevic:2012]
+One problem when interpolating directly between SVG-shapes is that they need to have a one-to-one correspondence between their anchor points. If this is not the case, there needs to be some method to add points to the simpler shape. For this we have used an algorithm that duplicates points of the simpler shape that are closest to the matching points in shape B. [@Beshai-16:improvingd3] This has produced visually good results in all our cases. But it had the downside of making the calculation of interpolated states slower.
 
 
 
@@ -1060,4 +1015,14 @@ Every interaction with the experiment was logged. Whenever the director detected
 Every entry stores a timestamp, an identifier for the participant and for the current mini-story, the URL, the scroll position and infos about the participants browser like window size or user agent (>> full documentation in supplementary material)
 
 
+
+### Discussion
+
+TODO
+
+
+
+
+
+# Conclusion
 
