@@ -34,7 +34,7 @@ According to Stolper et al. [@Riche-18:datadrivenstorytelling, pp. 85] there are
 
 ![In this New York Times story about rural Russia[@Barry-13:russialeft], a map is used as a navigational aid. \label{narrative-navigation}](/Users/jonas/Desktop/P9/bericht/img/narrative-navigation.png)
 
-**Dynamic queries** are a technique where the reader is allowed limited exploration of a visualization. For example by showing her data on her home city or checking how the result would have looked for another character (figure \ref{narrative-dynamic-query}). On the other hand, embedded interactive visualization allows for complete free exploration.
+**Dynamic queries** are a technique where the reader is allowed limited exploration of a visualization. For example by showing her data on her home city or checking how the result would have looked for another character (figure \ref{narrative-dynamic-query}). On the other hand, embedded interactive visualization allows for completely free exploration.
 
 ![Two examples of dynamic queries: Russel Goldenberg [@Goldenberg-16:startedbottom] talks about the rise and fall of NBA-teams. In the middle of the story, the reader can change the team that is being followed. On the left, after exploring jobs that would be suitable for a truck driver when his work is being automated, Jordan Dworkin and Ilia Blinderman [@Dworkin-18:whytech] let the reader choose another job for which to find suitable alternatives. \label{narrative-dynamic-query}](/Users/jonas/Desktop/P9/bericht/img/narrative-dynamic-query.png)
 
@@ -46,7 +46,7 @@ Even though exploration is often a part of narrative visualization, it always co
 
 The ordering of states is highly relevant to understanding a story and scrambling it will lead worse comprehensibility and recall of the information. [@Thorndyke-77:cognitivestructures] This observation should be discouraging for including explorative aspects in narrative visualization which by their nature introduce non-linearity. 
 
-We think the problem lies with the definition of a state. Just as the story of a movie is not changed by showing more of the scenery in one shot, the story of a narrative visualization is not changed by letting the reader explore details of the current state. A similar view is held by Hullman et al. who define a state as an "informationally distinct visual representation" [@Hullman-13:deeperunderstanding]; a definition to which we will also adhere to in this work.
+We think the problem lies with the definition of a state. Just as the story of a movie is not changed by showing more of the scenery in one shot, the story of a narrative visualization is not changed by letting the reader explore details of the current state. A similar view is held by Hullman et al. who define a state as an "informationally distinct visual representation" [@Hullman-13:deeperunderstanding]; a definition to which we will also adhere to in this work. We will call an "informationally distinct representation" a *chart* and use the term *visualization* to describe the whole sequence of *charts*. 
 
 The observation about the importance of sequence also implies that there is some information inherent in the ordering of states that is not present in the states themselves. The *transition* between the two states, therefore, carries implicit information that is essential to the understanding of the story. This is also observed by Stolper et al.  [@Riche-18:datadrivenstorytelling, pp. 85] when they talk about "linking separate story elements [or states]". Transitions then are a basic element of narrative visualization and we will go on to present some of their properties in greater detail.
 
@@ -54,55 +54,35 @@ The observation about the importance of sequence also implies that there is some
 
 # Transitions
 
-Transitions seemingly carry information that can not be extracted from the states alone. In order to see where it might come from, assume a transition between two states that are precisely the same. Something like this would obviously not merit the name "transition". It is therefore essentially the difference between the two states that carries the information. And finding this difference involves comparison.
-
-## Comparison
-
-"Compare" is one of the 11 fundamental  goals of using visualization according to a meta-analysis by Brehmer et al. [@Brehmer-13:multileveltypology]. The distinction between *identify*, *compare* and *summarize* is made based on the set of targets. While the *identify* action is concerned with a single target and *summarize* involves all the targets, *compare* refers to multiple subset of targets.
-
-![A topology of visualization tasks which synthesizes a large body of
-previous literature has been proposed by Brehmer et al. [@Brehmer-13:multileveltypology] \label{transition-topology}](/Users/jonas/Desktop/P9/bericht/img/comparison-taxonomoy.png)
-
-The first step in any comparison then is to identify the targets that should be compared. For this there are three possibilites: *explicit identification*, *identification through visual statistics* and *implicit identification*:
-
-**Explicit identification** is aided by the author through labels, annotations, colors and narrative. An example can be seen in figure \ref{narrative-annotation}.
-
-**Identification through visual statistics** uses the ability of the visual system to quickly and quite accurately calculate certain statistical properties of an image (figure \ref{comparison-identification}). A viewer can for example see in an instant if a certain region contains more orange than blue dots (mean). She can also quickly identify groups of points that form clusters (clustering). Viewers will be able to tell if circles get bigger from left to right (trends). Or if a point has a different color from all the outers (outlier). All of these values can then serve as a target for comparison.
-
-**Implicit identification**: In many cases, external knowledge or personal interest of the viewer will lead to the identification of a target. [@Gleicher-18:considerationsvisualizing] Often, readers will compare what they see to what they would have expected to see. Or a person from Brooklyn for example will tend to be more interested in the success and failure history of the Brooklyn Nets than that of the Warriors from California (see figure \ref{narrative-dynamic-query}). This is one of the reason for authors of narrative visualization to include *dynamic queries*. 
-
-![The visual aggregation tasks from [@Szafir-16:fourtypes] show how comparison targets can by identified by visual statistics. \label{comparison-identification}](/Users/jonas/Desktop/P9/bericht/img/comparison-identification.png)
-
-The second step is to perform a *lookup* or *locate*-action in the second state to find a corresponding target for comparison. A relationship has new been *identified* and can be further analyzed. [@Gleicher-18:considerationsvisualizing]  
-
-Comparison essentially involves the question: "What changes?". The different answers that have been given to that question will be discussed in the following section.
-
-
+Transitions seemingly carry information that is not explicitly presented in the two charts. To design effective narrative visualization, it is crucial to understand how readers perceive transitions and extract information from them. This chapter will therefore present the relevant literature and propose a classification of transitions based on cognitive load theory.
 
 ## Transition types
 
-### Visualization parameters
+Multiple authors have compiled classifications of transitions between informationally distinct states ( *charts* in this thesis). In this section we will discuss three different approaches to such classifications: visualization-focused, story-focused and inductive.
 
-The most common approach is to think about changes in terms of visualization parameters. [@Heer-07:animatedtransitions, @Yi-07:deeperunderstanding, @Fisher-11:animationvisualization, @-18:space] Any visualization can be viewed as the result of a series of parametrizable transformations applied to the underlying data set. When the data set doesn't change between two states, the transition can be fully described by the difference in parameters (more in chapter TODO).
+### Visualization-focused classifications
 
-Multiple authors coherently identify about eight transitions based on the change of visualization parameters:
+The most common approach is to think about transitions is in terms of visualization parameters. [@Heer-07:animatedtransitions, @Yi-07:deeperunderstanding, @Fisher-11:animationvisualization, @-18:space] Any visualization can be viewed as the result of a series of parametrizable transformations applied to the underlying data set. [@Jankun-kelly-07:modelframework] The transition can therefore be described in terms of parameter changes as long as the underlying data does not change.
+
+Through this approach, four authors identify a total of 9 transition types with a surprisingly high overlap:
 
 ![Comparison of transition types commonly identified by different authors for different purposes. The table shows that the agreement is relatively high for transitions that can be defined in terms of visualization parameters. What is often missing is the case where the underlying data changes.](/Users/jonas/Desktop/P9/bericht/img/transition-parametric.png)
 
-* **Pan**: Moving a fixed image below a smaller viewport to see one part at a time. The most famous example for this is Google Maps [@Google:googlemaps]. But the transition doesn't need to be animated. eBook-readers for example often show one screenful of text at a time.
-* **Zoom**: Geometric zooming in and out of a fixed image.
-* **Filter**: Filtering hides or shows elements based on some criteria. When watching a visualization on cars, filtering might for example hide all the data on American cars.
-* **Reorder**: Reordering axes according to a different criterion. For example from age to height.
-* **Substrate transformation**: Any distortion to the scale that is not addition or multiplication of a constant. For example a log transform.
-* **Visualization change**: Showing the same data with a different visualization idiom. For example from a bar chart to a pie chart.
-* **Data schema change**: When a different attribute is shown on one of the axes. Changing for example from earnings over time to losses over time.
-* **Data change**: When new data is shown but the visualization and the axes stay the same.
+* **Pan**: Moving a fixed image below a smaller viewport to see one part at a time. The most famous example for this is Google Maps [@Google:googlemaps].
+* **Zoom**: Geometric zooming in and out of a fixed image. This transition too, is used in Google Maps [@Google:googlemaps].
+* **Filter**: Hiding or showing elements based in some criteria. When reading a visualization on cars, filtering might for example hide all the data on American cars.
+* **Reorder**: Reordering axes according to a different criterion. Countries that are displayed in alphabetical order might for example be reordered according to their GDP.
+* **Substrate transformation**: Any distortion to the scale that is not addition or multiplication of a constant. For example a log transform or a lens-effect that resizes only a part of the coordinate system. The latter being something that is not often seen in real-world applications but seems to be a darling of visualization researchers. [@Munzner-15:visualizationanalysis, pp. 327–338]
+* **Visualization change**: Showing the same data with a different visualization idiom. For example, showing a distribution as a boxplot to clearly indicate mean, quantiles and outliers first and then transforming it into a histogram to give a better sense of its shape.
+* **Timestep**: Showing the same visualization for different points in time. For example the population pyramid of Switzerland for 1960 and 2010 to show how it has shifted to older people.
+* **Data schema change**: Mapping a different data dimension to one of the visual variables (position, color, etc.). A visualization might for example show the use of certain plant variants over time and show the occurrence of pests over the same period in the next state.
+* **Data change**: When new data is shown but the visualization and the axes stay the same. This is basically the generalization of the Timestep transition.
 
-The strength of this kind of classification is, that types can relatively easily and coherently be determined for a transition. Even automatically. [@Hullman-13:deeperunderstanding] It's weakness is that it characterizes a transition by its technical properties and not based on how the reader will try to understand  it. Other fields, especially the research on comics have done much more work in this regard.
+The strength of this kind of classification is, that types can relatively easily and coherently be determined for a transition. Even automatically. [@Hullman-13:deeperunderstanding] It's weakness is that it characterizes a transition by its technical properties and not based on how the reader will interpret it, which makes it less useful for designers of narrative visualization. Other fields, especially the research on comics have done much more work in this regard.
 
-### Subject, scene, time
+### Story-focused classification
 
-The most prevalent classification of transition types in comics is the one by McCloud [@Mccloud-93:understandingcomics] He describes six types of transitions between comic panels:
+The most-cited classification of transition types in comics is the one by McCloud [@Mccloud-93:understandingcomics] He describes six types of transitions between comic panels:
 
 ![transition-mccloud](/Users/jonas/Desktop/P9/bericht/img/transition-mccloud.png)
 
@@ -113,43 +93,74 @@ The most prevalent classification of transition types in comics is the one by Mc
 5. **Aspect-to-aspect**: Exploring a scene.
 6. **Non-sequitur**: Changes without an obvious relationship.
 
-McCloud too uses the question "What changes?" to characterize his transitions. In his view, there are three things that can change between two panels: *subject*, *scene* and *time*. 
+In McClouds classification, a transition is characterized by a change in either *subject*, *scene* and/or *time*. 
 
-Cohn [@Cohn-10:limitstime] refines on McClouds transition types by introducing hierarchy to the interpretation of subject, scene and time. Based on what we experience as the correct interpretation of a sequence of panels, he argues that readers will first look out for changes on or of the subjects. Then they will think about the scene. Finally, their attention will move to differences in time. In any case, they will assume that subject, scene and time have not changed if nothing explicitly contradicts this assumption.
+Cohn [@Cohn-10:limitstime] refines on McClouds transition types by introducing hierarchy to the interpretation of subject, scene and time. He argues that readers will first try to find the same subject in the subsequent panel. They will then move their attention to changes in the scene. Finally, they will shift their focus to changes in time. Cohn uses examples to show how a different order leads to interpretations that run counter to typical reading habits.
 
-*Subject*, *scene* and *time* are reminiscent of journalisms famous *who/what*, *where* and *when*. [@-19:fivews] This proximity to journalism is encouraging for the use of these three categories in narrative visualization.
+*Subject*, *scene* and *time* are reminiscent of journalisms famous *who/what*, *where* and *when*. [@-19:fivews] Such proximity to journalism indicates that McClouds transition types might be useful outside of the domain of comics.
 
-Missing from the list is *why* which will make its appearance in the next section.
+### Inductive classification
 
-### Hullman
+A bottom-up approach to transition types can be found in Hullman et al. [@Hullman-13:deeperunderstanding]. The authors reviewed 42 narrative visualizations and identified 12 different transition types which they grouped into six categories:
 
-A more bottom-up approach to transitions can be found in Hullman et al. [@Hullman-13:deeperunderstanding]. In a review of 42 narrative visualizations, the authors identified 12 different transition types through multiple rounds of coding. They grouped these into six categories:
+![\label{transition-hullman}](/Users/jonas/Desktop/P9/bericht/img/transition-hullman.png)
 
-![transition-hullman](/Users/jonas/Desktop/P9/bericht/img/transition-hullman.png)
+**Dialogue**: A question is asked or implied in one chart which is being answered in the next. One chart shows a time series of world temperature and asks how natural factors have contributed. The next charts shows how natural factors like volcanos have influenced global temperatures over time (see figure \ref{transition-hullman}).
 
-**Dialogue transitions**: A question is asked or implied in one state which is being answered in the next. For example, a state showing rising that organic farming is on the rise followed by a state showing areas where it is most prevalent. 
+**Temporal**: The two charts show the same data for different points in time. For example how the regional subdivision of Hungary has changed between 2017 and 2018 (see figure \ref{transition-hullman}).
 
-**Temporal transitions**: Where the difference between the states is that they show the situation at different points in time.
+**Causal**: One chart shows an effect and the next chart presents the cause of the effect. A chart showing a school district with high rates of failures and the next showing how high failure rates have been caused by higher segregation, for example (see figure \ref{transition-hullman}).
 
-**Causal transitions**: One state shows an effect and the next state presents the cause of the effect. For example, a state showing that the mortality rate was falling less recently and the next showing how the demographics have changed towards older people with naturally higher mortality rates.
+**Granularity**: When one chart shows a higher amount of detail than the other. One example being, a chart that shows EU countries on a map and another chart that shows how they are split into regions (see figure \ref{transition-hullman}).
 
-**Granularity transitions**: The amount of detail that is being shown changes between two states.
+**Comparison**: Either the dependent or an independent variable changes between the charts. The transition is called a measure walk when the measure is being changed. For example, showing a map of the impact of climate change on flooding risk and a map of the impact on crop shortage (where the respective impacts are the dependent variables) . It is called a dimension walk when one of the independent variables changes. For example, a series of sorted streamgraphs that show emigration patterns for different states (where the state is an independent variable) (see figure \ref{transition-hullman}).
 
-**Comparison transitions**: Either the dependent or an independent variable changes between the states. The transition is called a measure walk when the measure is being changed. For example, showing a map of the impact of climate change on flooding risk in the prior state and showing the impact on crop shortage in the successive. It is called a dimension walk when one of the independent variables changes. 
+**Spatial**: When the final state is spatially close to the initial state, as visible in figure \ref{transition-hullman}) where the charts show different heights of the earths orbit.
 
-**Spatial transitions**: When the final state is spatially close to the initial state.
-
-Hullman et al . distinguish between *implicit transitions* that can only be interpreted by a reader and *explicit transitions* that could potentially be inferred from changes in the attributes visualized (compare to section \ref{visualization-parameters}). Interestingly they have found very little occurrences of the two explicit transitions in their analysis (see figure \ref{hullman-frequency})
+Hullman et al . further distinguish between *implicit transitions* that can only be interpreted by a reader and *explicit transitions* that could potentially be inferred from changes in the attributes visualized (compare to section >>visualization-parameters). Interestingly they have found very little occurrences of the two explicit transitions in their analysis (see figure \ref{hullman-frequency})
 
 ![Transition types identified by Hullman et al. [@Hullman-13:deeperunderstanding]. The explicit dialogue and causal transitions are quite rare. \label{hullman-frequency}](/Users/jonas/Desktop/P9/bericht/img/transition-hullman-freq.png)
 
-In addition implicit and explicit transitions can easily be orthogonal at times. The dialogue transition that first shows a trend towards organic farming and then where it is on the rise could just as easily be classified as a dimension walk.
+Implicit transitions are defined by the question: "What changes between the charts?". This can be time, location, granularity, or a variable.
+
+## Comparison
+
+Basically all of the classifications presented before are based on different types of changes between charts. Either visualization parameters change; subject, scene or time change; or again time, location, granularity or variable. This indicates that the elusive information gained from transitions has something to do with comparing the two charts. This section therefore looks at the research on comparison in visualization in more detail.
+
+![A topology of visualization tasks which synthesizes a large body of
+previous literature has been proposed by Brehmer et al. [@Brehmer-13:multileveltypology] \label{transition-topology}](img/comparison-taxonomoy.png)
+
+According to Brehmer et al.'s taxonomy of visualization tasks [@Brehmer-13:multileveltypology], "Compare" is one of three tasks in the "Query"-group. These tasks are distinguished by the number of *targets* they operate on. An *identify*-task uses a single target while a *summarize*-task uses all available targets. The *compare*-task requires multiple subgroups of targets to compare them. Targets, obviously, need to be available before they can be compared.
+
+The comparison task therefore needs to be proceeded by tasks from the *search*-group that will identify and locate targets. In narrative visualization, this will most often be the *locate*-task to find targets explicitly mentioned in the narrative. But this is not the only case: 
+
+#### Explicit identification
+
+is aided by the author through labels, annotations, colors and narrative. An example can be seen in figure \ref{narrative-annotation}.
+
+#### Identification through visual statistics
+
+ uses the ability of the visual system to quickly and quite accurately calculate certain statistical properties of an image (figure \ref{comparison-identification}). A viewer can for example see in an instant if a certain region contains more orange than blue dots (mean). She can also quickly identify groups of points that are similar (clustering). Viewers will be able to tell if circles get bigger from left to right (trends). Or if a point has a different color from all the outers (outlier). All of these values can then serve as a target for comparison.
+
+#### Implicit identification
+
+ In many cases, external knowledge or personal interest of the viewer will lead to the identification of a target. [@Gleicher-18:considerationsvisualizing] Often, readers will compare what they see to what they would have expected to see. Or a person from Brooklyn for example will tend to be more interested in the success and failure history of the Brooklyn Nets than that of the Warriors from California (see figure \ref{narrative-dynamic-query}). This is one of the reason for authors of narrative visualization to include *dynamic queries*.
+
+![The visual aggregation tasks from [@Szafir-16:fourtypes] show how comparison targets can by identified by visual statistics. \label{comparison-identification}](img/comparison-identification.png)
 
 
+
+When a target or a set of targets have been identified in one of the charts, the reader proceeds to *locate* a corresponding target in the other chart. When all the targets are available, they are compared in the readers mind. This often requires a considerable mental effort, which we will call the *transition cost*.
 
 ## Transition cost
 
-Hullman et al. [@Hullman-13:deeperunderstanding] also introduced the idea of a *transition cost*. According to the authors, the transition cost should be calculated by summing the following numbers:
+Gleicher [@Gleicher-18:considerationsvisualizing] also describes three factors that make comparisons challenging:
+
+* A large number of targets
+* Large targets. For example when comparing two very long time series.
+* Complex relationships. For example when there is not a one-to-one relationship.
+
+Another approach to measure the difficulty of a transition can be found in Hullman et al. [@Hullman-13:deeperunderstanding] who introduce the idea of a *transition cost*. According to the authors, the transition cost should be calculated by summing the following counts:
 
 * How many independent variables have changed?
 * Has the dependent variable changed?
@@ -157,100 +168,87 @@ Hullman et al. [@Hullman-13:deeperunderstanding] also introduced the idea of a *
 
 When using this definition, the authors found that readers strongly preferred transitions with a cost of one. Transitions with costs that were higher, e. g. two or three were judged as equally undesirable. 
 
-### Transient memory effect
+### Cognitive load theory
 
-A similar view on this subject comes from *cognitive load theory*. It postulates that novel information needs to be processed in the learners working memory. At the same time this working memory is severely limited in capacity (the infamous 7 plus minus 2 rule). (TODO:MIller 56) But when a learner had time to process and organize the novel information into his long term memory, he can use it at almost no cost to his working memory. These observations lead to what is called the *transient information effect*. It occurs when learners are exposed to complex information in a form that is "transient and difficult to retrieve rapidly and when required". [@Wong-12:cognitiveload, p. 449] Examples for this are sequences of audio narration as well as animations. The transient information effect predicts that people will forget what they have seen before when the amount of novel information exceeds their working memory limits. The authors therefore suggest to segment large amounts of information into chunks that readily fit into working memory. Letting readers pause after each chunk would give them time to organize its content to long term memory. A chunk thus incorporated can then be used at very little cost to process the next chunk.
+The idea that the amount of change that people can process at a time is supported by *cognitive load theory*.[@Wong-12:cognitiveload] It postulates that novel information needs to be processed in the learners *working memory*. But this working memory is severely limited in capacity. The range is from from a maximum of 9 to as low as one object, depending on the complexity of the objects. [@Miller-56:magicalnumber, @Alvarez-04:capacityvisual] If the learner had time time to process and organize the novel information into her *long term memory*, she can use it at almost no cost to her working memory however. The way information is organized into long term memory is called a *schema*.
 
-TODO: schemas and memory islands
+These principles predict that when the number and complexity of targets in a transition exceeds the working memory of the reader, she will forget what she has seen before and comparison fails because not all necessary targets are available.
 
-While the inherent complexity of the information presented (*intrinsic cognitive load*) is not under the control of the designer, the number of elements (*extraneous cognitive load*), can be reduced. This mirrors Hullman et al.'s  [@Hullman-13:deeperunderstanding] findings and connects it to a larger theoretical context.
-
-While reducing the number of changes in a transition is a valid way to unburden a readers working memory, cognitive load theory points to many other valid methods.
+In some cases this complexity is inherent in the material that's being presented (*intrinsic cognitive load*). But in many cases it is the presentation that creates unnecessary cognitive load (*extraneous cognitive load*).
 
 ### Reducing the transition cost
 
-*Narration* is commonly used to guide the reader's attention to a specific relationship between two states  [@Aisch-17:hurricaneirma; @Collins-15:whymeasles; @Anderson-16:largestanalysis] and thus removes a lot of burden from working memory.
+#### Chunking
 
-*Color* is another very common way of highlighting certain elements. When a reader focuses on elements of a specific color (for example the one that's most saturated), his visual system will effectively prevent other elements (who might be desaturated) from even reaching short term memory. [@Franconeri-18:thinkingdata]
+The first recommendation to lighten the cognitive load is to reduce the number of elements that needs to be processed. This is done by splitting transitions and adding in-between charts. These charts serve as islands where the reader has time to organize information from working memory into long-term memory. From long-term memory the information is available at little cost for processing subsequent transitions.
 
-Different authors have also tried to use *animation* to reduce cognitive load [@Zongker-03:creatinganimation; @Betrancourt-08:displaykey] with mixed results. Although the use of animation for transitions is generally met with great enthusiasm by readers[@Heer-07:animatedtransitions], there is still much unclarity regarding its effect on understanding and about how well it fares against other means for easing the transition cost. One experiment, for example, has shown that *symbols* were as effective in establishing a causal relationship as animation.[@Kadaba-07:visualizingcausal] Others have found animation very effective in the common *panning* [@Shanmugasundaram-07:cansmooth] and *zooming* transitions [@Shanmugasundaram-08:effectanimated]. (see >>Visualization parameters)
+One of the most common types of intermediate charts are those how show how elements can be grouped into larger entities. This supports the reader in creating a schema in his long term memory.
 
-The variety of findings and the lack of an explanatory framework to explain them points to a gap in theory. Our attempt to close it by connecting existing models with cognitive load theory will be discussed in the next section.
+#### Highlighting
 
+Another way to reduce the amount of elements in working memory is to highlight the most important targets or the parts of them that are interesting for comparison. This can be done through the means of narrative visualization (narration, annotations, color) mentioned before (>>Narrative visualization) Highlighting is especially efficient when done through pre-attentive attributes) like color. In this case, elements with other colors are already being hidden by the visual system and don't even reach working memory. [@Franconeri-18:thinkingdata] (compare also figure \label{comparison-identification}
 
+#### Object constancy
 
-# Transition techniques
-
-We believe that none of the taxonomies described in section >>Transitions appropriately capture the way readers make sense of transitions by comparing targets (see >>Comparison). They are either too technical and abstract as when they are solely focused on visualization parameters or they don't deal with the particular nature of visualization understanding as it is the case for McCloud's (TODO:source) and Cohens (TODO:source) taxonomies. Hullman et al. seems to us to be the most promising approach but their transition types are not linked to any theory that would help explain differences between the different types. That's why the assumed all of their transitions to have a cost of one which contradicts our experience.
-
-We therefore propose a synthesis of these three models that directly links transitions to  *elements in working memory* described by cognitive load theory. We call these *characters*, *attributes* and *context*.
+Finally, properties of the visual system can be used to pre-process objects. There is some evidence that when the reader has rapid visual access to the targets (<300ms [@Rensink-02:changedetectiona]), changes will be detected before working memory is reached. Based on these findings, different authors have tried to use *animation* to reduce cognitive load [@Zongker-03:creatinganimation; @Betrancourt-08:displaykey] with mixed results. These findings will be discussed in the chapter on animation (>>Animation)
 
 
 
+## Perception-oriented classification
+
+Based on these insights, we believe that the taxonomies described in section (>>Transitions) don't adequately address the problem of reducing the transition cost. That is because they don't treat transitions as comparison of targets (>>Comparison) and they don't consider how these targets need to be compared in working memory (>>Cognitive Load Theory). From the three approaches we consider Hullman et al.'s classification the most promising because they have successfully linked it to  *transition cost*. The weakness of their model is that it is not linked to a larger theoretical framework. We will aim at this in the this chapter by first introducing a theoretical framework based on cognitive load theory. We will call this a *perception-oriented classification*. We will then use a similar method as Hullman et al. to infer a number of transition types from existing narrative visualizations.
 
 
-##  A simplified model of how readers perceive transitions
 
-
-
-Tableau:
-
-* Change context
-* Add bar
-* Remove bar
-
-* Slicing: change form of the value
-* Filter
-* Sorting
-* 
-
-
+###  Theoretical model
 
 (TODO:graphic)
 
-We argue that readers extract information from a transition based on a comparison of the initial and the final state. As discussed in section >>Comparison, readers first identify a target in on of the states. Then they try to locate the matching target in the other state. When a relationship is thus identified, it is further analyzed. To do this they need to three types of elements in their working memory:
+We argue that readers extract information from a transition based on a comparison between the first and the second chart. As discussed in section (>>Comparison), readers first identify a target in one of the charts. Then they try to locate the matching target in the other chart. When a relationship is thus identified, it is further analyzed. To do this they need to keep three types of elements in their working memory:
 
-**Characters**: A character is an identifiable and nameable visual entity in the chart. It can be a dot, a line or any other shape. In visualization these entities are very often identified by one or more independent, categorical variables. For example countries, genders, age groups, etc. Even though this definition might seem abstract at first, it is in most cases very easy to identify in narrative visualization. That is because the narrative will typically talk about them.
+#### Characters
 
-Characters can also be grouped into a unifying character. Switzerland, Italy and France could form the group *European countries* while Japan, China and Korea might be combined into *Asian countries*.
+A character is an identifiable and nameable visual entity in the chart. It can be a dot, a line or any other mark. In visualization these entities are very often identified by one or more independent, categorical variables. For example countries, genders, age groups, etc. Even though this definition might seem abstract at first, it is in most cases very easy to identify characters in narrative visualization. That is because the narrative will typically talk about them.
 
-**Attributes**: Is used to describe all the other independent variables as well as all dependent variables. Attributes are showing different aspects of the characters. Country-characters can have population numbers over time. Gender-characters might have differing PISA-test success rates or might marry at at different ages.
+Characters can also be grouped into a unifying character. Switzerland, Italy and France could form the group *European countries* while Japan, China and Korea might be combined into *Asian countries*. Grouping characters is one of the ways readers organize single elements into long term memory to reduce load on the working memory.
 
-**Context**: The context of the whole state is often not depicted in the chart. Often it is given in the title or in the text. A state might for example show the PISA-test success rates for a certain revision of the PISA-test or give country statistics according to a certain source. 
+#### Attributes
 
-This classification roughly mirror Cohn's [@Cohn-10:limitstime] categories of *subject*, *scene*, *time*. Based on his work and our own observation we think that there is also a hierarchy in our proposed categories. Readers will first identify the characters in a state and look for the corresponding characters in the following state. If they find them and they visually differ between the states, the reader will look for reasons. At first the reader will assume that a different attribute of the character is shown. She will therefore check the axes. If they conclude that the changing appearance of the character is not due to different attributes being shown they will assume that a change of context has happened.
+Are used to describe all the other variables encoded in the visualization in the form of position, size, shape, etc. Attributes are showing different aspects of the characters. Country-characters can have population numbers over time. Gender-characters might have differing PISA-test success rates or might marry at at different ages.
 
+#### Context
 
+Finally, many charts typically have a context. The situation shown might be for a certain year, for a certain revision of the PISA-test or according to a certain source. The context is often depicted in the title.
 
-## Method
+We believe that each of these elements will occupy roughly one slot of the readers working memory. When something stays the same between two charts, it will still only occupy one slot. If something changes, two slots will be needed.
 
-Similar to Hullman (42) (TODO) and [@Segel-10:narrativevisualization] (58)
+The three types of elements also roughly mirrors Cohn's [@Cohn-10:limitstime] categories of *subject*, *scene* and *time*. Based on his work and our own observation we suspect that there is also a hierarchy in our proposed types: Readers will first identify the *characters* in a chart and look for the corresponding characters in the other chart. If they find them and they visually differ between the states, they will look for reasons. At first they will assume that a different *attribute* of the character is shown and therefore check the axes. If they conclude that the changing appearance of the character is not due to different attributes being shown they will assume that a change of *context* has happened.
 
-### Selection of examples
-
-
-
-![image-20190819150848797](img/image-20190819150848797.png)
-
-[@Segel-10:narrativevisualization]
+Even though they flow from the literature, further research would be needed to validate the hypotheses about working memory consumption and the interpretation hierarchy.
 
 
 
-The test the proposed model, we have applied it to a collection of transition techniques commonly found in narrative visualization. We have started by compiling a corpus of narrative visualizations from online sources. The corpus combines two collections from other authors [@Riche-18:datadrivenstorytelling, @Mckenna-17:visualnarrative] with our own examples. The corpus thus includes 144 narrative visualizations published between 2008 and 2019 by a variety of new organizations as well as individuals.
+### Method
 
-In a first step we excluded stories that were not clearly focused on data visualization. These include for example infographics and scrollytelling stories that were included because they were important in McKenna et al.'s [@Mckenna-17:visualnarrative] work. On the other hand, some examples only contained a single visualization and no transition. We also excluded certain examples based on media type for practical purposes: everything in flash and all the videos. Finally, we excluded everything that was not accessible anymore. After this first round of filtering, 79 examples remained.
+To find out if the proposed theoretical model would be applicable to a wide range of narrative visualizations, we conducted an analysis of 20 narrative visualizations containing multiple transitions each (TODO:get the precise numbers).
 
-From these we selected subset of 40 to reduce the workload of the analysis.
+#### Selection of examples
 
-### Analysis
+The test the proposed model, we have applied it to a collection of transition techniques commonly found in narrative visualization. We have started by compiling a corpus of narrative visualizations from online sources. The corpus combines two collections from other authors [@Riche-18:datadrivenstorytelling, @Mckenna-17:visualnarrative] and our own examples. The corpus thus includes 144 narrative visualizations published between 2008 and 2019 by a variety of news organizations as well as individuals.
 
-For each example, a screenshot of each visualization state was pasted on a canvas in order. First we identified the characters in the first screenshot. For each transition we annotated if the characters, scene or context changed from the previous state and how it changed. This was usually straightforward which was an encouraging sign. Finally, we unified very similar transitions into 10 categories.
+In a first step we excluded stories that were not clearly focused on data visualization. These include for example infographics and scrollytelling stories that were in the corpus because they were important in McKenna et al.'s [@Mckenna-17:visualnarrative] work. On the other hand, some examples only contained a single visualization and no transition. We also excluded certain examples based on media type for practical purposes: everything in flash and all the videos. Finally, we excluded everything that was not accessible anymore. After this first round of filtering, 79 examples remained.
+
+From these we selected subset of 20 to reduce the workload of the analysis.
+
+#### Analysis
+
+For each example, a screenshot of each chart was pasted on a canvas in order. First we identified the characters in the first screenshot. For each transition we annotated if the characters, scene or context changed from the previous state and how it changed. This was usually straightforward which was an encouraging sign. Finally, we unified very similar transitions into 10 categories.
 
 
 
-## Techniques
+### Transition types
 
-### Explore attributes
+#### Explore attributes
 
 ![Two examples of transitions exploring different attributes of the same characters. On the left side from a story of TODO and on the right side a story of TODO  \label{technique-diffent-measure}](/Users/jonas/Desktop/P9/bericht/img/technique-different%20measure.png)
 
@@ -258,21 +256,21 @@ For each example, a screenshot of each visualization state was pasted on a canva
 | ------------- | ---------- |
 | Stay the same | Differ     |
 
-This is probably the most obvious transition type for storytelling. Here the author explores different aspects of the same character(s). In many cases this will be done by mapping a different attribute to one of the axis, like on the left side of figure \ref{technique-diffent-measure}. Here the author compares incarceration rates  (attribute) for black and white men (characters) by income of their parents in the first chart. In the second, the incarceration rate gets replaced with the percentage of children who are married. To show that you're more likely to get incarcerated and less likely to get married when your from a black family.
+This is probably the most obvious transition type for storytelling. Here the author explores different aspects of the same character(s). In many cases this will be done by mapping a different attribute to one of the axis, like on the left side of figure \ref{technique-diffent-measure}. Here the author compares incarceration rates  ![](img/attr.pdf) for black ![](img/char.pdf)and white men ![](img/char.pdf) by income of their parents ![](img/attr.pdf) in the first chart. In the second, the incarceration rate ![](img/attr.pdf) gets replaced with the percentage of children who are married ![](img/attr.pdf). To show that you're more likely to get incarcerated and less likely to get married when your from a black family.
 
 Note how the character changes technically between the two states as its first "black men" and after that "black men and women". This will likely get unnoticed by a majority of the readers by design. Choosing the same colors for semantically very similar character shows that the author intended them to be perceived as "the same".
 
 The example on the right side of figure \ref{technique-diffent-measure} shows to interesting things: characters need not be explicit and characters can stay the same between chart types.
 
-In the first chart, the characters are not identified by the author but emerge from the visualization through a combination of *identification through visual statistics* and *implicit identification*. More specifically the reader will perceive two clusters of very different color on the map. If she has some knowledge about the geography and history of Germany, she will identify them as Former East and West Germany.
+In the first chart, the characters are not identified by the author but emerge from the visualization through a combination of *identification through visual statistics* and *implicit identification* (see section >>Comparison). More specifically the reader will perceive two clusters of very different color on the map. If she has some knowledge about the geography and history of Germany, she will identify them as Former East  ![](img/char.pdf) and West Germany ![](img/char.pdf).
 
-These characters are named in the next state. In contrast to the example on the left, the second chart here is completely different from the first. While the first depicts a map, the second is a timeseries chart. Nonetheless, the transition is still between two states showing different measures for the same characters.
+These characters are named in the next state. In contrast to the example on the left, the second chart here is completely different from the first. While the first depicts a map, the second is a timeseries chart. Nonetheless, the transition is still between two characters showing different attributes (day care ![](img/attr.pdf)and children per women ![](img/attr.pdf)) for the same characters.
 
-The corresponding transition in Hullman et al. is a *measure walk*. [@Hullman-13:deeperunderstanding] A congruent *animation* for this type of transition is morphing a characters shape in the first chart into its shape in the second chart.
+The corresponding transition in Hullman et al. is a *measure walk*. [@Hullman-13:deeperunderstanding] A congruent *animation* for this type of transition is morphing a characters shape in the first chart into its shape in the second chart. The cognitive load of this transition is principally defined by the attribute change.
 
 
 
-### Contrast characters
+#### Contrast characters
 
 ![technique-contrast \ref{technique-contrast}](/Users/jonas/Desktop/P9/bericht/img/technique-contrast.png)
 
@@ -280,15 +278,15 @@ The corresponding transition in Hullman et al. is a *measure walk*. [@Hullman-13
 | ---------- | ------------- |
 | Differ     | Stay the same |
 
-We call this technique contrasting because it highlights the difference between characters. It's typical for these transitions to keep the exact same layout between two states and just switching characters. Only like this, visual comparison is possible. This is the case for the example on the right in figure \ref{technique-contrast}. The income gap between black and white men becomes very clear in comparison the obvious lack of the gap for women when plotted in the same coordinate system.
+We call this technique contrasting because it highlights the difference between characters. It's typical for these transitions to keep the exact same layout between two states and just switching characters. Only like this, visual comparison is possible. This is the case for the example on the right in figure \ref{technique-contrast}. The income gap between black ![](img/char.pdf) and white men ![](img/char.pdf) becomes very clear in comparison the obvious lack of the gap for women ![](img/char.pdf) when plotted in the same coordinate system.
 
-But also in contrasting transitions there is subtlety as visible on the left side of figure \ref{technique-contrast}. Here the x-axis is actually being shifted between the states. But the shift has no other reason than saving space. It may take a little more effort from the reader to understand that the first chart shows states that have below average proportions of women and the second chart shows states that have above average proportions of women. Yet this *pan* (see >>Visualization parameters) could have been left out without changing the interpretation of the transition at all. This leads us directly to the next technique: *Reconfigure*.
+But also in contrasting transitions there is subtlety as visible on the left side of figure \ref{technique-contrast}. Here the x-axis is actually being shifted between the states. But the shift has no other reason than saving space. It may take a little more effort from the reader to understand that the first chart shows states that have below average proportions ![](img/attr.pdf)  of women and the second chart shows states that have above average proportions ![](img/attr.pdf) of women. Yet this *pan* (see >>Visualization parameters) could have been left out without changing the interpretation of the transition at all. This leads us directly to the next technique: *Reconfigure*.
 
-The corresponding transition in Hullman et all. is a *dimension walk*. [@Hullman-13:deeperunderstanding] A congruent *animation* for this transition would be fading out the characters from the previous chart and fading in the new characters.
+The corresponding transition in Hullman et all. is a *dimension walk*. [@Hullman-13:deeperunderstanding] A congruent *animation* for this transition would be fading out the characters from the previous chart and fading in the new characters. The cognitive load of this transition is defined by the number of characters that need to be compared.
 
 
 
-### Reconfigure
+#### Reconfigure
 
 ![\label{technique-reconfigure}](/Users/jonas/Desktop/P9/bericht/img/technique-reconfigure.png)
 
@@ -300,11 +298,11 @@ The defining characteristic of this transition is, that no new information is sh
 
 The right example in figure \ref{technique-reconfigure} shows a more drastic reconfiguration of a map into a scatterplot. While the first chart makes it easy to see how for example the south of Italy is underdeveloped and while the north is above average, the same split can be found in the scatterplot when hovering over the dots, representing the individual regions of Italy. Conversely, the ranking and uniformity of countries can be extracted through visual statistics (>>Comparison) from the first chart. It's just much, much clearer in the second.
 
-Reconfigure subsumes the *pan*, *zoom*, *reorder* and *visualization change* transitions from section (>>Visualization parameters). We have note found reconfigure transitions to be common enough to deserve further specification into these subcategories. Still, the subcategories have some use when considering trying to define what a congruent *animation* for this transition might look like. A discussion can be found in [@Heer-07:animatedtransitions].
+Reconfigure subsumes the *pan*, *zoom*, *reorder* and *visualization change* transitions from visualization-oriented transitions (>>Visualization parameters). We have not found reconfigure transitions to be common enough in narrative visualization to deserve further specification into these subcategories. Still, the subcategories have some use when considering trying to define what a congruent *animation* for this transition might look like. A discussion can be found in [@Heer-07:animatedtransitions and @Isaacs-18:tableaumotion]. Regarding cognitive load, our model does not make any prediction for this type of transition. But our experiment indicate that it can be quite high (>>Differences between the stories).
 
 
 
-### Split characters
+#### Split characters
 
 ![technique-split](/Users/jonas/Desktop/P9/bericht/img/technique-split.png)
 
@@ -312,15 +310,17 @@ Reconfigure subsumes the *pan*, *zoom*, *reorder* and *visualization change* tra
 | ----------------------------------------------- | ------------- |
 | Visible characters are split into subcharacters | Stay the same |
 
-As described in (>>A simplified model) characters need not be atomic units. Groups of similar characters can be perceived as a character themselves. But sometimes the author wants to convey how characters in a group differ from each other and thus how homogeneous a group is.
+As described in (>>Theoretical model) characters need not be atomic units. Groups of similar characters can be perceived as a character themselves. But sometimes the author wants to convey how characters in a group differ from each other and thus how homogeneous a group is.
 
-Splitting characters is an essential device in narrative visualization because it nicely fits the general-to-specific pattern often used in storytelling (TODO:source). When splitting characters, the attributes will usually stay the same to serve as a frame of reference. A kind of shadow or contour of the "parent"-group will often remain too for reference. This is the case for both examples in figure \ref{technique-split} one who splits measles cases by states into years and one who splits European countries into regions.
+Splitting characters is an essential device in narrative visualization because it nicely fits the general-to-specific pattern often used in storytelling (TODO:source). When splitting characters, the attributes will usually stay the same to serve as a frame of reference. A kind of shadow or contour of the "parent"-group will often remain too for reference. This is the case for both examples in figure \ref{technique-split} one who splits measles cases by states ![](img/char.pdf)  by years ![](img/attr.pdf) and one who splits European countries ![](img/char.pdf) into regions ![](img/char.pdf).
 
 Splitting characters is what Hullman et al. [@Hullman-13:deeperunderstanding] call a *general-to-specific* transition. As it typically happens "in-place", a congruent *animation* might be fading in the sub-characters while fading out the parent.
 
+This transition helps reduce cognitive load by supporting the creation of a schema in the readers mind.
 
 
-### Merge characters
+
+#### Merge characters
 
 ![technique-merge](/Users/jonas/Desktop/P9/bericht/img/technique-merge.png)
 
@@ -328,13 +328,13 @@ Splitting characters is what Hullman et al. [@Hullman-13:deeperunderstanding] ca
 | ----------------------------- | ------------- |
 | Visible characters are merged | Stay the same |
 
-Where there is splitting, there needs to be merging. But merging is conceptually more complicated than splitting. Splitting shows more information in the second chart while merging summarizes information from the first chart. In the second case it is much more important for the reader to understand the summary operation. Is the new character the mean, the sum or even the difference of the characters previously seen? Both examples in figure \ref{technique-merge} illustrate this problem very well. Visually, the natural factors presented in the second chart could very well be the mean of volcanic, solar and orbital change. But it's actually the sum. In the second example, the pink bars might well represent the sum of the dots on the left but it's actually the difference. TODO:[@Kim-19:designinganimated]
+Where there is splitting, there needs to be merging. But merging is conceptually more complicated than splitting. Splitting shows more information in the second chart while merging summarizes information from the first chart. In the second case it is much more important for the reader to understand the summary operation that is being used. Is the new character the mean, the sum or even the difference of the characters previously seen? Both examples in figure \ref{technique-merge} illustrate this problem very well. Visually, the natural factors ![](img/char.pdf) presented in the second chart could very well be the mean of volcanic ![](img/char.pdf) , solar ![](img/char.pdf) and orbital change ![](img/char.pdf). But it's actually the sum. In the second example, the pink bars might well represent the sum of the dots on the left but it's actually the difference. TODO:[@Kim-19:designinganimated]
 
-Although merging is complex it can be very useful for a storytelling approach that has been called *ladder of abstraction*-storytelling[@Victor-11:ladderabstraction]. It starts with very concrete, down to earth characters (like volcanoes or skill importance) and moves "up" towards more abstract concepts (like natural factors or skill importance difference).
+Although merging is complex it can be very useful for a storytelling approach that has been called *ladder of abstraction*-storytelling[@Victor-11:ladderabstraction]. It starts with very concrete, down to earth characters (like volcanoes ![](img/char.pdf) or skill importance ![](img/char.pdf) ) and moves "up" towards more abstract concepts (like natural factors ![](img/char.pdf)  or skill importance difference ![](img/char.pdf) ).
 
-Hullman et al. [@Hullman-13:deeperunderstanding] call this transition *specific to general*
+Hullman et al. [@Hullman-13:deeperunderstanding] call this transition *specific to general*. Similar to *split characters* it should help reduce cognitive load by explicitly showing a schema that can be used to organize the information into long term memory. 
 
-### Highlighting
+#### Highlighting
 
 ![\label{technique-focus}](/Users/jonas/Desktop/P9/bericht/img/technique-focus.png)
 
@@ -342,13 +342,13 @@ Hullman et al. [@Hullman-13:deeperunderstanding] call this transition *specific 
 | ----------------- | ------------- |
 | Get filtered down | Stay the same |
 
-This technique again serves the very common *general-to-specific*-pattern (TODO:source). It focuses the reader a specific character or on a special group of characters. The most common way to do this is by hiding the other characters. An example of this can be found in the right example in figure \ref{technique-focus} where all the second chart only shows Hungary from all the EU countries. In the example on the left side of figure \ref{technique-focus} the transition only fades out the other age groups to highlight the 25 to 44 group. Many other ways of highlighting one character are imaginable.
+This technique again serves the very common *general-to-specific*-pattern (TODO:source). It focuses the reader on a specific character or on a special group of characters. The most common way to do this is by hiding the other characters. An example of this can be found in the right example in figure \ref{technique-focus} where all the second chart only shows Hungary ![](img/char.pdf) from all the EU countries ![](img/char.pdf). In the example on the left side of figure \ref{technique-focus} the transition hides the other age groups ![](img/char.pdf) to highlight the 25 to 44 group ![](img/char.pdf) . Many other ways of highlighting one character are imaginable.
 
-This transition is conceptually quite easy because attributes as well as characters stay essentially the same with the exception of the removal or deemphasis/emphasis of some characters.
+This transition reduces cognitive load by reducing the number of characters that need to be considered.
 
 
 
-### Progressive disclosure
+#### Progressive disclosure
 
 ![\label{technique-disclosure}](/Users/jonas/Desktop/P9/bericht/img/technique-disclosure.png)
 
@@ -356,15 +356,17 @@ This transition is conceptually quite easy because attributes as well as charact
 | ------------------------------------ | ------------- |
 | More or more of them becomes visible | Stay the same |
 
-Similar to split and merge, this is the counterpart of highlighting. And equally, to merge it is a useful device for *ladder of abstraction*-storytelling. [@Victor-11:ladderabstraction] One version of this technique introduces new characters in the second chart as seen on the right in figure \ref{technique-disclosure}. Another variant shows more of the same character(s) in the second chart. The example on the left shows more and more of the course of the game between the Miami Heats and the Houston Rockets with each transition.
+Similar to split and merge, this is the counterpart of highlighting. And equally, to merge it is a useful device for *ladder of abstraction*-storytelling. [@Victor-11:ladderabstraction] One version of this technique introduces new characters in the second chart as seen on the right in figure \ref{technique-disclosure}. Another variant shows more of the same character(s) in the second chart. The example on the left shows more and more of the course of the game between the Miami Heats ![](img/char.pdf) and the Houston Rockets ![](img/char.pdf) with each transition.
 
 A particular case of progressive disclosure are what Hullman et al. call *spatial transitions*. A story might for example explore the mountainous terrain of the Alps and disclose more and more of it with each transition. 
 
 What is congruent for progressive disclosure depends on the question if more characters are disclosed or more of the characters is disclosed. In the first case, a simple fade-in of the new characters is the most congruent. In the second case, some sort of movement is typically used.
 
+Progressive disclosure lightens the burden on working memory by splitting information into chunks that are shown one after the other.
 
 
-### Contrast contexts (Temporal??)
+
+#### Context
 
 ![technique-temporal](/Users/jonas/Desktop/P9/bericht/img/technique-temporal.png)
 
@@ -372,15 +374,15 @@ What is congruent for progressive disclosure depends on the question if more cha
 | -------------- | ------------- |
 | Stay the same* | Stay the same |
 
-The interest of the context transition is to show how the "situation" (the form of characters according to the same attributes) changes when the context changes. The most common case is comparing the situation at different points in time. In the right example in figure \ref{technique-temporal}, the author wants to convey how made up most of the world's poor in the 90s and is now home to a large part of the worlds middle class.
+The interest of the context transition is to show how the "situation" (the form of characters according to the same attributes) changes when the context changes. The most common case is comparing the situation at different points in time. In the right example in figure \ref{technique-temporal}, the author wants to convey how China ![](img/char.pdf) made up most of the world's poor ![](img/attr.pdf) in the 90s and is now home to a large part of the worlds middle class ![](img/attr.pdf) .
 
-The example on the left shows how a changing context may lead to a change in characters. Here the formerly single large administrative region around Budapest has split into the rich Budapest and the poor Pest (notice how poor Pest only gets half of the name).
+The example on the left shows how a changing context may lead to a change in characters. Here the formerly single large administrative region around Budapest ![](img/char.pdf) has split into the rich Budapest ![](img/char.pdf) and the poor Pest ![](img/char.pdf) (notice how poor Pest only gets half of the name).
 
-Hullman et al[@Hullman-13:deeperunderstanding]. identified the very prevalent change in temporal context but ignore the fact that other contexts like countries. As contexts contain groups of characters, they can become characters themselves at certain points of the story. That is why contrasting contexts has a close relationship to contrasting characters and the distinction is not always 100% clear.
+Hullman et al[@Hullman-13:deeperunderstanding] identified the very prevalent change in temporal context but did not generalize it. As contexts contain groups of characters, they can become characters themselves at certain points of the story. That is why context transitions have a close relationship to contrasting character transitons and the distinction is not always 100% clear. Their cognitive load is related to the changes in character as well as the two contexts that need to be kept in working memory.
 
 
 
-### Move through a semantic field
+#### Semantic field
 
 ![technique-semantic](/Users/jonas/Desktop/P9/bericht/img/technique-semantic.png)
 
@@ -388,29 +390,15 @@ Hullman et al[@Hullman-13:deeperunderstanding]. identified the very prevalent ch
 | ---------- | ---------- |
 | Differ     | Differ     |
 
-This is probably the hardest transition for readers to follow as none of the elements are shared between the charts. The only thing that connects the two charts is that their characters are connected through a similar meaning as described by Cohn [@Cohn-12:peanuts]. The reader therefore needs to move up in the conceptual hierarchy to find the relationship between the characters depicted.
+This is probably the hardest transition for readers to follow as none of the elements are shared between the charts. The only thing that connects the two charts is that their characters come from the same field of concepts as described by Cohn [@Cohn-12:peanuts]. The reader therefore needs to move up in the conceptual hierarchy to find the relationship between the characters depicted.
 
-*Causal* and *Question & answer* transitions identified in Hullman et al. [@Hullman-13:deeperunderstanding] would fall into that category. Because nothing is shared between the two states, there is no possible congruent *animation*. 
-
-
-
-## Implications
-
-TODO
+*Causal* and *Question & answer* transitions identified in Hullman et al. [@Hullman-13:deeperunderstanding] would fall into that category. Because nothing is shared between the two states, there is no possible congruent *animation*. Similarly, our model gives no indications about the complexity of such a transition because comparison happens at a higher level than characters and attributes.
 
 
 
+## Discussion
 
-
-
-
-
-
-
-
-
-
-
+In our analysis of narrative visualization we have found three transition types that introduce elements to working memory via characters and attributes (*explore attributes*, *contrast characters*, *context*) and four transition types that are being used to reduce working memory load by highlighting and chunking (*split characters*, *merge characters*, *highlight* and *progressive disclosure*). The third way to reduce cognitive load is maintaining *object constancy*. Animation said to have this effect and will be discussed in the next chapter.
 
 
 
@@ -424,23 +412,23 @@ To understand why designers might think that animation helps in these specific c
 
 
 
-#### Object constancy
+#### Object constancy ![](img/A.pdf)
 
-Object constancy describes the ability to identify two objects as being the same entity between two states.  This is probably the strength most often invoked for animation [@Chalbi-18:understandingdesigning, @Wu-16:graphicalperception, @Bederson:doesanimation, @Heer-07:animatedtransitions] It is also closely related to the previously presented model and *characters* (TODO:how). If animation indeed supports object constancy, it would simplify the *location* of the target in the second state (>>Comparison) and this simplify the essential comparison task.
+Object constancy describes the ability to identify two objects as being the same entity between two states.  This is probably the strength most often invoked for animation [@Chalbi-18:understandingdesigning, @Wu-16:graphicalperception, @Bederson:doesanimation, @Heer-07:animatedtransitions] It is also closely related to the previously presented model (>>Theoretical model) and *characters*. If animation indeed supports object constancy, it would simplify the *location* of the target in the second state (>>Comparison) and this simplify the essential comparison task.
 
-#### Attract attention
+#### Attract attention ![](img/B.pdf)
 
 Movement very strongly attracts attention. This view is undisputed in the literature [@Munzner-15:visualizationanalysis, p. 238] and there is some solid evidence that motion is more effective in highlighting elements than other visual means [@Ware-04:motionsupport] This ability to highlight elements can be very useful for storytelling. But it also poses the risk to distract the reader from important, non-moving elements of a visualization like axes or labels.
 
-#### Communicate causality and intentionality
+#### Communicate causality and intentionality ![](img/C.pdf)
 
 In nature, we observe a certain smooth flow of cause and effect. When a rolling billiard ball hits another, the second ball will smoothly continue its transition. This leads to the intuition that smooth animation would imply some sort of cause and effect relationship (>>Congruence). This has been found to be true when depicting naturalist phenomena like the formation of lightning. [@Betrancourt-08:displaykey] Other authors have found that animation also conveys causality in more abstract displays but that it doesn't perform better than symbolic depictions of causality. [@Kadaba-07:visualizingcausal]
 
-#### Engage
+#### Engage ![](img/D.pdf)
 
-Many authors have remarked how readers where "excited" about animation in interfaces and that it thus led to higher engagement [@Tversky-02:animationcan, @Heer-07:animatedtransitions] The ability of animation to engage and excite is often presupposed based on anecdotal evidence. But few studies have used validated questionnaires to explicitly measure engagement. One study who did, found very mixed results [@Amini-18:hookeddata]. In their findings animation only led to higher engagement when coupled with pictorial representations of data. (>>Congruence) The main factor that led to higher engagement was "Aesthetics".  We suspect that in many cases there might be a "novelty" effect of animation that excites readers. There is little evidence that yesterdays fashionable animation still leads to higher engagement today. Furthermore, the novelty effect might lead readers and designers astray and they might confuse their positive feelings with actual benefits for understanding.[@Hassenzahl-10:inferenceperceived, @Baudisch-06:phosphorexplaining]
+Multiple authors have remarked how readers where "excited" about animation in interfaces and that it thus led to higher engagement [@Tversky-02:animationcan, @Heer-07:animatedtransitions] The ability of animation to engage and excite is often presupposed based on anecdotal evidence. But few studies have used validated questionnaires to explicitly measure engagement. One study who did, found very mixed results [@Amini-18:hookeddata]. In their findings animation only led to higher engagement when coupled with pictorial representations of data. The main factor that led to higher engagement was "Aesthetics".  We suspect that in many cases there might be a "novelty" effect of animation that excites readers. There is little evidence that yesterdays fashionable animation still leads to higher engagement today. Furthermore, the novelty effect might lead readers and designers astray and they might confuse their positive feelings with actual benefits for understanding.[@Hassenzahl-10:inferenceperceived, @Baudisch-06:phosphorexplaining]
 
-#### Data encoding
+#### Data encoding ![](img/E.pdf)
 
 Similar to color or shape, motion can be used to encode data. Although the precision in interpreting it is very limited. [@Munzner-15:visualizationanalysis, p. 95] This property of animation is not listed in Heer et al. but we have decided to include it because it is well studied and forms the basis of multiple of the purposes listed by Chevalier et al. [@Chevalier-16:animations25]
 
@@ -454,7 +442,7 @@ The question if animation is a natural fit for certain types of transitions has 
 
 > Effective graphics conform to the Congruence Principle according to which the content and format of the graphic should correspond to the content and format of the concepts to be conveyed.
 
-According to this view, showing *change over time* would be a congruent use of animation. The reasoning is that people perceive change over time as smooth transitions in their everyday lives. One study accordingly found that animation reduced the perceived cognitive load when showing change in networks. [@Bach-14:graphdiariesanimated] Other authors have not found this benefits [@Tversky-02:animationcan] naming a lack of *apprehension* as the potential reason.
+According to this view, showing *change over time* would be a congruent use of animation. The reasoning is that people perceive change over time as smooth transitions in their everyday lives. One study accordingly found that animation reduced the perceived cognitive load when showing change in networks. [@Bach-14:graphdiariesanimated] Other authors have not found such benefits [@Tversky-02:animationcan] naming a lack of *apprehension* as the potential reason.
 
 The second natural fit for animation are *viewport changes* like *pan* and *zoom*. These correspond to a persons natural movements through space, getting closer to objects, looking around etc. Animated transitions have indeed been found to be superior to static transitions for *panning* [@Shanmugasundaram-07:cansmooth] as well as *zooming*. [@Shanmugasundaram-08:effectanimated]
 
@@ -462,9 +450,9 @@ As previously discussed, animation has also been shown to be congruent for commu
 
 ![\ref{Amini-18-hookeddata}](/Users/jonas/Desktop/P9/bericht/img/Amini-18-hookeddata.png)
 
-Interestingly, multiple authors found that animation seems to be far less effective when used with abstract representations than when it is used with iconic representations. Amini et al. [@Amini-18:hookeddata] found that animated transitions in data visualization only led to higher engagement when coupled with iconic representations (see \ref{Amini-18-hookeddata}). A recent meta-analysis [@Berney-16:doesanimation] of 50 studies on animation and learning found, that animation only benefitted knowledge acquisition when used with "iconic representations" of the phenomena the needed to be studied. No effect was found for abstract representations.
+Interestingly, multiple authors found that animation seems to be far less effective when used with abstract representations than when it is used with iconic representations. Amini et al. [@Amini-18:hookeddata] found that animated transitions in data visualization only led to higher engagement when coupled with iconic representations (see \ref{Amini-18-hookeddata}). A recent meta-analysis [@Berney-16:doesanimation] of 50 studies on animation and its effect on learning found, that animation only benefitted knowledge acquisition when used with "iconic representations" of the phenomena the needed to be studied. No effect was found for abstract representations.
 
-We believe that congruence is strongly linked to object constancy. Animations will therefore fail in in abstract visualizations because they are not being used to establish object constancy. Looking at transitions as following characters through multiple states, exploring their attributes and contrasting them as proposed in (>>a simplified model) should help designers look at transitions in terms of object constancy. Which will lead to more congruent animation. Heer et al. warn against the risk of misusing object constancy [@Heer-07:animatedtransitions, p. 1240]:
+We believe that congruence is strongly linked to object constancy. Animations will therefore fail in in abstract visualizations because they are not being used to establish object constancy. Looking at transitions as following characters through multiple states, exploring their attributes and contrasting them as proposed in our perception-based classification (>>Theoretical model) should help designers look at transitions in terms of object constancy. Which will lead to more congruent animation. Heer et al. also warn against the risk of misusing object constancy [@Heer-07:animatedtransitions, p. 1240]:
 
 >  Object constancy can be abused if an object is transformed into a completely unrelated object, establishing a false relation.
 
@@ -499,7 +487,7 @@ Research on visual tracking explores how people track objects when the objects a
 
 The last point also illustrates an important distinction in visual tracking tasks. Results are often different for cases where the identity of single objects needs to be tracked (*identity tracking*) or when a group of objects needs to be tracked (*group tracking*). In the example above, *group tracking* is worse when distractors enter the convex area formed by the objects of the group. *Identity tracking*, on the other hand, gets better in this case. [@Chevalier-14:notsostaggeringeffect]
 
-Multiple design approaches have been proposed for better apprehension.
+Multiple design approaches have therefore been proposed to increase apprehension.
 
 ### Staggered animation
 
@@ -513,11 +501,11 @@ Staggered animation has been proposed to *reduce occlusion* as well as *complexi
 
 Staged animation splits complex animations between multiple visual variables into stages. An animation the interpolates between positions as well as between two colors, might, for example, be split into two animation stages. One where the objects move from position a to position b. Another, where they change color.
 
-Heer et al. explicitly recommend the use of staged animation [@Heer-07:animatedtransitions] even though they found only modest benefits. In situations where staging led to complex and long animations, the authors found it even detrimental for tracking performance.
+Heer et al. explicitly recommend the use of staged animation [@Heer-07:animatedtransitions] even though they found only modest benefits. In situations where staging led to complex and long animations, the authors found it even detrimental for tracking performance. This is also what cognitive load theory would predict because long, uninterrupted multi-stage animation will introduce elements into working memory but not leave the viewer time to organize them into long term memory. Her working memory will therefore overflow and she will forget what she had seen before.
 
 ### Animation duration
 
-Multiple authors observe that the duration of animation has a major impact on perception. [@Shanmugasundaram-07:cansmooth] Animation that is too slow has been shown to be strongly disliked by readers.[@Baudisch-06:phosphorexplaining] Others argue that very fast animation might lead to higher error rates [@Heer-07:animatedtransitions]. Interestingly, others have shown that in situations where the distances between objects remained large enough during animation, higher speeds had no effect on tracking performance. [@Franconeri:2010ela] Other authors observe that faster animations might have the benefit of reducing *change blindness*. [@Fischer:2010iw], [@Shanmugasundaram:2008]
+Multiple authors observe that the duration of animation has a major impact on perception. [@Shanmugasundaram-07:cansmooth] Animation that is too slow has been shown to be strongly disliked by readers.[@Baudisch-06:phosphorexplaining] Others counter that very fast animation might lead to higher error rates [@Heer-07:animatedtransitions]. This assumption has been refuted by Franconeri et al. [@Franconeri:2010ela] who showed that higher speeds have no impact on tracking performance when the distance between objects stays large enough.
 
 ### Direct manipulation
 
@@ -525,47 +513,43 @@ Readers typically perform better at recall and problem solving, when they can co
 
 ### Easing
 
-John Lasseter in his classic paper on the principles of computer animation describes that animators developed a preference for "slow-in-slow-out" over linear easing over time. This recommendation has been confirmed in more formal experiments. [@Dragicevic-12:temporaldistortion]
+John Lasseter in his classic paper on the principles of computer animation [@Lasseter-87:principlestraditional] describes that animators developed a preference for "slow-in-slow-out" over linear easing over time. This recommendation has been confirmed in more formal experiments. [@Dragicevic-12:temporaldistortion]
 
-Most of these examples show how perceptual properties, which are often not intuitive in their most basic forms, interact to form phenomena which are very hard to generalize in real-world applications.
+Most of these examples show how perceptual properties, which are often not intuitive in their most basic forms, interact to form phenomena which are very hard to generalize in real-world applications. The only things that seem pretty sure from the literature is that optimal animations should be short, user-controlled and involve no more than four objects.
 
 
 
 ## Unfair comparisons
 
-Finally, animated transitions might contain information that is not easily deducible from the two states alone, resulting in an unfair comparison between animated and non-animated transitions. Tversky et al. [@Tversky-02:animationcan, p. 251] found in their review of existing research, that many studies included unfair comparisons that showed additional information in the animation scenario, they conclude:
+Some studies who have reported benefits of animated transitions have been criticized for invloving "unfair comparisons". [@Tversky-02:animationcan] The animations presented contained information that was not easily deducible from the non-animated transitions.  Tversky et al. [@Tversky-02:animationcan, p. 251] put it like this:
 
 > Showing that students learn material better when it is presented than when it is not presented should not be a goal of empirical research.
 
-Fair comparisons, in contrast, need to identify *informationally distinct* states very clearly and show them not just in the animated scenario but also in all the scenarios they are compared to. The authors find that in these experiments, purported benefits of animation often fail to materialize.
+Fair comparisons, in contrast, need to identify *informationally distinct* states very clearly and show them not just in the animated scenario but also in all the scenarios they are compared to. Tversky et al. find that in these experiments, purported benefits of animation often fail to materialize.
 
 
 
-# Research hypotheses
+## Research hypotheses
 
-Based on the discussions on transitions and animation, we establish the following hypotheses:
+We wanted to find out if the purported benefits of animation would apply to transitions in narrative visualization. More concretely if the following hypothesis would hold:
 
 #### H1: Relationship
 
-Based on the findings that animation can communicate causality and intentionality (see section >>Communicate causality and intentionality), we believe that it might also imply a relationship in a more general sense. Our first hypothesis is therefore that animated transitions will more often lead participants to assume a relationship between two charts.
+Based on the findings that animation can communicate causality and intentionality (see section >>Communicate causality and intentionality), we believe that animated transitions might imply a relationship in a more general sense. We hypothesize that animated transitions will more often lead participants to assume a relationship between two charts.
 
 #### H2: Causality
 
-Again based on the findings described in section (>>Communicate causality and intentionality), we believe that when readers assume a relationship between two charts, they will more often conclude that the relationship is causal when the transition is animated.
+Extending H1, we believe that when readers assume a relationship between two charts, they will more often conclude that the relationship is causal when the transition is animated.
 
 #### H3: Cueing
 
-Animated transitions will focus the reader on the characters the author intended. This will lead them more often to interpret the relationship between the charts as the author intended and to talk about the characters the author wants.
+Animated transitions will focus the reader on the characters the author intended because it attracts attention (see >>Attract attention). This will lead them to more often interpret the relationship between the charts as the author intended and to talk about the characters the author wants.
 
 #### H4: Object constancy
 
 Animated transitions will support object constancy in situations where only one of the charts is shown at a time. The effect will vanish when both charts are shown at the same time.
 
-#### H5: False memories
-
-We hypothesize the the in-between states from animated transitions lead to "false memories" which would interfere with the correct interpretation of the charts and hence the relationship. This assumption was based on a design recommendation from the literature [@Heer-07:animatedtransitions] TODO:source to avoid "nonsensical" intermediate states in animated transition as they might confuse readers.
-
-#### H6: Engagement
+#### H5: Engagement
 
 Readers will be more engaged by the visualizations with animated transitions.
 
@@ -581,15 +565,13 @@ In order to test the above hypotheses we have conducted an experiment which will
 
   ![experiment-setup.pdf](img/experiment-setup.pdf) 
 
-The experiment was published on Amazon Mechanical Turk for workers to complete. After in introductory screen that explained the task, the participants saw 10 screens with 8 mini-stories from two continuous narrative visualizations. Each story was introduced through an initial single chart followed by 4 mini-stories with two charts each. At the end of each mini-story, a questionnaire that asked about their conclusions and about engagement was displayed. After the two stories, we presented a final survey and finally displayed an answer code to verify their participation in the experiment. We paid each participant a fixed amount of USD 9 for completing the experiment. On average, participants took 52 minutes to complete the experiment. This results in a mean hourly wage of USD 10.40 with a minimum of USD 5.56 for the slowest participant and eight participants being paid less than minimum hourly wage for the U.S. (7.25 USD).
+The experiment was conducted on Amazon Mechanical Turk [@:amazonmechanical]. After in introductory screen that explained the task, the participants saw 10 screens with 8 mini-stories from two continuous narrative visualizations. Each story was introduced through an initial single chart followed by 4 mini-stories with two charts each. At the end of each mini-story, a questionnaire that asked about their conclusions and about engagement was displayed. After the two stories, we presented a final survey and finally displayed an answer code to verify their participation in the experiment. We paid each participant a fixed amount of USD 9 for completing the experiment. On average, participants took 52 minutes to complete the experiment. This results in a mean hourly wage of USD 10.40 with a minimum of USD 5.56 for the slowest participant and eight participants being paid less than minimum hourly wage for the U.S. (7.25 USD).
 
  ![results-duration.pdf](img/results-duration.pdf)
 
-
-
 ## Overview
 
-Before we will go on to discuss the specifics of the experiment, we will present the stimuli. Each of the mini-stories contained two charts and a transition between them. For one of the stories, this transition was *static*, for the other it was animated. In a static transition, the participant would initially see the first chart. Upon scrolling, it would be replaced by the second chart. When scrolling further, the questionnaire would appear. Animated transitions did not simply replace one chart with the other but showed an animation for a certain scrolling distance. Participants could freely control transitions and animations through their scrolling. They could also scroll back up while answering the survey.
+Before we will go on to discuss the specifics of the experiment, we will present the stimuli. Each of the mini-stories contained two charts and a transition between them. For one of the stories, this transition was *static*, for the other it was animated to have a full within-subject design. In a static transition, the participant would initially see the first chart. Upon scrolling, it would be replaced by the second chart. When scrolling further, the questionnaire would appear. Animated transitions did not simply replace one chart with the other but showed an animation for a certain scrolling distance. Participants could freely control transitions and animations through their scrolling. They could also scroll back up while answering the survey.
 
 ### Mortality
 
@@ -599,13 +581,13 @@ The first story is about the evolution of mortality rates in the U.S. It is a mo
 
 ![mortality-demographics](/Users/jonas/Desktop/P9/bericht/img/mortality-demographics.png)
 
-The first mini-story in the mortality story moves the reader through a semantic field. It begins with a chart showing how the population has gotten older over time. The following chart shows how the mortality rates of both genders have been reduced drastically over the same period of time. The transition thus conveys how reducing mortality rate leads to an aging population. The transition is animated by merging all the age groups into the grey "Everyone"-line and shows the lines for men and women subsequently.
+The first mini-story in the mortality story moves the reader through a semantic field. It begins with a chart showing how the population ![](img/char.pdf) has gotten older ![](img/attr.pdf) over time ![](img/attr.pdf) . The following chart shows how the mortality rates ![](img/attr.pdf) of both genders ![](img/char.pdf) have been reduced drastically over the same period of time. The transition thus conveys how reducing mortality rate leads to an aging population. The transition is animated by merging all the age groups into the grey "Everyone"-line and shows the lines for men and women subsequently.
 
 #### Mortality B
 
 ![mortality-absolute](/Users/jonas/Desktop/P9/bericht/img/mortality-absolute.png)
 
-The second transition contrasts the mortality rate of different characters. It starts with the last chart from the previous transition showing the mean mortality rates for "Men", "Women" and "Everyone". This is contrasted to the evolution of the mortality rates of different age groups. From this transition, the reader can see that the mortality rate is dominated (unsurprisingly) by elderly people. An apparent slowdown in mortality rate reduction in the first chart is therefore mostly due to to the development in the "Over 84" group. In the animated transition "Men" and "Women" characters are first hidden, the the "Everyone" character is being split and morphed into the different age groups.
+The second mini-story contrasts the mortality rate ![](img/attr.pdf) of different characters ![](img/char.pdf) . It starts with the last chart from the previous transition showing the mean mortality rates for "Men" ![](img/char.pdf), "Women" ![](img/char.pdf) and "Everyone" ![](img/char.pdf). This is contrasted to the evolution of the mortality rates ![](img/attr.pdf) of different age groups ![](img/char.pdf). From this mini-story, the reader learns that the mortality rate is dominated (unsurprisingly) by elderly people. An apparent slowdown in mortality rate reduction in the first chart is therefore mostly due to to the development in the "Over 84" group. In the animated transition "Men" and "Women" characters are first hidden, the the "Everyone" character is being split and morphed into the different age groups.
 
 #### Mortality C
 
@@ -619,25 +601,25 @@ Again, this mini-story starts with the last chart of the previous mini-story. In
 
 ![mortality-causes](/Users/jonas/Desktop/P9/bericht/img/mortality-causes.png)
 
-Some readers might have wondered why the mortality rate for "25–44" year olds was rising  at the beginning of the 90s. This mini-story introduces their causes of death in the second chart which quickly answers the question: it was precisely at this point that the AIDS-epidemic was at its peak and has most strongly affected this age group. The animation first hides all the other age groups, splits the "25–44"-line and morphs it into the different causes of death.
+Some readers might have wondered why the mortality rate for "25–44" year olds ![](img/char.pdf) was rising  at the beginning of the 90s. This mini-story introduces their causes of death ![](img/char.pdf) in the second chart which quickly answers the question: it was precisely at this point that the AIDS-epidemic was at its peak and has most strongly affected this age group. The animation first hides all the other age groups, splits the "25–44"-line and morphs it into the different causes of death.
 
 
 
 ### Energy
 
-This story talks about the evolution of energy sources in the U.S: since the beginning of the century. It combines a story from the New York Times  [@Popovich-18:howdoes] with one from Forbes [@Mahajan-18:plungingprices].
+This story talks about the evolution of energy sources in the U.S. since the beginning of the century. It combines a story from the New York Times  [@Popovich-18:howdoes] with one from Forbes [@Mahajan-18:plungingprices].
 
 #### Energy A
 
 ![energy-A](/Users/jonas/Desktop/P9/bericht/img/energy-A.png)
 
-The energy story starts by showing the evolution of different energy sources in the U.S in absolute numbers. In the second chart it shows how the proportions have changed over time. From comparing the two charts it becomes clear that while the absolute output has either risen or stagnated, coal has been used significantly less while the focus seems to be shifting to natural gas and the renewables. The animated transition morphs the lines into their respective areas in the second chart.
+The energy story starts by showing the evolution of different energy sources ![](img/char.pdf) in the U.S in absolute numbers ![](img/attr.pdf). In the second chart it shows how the proportions ![](img/attr.pdf) have changed over time. From comparing the two charts it becomes clear that while the absolute output has either risen or stagnated, coal has been used significantly less while the focus seems to be shifting to natural gas and the renewables. The animated transition morphs the lines into their respective areas in the second chart.
 
 #### Energy B
 
 ![energy-B](/Users/jonas/Desktop/P9/bericht/img/energy-B.png)
 
-As in the mortality narrative, the second transition starts out with the last chart from the previous transition. In the second chart it shows how wind has become a major energy source in certain (great plain states). The transition leads to the conclusion that, although the rise of wind energy looks unspectacular on a national scale, growth has been exponential in some places. The animation first hides everything except the area for "wind" which is then split and morphed into the lines of the individual states.
+As in the mortality narrative, the second mini-story starts out with the last chart from the previous mini-story. In the second chart it shows how wind ![](img/char.pdf) has become a major energy source ![](img/char.pdf) in certain (great plains) states ![](img/char.pdf) . The transition leads to the conclusion that, although the rise of wind energy looks unspectacular on a national scale, growth has been exponential in some places. The animation first hides everything except the area for "wind" which is then split and morphed into the lines of the individual states.
 
 #### Energy C
 
@@ -645,33 +627,21 @@ As in the mortality narrative, the second transition starts out with the last ch
 
 ![energy-C](/Users/jonas/Desktop/P9/bericht/img/energy-C.png)
 
-The third transition focuses on the strange stagnation of wind energy in California after 2013. To find out where the focus might have shifted, the second chart shows the energy mix of California over time. A marked rise in solar power after 2013 implies that the state has decided to invest in this renewable instead of wind. The animation first highlights California and then expands it into the other sources.
+The third mini-story focuses on the strange stagnation of wind energy ![](img/ctxt.pdf) in California ![](img/char.pdf) after 2013. To find out where the focus might have shifted, the second chart shows the energy mix of California ![](img/ctxt.pdf) over time ![](img/attr.pdf). A marked rise in solar power ![](img/char.pdf) after 2013 implies that the state has decided to invest in this renewable instead of wind ![](img/char.pdf). The animation first highlights California and then expands it into the other sources.
 
 #### Energy D
 
 ![energy-D](/Users/jonas/Desktop/P9/bericht/img/energy-D.png)
 
-Finally, this transition explores one of the possible reasons for Californias decision to focus on solar energy from 2013 on. The second chart shows the price evolution for different energy sources. While wind energy has been consistently inexpensive, the price of solar power has fallen substantially over time. It even reached the price level of wind energy in 2013. Which implies that Californias focus on solar rather than wind energy might have economic reasons. The animation morphs the areas representing the share of different energy sources into the line showing its price evolution.
+Finally, this transition explores one of the possible reasons for Californias ![](img/ctxt.pdf) decision to focus on solar energy from 2013 on. The second chart shows the price evolution ![](img/attr.pdf) for different energy sources ![](img/char.pdf). While wind energy ![](img/char.pdf) has been consistently inexpensive, the price of solar power ![](img/char.pdf) has fallen substantially over time. It even reached the price level of wind energy in 2013. Which implies that Californias focus on solar rather than wind energy might have economic reasons. The animation morphs the areas representing the share of different energy sources into the line showing its price evolution.
 
 
 
-## Experiment design
-
-### Introduction
-
-There is a fundamental tension when researching visualization design techniques like animated transitions. On one hand, quantitative research tries to remove every possible confounder when doing experiments. On the other hand it's precisely the interplay between different variables that make effective visualization designs. 
-
-![experiment-conflict](/Users/jonas/Desktop/P9/bericht/img/experiment-conflict.png)
-
-Obviously this mirrors the fundamental difference between disciplines that use quantitative methods and those where only qualitative methods make sense. Both cases can be found in the visualization literature. Placed on the left side of the spectrum, we find research on visual perception like Franconeri et al.'s work on object tracking [@Franconeri-10:trackingmultiple]. On the other end of the spectrum, new design approaches to, for example, compare phylogenetic trees [@Munzner-03:treejuxtaposerscalable], can only be properly evaluated in context through qualitative usability studies. We have decided to situate our study somewhere in the middle between these two poles for two reasons: First, the study aims at providing generalizable insight on the strengths of animation. Second, the topic researched, namely narrative visualization, is high context as readers can only make sense of transitions in context (see >>Comparison). These consideration will make some of the following design decisions much clearer.
-
-
-
-### Independent variable and conditions
+## Independent variable and conditions
 
 (TODO:illustration of the different transitions)
 
-The main concern of the experiment was finding differences between *animated* and *static* transitions which was the independent variable. We tried to counterbalance for some of the confounders like topic and visualization design by testing stories on two different topics with different designs. This has led us to the following within-subject design:
+The main concern of the experiment was finding differences between *animated* and *static* transitions. We therefore chose this to be the independent variable. We counterbalanced for some of the confounders like *topic* and visualization *design* by using the two different stories with difference designs presented before. This has resulted in the following within-subject design:
 
 | Condition 1                             | Condition 2                               | Condition 3                               | Condition 4                             |
 | --------------------------------------- | ----------------------------------------- | ----------------------------------------- | --------------------------------------- |
@@ -680,41 +650,39 @@ The main concern of the experiment was finding differences between *animated* an
 
 By its nature, each story consisted of a number of different transitions but we did not counterbalance them.
 
-Initially we intended to include another independent variable to more throughly test H4. This independent variable compared the design where only one chart is visible at a time (*superposed*) with a design where both charts are visible at the same time (*juxtaposed*). We hypothesized that animation would have help with object constancy but only when one chart was replaced with the other (*superposed*). We decided to exclude this variable from the current experiment because it would have required two more stories to do a within-subject design or an order of magnitude more participants to achieve the desired statistical power. For both of these we lacked resources.
+Initially we intended to include another independent variable to more throughly test H4. This independent
+
+compared two different layouts: *superposed* and *juxtaposed*. The usual case for animated transitions in narrative visualization is that only one chart is visible at a time, which corresponds to a *superposed* layout. We believe that help with maintaining object constancy is only needed in this case. In the case where both charts are presented next to each other (*juxtaposed*) animation would rather be a distractor than a help and the amount of participants who would interpret the relationship correctly would be lower for the animated transition.
+
+Finally, we decided to exclude this variable from the current experiment because it would have required two more stories for a within-subject design or an order of magnitude more participants to achieve the desired statistical power. For both of these we lacked resources.
 
 Before each story, we added a screen that simply showed the initial chart of the first mini-story and asked the participant to report on her understanding of this single chart. This was to account for the fact that for mini-stories B to D, the participants had already seen the first chart in the previous mini-story and we did not want mini-story A to be an exception in this regard.
 
+## Dependent variables
 
-
-### Dependent variables
-
-To test the hypotheses described in chapter (>>Research hypotheses), we have established a number of measures. A part of them was based on a set of six questions that were displayed at the end of each mini-story which is included in the annex.
+To test the hypotheses described in the section (>>Research hypotheses), we have established a number of measures. A part of them was based on the answers the participants gave to a questionnaire that was displayed at the end of each mini-story. We have included the whole questionnaire in the supplementary material.
 
 #### H1: Relationship
 
-After they had seen both charts, we asked readers what they concluded from them. If in their answer, they wondered, thought or assumed that something from the first chart was somehow related to something in the second chart, we coded the **relationship** measure as 1, otherwise as 0.
+After they had seen both charts, we asked participants what they concluded from them. If in their answer, they wondered, thought or assumed that something from the first chart was somehow related to something in the second chart, we coded the **relationship** measure as 1, otherwise as 0.
 
 #### H2: Causality
 
-Whenever the participant perceived a relationship, we also coded if it was causal. If the participant used words like *due to*, *caused*, *because*, *led to* or similar, we coded a measure **causal** to be one 1; 0 otherwise.
+Whenever the participant perceived a relationship, we also coded if she indicated causality. If the participant used words like *due to*, *caused*, *because*, *led to* or similar, we coded a measure **causal** to be 1; 0 otherwise.
 
 #### H3: Cueing
 
-Multiple studies have found that animation has a very high cueing effect (TODO:citation). This means that the readers gaze is automatically attracted to anything that moves. In the proposed experiment, the main characters therefore should be highlighted by the animation. One first effect that we predict is that this will lead people to mention fewer characters in their conclusions. During the coding phase, we therefore counted the **number of characters mentioned**. We not only included characters that were directly visible but also groupings of characters like "green energy sources" to count as one. 
+If animation has a cueing effect, it should focus the participant on certain characters. One first effect that we predict is that this will lead people to mention fewer characters in their conclusions. During the coding phase, we therefore counted the **number of characters mentioned**. We not only included characters that were directly visible but also groupings of characters like "green energy sources" to count as one. 
 
 Secondly, we predicted that guiding the readers attention to the characters the author intended would lead participants to interpret relationships according to what the author wanted to convey. We called this measure **correct relationship**. Whenever we found the mention of a *relationship* during the coding, we compared it with the story the author wanted to tell (see >>Overview). When the participant came to the same conclusion, we coded this measure as 1 and otherwise as 0.
 
 #### H4: Object constancy
 
-If animated transitions would support object constancy, participants would need fewer transitions to come to their conclusion because their cognitive load would be reduced. We therefore measured the **number of transitions** between the two charts. When the transition was animated the participants needed to cross the 10% and then the 90% threshold successively (or the inverse) to be counted as one transition. This excluded any back and forth movements between these boundaries. We assume that these would mostly have happened when readers accidentally would have scrolled too fast and needed to refer back to understand the animation.
+If animated transitions would support object constancy, participants would need fewer transitions to come to their conclusion because their cognitive load would be reduced. We therefore measured the **number of transitions** between the two charts. When the transition was animated the participants needed to cross the 10% and then the 90% threshold successively (or the inverse) to be counted as one transition. 
 
-#### H5: False memories
+#### H5: Engagement
 
-We wondered if "nonsensical" intermediate states from animated transition might interfere with the interpretation of the charts and the transition. We tested this by showing participants screenshots of the "true" (initial and final) states and screenshots of intermediate states. We asked participants to **decide if the screenshot showed the data they had seen before or not**. We predicted that participants who saw animated transitions would more often "fall" for the screenshots of intermediate states.
-
-#### H6: Engagement
-
-The literature generally suggests that animated transitions will lead to higher reader engagement. To measure this, we have used a subset of the validated *user engagement scale* questionnaire. The scale measures multiple attributes like *focused attention*, *perceived usability*, *aesthetics* or *reward* that together form what is known as *engagement* in the literature. [@Obrien-18:practicalapproach] But as even the short questionnaire  contains twelve questions which would have been too long to ask after each transition. We therefore decided to use a sub scale of the *user engagement scale* that measures **focused attention**. The reason to use *focused attention* was that it was found to be the factor that explained most of the variance in O'Brien et al.'s anaylsis [@Obrien-18:practicalapproach] Also, the questions skew towards the positive (compared to the other option, *perceived usability*) and we did not want to negatively prime the participants (the questions used can be found in the annex:TODO)
+The literature suggests that animated transitions will lead to higher reader engagement. To measure this, we have used a subset of the validated *user engagement scale* questionnaire. The scale measures multiple attributes like *focused attention*, *perceived usability*, *aesthetics* or *reward* that together form what is known as *engagement* in the literature. [@Obrien-18:practicalapproach] But even the short questionnaire  contains twelve questions which would have been too long to ask after each transition. We therefore decided to use a subscale of the *user engagement scale* that measures **focused attention**. The reason to use *focused attention* was that it was found to be the factor that explained most of the variance in O'Brien et al.'s anaylsis [@Obrien-18:practicalapproach] Also, the questions skew towards the positive (compared to the other option, *perceived usability*) and we did not want to negatively prime the participants.
 
 We considered **word count** to be another proxy for engagement. As the participants were in a task-oriented setting, we generally expected them to not lose their time with long answers. If answers turn out to be considerably longer in one of the scenarios, we assumed that it was because it engaged them.
 
@@ -878,14 +846,6 @@ We were surprised to find that participants did not report a higher level of *fl
 
 
 
-## Observations from the pilot studies
-
-We ran two explorative pilot studies before the final experiment. 
-
-
-
-
-
 ### Conclusions
 
 Based on the literature and the above findings we arrive at several conclusions about how the nature of transitions and animation. We came to believe that animation indeed guides the readers eye between transitions and therefore supports object constancy and cueing at the level of perception. But the results also show that relationships are interpreted at a much higher level and perceptual differences don't directly influence this interpretation. Finally, we are still unsure about how animation precisely influences engagement.
@@ -894,7 +854,7 @@ Based on the literature and the above findings we arrive at several conclusions 
 
 ### Analysis methods
 
-
+TODO
 
 
 
@@ -905,12 +865,6 @@ Based on the literature and the above findings we arrive at several conclusions 
 
 
 # Implementation
-
-In its essence, the mathematics of visualization is very simple. It is only concerned with creating functions that map values from the data domain to screen pixels:
-
-$$ \mathit{f}: Data → Pixels  $$
-
-Unfortunately, this function $$\mathit{f}$$ is not injective which leads to some problems that will be discussed later on in this part.
 
 ## Requirements
 
@@ -1025,7 +979,7 @@ The first part of the DSL is concerned with defining charts to be used. The synt
 
 ### Anatomy of a transition
 
-Together with the `director` (see >>Directing all of them), this is our main contribution in terms of software architecture. Because we have identified character and attribute changes as the main concern for transitions, the DSL focuses on them. Characters as well as axes (which represent attributes), can be mapped between two charts which will create a third chart that interpolates between them.
+Together with the `director` (see >>Directing all of them), this is our main contribution in terms of software architecture. Because we have identified character and attribute changes as the main concern for transitions, the DSL focuses on them. Characters as well as axes (which represent attributes), can be mapped between two charts which will create a third chart (transition chart) that interpolates between them.
 
 ![code-transition](img/code-transition.pdf) 
 
@@ -1049,13 +1003,15 @@ Finally, the `director` contains a kind of "scroll-timeline" of charts. Based on
 
 
 
-### Program generation
+### Program generation and rendering process
 
 1. In a first step, the system generates objects for all the charts with their axes, characters and annotations from the specification. Wherever something is not defined, it assumes a sensible default if possible or provides an explanation for the failure otherwise.
 2. After the charts, the system generates the objects who represent the transitions which reference the chart objects.
 3. Finally, a director object is generated with references to all the charts and transitions. The director continually checks if the viewer has been scrolling.
-4. When the scroll position changes, the director calls the `draw`-method on the charts/transitions that should be visible at this position. It calls the `hide`-method on all the others. If at the current position, a transition should be displayed, the `draw`-method an additional `position` parameter between 0 and 1 is set to indicate the state of the interpolation.
+4. When the scroll position changes, the director calls the `draw`-method on the charts/transitions that should be visible at this position. It calls the `hide`-method on all the others. If at the current position, a transition should be displayed, the `draw`-method is called with an additional `position` parameter TODO:formula that indicates the state of the interpolation.
 5. This sets in motion a rendering cascade where every object also calls the `draw` methods of its children to render the final display. This corresponds to the *render*-pattern described in  [@Heer-06:softwaredesign])
+6. Objects $$\{characters, axes, annotations\}$$ of transition charts implement their own interpolation methods and use them for rendering interpolated states.
+7. The `draw`-methods generate the necessary SVG-code and append it to an SVG that will finally be displayed in the HTML element for the chart.
 
 
 
