@@ -3,7 +3,8 @@ FILES = .paper.md \
 
 OUTPUT = build
 
-FLAGS = --bibliography=bibliography.bib \
+FLAGS = -F pandoc-crossref \
+		--bibliography=bibliography.bib \
 		--csl=bibliography.csl \
 		--pdf-engine=xelatex \
 		-s \
@@ -15,7 +16,7 @@ FLAGS_PDF = --template=eisvogel.tex
 all: pdf
 
 pdf:
-	cat paper.md |perl -pe 's/^\|(.+?)|\|.+/    \1  /g' > .paper.md; pandoc -o $(OUTPUT)/paper.pdf $(FLAGS) $(FLAGS_PDF) $(FILES)
+	cat paper.md > .paper.md; pandoc -o $(OUTPUT)/paper.pdf $(FLAGS) $(FLAGS_PDF) $(FILES)
 
 clean:
 	rm build/*

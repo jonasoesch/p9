@@ -319,8 +319,8 @@ $highlighting-macros$
 % Redefine the verbatim environment 'Highlighting' to break long lines (with
 % the help of fvextra). Redefinition is necessary because it is unlikely that
 % pandoc includes fvextra in the default template.
-\usepackage{fvextra}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+%\usepackage{fvextra}
+%\DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
 
 $endif$
 $if(tables)$
@@ -763,7 +763,11 @@ $if(beamer)$
 $else$
 $if(titlepage)$
 \begin{titlepage}
-\newgeometry{left=6cm}
+\newgeometry{left=5cm}
+$if(logo)$
+\noindent
+\includegraphics[width=$if(logo-width)$$logo-width$$else$100$endif$, left]{$logo$}
+$endif$
 $if(titlepage-color)$
 \definecolor{titlepage-color}{HTML}{$titlepage-color$}
 \newpagecolor{titlepage-color}\afterpage{\restorepagecolor}
@@ -784,16 +788,37 @@ $if(subtitle)$
 \vskip 1em
 {\Large \textsf{$subtitle$}}
 $endif$
-\vskip 2em
-\noindent
+\vskip 4em
 {\Large \textsf{$for(author)$$author$$sep$, $endfor$}
-\vfill
 }
 
-$if(logo)$
-\noindent
-\includegraphics[width=$if(logo-width)$$logo-width$$else$100$endif$pt, left]{$logo$}
+$if(thesistype)$
+\vskip 2em
+{\Large \textsf{$thesistype$}}
+\vskip 4em
 $endif$
+
+\includegraphics[width=13cm]{$title-image$}
+\vskip 5em
+
+\noindent
+$if(supervisor)$
+{\textsf{Supervised by $supervisor$}}
+$endif$
+
+$if(department)$
+\vskip 0em
+{\textsf{$department$}}
+$endif$
+
+$if(university)$
+\vskip 0em
+{\textsf{$university$}}
+$endif$
+
+\vfill
+
+
 
 \textsf{$date$}}
 \end{flushleft}

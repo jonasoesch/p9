@@ -1,6 +1,17 @@
 ---
 title: 'Lost in transition'
 author: Jonas Oesch
+supervisor: "Prof. Dr. Simon Schubiger"
+department: "MSc. in Engineering"
+university: "University of Applied Sciences and Arts Northwestern Switzerland"
+thesistype: "Master's Thesis"
+logo: img/fhnw.eps
+title-image: img/title.pdf
+date: 2019
+logo-width: 12cm
+titlepage-rule-color: "000000"
+titlepage-rule-height: "2"
+titlepage-text-color: "333333"
 keywords:
   - animation
   - narrative visualization
@@ -12,7 +23,7 @@ sansfont: TheSansB
 lang: en
 babel-lang: english
 toc-own-page: yes
-titlepage: yes
+titlepage: true 
 abstract: |
     TODO
     

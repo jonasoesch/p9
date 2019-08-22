@@ -1,8 +1,10 @@
 
 
+# Introduction
+
+While the amount of data generated is continuing to grow exponentially each year [@Reinsel-17:dataage], no area and profession is left untouched. One of these areas is journalism. Examples like the Panama papers [@Kister-16:panamapapers] show how data journalism is becoming the new investigative journalism[@:whatdata]. Data journalists bridge the gap between the oceans of data that are available but ultimately faceless [@Oesch-17:hitchhikerguide] and their readers everyday lives. They use traditional storytelling and data visualization to achieve this. Although data visualization has been used in science for a few centuries [@Friendly-08:briefhistory], it has only more recently gained widespread use in mass media. Many questions therefore still remain about how to best integrate data visualizations into news stories.
 
 
-# Narrative visualization
 
 ## Explorative and explanative visualization
 
@@ -24,7 +26,7 @@ On the other hand, the authors found that *feedforward*-cues led to higher rates
 
 A much more nuanced way to implement *feedforwarding* is to use storytelling techniques to give an example of how a visualization could be explored. [@Parlapiano-14:howrecession] Storytelling also helps to progressively build topic knowledge and explain complex visualization idioms. [@Dworkin-18:whytech] 
 
-## Narrative visualization
+## Narrative visualization {#sec:narr-vis}
 
 The idea of using storytelling techniques to introduce powerful visualization idioms to an audience with low visualization literacy, has led to the formation of a branch of research in *narrative visualization* [@Segel-10:narrativevisualization, @Hullman-13:deeperunderstanding, @Satyanarayan-14:authoringnarrative] Narrative visualization follows the same principles as other, established means of storytelling  in many aspects. Multiple publications have explored the use of narrative visualization in the form of videos [@Amini-15:understandingdata], comics [@Bach-16:tellingstories] or narrated sketching [@Lee-13:sketchstorytelling].
 
@@ -52,7 +54,7 @@ The observation about the importance of sequence also implies that there is some
 
 
 
-# Transitions
+# Transitions {sec:transitions}
 
 Transitions seemingly carry information that is not explicitly presented in the two charts. To design effective narrative visualization, it is crucial to understand how readers perceive transitions and extract information from them. This chapter will, therefore, present the relevant literature and propose a classification of transitions based on cognitive load theory.
 
@@ -60,7 +62,7 @@ Transitions seemingly carry information that is not explicitly presented in the 
 
 Multiple authors have compiled classifications of transitions between informationally distinct states ( *charts* in this thesis). In this section, we will discuss three different approaches to such classifications: visualization-focused, story-focused and inductive.
 
-### Visualization-focused classifications
+### Visualization-focused classifications {#sec:param-classification}
 
 The most common approach is to think about transitions is in terms of visualization parameters. [@Heer-07:animatedtransitions, @Yi-07:deeperunderstanding, @Fisher-11:animationvisualization, @-18:space] Any visualization can be viewed as the result of a series of parametrizable transformations applied to the underlying data set. [@Jankun-kelly-07:modelframework] The transition can, therefore, be described in terms of parameter changes as long as the underlying data does not change.
 
@@ -117,13 +119,13 @@ A bottom-up approach to transition types can be found in Hullman et al. [@Hullma
 
 **Spatial**: When the final state is spatially close to the initial state, as visible in figure \ref{transition-hullman}) where the charts show different heights of the earth's orbit.
 
-Hullman et al. further distinguish between *implicit transitions* that can only be interpreted by a reader and *explicit transitions* that could potentially be inferred from changes in the attributes visualized (compare to section >>visualization-parameters). Interestingly they have found very little occurrences of the two explicit transitions in their analysis (see figure \ref{hullman-frequency})
+Hullman et al. further distinguish between *implicit transitions* that can only be interpreted by a reader and *explicit transitions* that could potentially be inferred from changes in the attributes visualized (compare to [section @sec:param-classification]). Interestingly they have found very little occurrences of the two explicit transitions in their analysis (see figure \ref{hullman-frequency})
 
 ![Transition types identified by Hullman et al. [@Hullman-13:deeperunderstanding]. The explicit dialogue and causal transitions are quite rare. \label{hullman-frequency}](/Users/jonas/Desktop/P9/bericht/img/transition-hullman-freq.png)
 
 Implicit transitions are defined by the question: "What changes between the charts?". This can be time, location, granularity, or a variable.
 
-## Comparison
+## Comparison {#sec:comparison}
 
 All of the classifications presented before are based on different types of changes between charts. Either visualization parameters change; subject, scene or time change; or again time, location, granularity or variable. This indicates that the elusive information gained from transitions has something to do with comparing the two charts. This section, therefore, looks at the research on comparison in visualization in more detail.
 
@@ -168,7 +170,7 @@ Another approach to measuring the difficulty of a transition can be found in Hul
 
 When using this definition, the authors found that readers strongly preferred transitions with a cost of one. Transitions with costs that were higher, e. g. two or three were judged as equally undesirable. 
 
-### Cognitive load theory
+### Cognitive load theory {#sec:cognitive-load}
 
 The idea that the amount of change that people can process at a time is supported by *cognitive load theory*.[@Wong-12:cognitiveload] It postulates that novel information needs to be processed in the learners *working memory*. But this working memory is severely limited in capacity. The range is  from a maximum of 9 to as low as one object, depending on the complexity of the objects. [@Miller-56:magicalnumber, @Alvarez-04:capacityvisual] If the learner had time to process and organize the novel information into her *long term memory*, she can use it at almost no cost to her working memory, however. The way information is organized into long term memory is called a *schema*.
 
@@ -186,7 +188,7 @@ One of the most common types of intermediate charts are those who show how eleme
 
 #### Highlighting
 
-Another way to reduce the number of elements in working memory is to highlight the most important targets or the parts of them that are interesting for comparison. This can be done through the means of narrative visualization (narration, annotations, color) mentioned before (>>Narrative visualization) Highlighting is especially efficient when done through pre-attentive attributes) like color. In this case, elements with other colors are already being hidden by the visual system and don't even reach working memory. [@Franconeri-18:thinkingdata] (compare also figure \label{comparison-identification}
+Another way to reduce the number of elements in working memory is to highlight the most important targets or the parts of them that are interesting for comparison. This can be done through the means of narrative visualization (narration, annotations, color) mentioned in [section @sec:narr-vis]. Highlighting is especially efficient when done through pre-attentive attributes) like color. In this case, elements with other colors are already being hidden by the visual system and don't even reach working memory. [@Franconeri-18:thinkingdata] (compare also figure \label{comparison-identification}
 
 #### Object constancy
 
@@ -196,7 +198,7 @@ Finally, the properties of the visual system can be used to pre-process objects.
 
 ## Perception-oriented classification
 
-Based on these insights, we believe that the taxonomies described in section (>>Transitions) don't adequately address the problem of reducing the transition cost. That is because they don't treat transitions as comparison of targets (>>Comparison) and they don't consider how these targets need to be compared in working memory (>>Cognitive Load Theory). From the three approaches, we consider Hullman et al.'s classification the most promising because they have successfully linked it to  *transition cost*. The weakness of their model is that it is not linked to a larger theoretical framework. We will aim at this in this chapter by first introducing a theoretical framework based on cognitive load theory. We will call this a *perception-oriented classification*. We will then use a similar method as Hullman et al. to infer several transition types from existing narrative visualizations.
+Based on these insights, we believe that the taxonomies described in [section @sec:transitions] don't adequately address the problem of reducing the transition cost. That is because they don't treat transitions as comparison of targets ([see section @sec:comparison]) and they don't consider how these targets need to be compared in working memory ([see section @sec:cognitive-load]). From the three approaches, we consider Hullman et al.'s classification the most promising because they have successfully linked it to  *transition cost*. The weakness of their model is that it is not linked to a larger theoretical framework. We will aim at this in this chapter by first introducing a theoretical framework based on cognitive load theory. We will call this a *perception-oriented classification*. We will then use a similar method as Hullman et al. to infer several transition types from existing narrative visualizations.
 
 
 
@@ -402,7 +404,7 @@ In our analysis of narrative visualization we have found three transition types 
 
 
 
-# Animation
+# Animation {#sec:animation}
 
 Animation has been portrayed to provide many benefits to UX-design in general and visualization design in particular. Chevalier et al. [@Chevalier-16:animations25] have identified 23 different "purposes" of animation in visualization. Things like "Staying oriented during navigation" or "Hooking the user" which are finally classified into five meta-classes. Although this overview shows the popularity of animation in today's practice, it does not discuss any evidence that animation *actually* serves the given purposes.
 
@@ -834,13 +836,25 @@ Participants who saw an animated transition didn't switch back and forth as ofte
 
 We were surprised to find that participants did not report a higher level of *focused attention* when they saw animated transitions. Especially because we enjoyed them a lot ourselves. One explanation might be the very task-oriented setting. Participants got paid a fixed amount for the experiment and were probably focused on efficiency. Interestingly, the participants who saw animated transitions wrote significantly longer answers (*answer length*) in the same amount of time (*typing duration*) when they saw animated transitions. Which may indicate that they were more engaged but that we have chosen the wrong sub-scale (*focused attention*) to be able to find it.
 
+To explore this discrepancy further, we have used *sentiment analysis* on the participants answers. We assumed, that if there was a difference in engagement, this might lead to a more confident or positive tone in the answers. To analyze the answers, we have used IBM Watson [@Kaminski-19:scienceservice] which gives ratings for different types "tones" in the text. Watson identifies the degree to which a text is *analytical*, *confident*, *tentative*, *fearful*, *joyful* or *sad*.
+
+Because we would not expect highly emotional language in our answer, we decided to look further into the three dimensions: *analytical*, *confident*, and *tentative*. This decision is supported by the fact that they had the highest scores overall. We also found that more answers where classified as *tentative* than *confident* which confirms the analysis from before that the task was rather difficult.
+
+On all three dimensions, we did not find any significant differences between animated and static transitions. This lends support to the interpretation that the engagement truly did not differ between the conditions.
+
+
+
 ### Conclusions
 
-Based on the literature and the above findings we arrive at several conclusions about the nature of transitions and animation. We came to believe that animation indeed guides the reader's eye between transitions and therefore supports object constancy and cueing at the level of perception. But the results also indicate that relationships are interpreted at a much higher level and perceptual differences don't directly influence this interpretation. Finally, we are still unsure about how animation precisely influences engagement.
+Based on the literature and the above findings we arrive at several conclusions about the nature of transitions and animation. We came to believe that animation indeed guides the reader's eye between transitions and therefore supports object constancy and cueing at the level of perception. But the results also indicate that relationships are interpreted at a much higher level and perceptual differences don't directly influence this interpretation. Finally, we are still unsure about how animation precisely influences engagement but there are strong hints that its effect is not as universally positive as often portrayed in the literature.
 
 ###Limitations
 
 Much of the stories were designed before our conceptual understanding of transitions and animation was as clear as it is presented in this work. The types of transitions that are present in the experiment are therefore more strongly driven by the needs of the story than by our theoretical understanding of the properties of different transitions. This weakens the link between our results and the theoretical framework we have proposed.
+
+Almost 20% of the participants saw animated transitions that we categorized as slow. We decided to include these results anyway because most of the essential properties of the animation would still be present even when it was laggy. We also found that the results stayed the same even when we excluded *slow*-sessions but 
+
+The task was rather difficult.
 
 
 
