@@ -56,7 +56,7 @@
         "location": 17
       }
     ],
-    "string": "Temperature rise:\nHow high is the contribution of orbital changes?"
+    "string": "Temperature rise:\nHow high is the contribution of natural factors?"
   },
   "automaticallyDrawOnUnderlyingPath": false,
   "booleanOperation": -1,
@@ -82,7 +82,7 @@
     "x": 16,
     "y": 24.6171875
   },
-  "glyphBounds": "{{12, 1}, {238, 58}}",
+  "glyphBounds": "{{12, 1}, {238, 55}}",
   "hasClippingMask": false,
   "isFixedToViewport": false,
   "isFlippedHorizontal": false,

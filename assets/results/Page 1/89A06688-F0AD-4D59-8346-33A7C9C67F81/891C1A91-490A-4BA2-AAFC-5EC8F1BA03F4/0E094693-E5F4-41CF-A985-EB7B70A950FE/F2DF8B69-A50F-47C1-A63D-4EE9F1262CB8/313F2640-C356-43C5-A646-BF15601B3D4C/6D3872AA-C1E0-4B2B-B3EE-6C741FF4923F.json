@@ -13,13 +13,16 @@
               "size": 12
             }
           },
-          "ligature": 0
+          "ligature": 0,
+          "paragraphStyle": {
+            "_class": "paragraphStyle"
+          }
         },
-        "length": 18,
+        "length": 25,
         "location": 0
       }
     ],
-    "string": "Engagement (p=0.5)"
+    "string": "Focused attention (p=0.5)"
   },
   "automaticallyDrawOnUnderlyingPath": false,
   "booleanOperation": -1,
@@ -41,11 +44,11 @@
     "constrainProportions": false,
     "do_objectID": "D3DFC219-9F3A-4C9A-845E-D1E237A62CC2",
     "height": 15,
-    "width": 107,
-    "x": 169.4999999999999,
+    "width": 135,
+    "x": 139.4999999999999,
     "y": 31.99999999999999
   },
-  "glyphBounds": "{{0, 0}, {106, 12}}",
+  "glyphBounds": "{{0, 0}, {134, 12}}",
   "hasClippingMask": false,
   "isFixedToViewport": false,
   "isFlippedHorizontal": false,
@@ -54,7 +57,7 @@
   "isVisible": true,
   "layerListExpandedType": 0,
   "lineSpacingBehaviour": 1,
-  "name": "Engagement (p=0.5)",
+  "name": "Focused attention (p",
   "nameIsFixed": false,
   "resizingConstraint": 47,
   "resizingType": 0,
@@ -95,7 +98,10 @@
             "size": 12
           }
         },
-        "ligature": 0
+        "ligature": 0,
+        "paragraphStyle": {
+          "_class": "paragraphStyle"
+        }
       },
       "verticalAlignment": 0
     },

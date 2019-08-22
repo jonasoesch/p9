@@ -18,7 +18,7 @@
       {
         "_class": "exportFormat",
         "absoluteSize": 0,
-        "fileFormat": "png",
+        "fileFormat": "pdf",
         "name": "",
         "namingScheme": 0,
         "scale": 1,
@@ -44,7 +44,7 @@
     "do_objectID": "2122CBCB-CF82-4DF0-8E10-0D96A6EA565A"
   },
   "hasBackgroundColor": true,
-  "hasClickThrough": true,
+  "hasClickThrough": false,
   "hasClippingMask": false,
   "horizontalRulerData": {
     "_class": "rulerData",
@@ -93,7 +93,7 @@
     },
     {
       "class": "bitmap",
-      "id": "1C4433C6-E0F7-4AAD-A610-15EFCE57EE4B"
+      "id": "5D8F2265-939B-43FC-AA13-E7A9C28ABE17"
     },
     {
       "class": "bitmap",
@@ -158,6 +158,10 @@
     {
       "class": "group",
       "id": "1DDD0017-B357-4A9A-A69D-808E50D0688C"
+    },
+    {
+      "class": "text",
+      "id": "96A109EC-806D-4BAE-AE14-67A1AB9F03F2"
     }
   ],
   "name": "transition-hullman",

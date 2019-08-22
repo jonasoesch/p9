@@ -44,7 +44,7 @@
     "do_objectID": "64658C71-F4A4-45F7-B5EF-4FA7B50C29BA"
   },
   "hasBackgroundColor": false,
-  "hasClickThrough": false,
+  "hasClickThrough": true,
   "hasClippingMask": false,
   "horizontalRulerData": {
     "_class": "rulerData",
@@ -78,6 +78,10 @@
     {
       "class": "text",
       "id": "207E56DD-369E-4DB5-B678-2E7BAFF94CA9"
+    },
+    {
+      "class": "bitmap",
+      "id": "71FE65C1-ED9D-4D3A-854A-CB18E8E11EDE"
     }
   ],
   "name": "code-vega",
