@@ -2,6 +2,12 @@
 
 # Introduction
 
+Imagine you are a refugee sitting on a boat that crosses the mediterranean sea. When you look around, there are three dozen other people wearing life jackets. You know how they feel. You know their hope and you know their fear. But even more, you know the questions that are turning in their heads: "Where should I go?", "How will it be there?". Imagine being a top-level executive in an international corporation sitting in a meeting. When you look around, there are a dozen other people wearing black coats. You know what they hope for, but also what they fear. But most of all you know the piercing questions: "Where should we go?", "How will it be there?". Insecurity, ironically seems to characterize the age of information. 
+
+But we also know the other story, the one that is being told over and over again. Where  someone talks about the wonders of technology with red cheeks and glowing eyes. How can the same data 
+
+
+
 While the amount of data generated is continuing to grow exponentially each year [@Reinsel-17:dataage], no area and profession is left untouched. One of these areas is journalism. Examples like the Panama papers [@Kister-16:panamapapers] show how data journalism is becoming the new investigative journalism[@:whatdata]. Data journalists bridge the gap between the oceans of data that are available but ultimately faceless [@Oesch-17:hitchhikerguide] and their readers everyday lives. They use traditional storytelling and data visualization to achieve this. Although data visualization has been used in science for a few centuries [@Friendly-08:briefhistory], it has only more recently gained widespread use in mass media. Many questions therefore still remain about how to best integrate data visualizations into news stories.
 
 
@@ -14,7 +20,7 @@ The focus of early visualization research has mostly been on *explorative visual
 
 *Explorative* visualizations are targeted at researchers and help them *discover* new insights inside vast amounts of data. *Explanative* visualization, on the other hand, is used mainly for *presenting* information. [@Munzner-15:visualizationanalysis, pp. 45–48] The targeted audience are not specialists who will spend days, weeks or months with a given visualization, but a public who will only see it for a short amount of time. This leaves little room for learning the intricacies of a new idiom or to gain necessary topic knowledge necessary to correctly interpret complex visualizations. This new limitation has come to be known as "visualization literacy".[@Boy-14:principledway; @Lee-17:vlatdevelopment]
 
-## Visualization literacy
+## Visualization literacy {#sec:vis-literacy}
 
 Very little is known about how novices try to make sense of visualizations they are unfamiliar with. Lee et al. [@Lee-15:howpeople] show that most readers heavily rely on their topic knowledge to check if their ad-hoc interpretation of an unfamiliar visualization is correct.  When presenting unfamiliar material, it therefore often seems preferable to use well-known idioms like line charts or pie charts even if potentially more powerful idioms are available. Similar observations have been made regarding interactive visualizations in newspapers.[@Stabe-16:whyft; @Tse-16:whywe] According to them, most readers don't take the time to explore complex and unfamiliar visualizations.
 
@@ -192,7 +198,7 @@ Another way to reduce the number of elements in working memory is to highlight t
 
 #### Object constancy
 
-Finally, the properties of the visual system can be used to pre-process objects. There is some evidence that when the reader has rapid visual access to the targets (<300ms [@Rensink-02:changedetectiona]), changes will be detected before working memory is reached. Based on these findings, different authors have tried to use *animation* to reduce cognitive load [@Zongker-03:creatinganimation; @Betrancourt-08:displaykey] with mixed results. These findings will be discussed in the chapter on animation (>>Animation)
+Finally, the properties of the visual system can be used to pre-process objects. There is some evidence that when the reader has rapid visual access to the targets (<300ms [@Rensink-02:changedetectiona]), changes will be detected before working memory is reached. Based on these findings, different authors have tried to use *animation* to reduce cognitive load [@Zongker-03:creatinganimation; @Betrancourt-08:displaykey] with mixed results. These findings will be discussed in the chapter on animation ([-@sec:animation])
 
 
 
@@ -202,11 +208,11 @@ Based on these insights, we believe that the taxonomies described in [section @s
 
 
 
-###  Theoretical model
+###  Theoretical model {#sec:our-model}
 
 (TODO:graphic)
 
-We argue that readers extract information from a transition based on a comparison between the first and the second chart. As discussed in section (>>Comparison), readers first identify a target in one of the charts. Then they try to locate the matching target in the other chart. When a relationship is thus identified, it is further analyzed. To do this they need to keep three types of elements in their working memory:
+We argue that readers extract information from a transition based on a comparison between the first and the second chart. As discussed in section [-@sec:comparison], readers first identify a target in one of the charts. Then they try to locate the matching target in the other chart. When a relationship is thus identified, it is further analyzed. To do this they need to keep three types of elements in their working memory:
 
 #### Characters
 
@@ -248,7 +254,7 @@ For each example, a screenshot of each chart was pasted on a canvas in order. Fi
 
 
 
-### Transition types
+### Transition types {#sec:corpus-analysis}
 
 #### Explore attributes
 
@@ -264,7 +270,7 @@ Note how the character changes technically between the two states as its first "
 
 The example on the right side of figure \ref{technique-diffent-measure} shows two interesting things: characters need not be explicit and characters can stay the same between chart types.
 
-In the first chart, the characters are not identified by the author but emerge from the visualization through a combination of *identification through visual statistics* and *implicit identification* (see section >>Comparison). More specifically the reader will perceive two clusters of very different color on the map. If she has some knowledge about the geography and history of Germany, she will identify them as Former East  ![](img/char.pdf) and West Germany ![](img/char.pdf).
+In the first chart, the characters are not identified by the author but emerge from the visualization through a combination of *identification through visual statistics* and *implicit identification* (see section [-@sec:comparison]). More specifically the reader will perceive two clusters of very different color on the map. If she has some knowledge about the geography and history of Germany, she will identify them as Former East  ![](img/char.pdf) and West Germany ![](img/char.pdf).
 
 These characters are named in the next state. In contrast to the example on the left, the second chart here is completely different from the first. While the first depicts a map, the second is a time-series chart. Nonetheless, the transition is still between two characters showing different attributes (daycare ![](img/attr.pdf)and children per women ![](img/attr.pdf)) for the same characters.
 
@@ -282,7 +288,7 @@ The corresponding transition in Hullman et al. is a *measure walk*. [@Hullman-13
 
 We call this technique contrasting because it highlights the difference between characters. It's typical for these transitions to keep the same layout between two states and just switching characters. Only like this, a visual comparison is possible. This is the case for the example on the right in figure \ref{technique-contrast}. The income gap between black ![](img/char.pdf) and white men ![](img/char.pdf) becomes very clear in comparison to the obvious lack of the gap for women ![](img/char.pdf) when plotted in the same coordinate system.
 
-But also in contrasting transitions, there is subtlety as visible on the left side of figure \ref{technique-contrast}. Here the x-axis is being shifted between the states. But the shift has no other reason than saving space. It may take a little more effort from the reader to understand that the first chart shows states that have below-average proportions ![](img/attr.pdf)  of women and the second chart shows states that have above-average proportions ![](img/attr.pdf) of women. Yet this *pan* (see >>Visualization parameters) could have been left out without changing the interpretation of the transition at all. This leads us directly to the next technique: *Reconfigure*.
+But also in contrasting transitions, there is subtlety as visible on the left side of figure \ref{technique-contrast}. Here the x-axis is being shifted between the states. But the shift has no other reason than saving space. It may take a little more effort from the reader to understand that the first chart shows states that have below-average proportions ![](img/attr.pdf)  of women and the second chart shows states that have above-average proportions ![](img/attr.pdf) of women. Yet this *pan* (see section [-@sec:param-classification]) could have been left out without changing the interpretation of the transition at all. This leads us directly to the next technique: *Reconfigure*.
 
 The corresponding transition in Hullman et al. is a *dimension walk*. [@Hullman-13:deeperunderstanding] A congruent *animation* for this transition would be fading out the characters from the previous chart and fading in the new characters. The cognitive load of this transition is defined by the number of characters that need to be compared.
 
@@ -298,9 +304,9 @@ The corresponding transition in Hullman et al. is a *dimension walk*. [@Hullman-
 
 The defining characteristic of this transition is, that no new information is shown from the first to the second states. The information is just shown in a different way to clarify different aspects. The left example in figure \ref{technique-reconfigure} first shows the reader just how much the cases of measles have been  reduced through vaccination. It then *zooms* in on the portion of the chart showing the cases in recent times. They were too small to be visible in the first chart but technically present. This sort of transition is a good replacement for a log-transformed axis which few people understand anyway (TODO:source)
 
-The right example in figure \ref{technique-reconfigure} shows a more drastic reconfiguration of a map into a scatterplot. While the first chart makes it easy to see how for example the south of Italy is underdeveloped and while the north is above average, the same split can be found in the scatterplot when hovering over the dots, representing the individual regions of Italy. Conversely, the ranking and uniformity of countries can be extracted through visual statistics (>>Comparison) from the first chart. It's just much, much clearer in the second.
+The right example in figure \ref{technique-reconfigure} shows a more drastic reconfiguration of a map into a scatterplot. While the first chart makes it easy to see how for example the south of Italy is underdeveloped and while the north is above average, the same split can be found in the scatterplot when hovering over the dots, representing the individual regions of Italy. Conversely, the ranking and uniformity of countries can be extracted through visual statistics ([-@sec:comparison]) from the first chart. It's just much, much clearer in the second.
 
-Reconfigure subsumes the *pan*, *zoom*, *reorder* and *visualization change* transitions from visualization-oriented transitions (>>Visualization parameters). We have not found reconfigure transitions to be common enough in narrative visualization to deserve further specification into these subcategories. Still, the subcategories have some use when considering trying to define what a congruent *animation* for this transition might look like. A discussion can be found in [@Heer-07:animatedtransitions and @Isaacs-18:tableaumotion]. Regarding cognitive load, our model does not make any prediction for this type of transition. But our experiment indicates that it can be quite high (>>Differences between the stories).
+Reconfigure subsumes the *pan*, *zoom*, *reorder* and *visualization change* transitions from visualization-oriented transitions (see section [-@sec:param-classification]). We have not found reconfigure transitions to be common enough in narrative visualization to deserve further specification into these subcategories. Still, the subcategories have some use when considering trying to define what a congruent *animation* for this transition might look like. A discussion can be found in [@Heer-07:animatedtransitions and @Isaacs-18:tableaumotion]. Regarding cognitive load, our model does not make any prediction for this type of transition. But our experiment indicates that it can be quite high (see section [-@sec:results-stories]).
 
 
 
@@ -312,7 +318,7 @@ Reconfigure subsumes the *pan*, *zoom*, *reorder* and *visualization change* tra
 | ------------------------------------------------ | ------------- |
 | Visible characters are split into sub-characters | Stay the same |
 
-As described in (>>Theoretical model) characters need not be atomic units. Groups of similar characters can be perceived as a character themselves. But sometimes the author wants to convey how characters in a group differ from each other and thus how homogeneous a group is.
+As described in ([-@sec:our-model]l) characters need not be atomic units. Groups of similar characters can be perceived as a character themselves. But sometimes the author wants to convey how characters in a group differ from each other and thus how homogeneous a group is.
 
 Splitting characters is an essential device in narrative visualization because it nicely fits the general-to-specific pattern often used in storytelling (TODO:source). When splitting characters, the attributes will usually stay the same to serve as a frame of reference. A kind of shadow or contour of the "parent"-group will often remain too for reference. This is the case for both examples in figure \ref{technique-split} one who splits measles cases by states ![](img/char.pdf)  and years ![](img/attr.pdf) and one who splits European countries ![](img/char.pdf) into regions ![](img/char.pdf).
 
@@ -414,29 +420,29 @@ To understand why designers might think that animation helps in these specific c
 
 
 
-#### Object constancy ![](img/A.pdf)
+### Object constancy ![](img/A.pdf) {#sec:object-constancy}
 
-Object constancy describes the ability to identify two objects as being the same entity between two states.  This is probably the strength most often invoked for animation [@Chalbi-18:understandingdesigning, @Wu-16:graphicalperception, @Bederson:doesanimation, @Heer-07:animatedtransitions] It is also closely related to the previously presented model (>>Theoretical model) and *characters*. If animation indeed supports object constancy, it would simplify the *location* of the target in the second state (>>Comparison) and this simplifies the essential comparison task.
+Object constancy describes the ability to identify two objects as being the same entity between two states.  This is probably the strength most often invoked for animation [@Chalbi-18:understandingdesigning, @Wu-16:graphicalperception, @Bederson:doesanimation, @Heer-07:animatedtransitions] It is also closely related to the previously presented model (section [-@sec:our-model]) and *characters*. If animation indeed supports object constancy, it would simplify the *location* of the target in the second state (see section [-@sec:comparison]) and this simplifies the essential comparison task.
 
-#### Attract attention ![](img/B.pdf)
+### Attract attention ![](img/B.pdf) {#sec:attract-attention}
 
 Movement very strongly attracts attention. This view is undisputed in the literature [@Munzner-15:visualizationanalysis, p. 238] and there is some solid evidence that motion is more effective in highlighting elements than other visual means [@Ware-04:motionsupport] This ability to highlight elements can be very useful for storytelling. But it also poses the risk to distract the reader from important, non-moving elements of a visualization like axes or labels.
 
-#### Communicate causality and intentionality ![](img/C.pdf)
+### Communicate causality and intentionality ![](img/C.pdf) {#sec:causality}
 
-In nature, we observe a certain smooth flow of cause and effect. When a rolling billiard ball hits another, the second ball will smoothly continue its transition. This leads to the intuition that smooth animation would imply some sort of cause and effect relationship (>>Congruence). This is true when depicting naturalist phenomena like the formation of lightning. [@Betrancourt-08:displaykey] Other authors have found that animation also conveys causality in more abstract displays but that it doesn't perform better than symbolic depictions of causality. [@Kadaba-07:visualizingcausal]
+In nature, we observe a certain smooth flow of cause and effect. When a rolling billiard ball hits another, the second ball will smoothly continue its transition. This leads to the intuition that smooth animation would imply some sort of cause and effect relationship (see section [-@sec:congruence]). This is true when depicting naturalist phenomena like the formation of lightning. [@Betrancourt-08:displaykey] Other authors have found that animation also conveys causality in more abstract displays but that it doesn't perform better than symbolic depictions of causality. [@Kadaba-07:visualizingcausal]
 
-#### Engage ![](img/D.pdf)
+### Engage ![](img/D.pdf) {#sec:engage}
 
 Multiple authors have remarked how readers were "excited" about animation in interfaces and that it thus led to higher engagement [@Tversky-02:animationcan, @Heer-07:animatedtransitions] The ability of animation to engage and excite is often presupposed based on anecdotal evidence. But few studies have used validated questionnaires to explicitly measure engagement. One study who did found very mixed results [@Amini-18:hookeddata]. In their findings animation only led to higher engagement when coupled with pictorial representations of data. The main factor that led to higher engagement was "Aesthetics".  We suspect that in many cases there might be a "novelty" effect of animation that excites readers. There is little evidence that yesterdays fashionable animation still leads to higher engagement today. Furthermore, the novelty effect might lead readers and designers astray and they might confuse their positive feelings with actual benefits for understanding.[@Hassenzahl-10:inferenceperceived, @Baudisch-06:phosphorexplaining]
 
-#### Data encoding ![](img/E.pdf)
+### Data encoding ![](img/E.pdf)
 
 Similar to color or shape, motion can be used to encode data. Although the precision in interpreting it is very limited. [@Munzner-15:visualizationanalysis, p. 95] This property of animation is not listed in Heer et al. but we have decided to include it because it is well studied and forms the basis of multiple of the purposes listed by Chevalier et al. [@Chevalier-16:animations25]
 
 
 
-## Congruence
+## Congruence {#sec:congruence}
 
 ![Congruence as defined by Tversky et al. [@Tversky-02:animationcan] means that the representation should correspond to the concepts that are conveyed. Apprehension means that the representation should be accurately perceived.](/Users/jonas/Desktop/P9/bericht/img/congruence-apprehension.png)
 
@@ -448,13 +454,13 @@ According to this view, showing *change over time* would be a congruent use of a
 
 The second natural fit for animation are *viewport changes* like *pan* and *zoom*. These correspond to a person's natural movements through space, getting closer to objects, looking around, etc. Animated transitions have indeed been found to be superior to static transitions for *panning* [@Shanmugasundaram-07:cansmooth] as well as *zooming*. [@Shanmugasundaram-08:effectanimated]
 
-As previously discussed, animation has also been shown to be congruent for communicating causality and intentionality (>>Communicate causality and intentionality)
+As previously discussed, animation has also been shown to be congruent for communicating causality and intentionality (see section [-@sec:causality])
 
 ![\ref{Amini-18-hookeddata}](/Users/jonas/Desktop/P9/bericht/img/Amini-18-hookeddata.png)
 
 Interestingly, multiple authors found that animation seems to be far less effective when used with abstract representations than when it is used with iconic representations. Amini et al. [@Amini-18:hookeddata] found that animated transitions in data visualization only led to higher engagement when coupled with iconic representations (see \ref{Amini-18-hookeddata}). A recent meta-analysis [@Berney-16:doesanimation] of 50 studies on animation and its effect on learning found, that animation only benefitted knowledge acquisition when used with "iconic representations" of the phenomena the needed to be studied. No effect was found for abstract representations.
 
-We believe that congruence is strongly linked to object constancy. Animations will, therefore, fail in abstract visualizations because they are not being used to establish object constancy. Looking at transitions as following characters through multiple states, exploring their attributes and contrasting them as proposed in our perception-based classification (>>Theoretical model) should help designers look at transitions in terms of object constancy. Which will lead to more congruent animation. Heer et al. also warn against the risk of misusing object constancy [@Heer-07:animatedtransitions, p. 1240]:
+We believe that congruence is strongly linked to object constancy. Animations will, therefore, fail in abstract visualizations because they are not being used to establish object constancy. Looking at transitions as following characters through multiple states, exploring their attributes and contrasting them as proposed in our perception-based classification (see section [-@sec:our-model]) should help designers look at transitions in terms of object constancy. Which will lead to more congruent animation. Heer et al. also warn against the risk of misusing object constancy [@Heer-07:animatedtransitions, p. 1240]:
 
 >  Object constancy can be abused if an object is transformed into a completely unrelated object, establishing a false relation.
 
@@ -499,7 +505,7 @@ Staggered animation delays the start time animations incrementally for some obje
 
 Staggered animation has been proposed to *reduce occlusion* as well as *complexity* during animation and therefore lead to a higher tracking performance  [@Heer-07:animatedtransitions]  but the effect is negligible. [@Chevalier-14:notsostaggeringeffect]
 
-### Staged animation
+### Staged animation {#sec:staged-animation}
 
 Staged animation splits complex animations between multiple visual variables into stages. An animation then interpolates between positions as well as between two colors, might, for example, be split into two animation stages. One where the objects move from position a to position b. Another, where they change color.
 
@@ -531,13 +537,13 @@ Fair comparisons, in contrast, need to identify *informationally distinct* state
 
 
 
-## Research hypotheses
+## Research hypotheses {#sec:hypotheses}
 
 We wanted to find out if the purported benefits of animation would apply to transitions in narrative visualization. More concretely if the following hypothesis would hold:
 
 #### H1: Relationship
 
-Based on the findings that animation can communicate causality and intentionality (see section >>Communicate causality and intentionality), we believe that animated transitions might imply a relationship in a more general sense. We hypothesize that animated transitions will more often lead participants to assume a relationship between two charts.
+Based on the findings that animation can communicate causality and intentionality (see section [-@sec:causality]), we believe that animated transitions might imply a relationship in a more general sense. We hypothesize that animated transitions will more often lead participants to assume a relationship between two charts.
 
 #### H2: Causality
 
@@ -545,7 +551,7 @@ Extending H1, we believe that when readers assume a relationship between two cha
 
 #### H3: Cueing
 
-Animated transitions will focus the reader on the characters the author intended because it attracts attention (see >>Attract attention). This will lead them to more often interpret the relationship between the charts as the author intended and to talk about the characters the author wants.
+Animated transitions will focus the reader on the characters the author intended because it attracts attention (see section [-@sec:attract-attention]). This will lead them to more often interpret the relationship between the charts as the author intended and to talk about the characters the author wants.
 
 #### H4: Object constancy
 
@@ -557,7 +563,7 @@ Readers will be more engaged by the visualizations with animated transitions.
 
 
 
-# Experiment
+# Experiment {#sec:experiment}
 
 To test the above hypotheses, we have conducted an experiment which will be described in the following sections.
 
@@ -571,7 +577,7 @@ The experiment was conducted on Amazon Mechanical Turk [@:amazonmechanical] and 
 
  ![results-duration.pdf](img/results-duration.pdf)
 
-## Overview
+## Overview {#sec:experiment-overview}
 
 Before we will go on to discuss the specifics of the experiment, we will present the stimuli. Each of the mini-stories contained two charts and a transition between them. For one of the stories, this transition was *static*, for the other it was animated to have a full within-subject design. In a static transition, the participant would initially see the first chart. Upon scrolling, it would be replaced by the second chart. When scrolling further, the questionnaire would appear. Animated transitions did not simply replace one chart with the other but showed an animation for a certain scrolling distance. Participants could freely control transitions and animations through their scrolling. They could also scroll back up while answering the survey.
 
@@ -579,19 +585,19 @@ Before we will go on to discuss the specifics of the experiment, we will present
 
 The first story is about the evolution of mortality rates in the U.S. It is a modification of an article published by Bloomberg in 2014.[@Klein-14:howamericans]
 
-#### Mortality A
+#### Mortality A {#sec:mortality-a}
 
 ![mortality-demographics](/Users/jonas/Desktop/P9/bericht/img/mortality-demographics.png)
 
 The first mini-story in the mortality story moves the reader through a semantic field. It begins with a chart showing how the population ![](img/char.pdf) has gotten older ![](img/attr.pdf) over time ![](img/attr.pdf) . The following chart shows how the mortality rates ![](img/attr.pdf) of both genders ![](img/char.pdf) have been reduced drastically over the same period. The transition thus conveys how reducing mortality rate leads to an aging population. The transition is animated by merging all the age groups into the grey "Everyone"-line and shows the lines for men and women subsequently.
 
-#### Mortality B
+#### Mortality B {#sec:mortality-b}
 
 ![mortality-absolute](/Users/jonas/Desktop/P9/bericht/img/mortality-absolute.png)
 
 The second mini-story contrasts the mortality rate ![](img/attr.pdf) of different characters ![](img/char.pdf) . It starts with the last chart from the previous transition showing the mean mortality rates for "Men" ![](img/char.pdf), "Women" ![](img/char.pdf) and "Everyone" ![](img/char.pdf). This is contrasted to the evolution of the mortality rates ![](img/attr.pdf) of different age groups ![](img/char.pdf). From this mini-story, the reader learns that the mortality rate is dominated (unsurprisingly) by elderly people. An apparent slowdown in mortality rate reduction in the first chart is therefore mostly due to to the development in the "Over 84" group. In the animated transition "Men" and "Women" characters are first hidden, the "Everyone" character is being split and morphed into the different age groups.
 
-#### Mortality C
+#### Mortality C {#sec:mortality-c}
 
 ![mortality-relative](/Users/jonas/Desktop/P9/bericht/img/mortality-relative.png)
 
@@ -599,7 +605,7 @@ Again, this mini-story starts with the last chart of the previous mini-story. In
 
 
 
-#### Mortality D
+#### Mortality D {#sec:mortality-d}
 
 ![mortality-causes](/Users/jonas/Desktop/P9/bericht/img/mortality-causes.png)
 
@@ -611,19 +617,19 @@ Some readers might have wondered why the mortality rate for "25–44" year olds 
 
 This story talks about the evolution of energy sources in the U.S. since the beginning of the century. It combines a story from the New York Times  [@Popovich-18:howdoes] with one from Forbes [@Mahajan-18:plungingprices].
 
-#### Energy A
+#### Energy A {#sec:energy-a}
 
 ![energy-A](/Users/jonas/Desktop/P9/bericht/img/energy-A.png)
 
 The energy story starts by showing the evolution of different energy sources ![](img/char.pdf) in the U.S in absolute numbers ![](img/attr.pdf). In the second chart, it shows how the proportions ![](img/attr.pdf) have changed over time. From comparing the two charts it becomes clear that while the absolute output has either risen or stagnated, coal has been used significantly less while the focus seems to be shifting to natural gas and the renewables. The animated transition morphs the lines into their respective areas in the second chart.
 
-#### Energy B
+#### Energy B {#sec:energy-b}
 
 ![energy-B](/Users/jonas/Desktop/P9/bericht/img/energy-B.png)
 
 As in the mortality narrative, the second mini-story starts with the last chart from the previous mini-story. In the second chart, it shows how wind ![](img/char.pdf) has become a major energy source ![](img/char.pdf) in certain (great plains) states ![](img/char.pdf) . The transition leads to the conclusion that, although the rise of wind energy looks unspectacular on a national scale, growth has been exponential in some places. The animation first hides everything except the area for "wind" which is then split and morphed into the lines of the individual states.
 
-#### Energy C
+#### Energy C {#sec:energy-c}
 
 
 
@@ -631,7 +637,7 @@ As in the mortality narrative, the second mini-story starts with the last chart 
 
 The third mini-story focuses on the strange stagnation of wind energy ![](img/ctxt.pdf) in California ![](img/char.pdf) after 2013. To find out where the focus might have shifted, the second chart shows the energy mix of California ![](img/ctxt.pdf) over time ![](img/attr.pdf). A marked rise in solar power ![](img/char.pdf) after 2013 implies that the state has decided to invest in this renewable instead of wind ![](img/char.pdf). The animation first highlights California and then expands it into the other sources.
 
-#### Energy D
+#### Energy D {#sec:energy-d}
 
 ![energy-D](/Users/jonas/Desktop/P9/bericht/img/energy-D.png)
 
@@ -660,7 +666,7 @@ Before each story, we added a screen that simply showed the initial chart of the
 
 ## Dependent variables
 
-To test the hypotheses described in the section (>>Research hypotheses), we have established several measures. A part of them was based on the answers the participants gave to a questionnaire that was displayed at the end of each mini-story. We have included the whole questionnaire in the supplementary material.
+To test the hypotheses described in section [-@sec:hypotheses], we have established several measures. A part of them was based on the answers the participants gave to a questionnaire that was displayed at the end of each mini-story. We have included the whole questionnaire in the supplementary material.
 
 #### H1: Relationship
 
@@ -674,7 +680,7 @@ Whenever the participant perceived a relationship, we also coded if she indicate
 
 If animation has a cueing effect, it should focus the participant on certain characters. One first effect that we predict is that this will lead people to mention fewer characters in their conclusions. During the coding phase, we, therefore, counted the **number of characters mentioned**. We not only included characters that were directly visible but also groupings of characters like "green energy sources" to count as one. 
 
-Secondly, we predicted that guiding the reader's attention to the characters the author intended would lead participants to interpret relationships according to what the author wanted to convey. We called this measure "**correct relationship**". Whenever we found the mention of a *relationship* during the coding, we compared it with the story the author wanted to tell (see >>Overview). When the participant came to the same conclusion, we coded this measure as 1 and otherwise as 0.
+Secondly, we predicted that guiding the reader's attention to the characters the author intended would lead participants to interpret relationships according to what the author wanted to convey. We called this measure "**correct relationship**". Whenever we found the mention of a *relationship* during the coding, we compared it with the story the author wanted to tell (see section [-@sec:experiment-overview]). When the participant came to the same conclusion, we coded this measure as 1 and otherwise as 0.
 
 #### H4: Object constancy
 
@@ -714,7 +720,7 @@ Also asked in the final survey, this would act as a rough proxy for visualizatio
 
 Equally, if the participants reported weak and uncorrected vision, we could potentially exclude them from the analysis if we found that the factor skewed the results.
 
-#### Colorblindness
+#### Colorblindness {#sec:colorblindness}
 
 ![experiment-colorblindness](/Users/jonas/Desktop/P9/bericht/img/experiment-colorblindness.png)
 
@@ -724,11 +730,11 @@ A final criterion we considered for explaining outliers was color blindness. We 
 
 ## Visualization design
 
-### Story selection
+### Story selection {#sec:story-selection}
 
-Selecting or designing the stories was one of the most delicate parts of the experiment design. The characters and the broader context needed to be familiar to a wide audience because visualization interpretation is highly dependent on context knowledge (>>Narrative visualization and >>Comparison) and the experiment did not provide an introduction to the topic. A story on paratransit (a special means of transport for disabled people in the U.S.) for example, was initially planned to be included but was soon removed because the topic was not familiar to most people.
+Selecting or designing the stories was one of the most delicate parts of the experiment design. The characters and the broader context needed to be familiar to a wide audience because visualization interpretation is highly dependent on context knowledge (compare sections [-@sec:narr-vis] and [-@sec:comparison]) and the experiment did not provide an introduction to the topic. A story on paratransit (a special means of transport for disabled people in the U.S.) for example, was initially planned to be included but was soon removed because the topic was not familiar to most people.
 
-The stories also had to avoid highly controversial topics because we feared that implicit reader knowledge might interfere with the interpretation of the visualizations (>>Comparison). We have seen this happen in both stories but it was less prevalent than we feared.
+The stories also had to avoid highly controversial topics because we feared that implicit reader knowledge might interfere with the interpretation of the visualizations (see section [-@sec:comparison]). We have seen this happen in both stories but it was less prevalent than we feared.
 
 Finally, the story needed to be told mainly through the visualizations. This turned out to be to most constraining factor. In most existing narrative visualization we have found, that the textual narration was essential to understand the story. The story on the evolution of mortality[@Klein-14:howamericans] was chosen exactly because it contained very little text in its original version. The story about the energy sources was specifically created in a way that we hoped would be self-explanatory with very little text.
 
@@ -742,7 +748,7 @@ Textual narrative was excluded from the experiment because it is a huge confound
 
 ![\label{experiment-charttypes}](/Users/jonas/Desktop/P9/bericht/img/experiment-charttypes.png)
 
-Previous studies have found that the majority of people are unable to correctly interpret complex visualizations. (TODO:source) According to these authors, the "safe" visualizations are bar charts, line charts, scatterplots and maps (>>see visualization literacy) This finding is supported by our analysis of narrative visualization who also almost exclusively use these simpler visualizations (>>Perception-oriented classificationl) As we did not want participants to fail because they were unable to read the individual  charts, we have decided to limit the experiment to line charts and stacked area charts. In our pilot studies, these chart types have been "safe", even though the stacked area chart posed problems to some of the participants in the experiment (>> see Results). One chart type that was excluded based on pilot data was the *slope chart*. (see \ref{experiment-charttypes} )
+Previous studies have found that the majority of people are unable to correctly interpret complex visualizations. (TODO:source) According to these authors, the "safe" visualizations are bar charts, line charts, scatterplots and maps (see section [-@sec:vis-literacy]). This finding is supported by our analysis of narrative visualization in section [-@sec:corpus-analysis] who also almost exclusively use these simpler visualizations As we did not want participants to fail because they were unable to read the individual  charts, we have decided to limit the experiment to line charts and stacked area charts. In our pilot studies, these chart types have been "safe", even though the stacked area chart posed problems to some of the participants in the experiment (see [-@sec:experiment-results]). One chart type that was excluded based on pilot data was the *slope chart*. (see \ref{experiment-charttypes} )
 
 ### Reader-controlled animation
 
@@ -756,15 +762,15 @@ Three different kinds of animated transitions were used throughout the experimen
 
 #### One-to-many
 
-A good example of this case is >>"Mortality D". There, the animation needed to convey that the "causes of death" ![](img/char.pdf) in the second chart only concerned the "25–44" year old age group ![](img/ctxt.pdf) . This is done through a *staged transition* (>>see staged transition). We first highlight the "25–44" year old age group by hiding all the others and then splitting and morphing this character into the different causes of death. The same approach was applied in >>"Mortality B",>> "Energy B" and ">>Energy C".
+A good example of this case is *Mortality D* ([@sec:mortality-d]). There, the animation needed to convey that the "causes of death" ![](img/char.pdf) in the second chart only concerned the "25–44" year old age group ![](img/ctxt.pdf) . This is done through a *staged transition* (see section [-@sec:staged-animation]). We first highlight the "25–44" year old age group by hiding all the others and then splitting and morphing this character into the different causes of death. The same approach was applied in *Mortality B* ([@sec:mortality-b]), *Energy B* ([@sec:energy-b]) and *Energy C* ([@sec:energy-c]).
 
 #### Many-to-one
 
-This case can only be found in >>"Mortality A". Here the different age groups ![](img/char.pdf) are being morphed into a single line that represents "Everyone" ![](img/char.pdf). After the morphing was finished, the characters ("Men" ![](img/char.pdf) and "Women" ![](img/char.pdf)) were shown.
+This case can only be found in *Mortality A* ([@sec:mortality-a]). Here the different age groups ![](img/char.pdf) are being morphed into a single line that represents "Everyone" ![](img/char.pdf). After the morphing was finished, the characters ("Men" ![](img/char.pdf) and "Women" ![](img/char.pdf)) were shown.
 
 #### Many-to-many
 
-This case is well illustrated by >>"Energy D" where the marks for proportions ![](img/attr.pdf)  of different energy sources ![](img/char.pdf)  were morphed to represent the price evolution ![](img/attr.pdf) of these same energy sources ![](img/char.pdf). Many-to-many animations are also being used in >>"Mortality C" and >>"Energy A".
+This case is well illustrated by *Energy D* ([@sec:energy-d]) where the marks for proportions ![](img/attr.pdf)  of different energy sources ![](img/char.pdf)  were morphed to represent the price evolution ![](img/attr.pdf) of these same energy sources ![](img/char.pdf). Many-to-many animations are also being used in *Mortality C* ([@sec:mortality-c]) and *Energy A* ([@sec:energy-a]).
 
 
 
@@ -790,7 +796,7 @@ Also, the decision to exclude the slope chart or the decision to highlight the c
 
 
 
-## Results
+## Results {#sec:experiment-results}
 
 ### Demographics of the participants
 
@@ -798,17 +804,17 @@ Also, the decision to exclude the slope chart or the decision to highlight the c
 
 Because the experiment was conducted on Amazon Mechanical Turk, the participants were quite varied though there was a tendency towards men and younger people. We were surprised that the level of education of our participants was in general quite high. We assume that a lot of people with lower levels of education self-selected out of the experiment. 173 persons saw the initial, explanatory screen but 117 stopped there or after the first few screens. Many probably because they realized that they could not read the visualizations.
 
-The Ishihara plates found three colorblind participants. All of them men. This is close enough to the 8% known in the literature (>> colorblindness) to assume that the test worked properly.
+The Ishihara plates found three colorblind participants. All of them men. This is close enough to the 8% known in the literature (see section [-@sec:colorblindness]) to assume that the test worked properly.
 
 
 
-### Differences between the stories
+### Differences between the stories {#sec:results-stories}
 
 ![results-stories](img/results-stories.png)
 
-As discussed in section (>>Story selection), one of the main challenges was to design narrative visualizations that a large part of the participants would understand. We only succeeded partially in this. The target was to design the stories so that about 40–50% of the participants would interpret them according to the author's intentions (**correct relationship**). Arguably this only worked for *energy D* and *mortality A* and *D*. Interestingly, these are also the mini-stories that contained a cause-and-effect relationship between the two charts. We wonder if readers are just more prone to talk about cause-and-effect relationships or if they truly notice them more readily.
+As discussed in section [-@sec:story-selection], one of the main challenges was to design narrative visualizations that a large part of the participants would understand. We only succeeded partially in this. The target was to design the stories so that about 40–50% of the participants would interpret them according to the author's intentions (**correct relationship**). Arguably this only worked for *energy D* and *mortality A* and *D*. Interestingly, these are also the mini-stories that contained a cause-and-effect relationship between the two charts. We wonder if readers are just more prone to talk about cause-and-effect relationships or if they truly notice them more readily.
 
-The most confusing story of all was *mortality C* where the characters were simply rescaled, which is a Reconfigure-transition according to our classification (>>Perception oriented/Transition types). The difficulty of this transition is also visible in the unusually high transition count. The differences in *characters* mentioned are easy to explain: some mini-stories contained simply many more characters than others.
+The most confusing story of all was *mortality C* where the characters were simply rescaled, which is a Reconfigure-transition according to our classification in section [-@sec:]. The difficulty of this transition is also visible in the unusually high transition count. The differences in *characters* mentioned are easy to explain: some mini-stories contained simply many more characters than others.
 
 
 
@@ -826,7 +832,7 @@ Neither did we find that animated transitions in themselves implied a causal rel
 
 #### H3: Cueing
 
-We found that animation focused participants on a smaller group of characters. But this seemingly did not help them correctly interpret the relationship. One explanation might be that the animation design was not clear enough. Another explanation might be the following: interpreting the relationship between two charts is certainly a process that happens after identifying a relationship (>>Comparison). It is therefore even further removed from the levels of visual perception that are affected by the animated-static distinction. It would. therefore, be surprising to find a difference in this measure while not finding one in the *relationship*-measure.
+We found that animation focused participants on a smaller group of characters. But this seemingly did not help them correctly interpret the relationship. One explanation might be that the animation design was not clear enough. Another explanation might be the following: interpreting the relationship between two charts is certainly a process that happens after identifying a relationship (see section [-@sec:comparison]). It is therefore even further removed from the levels of visual perception that are affected by the animated-static distinction. It would. therefore, be surprising to find a difference in this measure while not finding one in the *relationship*-measure.
 
 #### H4: Object constancy
 
@@ -862,25 +868,25 @@ The task was rather difficult.
 
 To quickly create narrative visualizations and animated transitions for the experiment, we have built a visualization tool that would simplify this task. The solution presented in this chapter might look simple, even obvious to the reader. But our first attempts to implement animated transitions resulted in a tangled mess of spaghetti code and attest that the problem does not have a straightforward solution. We conclude that the simplicity of the proposed solution is, therefore, more a sign of conceptual clarity than a sign for the mundanity of the problem.
 
-## Requirements
+## Requirements {#sec:requirements}
 
 #### Online narrative visualization
 
-Much the specification of the experiment has already been described in a previous section (>>Experiment). To run it on Amazon Mechanical Turk we needed to build web-based narrative visualizations with animated transitions. It was, therefore, an obvious choice to use common web technologies like HTML, CSS, SVG, and ECMAScript for the implementation. For increased programmer convenience through type checking, we have used TypeScript to generate the final ECMAScript.
+Much the specification of the experiment has already been described previously in  section [-@sec:experiment]. To run it on Amazon Mechanical Turk we needed to build web-based narrative visualizations with animated transitions. It was, therefore, an obvious choice to use common web technologies like HTML, CSS, SVG, and ECMAScript for the implementation. For increased programmer convenience through type checking, we have used TypeScript to generate the final ECMAScript.
 
 The D3 library [@Bostock-11:datadrivendocuments] was used because it abstracts some of the more tedious parts of generating SVG-code from data. D3 was chosen because it is currently the de-facto standard for data visualization on the web and it does not impose a certain structure in the code as many frameworks do.
 
 #### Rapid prototyping
 
-Because the stories and the design were developed alongside with the implementation, we wanted a system the would allow us to quickly test different design choices or modify the story. We, therefore, decided to build an application generator the would interpret a domain-specific language (DSL) perfectly tailored to our needs. An in-depth discussion can be found in section (>>Declarative language for narrative visualization)
+Because the stories and the design were developed alongside with the implementation, we wanted a system the would allow us to quickly test different design choices or modify the story. We, therefore, decided to build an application generator the would interpret a domain-specific language (DSL) perfectly tailored to our needs. An in-depth discussion can be found in section [-@sec:declarative-syntax]
 
 #### Limited range of chart types
 
-As discussed in section (>>Visualization design/Visualization literacy), the range of charts that the general public easily understands is very limited. We, therefore, limited our ambitions to a system that would be able to generate simple 2D chart types like the line charts and stacked are charts mentioned in section  (>>Visualization design/Visualization literacy).
+As discussed in section [-@sec:vis-literacy], the range of charts that the general public easily understands is very limited. We, therefore, limited our ambitions to a system that would be able to generate simple 2D chart types like the line charts and stacked are charts mentioned in section  [-@sec:vis-literacy]
 
 #### Transitions focused on characters
 
-Based on the discussion on *object constancy* (section >>Animation/Object constancy) and the findings in (>>Techniques), we decided to base all of the animated transitions on the concept of *characters*.
+Based on the discussion on *object constancy* (section [-@sec:object-constancy]) and the findings in section [-@sec:our-model], we decided to base all of the animated transitions on the concept of *characters*.
 
 #### Performance
 
@@ -912,7 +918,7 @@ Even less research has been conducted on DSLs who describe animated transitions 
 
 Very recently, Tableau, one of the largest providers of commercial visualization software has released a preview of their future implementation of animated transitions. [@Isaacs-18:tableaumotion] In their concept, animations are predetermined by the type of transition and not configurable by the author.
 
-The tool that most closely addresses the problems of narrative visualization is *Ellipsis* by Satyanarayan and Heer [@Satyanarayan-14:authoringnarrative] Ellipsis is a tool to create narrative visualization through a graphical interface. It wraps existing visualizations and adds an *annotation* layer, *parameters* for dynamic queries (>>narrative visualization) and a layer for defining *transitions* between charts. Ellipsis thus effectively decouples the narrative structure from the individual charts and lets authors quickly explore alternative narrative structures.
+The tool that most closely addresses the problems of narrative visualization is *Ellipsis* by Satyanarayan and Heer [@Satyanarayan-14:authoringnarrative] Ellipsis is a tool to create narrative visualization through a graphical interface. It wraps existing visualizations and adds an *annotation* layer, *parameters* for dynamic queries (see section [-@sec:narr-vis]) and a layer for defining *transitions* between charts. Ellipsis thus effectively decouples the narrative structure from the individual charts and lets authors quickly explore alternative narrative structures.
 
 
 
@@ -922,9 +928,9 @@ Heer et al. [@Heer-10:declarativelanguage] mention another advantage of DSLs for
 
 
 
-## Declarative syntax
+## Declarative syntax {#sec:declarative-syntax}
 
-Based on the requirements described in section (>>requirements) and the review of existing tools, we decided to design a domain-specific language (DSL) for narrative visualization with animated transitions. A DSL allows for *rapid prototyping* by making the definition of charts and transitions quick. Yet it can provide a lot of flexibility in terms of annotations and in *how characters should morph between the charts*. Finally, *slow animations can be optimized* without changing the visualizations that were already created for the experiment.
+Based on the requirements described in section [-@sec:requirements] and the review of existing tools, we decided to design a domain-specific language (DSL) for narrative visualization with animated transitions. A DSL allows for *rapid prototyping* by making the definition of charts and transitions quick. Yet it can provide a lot of flexibility in terms of annotations and in *how characters should morph between the charts*. Finally, *slow animations can be optimized* without changing the visualizations that were already created for the experiment.
 
 ### Anatomy of a chart
 
