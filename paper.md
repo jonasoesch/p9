@@ -2,13 +2,45 @@
 
 # Introduction
 
-Imagine you are a refugee sitting on a boat that crosses the mediterranean sea. When you look around, there are three dozen other people wearing life jackets. You know how they feel. You know their hope and you know their fear. But even more, you know the questions that are turning in their heads: "Where should I go?", "How will it be there?". Imagine being a top-level executive in an international corporation sitting in a meeting. When you look around, there are a dozen other people wearing black coats. You know what they hope for, but also what they fear. But most of all you know the piercing questions: "Where should we go?", "How will it be there?". Insecurity, ironically seems to characterize the age of information. 
+December 17, 2010. In Sidi Bouzid, Tunesia, Mohamed Bouazizi sets himself on fire in front of the provincial headquarters. The authorities had confiscated a cart full of produce that Bouazizi intended to sell this day, his families sole source of income. Three weeks earlier, WikiLeaks had released a large number of documents that included descriptions of large scale corruption and repression by the Tunisian regime. This led to protests, first only in Sidi Bouzid, but through the rapid dissemination of the information, protests broke out all over the country which led to the overturn of the old regime. The information also reached the populations of other Arab countries who where inspired to protest against their regimes. While this might be a seen as a success story of the information age, the Arab spring has turned into an Arab winter and leaves many countries in a state of instability. Insecurity, ironically, seems to characterize the age of information.
 
-But we also know the other story, the one that is being told over and over again. Where  someone talks about the wonders of technology with red cheeks and glowing eyes. How can the same data 
+While the amount of data generated is continuing to grow exponentially [@Reinsel-17:dataage], human minds and lives stay closely confined by their biology and experience. Whoever ignores the second part of the equation risks being someone who lights a match in a fireworks factory because he thinks it might help him see more. But precisely, most of the research seems to be focused on how to treat ever larger amounts of data. It often does not occur to researchers to look at the equation from the other side. To ask, first, what  a person might want or need to know and in what form. To some this might sound paternalistic, "the data is just what it is" they say. But this question precisely shows how much they ignore the other part of the equation. Data means nothing to a person. But a single data point, a single greengrocer's tragic suicide, in a particular context, can lead to a revolution.
+
+## Visualization for communication
+
+Visualization research too, has long treated data as neutral and contextless. Because of this, most of the research has been focused on how to maximize the amount of data that can be communicated to the reader. This way of thinking is epitomized in Tufte's principle to "maximize the data-to-ink ratio". [@Tufte-01:visualdisplay] or in statements like "The visual system provides a very high-bandwidth channel to our brains". [@Munzner-15:visualizationanalysis, p. 6] While such concerns are valid for visualization that is trying to help a researcher *discover* new insights, they are completely inadequate for a visualization that is trying to communicate. John Stasko, who has researched data visualization for over 30 years, recently tweeted [@Stasko-19:tweet]:
+
+> I grow increasingly convinced every day that data visualization for analytical, exploratory purposes and data visualization for communicative, presentational purposes are more different than most people think.
+
+When using visualization for communication, we can not assume that the data we show will have any significance to the reader. Without the proper context, it means nothing to her. Researchers approach data with their own questions, for them visualization is a tool to find answers to these questions. But an audience does not usually come with questions that the data we would like to present just happens to answer. Instead, the audience needs to be led 
 
 
 
-While the amount of data generated is continuing to grow exponentially each year [@Reinsel-17:dataage], no area and profession is left untouched. One of these areas is journalism. Examples like the Panama papers [@Kister-16:panamapapers] show how data journalism is becoming the new investigative journalism[@:whatdata]. Data journalists bridge the gap between the oceans of data that are available but ultimately faceless [@Oesch-17:hitchhikerguide] and their readers everyday lives. They use traditional storytelling and data visualization to achieve this. Although data visualization has been used in science for a few centuries [@Friendly-08:briefhistory], it has only more recently gained widespread use in mass media. Many questions therefore still remain about how to best integrate data visualizations into news stories.
+Two examples will clarify how the "old ways" have often led communicators who used data visualization astray: *interaction* and *visualization literacy*. 
+
+#### Interaction
+
+Interaction has been a very dear concept to visualization research (when searching for "visualization" on Google Scholar, half of the results also contain the term "interactive"). When a screen does not have enough pixels to display *all* of the data, it can still be explored through interaction. Based on the premise that it is always good to "show all the data", newspapers have integrated interactive visualizations in their online articles.[@Segel-10:narrativevisualization] But they where disappointed to find that almost no one interacted with them. [@Stabe-16:whyft; @Tse-16:whywe] Instead of using interactive visualizations, these newspapers now create many more static visualizations that show precisely what the reader needs to know at a given point in the article. [@Tse-16:whywe]
+
+#### Visualization literacy
+
+Another strategy to show more data in less space is the invention of more complex visualization idioms. 
+
+
+
+## Narrative visualization
+
+Readers expect to know why some data is important for them.
+
+
+
+* Complex visualization idioms
+* All data is not equal and people are therefore not interested in quantity
+* Readers need very good reasons to put in the effort
+  * but they are not dumb and will do it if it's worth their time
+* 
+
+
 
 
 
@@ -22,7 +54,7 @@ The focus of early visualization research has mostly been on *explorative visual
 
 ## Visualization literacy {#sec:vis-literacy}
 
-Very little is known about how novices try to make sense of visualizations they are unfamiliar with. Lee et al. [@Lee-15:howpeople] show that most readers heavily rely on their topic knowledge to check if their ad-hoc interpretation of an unfamiliar visualization is correct.  When presenting unfamiliar material, it therefore often seems preferable to use well-known idioms like line charts or pie charts even if potentially more powerful idioms are available. Similar observations have been made regarding interactive visualizations in newspapers.[@Stabe-16:whyft; @Tse-16:whywe] According to them, most readers don't take the time to explore complex and unfamiliar visualizations.
+Very little is known about how novices try to make sense of visualizations they are unfamiliar with. Lee et al. [@Lee-15:howpeople] show that most readers heavily rely on their topic knowledge to check if their ad-hoc interpretation of an unfamiliar visualization is correct.  When presenting unfamiliar material, it therefore often seems preferable to use well-known idioms like line charts or pie charts even if potentially more powerful idioms are available. Similar observations have been made regarding interactive visualizations in newspapers. According to them, most readers don't take the time to explore complex and unfamiliar visualizations.
 
 Exceptions exist, where very complex and creative visualizations seem to be liked by readers [@Lupi-:visualdata]. We hypothesize that these are probably due to a shift in the readers' goals. Instead of trying to understand the story, the readers now challenge themselves to understand the mechanics of the visualization. [@Manjoo-13:wholelot],  This would correspond to the third type of visualization, who are primarily *enjoyed* for their artistic appeal.[@Munzner-15:visualizationanalysis, p. 48]
 
