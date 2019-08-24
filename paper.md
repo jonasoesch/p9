@@ -2,23 +2,39 @@
 
 # Introduction
 
-A lot of people think of something rather dry, even lifeless when they hear the word "data". They have heard 
+When they hear the word "data", it evokes feelings of something rather dry, even lifeless in many peoples minds. They might have heard that the data generated each year is continuing to grow exponentially each year [@Reinsel-17:dataage]. They might have heard of the many marvels that data will deliver to humanity. But they simply can not relate. Data is something for the specialists who have a special trait of character, something that escapes the regular person.
+
+This view of things is reinforced by most of the research that is being conducted around data. Much of it is focused on how to store, process and interpret the ever larger amounts of data. And while these researchers push the boundaries of what is technologically possible, human capabilities remain painfully  limited within clear boundaries. It is obvious how this situation leads some to conclude that we need to either augment the human brain through technology [TODO:source] or to remove the human from the loop entirely. [TODO:source].
+
+User interface design in general and data visualization in particular have traditionally taken the role of the mediator between the two worlds. Visualization research has extensively explored how to maximize the data that can be communicated to humans. They faced limitations like available pixels on the screen and the perceptual and cognitive abilities of people. Much of the thinking in the field is focused on not wasting these precious resources. It is epitomized in recommendations like "maximizing the data-to-ink ratio". [@Tufte-01:visualdisplay] and in observations like this: "The visual system provides a very high-bandwidth channel to our brains". [@Munzner-15:visualizationanalysis, p. 6]
+
+We argue that it is precisely this narrow focus on maximizing data throughput that has alienated the regular person from data. This is because feeding a person the maximum amount of data possible comes at a cost. While the visual system and the brain might be able to process a surprisingly high amount of information it puts a lot of strain on them. A researcher who is driven by the prospect of finding answers to his questions in the data will probably have a high tolerance to put up with this. But even for them, data analysis is a fatiguing task. Excitement and interest is not inherent in the data but much more related to the researchers questions.
+
+Because it's the questions that drive the exploration of the data, presenting data without them is a rather dull thing. It is reminds us of Douglas Adams famous "answer to life, the universe and everything. 42". It leaves its recipients puzzled and frustrated. So even if the data contains an answer to everything the reader ever wanted to know, it is still no use the her to see "all the data". Rather the reader would like to follow the thought process that in the end makes it obvious why some data is interesting.
+
+And while data exploration is a chaotic, non-linear process, following a thought process is something highly linear. A story.
+
+Telling stories with data therefore has the potential to make it come alive for readers who are not already approaching it with their questions. This topic has only gained some attention in visualization research after a landmark paper by Segel and Heer in 2010 [@Segel-10:narrativevisualization] who called it "narrative visualization".
+
+While narrative visualization shares many of traits of regular visualization, its linear nature is something highly untypical in traditional, explorative visualizations. In other areas, especially writing, a lot of research has been conducted on how to structure linear narratives and it has been shown that the order and the rhythm in which information is presented is highly relevant. Writing rules like "one thought per paragraph" are the results of such findings. But almost nothing is known about how to order and pace the presentation of data visualization.
+
+This is what the current work aims at. It consists of three parts with individual research questions.
+
+The first part will look at how sequences of visualizations are read and how mental effort in understanding them can potentially be reduced.
+
+The second part will look deeper into one particular way to reduce the mental effort: animation. We describe how animation is thought to reduce this effort and describe the results of an experiment that has tested these purported strengths of animation.
+
+In the last part, we propose a system to implement sequential visualizations with animated transitions on the web.
 
 
 
-Imagine that you have booked a trip to Vietnam through a travel agency. The agency is specialized in organizing trips to southeast Asia. As you get out of the Airplane, you find yourself in the middle of the most beautiful Vietnamese jungle. The pilot hands you a map and tells you to enjoy your exploration of Vietnam. He will pick you up in ten days at the marked point. While this idea might sound intriguing to some, most people (including the author) would be utterly lost in such a situation. We had expected the agency, specialists of southeast Asia to guide us through the country. To show us fascinating and historic places and giving us all the information we would need in order to get a deeper understanding of the countries rich heritage. And now we are here, lost in the middle of the jungle.
-
-While this idea might sound patently absurd, it is often what we do to readers when presenting data. 
 
 
 
-December 17, 2010. In Sidi Bouzid, Tunesia, Mohamed Bouazizi sets himself on fire in front of the provincial headquarters. The authorities had confiscated a cart full of produce that Bouazizi intended to sell this day, his families sole source of income. Three weeks earlier, WikiLeaks had released a large number of documents that included descriptions of large scale corruption and repression by the Tunisian regime. This led to protests, first only in Sidi Bouzid, but through the rapid dissemination of the information, protests broke out all over the country which led to the overturn of the old regime. The information also reached the populations of other Arab countries who where inspired to protest against their regimes. While this might be a seen as a success story of the information age, the Arab spring has turned into an Arab winter and leaves many countries in a state of instability. Insecurity, ironically, seems to characterize the age of information.
-
-While the amount of data generated is continuing to grow exponentially [@Reinsel-17:dataage], human minds and lives stay closely confined by their biology and experience. Whoever ignores the second part of the equation risks being someone who lights a match in a fireworks factory because he thinks it might help him see more. But precisely, most of the research seems to be focused on how to treat ever larger amounts of data. It often does not occur to researchers to look at the equation from the other side. To ask, first, what  a person might want or need to know and in what form. To some this might sound paternalistic, "the data is just what it is" they say. But this question precisely shows how much they ignore the other part of the equation. Data means nothing to a person. But a single data point, a single greengrocer's tragic suicide, in a particular context, can lead to a revolution.
 
 ## Visualization for communication
 
-Visualization research too, has long treated data as neutral and contextless. Because of this, most of the research has been focused on how to maximize the amount of data that can be communicated to the reader. This way of thinking is epitomized in Tufte's principle to "maximize the data-to-ink ratio". [@Tufte-01:visualdisplay] or in statements like "The visual system provides a very high-bandwidth channel to our brains". [@Munzner-15:visualizationanalysis, p. 6] While such concerns are valid for visualization that is trying to help a researcher *discover* new insights, they are completely inadequate for a visualization that is trying to communicate. John Stasko, who has researched data visualization for over 30 years, recently tweeted [@Stasko-19:tweet]:
+Visualization research too, has long treated data as neutral and contextless. Because of this, most of the research has been focused on how to maximize the amount of data that can be communicated to the reader. This way of thinking is epitomized in Tufte's principle to  or in statements like While such concerns are valid for visualization that is trying to help a researcher *discover* new insights, they are completely inadequate for a visualization that is trying to communicate. John Stasko, who has researched data visualization for over 30 years, recently tweeted [@Stasko-19:tweet]:
 
 > I grow increasingly convinced every day that data visualization for analytical, exploratory purposes and data visualization for communicative, presentational purposes are more different than most people think.
 
