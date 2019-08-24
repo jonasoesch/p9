@@ -2,6 +2,16 @@
 
 # Introduction
 
+A lot of people think of something rather dry, even lifeless when they hear the word "data". They have heard 
+
+
+
+Imagine that you have booked a trip to Vietnam through a travel agency. The agency is specialized in organizing trips to southeast Asia. As you get out of the Airplane, you find yourself in the middle of the most beautiful Vietnamese jungle. The pilot hands you a map and tells you to enjoy your exploration of Vietnam. He will pick you up in ten days at the marked point. While this idea might sound intriguing to some, most people (including the author) would be utterly lost in such a situation. We had expected the agency, specialists of southeast Asia to guide us through the country. To show us fascinating and historic places and giving us all the information we would need in order to get a deeper understanding of the countries rich heritage. And now we are here, lost in the middle of the jungle.
+
+While this idea might sound patently absurd, it is often what we do to readers when presenting data. 
+
+
+
 December 17, 2010. In Sidi Bouzid, Tunesia, Mohamed Bouazizi sets himself on fire in front of the provincial headquarters. The authorities had confiscated a cart full of produce that Bouazizi intended to sell this day, his families sole source of income. Three weeks earlier, WikiLeaks had released a large number of documents that included descriptions of large scale corruption and repression by the Tunisian regime. This led to protests, first only in Sidi Bouzid, but through the rapid dissemination of the information, protests broke out all over the country which led to the overturn of the old regime. The information also reached the populations of other Arab countries who where inspired to protest against their regimes. While this might be a seen as a success story of the information age, the Arab spring has turned into an Arab winter and leaves many countries in a state of instability. Insecurity, ironically, seems to characterize the age of information.
 
 While the amount of data generated is continuing to grow exponentially [@Reinsel-17:dataage], human minds and lives stay closely confined by their biology and experience. Whoever ignores the second part of the equation risks being someone who lights a match in a fireworks factory because he thinks it might help him see more. But precisely, most of the research seems to be focused on how to treat ever larger amounts of data. It often does not occur to researchers to look at the equation from the other side. To ask, first, what  a person might want or need to know and in what form. To some this might sound paternalistic, "the data is just what it is" they say. But this question precisely shows how much they ignore the other part of the equation. Data means nothing to a person. But a single data point, a single greengrocer's tragic suicide, in a particular context, can lead to a revolution.
