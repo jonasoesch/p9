@@ -10,33 +10,9 @@ In the first part, we take a look at different classifications of transitions be
 
 In the the second part, we discuss how animation can be used to facilitate transitions. We present an overview of the literature on animated transitions in visualization and learning theory. We formulate some ways how animation might support the reader in understanding the transitions and propose an experiment to test these. The results show that animated transitions have certain positive attributes but that they don't have a considerable impact on the final understanding of the relationships.
 
-In the last part
+In the last part, we propose a visualization library that supports the implementation of the kind of animated transitions that were tested in the second part.
 
-Recent practice and research shows how data visualization can work as a medium for storytelling by showing a series of charts along with the narration. In order to understand the story, the readers need to somehow relate the charts to each other.
-
-The goal of this work is to better understand how 
-
- 
-
-One important aspect of storytelling is how to connect the key ideas 
-
-
-
-A key question when crafting stor
-
-Readers extract this information by comparing the two charts to see what has changed between them. In transitions between charts, three types of elements can change: *characters*, their *attributes* and their *context*. Characters are the visual marks that represent what the story is about. For example, lines representing different countries. Attributes define the shape of the characters. For example, showing time and GDP will lead to a very particular shape of the country characters. Finally, the *context* is what frames the characters. The time series chart about countries GDP might for example be based on a certain method of estimation.
-
-Transitions can be categorized by the change in characters, attributes and context. In the narrative visualizations that we have found, characters most commonly stay constant between the charts. 
-
-
-
- For a transition to be understandable, the rate of change in these three elements needs to stay within the boundaries of working memory. Every change incurs a certain cost on the readers memory. When too many elements change, the readers working memory is overloaded which leads to a loss of information and a failed attempt to understand the transition. The first way to facilitate transitions is to keep the rate of change low.
-
-One method to simplify difficult a transition is therefore to split it into multiple steps. Such intermediate steps provides helpful guidance to to the readers' mental process. Animated transitions have been proposed as another approach to guide the reader in three ways: by establishing *object constancy* between charts, by highlighting the representations that need to be compared and by communicating the existence of a relationship between the two charts. We have found evidence for the existence of the first two but not for the third. We have also found that animation did not fundamentally altered the performance of the readers nor made the reading more enjoyable to them.
-
-This translates, 
-
-
+We conclude that while animated transitions provide some benefits they can not essentially simplify conceptually hard transitions between charts.
 
 
 
