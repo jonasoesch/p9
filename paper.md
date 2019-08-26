@@ -1,130 +1,65 @@
 
 
-# Abstract
-
-Although understanding the vast amounts of data that are available is becoming ever more important, data  seems hard to approach for most people. Data visualization has typically had the role of making data accessible to humans. But its focus has long been to maximize data throughput to the reader. This leads to visualization designs that are rich in information but tedious to read. On the other hand, communicators have long relied on sequential, narrative structures (stories) to reduce the cognitive burden. Recent practice and research show how charts can be embedded within a sequential narrative structure to facilitate the understanding of key aspects of the data. Instead of letting the reader explore the data himself, these *narrative visualzations* guide him through the key insights in the data.  This is done by showing a sequence of charts alongside a narrative. While such a guidance considerably reduces the mental burden of the reader, a new difficulty arises. The reader needs to understand how the individual charts are related to each other to follow the story.
-
-The goal of this work is to better understand how readers understand these relationships and what supports the reader's understanding. It consists of three parts:
-
-In the first part, we take a look at different classifications of transitions between charts. We propose a refined way to classify transitions based on cognitive load theory. We show that it can express the existing classification systems and that is applicable to narrative visualization in practice. Finally, we show how this theory can be translated to concrete design principles.
-
-In the the second part, we discuss how animation can be used to facilitate transitions. We present an overview of the literature on animated transitions in visualization and learning theory. We formulate some ways how animation might support the reader in understanding the transitions and propose an experiment to test these. The results show that animated transitions have certain positive attributes but that they don't have a considerable impact on the final understanding of the relationships.
-
-In the last part, we propose a visualization library that supports the implementation of the kind of animated transitions that were tested in the second part.
-
-We conclude that while animated transitions provide some benefits they can not essentially simplify conceptually hard transitions between charts.
-
-
-
 # Introduction
 
 When they hear the word "data", it evokes feelings of something rather dry, even lifeless in many peoples minds. They might have heard that the data generated each year is continuing to grow exponentially each year [@Reinsel-17:dataage]. They might have heard of the many marvels that data will deliver to humanity. But they simply can not relate. Data is something for the specialists who have a special trait of character, something that escapes the regular person.
 
-This view of things is reinforced by most of the research that is being conducted around data. Much of it is focused on how to store, process and interpret the ever larger amounts of data. And while these researchers push the boundaries of what is technologically possible, human capabilities remain painfully  limited within clear boundaries. It is obvious how this situation leads some to conclude that we need to either augment the human brain through technology [TODO:source] or to remove the human from the loop entirely. [TODO:source].
+This view of things is reinforced by most of the research that is being conducted around data. Much of it is focused on how to store, process and interpret the ever larger amounts of data. And while these researchers push the boundaries of what is technologically possible, human capabilities remain painfully  limited within narrow boundaries. It is obvious how this situation leads some to conclude that we need to either augment the human brain through technology [TODO:source] or to remove the human from the loop entirely. [TODO:source].
 
-User interface design in general and data visualization in particular have traditionally taken the role of the mediator between the two worlds. Visualization research has extensively explored how to maximize the data that can be communicated to humans. They faced limitations like available pixels on the screen and the perceptual and cognitive abilities of people. Much of the thinking in the field is focused on not wasting these precious resources. It is epitomized in recommendations like "maximizing the data-to-ink ratio". [@Tufte-01:visualdisplay] and in observations like this: "The visual system provides a very high-bandwidth channel to our brains". [@Munzner-15:visualizationanalysis, p. 6]
+User interface design in general and data visualization in particular have traditionally taken the role of the mediator between the two worlds. Visualization research has extensively explored how to maximize the data that can be communicated to humans. They have faced limitations like available pixels on the screen and the perceptual and cognitive abilities of people. Much of the thinking in the field is focused on not wasting these precious resources. It is epitomized in recommendations like "maximizing the data-to-ink ratio". [@Tufte-01:visualdisplay] and in observations like this: "The visual system provides a very high-bandwidth channel to our brains". [@Munzner-15:visualizationanalysis, p. 6]
 
-We argue that it is precisely this narrow focus on maximizing data throughput that has alienated the regular person from data. This is because feeding a person the maximum amount of data possible comes at a cost. While the visual system and the brain might be able to process a surprisingly high amount of information it puts a lot of strain on them. A researcher who is driven by the prospect of finding answers to his questions in the data will probably have a high tolerance to put up with this. But even for them, data analysis is a fatiguing task. Excitement and interest is not inherent in the data but much more related to the researchers questions.
+We argue that it is precisely this narrow focus on maximizing data throughput that has alienated the regular person from data. This is because feeding a person the maximum amount of data possible comes at a cost. While the visual system and the brain might be able to process a surprisingly high amount of information, it puts a lot of strain on them. A researcher who is driven by the prospect of finding answers to his questions in the data will probably have a high tolerance to put up with this. But even for them, data analysis is a fatiguing task. 
 
-Because it's the questions that drive the exploration of the data, presenting data without them is a rather dull thing. It is reminds us of Douglas Adams famous "answer to life, the universe and everything. 42". It leaves its recipients puzzled and frustrated. So even if the data contains an answer to everything the reader ever wanted to know, it is still no use the her to see "all the data". Rather the reader would like to follow the thought process that in the end makes it obvious why some data is interesting.
-
-And while data exploration is a chaotic, non-linear process, following a thought process is something highly linear. A story.
-
-Telling stories with data therefore has the potential to make it come alive for readers who are not already approaching it with their questions. This topic has only gained some attention in visualization research after a landmark paper by Segel and Heer in 2010 [@Segel-10:narrativevisualization] who called it "narrative visualization".
-
-While narrative visualization shares many of traits of regular visualization, its linear nature is something highly untypical in traditional, explorative visualizations. In other areas, especially writing, a lot of research has been conducted on how to structure linear narratives and it has been shown that the order and the rhythm in which information is presented is highly relevant. Writing rules like "one thought per paragraph" are the results of such findings. But almost nothing is known about how to order and pace the presentation of data visualization.
-
-This is what the current work aims at. It consists of three parts with individual research questions.
-
-The first part will look at how sequences of visualizations are read and how mental effort in understanding them can potentially be reduced.
-
-The second part will look deeper into one particular way to reduce the mental effort: animation. We describe how animation is thought to reduce this effort and describe the results of an experiment that has tested these purported strengths of animation.
-
-In the last part, we propose a system to implement sequential visualizations with animated transitions on the web.
-
-
-
-
-
-
-
-## Visualization for communication
-
-Visualization research too, has long treated data as neutral and contextless. Because of this, most of the research has been focused on how to maximize the amount of data that can be communicated to the reader. This way of thinking is epitomized in Tufte's principle to  or in statements like While such concerns are valid for visualization that is trying to help a researcher *discover* new insights, they are completely inadequate for a visualization that is trying to communicate. John Stasko, who has researched data visualization for over 30 years, recently tweeted [@Stasko-19:tweet]:
+Visualization that is intended to communicate therefore can ill afford to burden the recipient the task of exploration. And while this might seem obvious, the distinction only emerges slowly in the visualization community. A recent tweet from John Stasko, a visualization researcher for over 30 years, shows this [@Stasko-19:tweet]:
 
 > I grow increasingly convinced every day that data visualization for analytical, exploratory purposes and data visualization for communicative, presentational purposes are more different than most people think.
-
-When using visualization for communication, we can not assume that the data we show will have any significance to the reader. Without the proper context, it means nothing to her. Researchers approach data with their own questions, for them visualization is a tool to find answers to these questions. But an audience does not usually come with questions that the data we would like to present just happens to answer. Instead, the audience needs to be led 
-
-
-
-Two examples will clarify how the "old ways" have often led communicators who used data visualization astray: *interaction* and *visualization literacy*. 
-
-#### Interaction
-
-Interaction has been a very dear concept to visualization research (when searching for "visualization" on Google Scholar, half of the results also contain the term "interactive"). When a screen does not have enough pixels to display *all* of the data, it can still be explored through interaction. Based on the premise that it is always good to "show all the data", newspapers have integrated interactive visualizations in their online articles.[@Segel-10:narrativevisualization] But they where disappointed to find that almost no one interacted with them. [@Stabe-16:whyft; @Tse-16:whywe] Instead of using interactive visualizations, these newspapers now create many more static visualizations that show precisely what the reader needs to know at a given point in the article. [@Tse-16:whywe]
-
-#### Visualization literacy
-
-Another strategy to show more data in less space is the invention of more complex visualization idioms. 
 
 
 
 ## Narrative visualization
 
-Readers expect to know why some data is important for them.
+![1. The Washington Post uses annotation extensively to show how smaller counties had a tendency to swing to the right while cities were swinging left between 2004 and 2016. 2. In this New York Times story about rural Russia[@Barry-13:russialeft], a map is used as a navigational aid. [@Gamio-16:urbanrural] 3. This article by *The pudding* explores what jobs truck drivers that are being replaced by self-driving cars could transition to [@Dworkin-18:whytech]. At the end the reader can select other jobs that might be automated in the future and explore alternatives. 4. Comes from an article on the still existing differences between Eastern and Western Germany [@Borgenheimer-14:germanunification]. The two regions are consistently identified with through their color in the article. \label{narrative-visualization}](img/narrative-visualization.pdf)
+
+The finding that visualization for exploration and visualization for explanation are in some ways very different has led to a new field of research called *narrative visualization*. Narrative visualizations still share many traits with exploratory visualizations, but they have four distinct characteristics [@Riche-18:datadrivenstorytelling, pp. 85]: they **narrate and comment** a visualization through text, audio, and annotations (figure \ref{narrative-annotation}); they provide **navigation aids** like timelines, maps, breadcrumbs, etc. (figure \ref{narrative-navigation});  they provide **controlled exploration**  through embedded interactive visualization; and they **link separate charts** through color, animation and/or interaction (see figure \ref{narrative-visualization})
+
+*Controlled exploration* is an attempt to preserve at least some of the pervasive "show all the data"-approach in the communicative setting. But after some years of experimentation with including interactive visualization in their stories, multiple online newspapers report that they are seldomly used [@Stabe-16:whyft; @Tse-16:whywe]. Based on this findings, Archie Tse from the New York Times formulated the following rules in 2016:
+
+> 1. If you make the reader click or do anything other than scroll, something spectacular has to happen.
+>
+> 2. If you make a tooltip or rollover, assume no one will ever see it. If content is important for readers to see, don't hide it.
+
+These conclusions are supported by a study by Boy et al. [@Boy-15:suggestedinteractivity] who tested if participants would use interactive visualization rather than text to find answers to questions. In their experiment, it was quicker to get the answers from interactive visualization rather than the textual narrative. Still, only 30% of the participants used the interactive visualization.
+
+The author of narrative visualization is therefore faced with the task of deciding what information to show and in what order. While the global structure of such a narrative is similar to that of narratives from other media 
 
 
 
-* Complex visualization idioms
-* All data is not equal and people are therefore not interested in quantity
-* Readers need very good reasons to put in the effort
-  * but they are not dumb and will do it if it's worth their time
-* 
+
+
+
+
+## Research outline
 
 
 
 
 
-## Explorative and explanative visualization
+## Contributions
 
-![Munzner[@Munzner-15:visualizationanalysis] uses the words "discover" for explorative and "present" for explanative visualization](/Users/jonas/Library/Application Support/typora-user-images/image-20190213162158465.png)
+This work makes the following novel contributions:
 
-The focus of early visualization research has mostly been on *explorative visualization* as opposed to *explanative visualization*. Explorative visualization deals with three major constraints: *system resources* like memory and processing power, *display capacity* given for example by screen size and pixel density, and finally human *perceptual* and *cognitive* like preattentive mechanisms or working memory. Most of the research visualization is therefore concerned with maximizing information throughput regarding these limitations.[@Munzner-15:visualizationanalysis, pp 14–15]
+1. It refines previous work on transitions in narrative visualizations by connecting it to Gleicher's work on *comparison* and to *cognitive load theory*. This contributes to understanding why certain transitions are perceived as more difficult to understand than others by the reader. It also implies certain strategies to reduce the difficulty of transitions: *chunking*, *highlighting*, *supporting object constancy*
+2. It tests if animated transitions imply a relationship between two charts and if it helps with *highlighting* and *object constancy*.
 
-*Explorative* visualizations are targeted at researchers and help them *discover* new insights inside vast amounts of data. *Explanative* visualization, on the other hand, is used mainly for *presenting* information. [@Munzner-15:visualizationanalysis, pp. 45–48] The targeted audience are not specialists who will spend days, weeks or months with a given visualization, but a public who will only see it for a short amount of time. This leaves little room for learning the intricacies of a new idiom or to gain necessary topic knowledge necessary to correctly interpret complex visualizations. This new limitation has come to be known as "visualization literacy".[@Boy-14:principledway; @Lee-17:vlatdevelopment]
 
-## Visualization literacy {#sec:vis-literacy}
 
-Very little is known about how novices try to make sense of visualizations they are unfamiliar with. Lee et al. [@Lee-15:howpeople] show that most readers heavily rely on their topic knowledge to check if their ad-hoc interpretation of an unfamiliar visualization is correct.  When presenting unfamiliar material, it therefore often seems preferable to use well-known idioms like line charts or pie charts even if potentially more powerful idioms are available. Similar observations have been made regarding interactive visualizations in newspapers. According to them, most readers don't take the time to explore complex and unfamiliar visualizations.
 
-Exceptions exist, where very complex and creative visualizations seem to be liked by readers [@Lupi-:visualdata]. We hypothesize that these are probably due to a shift in the readers' goals. Instead of trying to understand the story, the readers now challenge themselves to understand the mechanics of the visualization. [@Manjoo-13:wholelot],  This would correspond to the third type of visualization, who are primarily *enjoyed* for their artistic appeal.[@Munzner-15:visualizationanalysis, p. 48]
 
-Based on this observation, textbooks, and newspapers are typically rather conservative when using visualization, defaulting to well-known idioms. This stance is supported by a study by Boy et al. [@Boy-15:suggestedinteractivity]. The authors asked participants to answer questions based on a text and an interactive visualization. The experiment was set up so that it was quicker to find the right answer by interacting with the visualization. Yet, only 30% of the participants ended up using it. The proportion did not change when they added cues like an animated mouse-cursor hovering over the visualization or when the visualization was pulsating. 
 
-On the other hand, the authors found that *feedforward*-cues led to higher rates of interaction. A *feedforward*-cue displays the outcome of an interaction to the reader. For example through an animation of a mouse cursor that was showing how the visualization responds to interaction.
 
-A much more nuanced way to implement *feedforwarding* is to use storytelling techniques to give an example of how a visualization could be explored. [@Parlapiano-14:howrecession] Storytelling also helps to progressively build topic knowledge and explain complex visualization idioms. [@Dworkin-18:whytech] 
 
-## Narrative visualization {#sec:narr-vis}
 
-The idea of using storytelling techniques to introduce powerful visualization idioms to an audience with low visualization literacy, has led to the formation of a branch of research in *narrative visualization* [@Segel-10:narrativevisualization, @Hullman-13:deeperunderstanding, @Satyanarayan-14:authoringnarrative] Narrative visualization follows the same principles as other, established means of storytelling  in many aspects. Multiple publications have explored the use of narrative visualization in the form of videos [@Amini-15:understandingdata], comics [@Bach-16:tellingstories] or narrated sketching [@Lee-13:sketchstorytelling].
 
-![The Washington Post uses annotation extensively to show how smaller counties had a tendency to swing to the right while cities were swinging left between 2004 and 2016. [@Gamio-16:urbanrural] \label{narrative-annotation}](/Users/jonas/Desktop/P9/bericht/img/narrative-annotation.png)
-
-According to Stolper et al. [@Riche-18:datadrivenstorytelling, pp. 85] there are four characteristics to narrative visualization: they **narrate and comment** a visualization through text, audio, and annotations (figure \ref{narrative-annotation}); they **link separate states** through color, animation and/or interaction; they provide **navigation aids** like timelines, maps, breadcrumbs, etc. (figure \ref{narrative-navigation}); and they provide **controlled exploration**  through embedded interactive visualization or dynamic queries.
-
-![In this New York Times story about rural Russia[@Barry-13:russialeft], a map is used as a navigational aid. \label{narrative-navigation}](/Users/jonas/Desktop/P9/bericht/img/narrative-navigation.png)
-
-**Dynamic queries** are a technique where the reader is allowed limited exploration of a visualization. For example by showing her data on her home city or checking how the result would have looked for another character (figure \ref{narrative-dynamic-query}). On the other hand, embedded interactive visualization allows for completely free exploration.
-
-![Two examples of dynamic queries: Russel Goldenberg [@Goldenberg-16:startedbottom] talks about the rise and fall of NBA-teams. In the middle of the story, the reader can change the team that is being followed. On the left, after exploring jobs that would be suitable for a truck driver when his work is being automated, Jordan Dworkin and Ilia Blinderman [@Dworkin-18:whytech] let the reader choose another job for which to find suitable alternatives. \label{narrative-dynamic-query}](/Users/jonas/Desktop/P9/bericht/img/narrative-dynamic-query.png)
-
-Segel et al. [@Segel-10:narrativevisualization] describe how such exploration is integrated into the typically linear structure of storytelling. The *martini glass* structure starts with a sequence of states and leaves the reader to explore a visualization at the end. The *drill-down*  structure starts with exploration until the reader chooses a topic and is led through a sub-story sequentially. Finally, the *interactive slideshow* is structured by an overarching sequence of states and integrates exploration at every step.
-
-![The different structures of non-linear storytelling in narrative visualization described by Segel et al.[@Segel-10:narrativevisualization]](/Users/jonas/Desktop/P9/bericht/img/storytelling structure.png)
-
-Even though exploration is often a part of narrative visualization, it always contains one or many author-defined sequences of states that contain the major insights the author wants to convey. This intent to communicate a set story puts narrative visualization into the *explanative visualization* category discussed previously. Its quality is therefore measured by the readers understanding of the story the author wants to convey.
 
 The ordering of states is highly relevant to understanding a story and scrambling it will lead worse comprehensibility and recall of the information. [@Thorndyke-77:cognitivestructures] This observation should be discouraging for including explorative aspects in narrative visualization which by their nature introduce non-linearity. 
 
