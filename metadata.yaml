@@ -25,7 +25,17 @@ babel-lang: english
 toc-own-page: yes
 titlepage: true 
 abstract: |
-    TODO
+   Although understanding the vast amounts of data that are available is becoming ever more important, data  seems hard to approach for most people. Data visualization has typically had the role of making data accessible to humans. But its focus has long been to maximize data throughput to the reader. This leads to visualization designs that are rich in information but tedious to read. On the other hand, communicators have long relied on sequential, narrative structures (stories) to reduce the cognitive burden. Recent practice and research show how charts can be embedded within a sequential narrative structure to facilitate the understanding of key aspects of the data. Instead of letting the reader explore the data himself, these *narrative visualzations* guide him through the key insights in the data.  This is done by showing a sequence of charts alongside a narrative. While such a guidance considerably reduces the mental burden of the reader, a new difficulty arises. The reader needs to understand how the individual charts are related to each other to follow the story.
+
+    The goal of this work is to better understand how readers understand these relationships and what supports the reader's understanding. It consists of three parts:
+
+    In the first part, we take a look at different classifications of transitions between charts. We propose a refined way to classify transitions based on cognitive load theory. We show that it can express the existing classification systems and that is applicable to narrative visualization in practice. Finally, we show how this theory can be translated to concrete design principles.
+
+    In the the second part, we discuss how animation can be used to facilitate transitions. We present an overview of the literature on animated transitions in visualization and learning theory. We formulate some ways how animation might support the reader in understanding the transitions and propose an experiment to test these. The results show that animated transitions have certain positive attributes but that they don't have a considerable impact on the final understanding of the relationships.
+
+    In the last part, we propose a visualization library that supports the implementation of the kind of animated transitions that were tested in the second part.
+
+    We conclude that while animated transitions provide some benefits they can not essentially simplify conceptually hard transitions between charts. 
     
 ...
 

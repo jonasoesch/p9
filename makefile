@@ -9,7 +9,7 @@ FLAGS = -F pandoc-crossref \
 		--pdf-engine=xelatex \
 		-s \
 		-f markdown \
-		--toc
+		--toc 
 
 FLAGS_PDF = --template=eisvogel.tex
 
