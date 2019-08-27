@@ -18,7 +18,7 @@
       {
         "_class": "exportFormat",
         "absoluteSize": 0,
-        "fileFormat": "png",
+        "fileFormat": "pdf",
         "name": "",
         "namingScheme": 0,
         "scale": 1,
@@ -86,6 +86,30 @@
     {
       "class": "shapePath",
       "id": "7207181B-93B0-40B8-9E24-0F48C8D01FEC"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "776DF035-9EF2-4A25-BBC7-A3BB165F494A"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "959B0AE1-F93B-4016-8380-196ED45B2989"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "B8217A5D-921D-4636-9B48-FAC0916D1ED9"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "379391E8-ACE9-4CA6-936F-91C0ACFC8AA5"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "66986051-EA9E-4572-A9DD-7C7FECA23FA2"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "D4C63E39-2B9C-4E06-810B-AEEFE5C80DF1"
     }
   ],
   "name": "technique-merge",

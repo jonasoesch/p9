@@ -18,7 +18,7 @@
       {
         "_class": "exportFormat",
         "absoluteSize": 0,
-        "fileFormat": "png",
+        "fileFormat": "pdf",
         "name": "",
         "namingScheme": 0,
         "scale": 1,
@@ -35,7 +35,7 @@
     "constrainProportions": false,
     "do_objectID": "D9D7CC18-3A36-4548-9BC7-1E1F98AA5E20",
     "height": 1065,
-    "width": 1862,
+    "width": 1786,
     "x": -587,
     "y": 4494
   },
@@ -65,14 +65,6 @@
   "layers": [
     {
       "class": "bitmap",
-      "id": "06BCC45B-B37F-417A-A558-109A66709931"
-    },
-    {
-      "class": "bitmap",
-      "id": "BE057EA5-A701-4A94-9037-D048D4F8819F"
-    },
-    {
-      "class": "bitmap",
       "id": "87D42D6B-A279-4EBC-954D-49A1B6D9B177"
     },
     {
@@ -81,11 +73,43 @@
     },
     {
       "class": "shapePath",
-      "id": "C68818B1-02A3-4E67-8128-7D987D584F9F"
+      "id": "BC273E6C-BB96-4951-98C2-BA5DF843C94B"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "208D0E84-1BC9-4EAD-B6AC-25573EAA448F"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "7C3C8374-DDAC-4CB6-8271-490D050243DB"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "C197159E-3DB7-4662-B804-F6ECCCEB86F5"
+    },
+    {
+      "class": "bitmap",
+      "id": "06BCC45B-B37F-417A-A558-109A66709931"
+    },
+    {
+      "class": "bitmap",
+      "id": "BE057EA5-A701-4A94-9037-D048D4F8819F"
     },
     {
       "class": "shapePath",
-      "id": "BC273E6C-BB96-4951-98C2-BA5DF843C94B"
+      "id": "C68818B1-02A3-4E67-8128-7D987D584F9F"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "C39C6D87-EB91-44DB-9BA1-5728601FC414"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "469ECF5B-2147-4BDD-9153-10A9ABB76496"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "0E2E33B0-C8C7-4E84-AE05-D341C0768E2C"
     }
   ],
   "name": "technique-focus",

@@ -18,7 +18,7 @@
       {
         "_class": "exportFormat",
         "absoluteSize": 0,
-        "fileFormat": "png",
+        "fileFormat": "pdf",
         "name": "",
         "namingScheme": 0,
         "scale": 1,
@@ -44,7 +44,7 @@
     "do_objectID": "460F3218-0365-416F-ACF6-1059E870B537"
   },
   "hasBackgroundColor": false,
-  "hasClickThrough": true,
+  "hasClickThrough": false,
   "hasClippingMask": false,
   "horizontalRulerData": {
     "_class": "rulerData",
@@ -65,14 +65,6 @@
   "layers": [
     {
       "class": "bitmap",
-      "id": "071444CE-C46E-4E78-9C8D-91974D6A6393"
-    },
-    {
-      "class": "bitmap",
-      "id": "F09CA8E2-73E9-463F-AAF2-4B2F45618017"
-    },
-    {
-      "class": "bitmap",
       "id": "26E11EF1-42D6-4594-B1C4-EAE619AC07BB"
     },
     {
@@ -81,11 +73,43 @@
     },
     {
       "class": "shapePath",
-      "id": "CFC72C47-BD59-425A-9734-0DED75900F86"
+      "id": "0436CCFE-9AAA-4E86-B6D1-229F13B321D1"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "9CD2B48F-876F-41FB-BF11-A58EF32BD626"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "D6B30415-266F-4ED0-BB9A-6205BC73AB4B"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "66499573-AEE8-42F3-A484-087D8868B437"
+    },
+    {
+      "class": "bitmap",
+      "id": "071444CE-C46E-4E78-9C8D-91974D6A6393"
+    },
+    {
+      "class": "bitmap",
+      "id": "F09CA8E2-73E9-463F-AAF2-4B2F45618017"
     },
     {
       "class": "shapePath",
-      "id": "0436CCFE-9AAA-4E86-B6D1-229F13B321D1"
+      "id": "CFC72C47-BD59-425A-9734-0DED75900F86"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "3ECBA8DA-A024-4481-8A02-BC3FC003D1B7"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "F2ED95A2-F1D9-473B-9AA3-1FC146C244D8"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "A07C9ECD-4292-4DF1-9068-1CB60580D6B7"
     }
   ],
   "name": "technique-disclosure",

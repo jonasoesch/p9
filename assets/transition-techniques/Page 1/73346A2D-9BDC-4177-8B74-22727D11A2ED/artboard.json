@@ -18,7 +18,7 @@
       {
         "_class": "exportFormat",
         "absoluteSize": 0,
-        "fileFormat": "png",
+        "fileFormat": "pdf",
         "name": "",
         "namingScheme": 0,
         "scale": 1,
@@ -86,6 +86,46 @@
     {
       "class": "shapePath",
       "id": "2D05936C-35AC-4B80-8CCF-77CCB9BDFAA9"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "7DFB70B2-9ECA-482A-A0B3-AEB8FF7C182D"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "52B37770-1BB2-4B54-801C-61DE0DC397DE"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "6C232F54-AE5C-46C4-A6B8-0702C845A411"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "2B140ADC-4B9D-432A-89FD-480F209C0B8F"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "481FBE8D-F820-47BA-BA70-60C72881CEE7"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "751ADB38-8AF9-44C4-841F-EA4B1F99FB56"
+    },
+    {
+      "class": "group",
+      "id": "66111862-DEC8-4868-8AA9-C73045B02B70"
+    },
+    {
+      "class": "group",
+      "id": "10D6413F-5B5D-45C0-B3F7-A76F2542146F"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "F89695F8-A45B-4ECA-93AB-3415C56FF1B1"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "3E6E7A2A-41F0-42AA-AB8F-8A314BE54E36"
     }
   ],
   "name": "technique-semantic",

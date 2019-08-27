@@ -26,7 +26,7 @@
           },
           "textStyleVerticalAlignmentKey": 0
         },
-        "length": 25,
+        "length": 19,
         "location": 0
       },
       {
@@ -53,10 +53,10 @@
           "textStyleVerticalAlignmentKey": 0
         },
         "length": 22,
-        "location": 25
+        "location": 19
       }
     ],
-    "string": "Contrast between groups:\nFathers present or not"
+    "string": "Different context:\nFathers present or not"
   },
   "automaticallyDrawOnUnderlyingPath": false,
   "booleanOperation": -1,
@@ -82,7 +82,7 @@
     "x": 13,
     "y": 14
   },
-  "glyphBounds": "{{3, 1}, {226, 38}}",
+  "glyphBounds": "{{22, 1}, {190, 38}}",
   "hasClippingMask": false,
   "isFixedToViewport": false,
   "isFlippedHorizontal": false,
@@ -91,7 +91,7 @@
   "isVisible": true,
   "layerListExpandedType": 0,
   "lineSpacingBehaviour": 2,
-  "name": "Contrast between gro",
+  "name": "Different context: F",
   "nameIsFixed": false,
   "resizingConstraint": 47,
   "resizingType": 0,

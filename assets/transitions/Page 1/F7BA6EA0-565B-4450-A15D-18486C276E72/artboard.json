@@ -25,10 +25,10 @@
     "_class": "rect",
     "constrainProportions": false,
     "do_objectID": "C0C0CC06-1340-4613-B040-FD57A9D50EE4",
-    "height": 1248,
-    "width": 3397,
-    "x": -12043,
-    "y": -7488
+    "height": 1156,
+    "width": 3238,
+    "x": -12219,
+    "y": -9945
   },
   "groupLayout": {
     "_class": "MSImmutableFreeformGroupLayout",
@@ -65,6 +65,42 @@
     {
       "class": "bitmap",
       "id": "FFBA872F-3932-47BE-A85F-F9F54E72F16E"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "5B6DA804-84B0-4D7A-8C82-9A3A26162F27"
+    },
+    {
+      "class": "bitmap",
+      "id": "BD6D78D6-C27F-4DAF-8CA2-113EF88BBC00"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "42345CDF-E13A-460C-B40B-37448D6EDC82"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "F27DB89D-D710-4554-BC7D-4D35E762D631"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "60699401-0F8A-468A-A365-2CAA6CA5964B"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "071FCEDF-C4BC-4CD1-81A6-9A943927D206"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "389B91AB-CB88-434B-A5E0-68C0E9CCD205"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "FDB8104D-D5D4-4767-9675-C5EDB85B7070"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "42A2D8B8-CCF2-494E-8967-E61009861BB0"
     }
   ],
   "name": "measure walk copy 9",

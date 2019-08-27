@@ -26,7 +26,7 @@
           },
           "textStyleVerticalAlignmentKey": 0
         },
-        "length": 28,
+        "length": 21,
         "location": 0
       },
       {
@@ -53,7 +53,7 @@
           "textStyleVerticalAlignmentKey": 0
         },
         "length": 26,
-        "location": 28
+        "location": 21
       },
       {
         "_class": "stringAttribute",
@@ -79,7 +79,7 @@
           "textStyleVerticalAlignmentKey": 0
         },
         "length": 1,
-        "location": 54
+        "location": 47
       },
       {
         "_class": "stringAttribute",
@@ -105,10 +105,10 @@
           "textStyleVerticalAlignmentKey": 0
         },
         "length": 29,
-        "location": 55
+        "location": 48
       }
     ],
-    "string": "New measure for characters:\nIncome ranke parents/kids → share living in neighborhood"
+    "string": "Different attribute:\nIncome ranke parents/kids → share living in neighborhood"
   },
   "automaticallyDrawOnUnderlyingPath": false,
   "booleanOperation": -1,
@@ -134,7 +134,7 @@
     "x": 15.4,
     "y": 14
   },
-  "glyphBounds": "{{10, 1}, {256, 62}}",
+  "glyphBounds": "{{11, 1}, {254, 62}}",
   "hasClippingMask": false,
   "isFixedToViewport": false,
   "isFlippedHorizontal": false,
@@ -143,7 +143,7 @@
   "isVisible": true,
   "layerListExpandedType": 0,
   "lineSpacingBehaviour": 2,
-  "name": "New measure for char",
+  "name": "Different attribute:",
   "nameIsFixed": false,
   "resizingConstraint": 47,
   "resizingType": 0,

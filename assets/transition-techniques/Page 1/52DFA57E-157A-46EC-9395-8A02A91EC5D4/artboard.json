@@ -18,7 +18,7 @@
       {
         "_class": "exportFormat",
         "absoluteSize": 0,
-        "fileFormat": "png",
+        "fileFormat": "pdf",
         "name": "",
         "namingScheme": 0,
         "scale": 1,
@@ -34,7 +34,7 @@
     "_class": "rect",
     "constrainProportions": false,
     "do_objectID": "1AA3FB83-3E24-4133-B587-FD198D4E1BE1",
-    "height": 677,
+    "height": 739,
     "width": 2874,
     "x": -564,
     "y": 1116
@@ -44,7 +44,7 @@
     "do_objectID": "7A109540-577C-48E1-8103-A7A1974C7B46"
   },
   "hasBackgroundColor": false,
-  "hasClickThrough": false,
+  "hasClickThrough": true,
   "hasClippingMask": false,
   "horizontalRulerData": {
     "_class": "rulerData",
@@ -86,6 +86,30 @@
     {
       "class": "bitmap",
       "id": "4B978C39-EEED-4D32-A56B-DFABD53199B9"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "6D8D5B9F-1704-4664-A9D0-4EC232C39761"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "B37463C6-095F-42C2-B24A-FBF4D474823F"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "3F61A302-7C4E-47C3-8378-66EF0721C5A4"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "FDEB8276-D630-4D8A-BD34-9E7DFB0EF5F1"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "DB64A7B2-CE8E-4D2B-B1AE-06A229D5C065"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "F16A86EF-7F50-4FD0-8BE5-B3C05B9B0B05"
     }
   ],
   "name": "technique-different measure",

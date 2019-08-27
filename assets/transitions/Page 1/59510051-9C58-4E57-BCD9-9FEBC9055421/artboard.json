@@ -27,8 +27,8 @@
     "do_objectID": "FAE48CD9-999B-4E7A-8B4B-362C6478B17E",
     "height": 989,
     "width": 3377,
-    "x": -4325,
-    "y": -3982
+    "x": -12231,
+    "y": -12562
   },
   "groupLayout": {
     "_class": "MSImmutableFreeformGroupLayout",
@@ -91,8 +91,8 @@
       "id": "FFB47EEC-98E8-4097-A844-EFD93ECFA362"
     },
     {
-      "class": "group",
-      "id": "D544DF2B-4A75-4374-9749-EF024E396D9F"
+      "class": "symbolInstance",
+      "id": "68AC5E47-6AA2-41B7-AB8C-AF042ED2B4DE"
     },
     {
       "class": "group",
@@ -125,6 +125,10 @@
     {
       "class": "symbolInstance",
       "id": "EF04C838-17DC-47A3-93FC-560B64FE14E9"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "D6FCD367-BF8C-4A76-8EDD-9743C67CD86F"
     },
     {
       "class": "symbolInstance",

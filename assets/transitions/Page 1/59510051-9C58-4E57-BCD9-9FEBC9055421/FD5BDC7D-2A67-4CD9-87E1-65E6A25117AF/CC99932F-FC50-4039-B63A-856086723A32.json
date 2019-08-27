@@ -26,7 +26,7 @@
           },
           "textStyleVerticalAlignmentKey": 0
         },
-        "length": 28,
+        "length": 21,
         "location": 0
       },
       {
@@ -53,7 +53,7 @@
           "textStyleVerticalAlignmentKey": 0
         },
         "length": 29,
-        "location": 28
+        "location": 21
       },
       {
         "_class": "stringAttribute",
@@ -79,7 +79,7 @@
           "textStyleVerticalAlignmentKey": 0
         },
         "length": 1,
-        "location": 57
+        "location": 50
       },
       {
         "_class": "stringAttribute",
@@ -105,10 +105,10 @@
           "textStyleVerticalAlignmentKey": 0
         },
         "length": 46,
-        "location": 58
+        "location": 51
       }
     ],
-    "string": "New measure for characters:\nShare living in neighborhood → Income rank parents / share of incarcerations"
+    "string": "Different attribute:\nShare living in neighborhood → Income rank parents / share of incarcerations"
   },
   "automaticallyDrawOnUnderlyingPath": false,
   "booleanOperation": -1,
@@ -143,7 +143,7 @@
   "isVisible": true,
   "layerListExpandedType": 0,
   "lineSpacingBehaviour": 2,
-  "name": "New measure for char",
+  "name": "Different attribute:",
   "nameIsFixed": false,
   "resizingConstraint": 47,
   "resizingType": 0,

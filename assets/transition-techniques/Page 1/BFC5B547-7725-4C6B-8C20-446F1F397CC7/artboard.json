@@ -18,7 +18,7 @@
       {
         "_class": "exportFormat",
         "absoluteSize": 0,
-        "fileFormat": "png",
+        "fileFormat": "pdf",
         "name": "",
         "namingScheme": 0,
         "scale": 1,
@@ -44,7 +44,7 @@
     "do_objectID": "ABB6E9C8-BD1B-478E-B8E1-9A1D8404DD7A"
   },
   "hasBackgroundColor": false,
-  "hasClickThrough": false,
+  "hasClickThrough": true,
   "hasClippingMask": false,
   "horizontalRulerData": {
     "_class": "rulerData",
@@ -86,6 +86,30 @@
     {
       "class": "shapePath",
       "id": "4ADDD2BF-4AA4-410C-87F2-F4A9738D6A87"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "815CD585-AA60-4EF4-8340-CAE87E06A79F"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "B32776D0-5367-4758-A558-C553D60B0C67"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "F7B19BAC-F102-45EF-BDBA-159B83FBD80B"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "8D636AA1-3FA4-4146-8464-B724E4D47361"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "AF2AEEF1-47A6-4724-8872-01ECDA2A7FA0"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "75D010FB-1BD6-4108-BC28-7FDF33EEEBCE"
     }
   ],
   "name": "technique-split",

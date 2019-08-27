@@ -18,7 +18,7 @@
       {
         "_class": "exportFormat",
         "absoluteSize": 0,
-        "fileFormat": "png",
+        "fileFormat": "pdf",
         "name": "",
         "namingScheme": 0,
         "scale": 1,
@@ -44,7 +44,7 @@
     "do_objectID": "90C3A92D-FB4F-4F55-8914-A6C1A3643207"
   },
   "hasBackgroundColor": false,
-  "hasClickThrough": false,
+  "hasClickThrough": true,
   "hasClippingMask": false,
   "horizontalRulerData": {
     "_class": "rulerData",
@@ -86,6 +86,22 @@
     {
       "class": "bitmap",
       "id": "D98BFF82-E99A-48C5-8899-9FB1CEA39D5B"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "481547B1-80BF-4ED2-969A-4B897F7634F7"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "A4EBD61D-B7D8-402B-8218-EC2DC073060B"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "9C4BE37D-A9DB-48C1-89E3-F38241A94507"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "3E76D93B-4F3A-46C6-9973-4173143B25B3"
     }
   ],
   "name": "technique-reconfigure",

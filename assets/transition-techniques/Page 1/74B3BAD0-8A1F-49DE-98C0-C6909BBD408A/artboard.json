@@ -18,7 +18,7 @@
       {
         "_class": "exportFormat",
         "absoluteSize": 0,
-        "fileFormat": "png",
+        "fileFormat": "pdf",
         "name": "",
         "namingScheme": 0,
         "scale": 1,
@@ -65,6 +65,26 @@
   "layers": [
     {
       "class": "bitmap",
+      "id": "A12E5563-DF8C-4821-B290-BE1486B1C877"
+    },
+    {
+      "class": "shapePath",
+      "id": "3384B908-469C-4C92-AD8F-733B81425141"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "2357EF1B-15A8-4DC4-B359-368F373D2A00"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "60109633-DBC0-44D3-B5A8-10FD0B1CEAE8"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "B5990BBE-4161-46EE-9232-96FC4B7EF2EA"
+    },
+    {
+      "class": "bitmap",
       "id": "FAD8F6A8-439C-4BE2-A966-D5AE450DF423"
     },
     {
@@ -76,12 +96,12 @@
       "id": "A66A584F-39EE-437E-8E8D-A78C4A578687"
     },
     {
-      "class": "bitmap",
-      "id": "A12E5563-DF8C-4821-B290-BE1486B1C877"
+      "class": "symbolInstance",
+      "id": "9696FA15-9481-4A18-91B7-ADEE8B03EEC1"
     },
     {
-      "class": "shapePath",
-      "id": "3384B908-469C-4C92-AD8F-733B81425141"
+      "class": "symbolInstance",
+      "id": "9ABFD0A6-4221-4323-8B0C-C0AA4D2C547F"
     }
   ],
   "name": "technique-contrast",

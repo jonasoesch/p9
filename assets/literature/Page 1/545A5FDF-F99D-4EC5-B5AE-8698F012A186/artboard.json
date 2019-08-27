@@ -44,7 +44,7 @@
     "do_objectID": "11D2336F-CDB3-48A3-89B7-13788020A253"
   },
   "hasBackgroundColor": true,
-  "hasClickThrough": false,
+  "hasClickThrough": true,
   "hasClippingMask": false,
   "horizontalRulerData": {
     "_class": "rulerData",
@@ -66,10 +66,6 @@
     {
       "class": "bitmap",
       "id": "97C41FA1-340F-435B-84AE-A792E02B76A4"
-    },
-    {
-      "class": "bitmap",
-      "id": "E7CD91A5-74CA-49E0-9CD4-A1C081F460D1"
     }
   ],
   "name": "narrative-dynamic-query",
