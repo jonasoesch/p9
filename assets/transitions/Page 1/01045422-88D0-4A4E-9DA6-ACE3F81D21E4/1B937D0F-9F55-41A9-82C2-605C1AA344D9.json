@@ -1,0 +1,64 @@
+{
+  "_class": "symbolInstance",
+  "booleanOperation": -1,
+  "clippingMaskMode": 0,
+  "do_objectID": "1B937D0F-9F55-41A9-82C2-605C1AA344D9",
+  "exportOptions": {
+    "_class": "exportOptions",
+    "do_objectID": "D422D5D5-7CAD-448D-896C-4EB4895B2C61",
+    "exportFormats": [
+    ],
+    "includedLayerIds": [
+    ],
+    "layerOptions": 0,
+    "shouldTrim": false
+  },
+  "frame": {
+    "_class": "rect",
+    "constrainProportions": false,
+    "do_objectID": "E6A18A3F-52CF-459C-9AB0-BDF2CE671367",
+    "height": 87,
+    "width": 260,
+    "x": 5351,
+    "y": 968
+  },
+  "hasClippingMask": false,
+  "horizontalSpacing": 0,
+  "isFixedToViewport": false,
+  "isFlippedHorizontal": false,
+  "isFlippedVertical": false,
+  "isLocked": false,
+  "isVisible": true,
+  "layerListExpandedType": 0,
+  "name": "label copy 10",
+  "nameIsFixed": false,
+  "overrideValues": [
+    {
+      "_class": "overrideValue",
+      "do_objectID": "FF80378C-7106-44E6-9AA7-DD5D7F9B8B6B",
+      "overrideName": "A9CE708A-2788-4C29-AAD9-5AD02CE5CE7E_stringValue",
+      "value": "Different attribute"
+    },
+    {
+      "_class": "overrideValue",
+      "do_objectID": "AB75C971-0BB5-4336-85A2-8FD31B5207E8",
+      "overrideName": "A930FF46-3D8C-4F84-AF7A-1485C87385C5_stringValue",
+      "value": "Day care → Children per women"
+    }
+  ],
+  "resizingConstraint": 63,
+  "resizingType": 0,
+  "rotation": 0,
+  "scale": 1,
+  "shouldBreakMaskChain": false,
+  "style": {
+    "_class": "style",
+    "do_objectID": "4FC9BF6F-26B0-47C1-A3B0-DBE731E8BF22",
+    "endMarkerType": 0,
+    "miterLimit": 10,
+    "startMarkerType": 0,
+    "windingRule": 1
+  },
+  "symbolID": "99BEF1FF-ED4D-49EA-8D7F-0AE776855A9C",
+  "verticalSpacing": 0
+}

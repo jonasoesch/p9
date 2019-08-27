@@ -1,0 +1,64 @@
+{
+  "_class": "symbolInstance",
+  "booleanOperation": -1,
+  "clippingMaskMode": 0,
+  "do_objectID": "2456792F-0DC0-4337-9FF7-64BBCDF4CA5C",
+  "exportOptions": {
+    "_class": "exportOptions",
+    "do_objectID": "C31CF088-2D39-49AC-9115-F5DE74EA678A",
+    "exportFormats": [
+    ],
+    "includedLayerIds": [
+    ],
+    "layerOptions": 0,
+    "shouldTrim": false
+  },
+  "frame": {
+    "_class": "rect",
+    "constrainProportions": false,
+    "do_objectID": "E0CF071C-371D-4995-AC2E-62729D7F447C",
+    "height": 87,
+    "width": 260,
+    "x": 4300,
+    "y": 983
+  },
+  "hasClippingMask": false,
+  "horizontalSpacing": 0,
+  "isFixedToViewport": false,
+  "isFlippedHorizontal": false,
+  "isFlippedVertical": false,
+  "isLocked": false,
+  "isVisible": true,
+  "layerListExpandedType": 0,
+  "name": "label copy 8",
+  "nameIsFixed": false,
+  "overrideValues": [
+    {
+      "_class": "overrideValue",
+      "do_objectID": "FF80378C-7106-44E6-9AA7-DD5D7F9B8B6B",
+      "overrideName": "A9CE708A-2788-4C29-AAD9-5AD02CE5CE7E_stringValue",
+      "value": "Different attribute"
+    },
+    {
+      "_class": "overrideValue",
+      "do_objectID": "AB75C971-0BB5-4336-85A2-8FD31B5207E8",
+      "overrideName": "A930FF46-3D8C-4F84-AF7A-1485C87385C5_stringValue",
+      "value": "Flu shots → average age"
+    }
+  ],
+  "resizingConstraint": 63,
+  "resizingType": 0,
+  "rotation": 0,
+  "scale": 1,
+  "shouldBreakMaskChain": false,
+  "style": {
+    "_class": "style",
+    "do_objectID": "6A1102A1-1A5B-4B26-A2DF-F8647FBFB90A",
+    "endMarkerType": 0,
+    "miterLimit": 10,
+    "startMarkerType": 0,
+    "windingRule": 1
+  },
+  "symbolID": "99BEF1FF-ED4D-49EA-8D7F-0AE776855A9C",
+  "verticalSpacing": 0
+}

@@ -1,0 +1,64 @@
+{
+  "_class": "symbolInstance",
+  "booleanOperation": -1,
+  "clippingMaskMode": 0,
+  "do_objectID": "071FCEDF-C4BC-4CD1-81A6-9A943927D206",
+  "exportOptions": {
+    "_class": "exportOptions",
+    "do_objectID": "2DC6AE05-36DA-4276-A1EE-9577CEDF573B",
+    "exportFormats": [
+    ],
+    "includedLayerIds": [
+    ],
+    "layerOptions": 0,
+    "shouldTrim": false
+  },
+  "frame": {
+    "_class": "rect",
+    "constrainProportions": false,
+    "do_objectID": "7E5BE9B2-ADBD-47B3-871D-02A43A0F107F",
+    "height": 87,
+    "width": 260,
+    "x": 2551,
+    "y": 992
+  },
+  "hasClippingMask": false,
+  "horizontalSpacing": 0,
+  "isFixedToViewport": false,
+  "isFlippedHorizontal": false,
+  "isFlippedVertical": false,
+  "isLocked": false,
+  "isVisible": true,
+  "layerListExpandedType": 0,
+  "name": "label copy 23",
+  "nameIsFixed": false,
+  "overrideValues": [
+    {
+      "_class": "overrideValue",
+      "do_objectID": "FF80378C-7106-44E6-9AA7-DD5D7F9B8B6B",
+      "overrideName": "A9CE708A-2788-4C29-AAD9-5AD02CE5CE7E_stringValue",
+      "value": "Different character"
+    },
+    {
+      "_class": "overrideValue",
+      "do_objectID": "AB75C971-0BB5-4336-85A2-8FD31B5207E8",
+      "overrideName": "A930FF46-3D8C-4F84-AF7A-1485C87385C5_stringValue",
+      "value": "Airports → airlines"
+    }
+  ],
+  "resizingConstraint": 63,
+  "resizingType": 0,
+  "rotation": 0,
+  "scale": 1,
+  "shouldBreakMaskChain": false,
+  "style": {
+    "_class": "style",
+    "do_objectID": "3BAACB0A-6E31-435F-9D97-5CE139327B4D",
+    "endMarkerType": 0,
+    "miterLimit": 10,
+    "startMarkerType": 0,
+    "windingRule": 1
+  },
+  "symbolID": "99BEF1FF-ED4D-49EA-8D7F-0AE776855A9C",
+  "verticalSpacing": 0
+}

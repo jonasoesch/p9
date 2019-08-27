@@ -1,0 +1,64 @@
+{
+  "_class": "symbolInstance",
+  "booleanOperation": -1,
+  "clippingMaskMode": 0,
+  "do_objectID": "CEBBE64D-EDBC-4883-A23D-0C75CA7F7991",
+  "exportOptions": {
+    "_class": "exportOptions",
+    "do_objectID": "3554105E-2E7F-468A-905D-ED1FD6502363",
+    "exportFormats": [
+    ],
+    "includedLayerIds": [
+    ],
+    "layerOptions": 0,
+    "shouldTrim": false
+  },
+  "frame": {
+    "_class": "rect",
+    "constrainProportions": false,
+    "do_objectID": "5F3A49F3-6971-40B0-958C-3256E1C47D68",
+    "height": 87,
+    "width": 260,
+    "x": 1173,
+    "y": 985
+  },
+  "hasClippingMask": false,
+  "horizontalSpacing": 0,
+  "isFixedToViewport": false,
+  "isFlippedHorizontal": false,
+  "isFlippedVertical": false,
+  "isLocked": false,
+  "isVisible": true,
+  "layerListExpandedType": 0,
+  "name": "label copy",
+  "nameIsFixed": false,
+  "overrideValues": [
+    {
+      "_class": "overrideValue",
+      "do_objectID": "FF80378C-7106-44E6-9AA7-DD5D7F9B8B6B",
+      "overrideName": "A9CE708A-2788-4C29-AAD9-5AD02CE5CE7E_stringValue",
+      "value": "Different attribute"
+    },
+    {
+      "_class": "overrideValue",
+      "do_objectID": "AB75C971-0BB5-4336-85A2-8FD31B5207E8",
+      "overrideName": "A930FF46-3D8C-4F84-AF7A-1485C87385C5_stringValue",
+      "value": "Ronny frequency → Agriculture"
+    }
+  ],
+  "resizingConstraint": 63,
+  "resizingType": 0,
+  "rotation": 0,
+  "scale": 1,
+  "shouldBreakMaskChain": false,
+  "style": {
+    "_class": "style",
+    "do_objectID": "1B6A2721-F27B-49FD-B486-0216863ED446",
+    "endMarkerType": 0,
+    "miterLimit": 10,
+    "startMarkerType": 0,
+    "windingRule": 1
+  },
+  "symbolID": "99BEF1FF-ED4D-49EA-8D7F-0AE776855A9C",
+  "verticalSpacing": 0
+}
