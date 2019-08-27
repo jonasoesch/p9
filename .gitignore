@@ -1,0 +1,8 @@
+.paper.md
+~$*
+build/
+design
+
+
+# Ignore sketch files
+*.sketch
