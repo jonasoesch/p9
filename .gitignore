@@ -1,7 +1,8 @@
 .paper.md
 ~$*
 build/
-design
+design/
+img/
 
 
 # Ignore sketch files
