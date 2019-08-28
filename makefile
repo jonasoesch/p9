@@ -8,7 +8,7 @@ FLAGS = -F pandoc-crossref \
 		--csl=bibliography.csl \
 		--pdf-engine=xelatex \
 		-s \
-		-f markdown \
+		-f markdown+yaml_metadata_block \
 		--toc 
 
 FLAGS_PDF = --template=eisvogel.tex
