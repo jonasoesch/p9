@@ -1,6 +1,6 @@
 
 
-# Introduction
+# Introduction {#sec:introduction}
 
 When they hear the word "data", it evokes feelings of something rather dry, even lifeless in many peoples minds. They might have heard that the data generated each year is continuing to grow exponentially each year [@Reinsel-17:dataage]. They might have heard of the many marvels that data will deliver to humanity. But they simply can not relate. Data is something for the specialists who have a special trait of character, something that escapes the regular person.
 
@@ -197,7 +197,7 @@ To understand why designers might think that animation helps in these specific c
 
 ### Object constancy ![](img/A.pdf) {#sec:object-constancy}
 
-Object constancy describes the ability to identify two objects as being the same entity between two states. There is some evidence that when the reader has rapid visual access to the targets (<300ms [@Rensink-02:changedetectiona]), changes will be detected before working memory is reached. The idea is that when one target is morphed into another, they are identified as being "the same" without having to do a comparison in working memory. This is probably the strength most often invoked for animation [@Chalbi-18:understandingdesigning, @Wu-16:graphicalperception, @Bederson:doesanimation, @Heer-07:animatedtransitions].
+Object constancy describes the ability to identify two objects as being the same entity between two states. There is some evidence that when the reader has rapid visual access to the targets (less than 300ms [@Rensink-02:changedetectiona]), changes will be detected before working memory is reached. The idea is that when one target is morphed into another, they are identified as being "the same" without having to do a comparison in working memory. This is probably the strength most often invoked for animation [@Chalbi-18:understandingdesigning, @Wu-16:graphicalperception, @Bederson:doesanimation, @Heer-07:animatedtransitions].
 
 ### Attract attention ![](img/B.pdf) {#sec:attract-attention}
 
@@ -367,13 +367,25 @@ In a first step we excluded examples that were either not focused on data visual
 
 ### Analysis
 
-For each example, a screenshot of each chart was pasted on a canvas in order. First, we identified the characters in the first screenshot. For each transition, we annotated if the characters, scene or context changed from the previous state and how it changed. This was usually straightforward which was an encouraging sign. Finally, we unified very similar transitions into 9 categories.
+For each example, a screenshot of each chart was pasted on a canvas in order. First, we identified the characters in the first screenshot. For each transition, we annotated if the characters, scene or context changed from the previous state and how it changed. This was usually straightforward which was an encouraging sign. Finally, we unified very similar transitions into 9 categories as presented in table \ref{table-transition-types}.
 
 
 
 ## Transition types {#sec:corpus-analysis}
 
-TODO:overview
+|                        | Characters | Attributes   | Context    |
+| ---------------------- | ---------- | ------------ | ---------- |
+| Explore attributes     | Same       | Differ       | Same       |
+| Contrast characters    | Differ     | Same         | Same       |
+| Reconfigure            | Same       | Get remapped | Same       |
+| Split characters       | Split      | Same         | Same       |
+| Merge characters       | Merged     | Same         | Same       |
+| Highlighting           | Less       | Same         | Same       |
+| Progressive disclosure | More       | Same         | Same       |
+| Context                | Can differ | Same         | Differs    |
+| Semantic field         | Differ     | Differ       | Can differ |
+
+Table:  (Transition types are defined by how characters, attributes and context differ between two charts.) \label{table-transition-types}
 
 ### Explore attributes
 
@@ -527,7 +539,7 @@ Complex relationships take multiple steps from the reader to understand through 
 
 Highlighting explicitly identifies the targets that the reader should compare (see section [-@sec:comparison]). It therefore also reduces the number of targets that need to be held in working memory. Highlighting can be done through the means of narrative visualization (narration, annotations, color and animation) mentioned in [section -@sec:narr-vis]. When highlighting is done through pre-attentive attributes like color, objects of another color are already being hidden in the visual system and don't even reach working memory [@Franconeri-18:thinkingdata] (compare also "Visual feature" in  figure \label{comparison-identification}). Something similar might happen when using animation to highlight certain targets.
 
-## Implications for transition types
+## Implications for transition types {#sec:implications}
 
 The transition types presented in section [-@sec:corpus-analysis] will be interpreted in different ways by the readers. While one type will require the reader to find out how the shape of a character has changed, another will require of him to identify characters that have similar shapes, and a third one will require him to create a relation at the conceptual level. Not all of them will therefore see the same benefits from animation. (@sec:reducing-cost).
 
@@ -561,25 +573,29 @@ Different from the other two, highlighting does not require characters to be sha
 
 ## Research hypotheses {#sec:hypotheses}
 
-We wanted to find out if the purported benefits of animation would apply to transitions in narrative visualization. More concretely if the following hypothesis would hold:
+Based on the discussion in the previous section, we believe that animated transitions have the potential to support readers in understanding the relationship between two charts. This is the main research question of this work as mentioned in the introduction [@sec:introduction]. H2 to H6 test more specific hypotheses based on the strengths of animation presented in section [-@sec:animation]. The hypotheses only apply to transition types where animation can theoretically provide a benefit (compare to section [-@sec:implications]).
 
-#### H1: Relationship
+#### H1: Animation makes understanding transitions easier
 
-Based on the findings that animation can communicate causality and intentionality (see section [-@sec:causality]), we believe that animated transitions might imply a relationship in a more general sense. We hypothesize that animated transitions will more often lead participants to assume a relationship between two charts.
+Based on the widespread use of animation to help readers understand transitions the discussion in this chapter, we believe that animation will reduce the cognitive load of readers. Because they will have more available working memory capacity, we hypothesize that they will more likely interpret a transition correctly.
 
-#### H2: Causality
+#### H2: Animation implies a relationship
 
-Extending H1, we believe that when readers assume a relationship between two charts, they will more often conclude that the relationship is causal when the transition is animated.
+Based on the findings that animation can communicate relationships (see section [-@sec:causality]), we believe that animated transitions might imply a relationship in a more general sense. We hypothesize that animated transitions will more often lead participants to assume a relationship between two charts.
 
-#### H3: Cueing
+#### H3: Animation implies a causal relationship
+
+Extending H2 and based on findings discussed in section [-@sec:causality], we believe that when readers assume a relationship between two charts, they will more often conclude that the relationship is causal when the transition is animated.
+
+#### H4: Animation leads to object constancy
+
+We hypothesize that animated transitions will support the reader through object constancy. 
+
+#### H5: Animation highlights characters
 
 Animated transitions will focus the reader on the characters the author intended because it attracts attention (see section [-@sec:attract-attention]). This will lead them to more often interpret the relationship between the charts as the author intended and to talk about the characters the author wants.
 
-#### H4: Object constancy
-
-Animated transitions will support object constancy in situations where only one of the charts is shown at a time. The effect will vanish when both charts are shown at the same time.
-
-#### H5: Engagement
+#### H6: Animation leads to higher engagement
 
 Readers will be more engaged by the visualizations with animated transitions.
 
@@ -623,7 +639,7 @@ The second mini-story contrasts the mortality rate ![](img/attr.pdf) of differen
 
 #### Mortality C {#sec:mortality-c}
 
-![mortality-relative](/Users/jonas/Desktop/P9/bericht/img/mortality-relative.png)
+![mortality-relative](/Users/jonas/Desktop/P9/bericht/img/mortality-relative.pdf)
 
 Again, this mini-story starts with the last chart of the previous mini-story. In the second chart, the same data is shown but with the mortality rate of each character normalized to its rate in 1968. Thanks to this it becomes apparent that even though the elderly have made the most progress in absolute numbers, the relative reduction is highest for younger age groups. This transition is animated by morphing each character into its new shape.
 
@@ -631,7 +647,7 @@ Again, this mini-story starts with the last chart of the previous mini-story. In
 
 #### Mortality D {#sec:mortality-d}
 
-![mortality-causes](/Users/jonas/Desktop/P9/bericht/img/mortality-causes.png)
+![mortality-causes](/Users/jonas/Desktop/P9/bericht/img/mortality-causes.pdf)
 
 Some readers might have wondered why the mortality rate for "25–44" year olds ![](img/char.pdf) was rising  at the beginning of the 90s. This mini-story introduces their causes of death ![](img/char.pdf) in the second chart which quickly answers the question: it was precisely at this point that the AIDS-epidemic was at its peak and has most strongly affected this age group. The animation first hides all the other age groups, splits the "25–44"-line and morphs it into the different causes of death.
 
@@ -643,13 +659,13 @@ This story talks about the evolution of energy sources in the U.S. since the beg
 
 #### Energy A {#sec:energy-a}
 
-![energy-A](/Users/jonas/Desktop/P9/bericht/img/energy-A.png)
+![energy-A](/Users/jonas/Desktop/P9/bericht/img/energy-A.pdf)
 
 The energy story starts by showing the evolution of different energy sources ![](img/char.pdf) in the U.S in absolute numbers ![](img/attr.pdf). In the second chart, it shows how the proportions ![](img/attr.pdf) have changed over time. From comparing the two charts it becomes clear that while the absolute output has either risen or stagnated, coal has been used significantly less while the focus seems to be shifting to natural gas and the renewables. The animated transition morphs the lines into their respective areas in the second chart.
 
 #### Energy B {#sec:energy-b}
 
-![energy-B](/Users/jonas/Desktop/P9/bericht/img/energy-B.png)
+![energy-B](/Users/jonas/Desktop/P9/bericht/img/energy-B.pdf)
 
 As in the mortality narrative, the second mini-story starts with the last chart from the previous mini-story. In the second chart, it shows how wind ![](img/char.pdf) has become a major energy source ![](img/char.pdf) in certain (great plains) states ![](img/char.pdf) . The transition leads to the conclusion that, although the rise of wind energy looks unspectacular on a national scale, growth has been exponential in some places. The animation first hides everything except the area for "wind" which is then split and morphed into the lines of the individual states.
 
@@ -1073,3 +1089,4 @@ TODO
 ## Future work
 
 * Validate the proposed transition types
+
