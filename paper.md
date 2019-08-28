@@ -6,7 +6,7 @@ When they hear the word "data", it evokes feelings of something rather dry, even
 
 This view of things is reinforced by most of the research that is being conducted around data. Much of it is focused on how to store, process and interpret the ever larger amounts of data. And while these researchers push the boundaries of what is technologically possible, human capabilities remain painfully  limited within narrow boundaries. It is obvious how this situation leads some to conclude that we need to either augment the human brain through technology [TODO:source] or to remove the human from the loop entirely. [TODO:source].
 
-User interface design in general and data visualization in particular have traditionally taken the role of the mediator between the two worlds. Visualization research has extensively explored how to maximize the data that can be communicated to humans. They have faced limitations like available pixels on the screen and the perceptual and cognitive abilities of people. Much of the thinking in the field is focused on not wasting these precious resources. It is epitomized in recommendations like "maximizing the data-to-ink ratio". [@Tufte-01:visualdisplay] and in observations like this: "The visual system provides a very high-bandwidth channel to our brains". [@Munzner-15:visualizationanalysis, p. 6]
+User interface design in general and data visualization in particular have traditionally taken the role of the mediator between the two worlds. Visualization research has extensively explored how to maximize the data that can be communicated to humans. They have faced limitations like available pixels on the screen and the perceptual and cognitive abilities of people. Much of the thinking in the field is focused on not wasting these precious resources. It is epitomized in recommendations like "maximizing the data-to-ink ratio" [@Tufte-01:visualdisplay]. and in observations like this: "The visual system provides a very high-bandwidth channel to our brains" [@Munzner-15:visualizationanalysis, p. 6].
 
 We argue that it is precisely this narrow focus on maximizing data throughput that has alienated the regular person from data. This is because feeding a person the maximum amount of data possible comes at a cost. While the visual system and the brain might be able to process a surprisingly high amount of information, it puts a lot of strain on them. A researcher who is driven by the prospect of finding answers to his questions in the data will probably have a high tolerance to put up with this. But even for them, data analysis is a fatiguing task. 
 
@@ -18,7 +18,7 @@ Visualization that is intended to communicate therefore can ill afford to burden
 
 ## Narrative visualization {#sec:narr-vis}
 
-![1. The Washington Post uses annotation extensively to show how smaller counties had a tendency to swing to the right while cities were swinging left between 2004 and 2016. 2. In this New York Times story about rural Russia[@Barry-13:russialeft], a map is used as a navigational aid. [@Gamio-16:urbanrural] 3. This article by *The pudding* explores what jobs truck drivers that are being replaced by self-driving cars could transition to [@Dworkin-18:whytech]. At the end the reader can select other jobs that might be automated in the future and explore alternatives. 4. Comes from an article on the still existing differences between Eastern and Western Germany [@Borgenheimer-14:germanunification]. The two regions are consistently identified with through their color in the article. \label{narrative-visualization}](img/narrative-visualization.pdf)
+![1. The Washington Post uses annotation extensively to show how smaller counties had a tendency to swing to the right while cities were swinging left between 2004 and 2016. 2. In this New York Times story about rural Russia[@Barry-13:russialeft], a map is used as a navigational aid [@Gamio-16:urbanrural]. 3. This article by *The pudding* explores what jobs truck drivers that are being replaced by self-driving cars could transition to [@Dworkin-18:whytech]. At the end the reader can select other jobs that might be automated in the future and explore alternatives. 4. Comes from an article on the still existing differences between Eastern and Western Germany [@Borgenheimer-14:germanunification]. The two regions are consistently identified with through their color in the article. \label{narrative-visualization}](img/narrative-visualization.pdf)
 
 
 
@@ -71,7 +71,7 @@ Multiple authors have compiled classifications of transitions between charts. In
 
 ### Visualization-focused classifications {#sec:param-classification}
 
-The most common approach is to think about transitions is in terms of visualization parameters. [@Heer-07:animatedtransitions, @Yi-07:deeperunderstanding, @Fisher-11:animationvisualization, @-18:space] Any visualization can be viewed as the result of a series of parametrizable transformations applied to the underlying data set. [@Jankun-kelly-07:modelframework] The transition can, therefore, be described in terms of parameter changes as long as the underlying data does not change.
+The most common approach is to think about transitions is in terms of visualization parameters [@Heer-07:animatedtransitions, @Yi-07:deeperunderstanding, @Fisher-11:animationvisualization, @-18:space]. Any visualization can be viewed as the result of a series of parametrizable transformations applied to the underlying data set [@Jankun-kelly-07:modelframework]. The transition can, therefore, be described in terms of parameter changes as long as the underlying data does not change.
 
 Through this approach, four authors identify a total of 9 transition types. Because their approach is very similar, their classes have a high overlap and will be presented together. Figure \ref{visualization-focused-classification} maps the names the authors have used the "generic" names that we used in the description:
 
@@ -81,7 +81,7 @@ Through this approach, four authors identify a total of 9 transition types. Beca
 * **Zoom**: Geometric zooming in and out of a fixed image. This transition too, is used in Google Maps [@Google:googlemaps].
 * **Filter**: Hiding or showing elements based on some criteria. When reading a visualization on cars, filtering might for example hide all the data on American cars.
 * **Reorder**: Reordering axes according to a different criterion. Countries that are displayed in alphabetical order might, for example, be reordered according to their GDP.
-* **Substrate transformation**: Any distortion to the scale that is not addition or multiplication of a constant. For example a log transform or a lens-effect that resizes only a part of the coordinate system. The latter being something that is not often seen in real-world applications but seems to be a darling of visualization researchers. [@Munzner-15:visualizationanalysis, pp. 327–338]
+* **Substrate transformation**: Any distortion to the scale that is not addition or multiplication of a constant. For example a log transform or a lens-effect that resizes only a part of the coordinate system. The latter being something that is not often seen in real-world applications but seems to be a darling of visualization researchers [@Munzner-15:visualizationanalysis, pp. 327–338].
 * **Visualization change**: Showing the same data with a different visualization idiom. For example, showing a distribution as a boxplot to indicate mean, quantiles and outliers first and then transforming it into a histogram to give a better sense of its shape.
 * **Timestep**: Showing the same visualization for different points in time. For example, the population pyramid of Switzerland for 1960 and 2010 to show how it has shifted to older people.
 * **Data schema change**: Mapping a different data dimension to one of the visual variables (position, color, etc.). A visualization might, for example, show the use of certain plant variants over time and show the occurrence of pests over the same period in the next state.
@@ -93,7 +93,7 @@ The strength of this kind of classification is, that types can relatively easily
 
 The most-cited classification of transition types in comics is the one by McCloud [@Mccloud-93:understandingcomics]. It is also commonly referred to in narrative visualization [@Baudisch-06:phosphorexplaining, @Segel-10:narrativevisualization, @Amini-15:understandingdata, @Badawood-15:narrativeconstruction, @Bach-16:tellingstories] because comics are similar to narrative visualization in that they are *visual* and *sequential* [@Mccloud-93:understandingcomics, p. 16]. McCloud describes six types of transitions between comic panels:
 
-![transition-mccloud](/Users/jonas/Desktop/P9/bericht/img/transition-mccloud.png)
+![The six transition types for comics proposed by McCloud based on the concepts of *subject*, *scene* and *time* [@Mccloud-93:understandingcomics].](/Users/jonas/Desktop/P9/bericht/img/transition-mccloud.png)
 
 1. **Moment-to-moment**: Stepwise movement through time.
 2. **Action-to-action**: Movement through time-based on meaningful events.
@@ -106,13 +106,13 @@ In McCloud's classification, a transition is characterized by a change in either
 
 Cohn [@Cohn-10:limitstime] refines on McCloud's transition types by introducing hierarchy to the interpretation of subject, scene and time. He argues that readers will first try to find the same subject in the subsequent panel. They will then move their attention to changes in the scene. Finally, they will shift their focus to changes in time. Cohn uses examples to show how a different order leads to interpretations that run counter to typical reading habits [@Cohn-10:limitstime, p. 143].
 
-*Subject*, *scene* and *time* are reminiscent of journalisms famous *who/what*, *where* and *when*. [@-19:fivews] Such proximity to journalism indicates that McCloud's transition types might be useful outside of the domain of comics. While McClouds transitions based on *subject*, *scene* and *time* might be useful in raditional narratives that talk about people and events, it is not directly obvious how to apply them to abstract visualizations [@Badawood-15:narrativeconstruction, pp. 68-82]. 
+*Subject*, *scene* and *time* are reminiscent of journalisms famous *who/what*, *where* and *when* [@-19:fivews]. Such proximity to journalism indicates that McCloud's transition types might be useful outside of the domain of comics. While McClouds transitions based on *subject*, *scene* and *time* might be useful in raditional narratives that talk about people and events, it is not directly obvious how to apply them to abstract visualizations [@Badawood-15:narrativeconstruction, pp. 68-82]. 
 
 ### Inductive classification {#sec:inductive-classification}
 
 A bottom-up approach to transition types can be found in Hullman et al. [@Hullman-13:deeperunderstanding]. The authors reviewed 42 narrative visualizations and identified 12 different transition types which they grouped into six categories:
 
-![\label{transition-hullman}](/Users/jonas/Desktop/P9/bericht/img/transition-hullman.png)
+![The six categories of transitions identified by Hullman et al. based on an analysis of 42 narative visualizations [@Hullman-13:deeperunderstanding]. The sources of the visualizations used to illustrate the transitions are (in order): [@Roston-15:whatreally, @Lambrechts-19:whyeua, @Nathaniel-15:howfive, @Lambrechts-19:whyeua, @Aisch-14:wherewe, @Fernholz-15:interactivegraphic] \label{transition-hullman}](/Users/jonas/Desktop/P9/bericht/img/transition-hullman.pdf)
 
 **Dialogue**: A question is asked or implied in one chart which is being answered in the next. One chart shows a time series of world temperature and asks how natural factors have contributed. The next chart shows how natural factors like volcanos have influenced global temperatures over time (see figure \ref{transition-hullman}).
 
@@ -163,11 +163,11 @@ Is aided by the author through labels, annotations, colors, and narrative. An ex
 
 #### Identification through visual statistics
 
-This uses the ability of the visual system to quickly and quite accurately calculate certain statistical properties of an image (figure \ref{comparison-identification}). A viewer can, for example, see in an instant if a certain region contains more orange than blue dots (mean). She can also quickly identify groups of points that are similar (clustering). Viewers will be able to tell if circles get bigger from left to right (trends). Or if a point has a different color from all the outers (outlier). All of these values can then serve as a target for comparison.
+This uses the ability of the visual system to quickly and quite accurately calculate certain statistical properties of an image (figure \ref{comparison-identification}). A viewer can, for example, see in an instant if a certain region contains more orange than blue dots (mean). He can also quickly identify groups of points that are similar (clustering). Viewers will be able to tell if circles get bigger from left to right (trends). Or if a point has a different color from all the outers (outlier). All of these values can then serve as a target for comparison.
 
 #### Implicit identification
 
- In many cases, external knowledge or personal interest of the viewer will lead to the identification of a target. [@Gleicher-18:considerationsvisualizing] Often, readers will compare what they see to what they would have expected to see. Or a person from Brooklyn, for example, will tend to be more interested in the success and failure history of the Brooklyn Nets than that of the Warriors from California (see point 3 in figure \ref{narrative-visualization}). This is one of the reason for authors of narrative visualization to include *interactive visualization*.
+ In many cases, external knowledge or personal interest of the viewer will lead to the identification of a target [@Gleicher-18:considerationsvisualizing]. Often, readers will compare what they see to what they would have expected to see. Or a person from Brooklyn, for example, will tend to be more interested in the success and failure history of the Brooklyn Nets than that of the Warriors from California (see point 3 in figure \ref{narrative-visualization}). This is one of the reason for authors of narrative visualization to include *interactive visualization*.
 
 ![The visual aggregation tasks from [@Szafir-16:fourtypes] show how comparison targets can by identified by visual statistics. \label{comparison-identification}](img/comparison-identification.png)
 
@@ -181,7 +181,7 @@ The transition cost describes how much mental effort it takes to do the necessar
 * Large targets. For example when comparing two very long time series.
 * Complex relationships. For example when there is not a one-to-one relationship.
 
-Cognitive load theory predicts that a maximum number of 9 targets can be held in working memory for processing [@Wong-12:cognitiveload, @Miller-56:magicalnumber]. Depending on the size of the targets and the complexity of the relationships, this number can get as low as 1. [@Alvarez-04:capacityvisual]  When the number of targets that are needed for a comparison exceed these limitations, the reader will forget some of them and the comparison fails. [@Wong-12:cognitiveload]
+Cognitive load theory predicts that a maximum number of 9 targets can be held in working memory for processing [@Wong-12:cognitiveload, @Miller-56:magicalnumber]. Depending on the size of the targets and the complexity of the relationships, this number can get as low as 1 [@Alvarez-04:capacityvisual].  When the number of targets that are needed for a comparison exceed these limitations, the reader will forget some of them and the comparison fails [@Wong-12:cognitiveload].
 
 When designing narrative visualization, the cost of the transitions should ideally stay within these boundaries to make the reading fluent. Animation is often proposed as a means to make transitions easier, but it is often not clear how exactly. The next section will therefore present the state of the art in animated 
 
@@ -195,7 +195,7 @@ Animation has been portrayed to provide many benefits to UX-design in general an
 
 To understand why designers might think that animation helps in these specific circumstances, we have mapped some lower-level strengths of animation described in Heer et al. [@Heer-07:animatedtransitions] to all each of the purposes (see figure \ref{animation-purposes}).
 
-![The purposes of animation found by Chevalier et al. [@Chevalier-14:notsostaggeringeffect] each employ one or more of the strenghts of animation.\label{animation-purposes}](img/animation-purposes.png)
+![The purposes of animation found by Chevalier et al. [@Chevalier-14:notsostaggeringeffect] each employ one or more of the strenghts of animation that are described by Heer et al. [@Heer-07:animatedtransitions]. \label{animation-purposes}](img/animation-purposes.png)
 
 
 
@@ -209,7 +209,7 @@ Movement very strongly attracts attention. This view is undisputed in the litera
 
 ### Communicate relationships ![](img/C.pdf) {#sec:causality}
 
-In nature, we observe a certain smooth flow of cause and effect. When a rolling billiard ball hits another, the second ball will smoothly continue its transition. This leads to the intuition that smooth animation would imply some sort of cause and effect relationship (see section [-@sec:congruence]). This is true when depicting naturalist phenomena like the formation of lightning. [@Betrancourt-08:displaykey]. Other authors have found that animation also conveys causality in more abstract displays but that it doesn't perform better than symbolic depictions of causality [@Kadaba-07:visualizingcausal].
+In nature, we observe a certain smooth flow of cause and effect. When a rolling billiard ball hits another, the second ball will smoothly continue its transition. This leads to the intuition that smooth animation would imply some sort of cause and effect relationship (see section [-@sec:congruence]). This is true when depicting naturalist phenomena like the formation of lightning [@Betrancourt-08:displaykey].. Other authors have found that animation also conveys causality in more abstract displays but that it doesn't perform better than symbolic depictions of causality [@Kadaba-07:visualizingcausal].
 
 Animation has also been reported to have modest benefits when depicting aggregation operations like summing [@Kim-19:designinganimated].
 
@@ -219,7 +219,7 @@ Multiple authors have remarked how readers were "excited" about animation in int
 
 ### Data encoding ![](img/E.pdf)
 
-Similar to color or shape, motion can be used to encode data. Although the precision in interpreting it is very limited. [@Munzner-15:visualizationanalysis, p. 95] This property of animation is not listed in Heer et al. [@Heer-07:animatedtransitions] but we have decided to include it because it is well studied and forms the basis of multiple of the purposes listed by Chevalier et al. [@Chevalier-16:animations25]
+Similar to color or shape, motion can be used to encode data. Although the precision in interpreting it is very limited [@Munzner-15:visualizationanalysis, p. 95]. This property of animation is not listed in Heer et al. [@Heer-07:animatedtransitions] but we have decided to include it because it is well studied and forms the basis of multiple of the purposes listed by Chevalier et al [@Chevalier-16:animations25].
 
 While the listed strengths seem straightforward, the literature indicates that they are present only under certain circumstances.
 
@@ -237,13 +237,13 @@ The question if animation is a natural fit for certain types of transitions has 
 
 > Effective graphics conform to the Congruence Principle according to which the content and format of the graphic should correspond to the content and format of the concepts to be conveyed.
 
-According to this view, showing *change over time* would be a congruent use of animation. The reasoning is that people perceive change over time as smooth transitions in their everyday lives. One study accordingly found that animation reduced the perceived cognitive load when showing change in networks. [@Bach-14:graphdiariesanimated] Other authors have not found such benefits [@Tversky-02:animationcan] naming a lack of *apprehension* as the potential reason.
+According to this view, showing *change over time* would be a congruent use of animation. The reasoning is that people perceive change over time as smooth transitions in their everyday lives. One study accordingly found that animation reduced the perceived cognitive load when showing change in networks [@Bach-14:graphdiariesanimated]. Other authors have not found such benefits [@Tversky-02:animationcan] naming a lack of *apprehension* as the potential reason.
 
 The second natural fit for animation are *viewport changes* like *pan* and *zoom*. These correspond to a person's natural movements through space, getting closer to objects, looking around, etc. Animated transitions have indeed been found to be superior to static transitions for *panning* [@Shanmugasundaram-07:cansmooth] as well as *zooming* [@Shanmugasundaram-08:effectanimated].
 
 As previously discussed, animation has also been shown to be congruent for communicating causality and intentionality (see section [-@sec:causality])
 
-![\ref{Amini-18-hookeddata}](img/Amini-18-hookeddata.png)
+![Amini et al. found that animation only led to higher engagement together with iconic representation of the data (on the top) while it did not differ from non-animated transitions when the representation was abstract (on the bottom) [@Amini-18:hookeddata]. \label{Amini-18-hookeddata}](img/Amini-18-hookeddata.png)
 
 Interestingly, multiple authors found that animation seems to be far less effective when used with abstract representations than when it is used with iconic representations. Amini et al. [@Amini-18:hookeddata] found that animated transitions in data visualization only led to higher engagement when coupled with iconic representations (see \ref{Amini-18-hookeddata}). A recent meta-analysis [@Berney-16:doesanimation] of 50 studies on animation and its effect on learning found, that animation only benefitted knowledge acquisition when used with "iconic representations" of the phenomena the needed to be studied. No effect was found for abstract representations.
 
@@ -261,19 +261,19 @@ It is therefore related to the basic perceptual abilities of the reader. Heer et
 
 Research on visual tracking explores how people track objects when the objects are moving. Participants typically have to track the position of several individual objects (circles or rectangles) or a group of objects under different conditions. These experiments have revealed several, sometimes surprising, properties of the human perception:
 
-*Animation speed*: Higher animation speeds do not strongly influence tracking ability. [@Franconeri-10:trackingmultiple]   
+*Animation speed*: Higher animation speeds do not strongly influence tracking ability [@Franconeri-10:trackingmultiple].   
 
 *Distance traveled*: Longer distances traveled make objects harder to track [@Franconeri-10:trackingmultiple]  
 
-*Number of objects*: In typical situations, four objects can be tracked in parallel. [@Yantis-92:multielementvisuala]
+*Number of objects*: In typical situations, four objects can be tracked in parallel [@Yantis-92:multielementvisuala].
 
-*Unpredictable paths*: Have only a minimal impact on tracking performance. [@Chevalier-14:notsostaggeringeffect]
+*Unpredictable paths*: Have only a minimal impact on tracking performance [@Chevalier-14:notsostaggeringeffect].
 
 *Occlusion*: Doesn't impair tracking when it can be interpreted as "one object disappears" behind another [@Scholl-99:trackingmultiple]
 
 *Crowding*: When objects that need to be tracked get close to each other, tracking performance is impaired.  [@Chevalier-14:notsostaggeringeffect]
 
-*Multiple objects are tracked as one convex area*: Deformation of this area as well as distractors entering the convex area lead to impaired tracking performance. [@Yantis-92:multielementvisuala, @Chevalier-14:notsostaggeringeffect]
+*Multiple objects are tracked as one convex area*: Deformation of this area as well as distractors entering the convex area lead to impaired tracking performance [@Yantis-92:multielementvisuala, @Chevalier-14:notsostaggeringeffect].
 
 The above results show that object tracking happens through a complex interplay of the different levels of the visual system. While they give some indications on how the visual system processes information, the findings are hard to operationalize in animation designs because they will often be in conflict with the content that should be depicted. The *distance travelled* , for example, is often given by the data that is being depicted in two charts and can not be influenced. The next section will discuss a few concrete propositions to increase the apprehension of animated transitions. 
 
@@ -287,9 +287,9 @@ A number of techniques has been proposed in the literature to increase the appre
 
 Because only a limited number of objects can be tracked simultaneously (see section [-@sec:visual-tracking]), it has been proposed to animate objects in multiple steps (see figure \ref{staggered-animation}).
 
-![In staggered animation, some objects start to animate only with a delay. \ref{staggered-animation}](img/staggering.png)
+![In staggered animation, some objects start to animate only with a delay. \label{staggered-animation}](img/staggering.png)
 
-Staggered animation delays the start time of animations incrementally for some objects. An example: out of 7 objects, 4 will start to move right away, 3 other objects will start to move only a bit later. The delay between the starts is called *dwell*. A dwell of zero means no staggering.
+Staggered animation delays the start time of animations incrementally for some objects. An example: out of 7 objects, 4 will start to move right away, 3 other objects will start to move only a bit later. A more complex example is shown in figure \ref{staggered-animation}. The delay between the starts is called *dwell*. A dwell of zero means no staggering.
 
 Staggered animation has been proposed to *reduce occlusion* as well as *complexity* during animation and therefore lead to a higher tracking performance  [@Heer-07:animatedtransitions]  but interestingly the effect is negligible [@Chevalier-14:notsostaggeringeffect].
 
@@ -297,11 +297,11 @@ Staggered animation has been proposed to *reduce occlusion* as well as *complexi
 
 Staged animation splits complex animation into multiple steps. An animation then interpolates between positions as well as between two colors, might, for example, be split into two animation stages. One where the objects move from position a to position b. Another, where they change color.
 
-Heer et al. explicitly recommend the use of staged animation [@Heer-07:animatedtransitions] even though they found only modest benefits. In situations where staging led to complex and long animations, the authors found it even detrimental for tracking performance. This is also what cognitive load theory would predict because long, uninterrupted multi-stage animation will introduce elements into working memory but not leave the viewer time to organize them into long term memory. His working memory will therefore overflow and he will forget what he had seen before. This is called the *transient memory effect*. [@Wong-12:cognitiveload]
+Heer et al. explicitly recommend the use of staged animation [@Heer-07:animatedtransitions] even though they found only modest benefits. In situations where staging led to complex and long animations, the authors found it even detrimental for tracking performance. This is also what cognitive load theory would predict because long, uninterrupted multi-stage animation will introduce elements into working memory but not leave the viewer time to organize them into long term memory. His working memory will therefore overflow and he will forget what he had seen before. This is called the *transient memory effect* [@Wong-12:cognitiveload].
 
 #### Animation duration
 
-Multiple authors have observed that making animation slower has a negative effect on readers. [@Shanmugasundaram-07:cansmooth, @Baudisch-06:phosphorexplaining]. Others counter that very fast animation might lead to higher error rates [@Heer-07:animatedtransitions]. This assumption has been refuted by Franconeri et al. [@Franconeri:2010ela] who showed that higher speeds have no impact on tracking performance when the distance between objects stays large enough.
+Multiple authors have observed that making animation slower has a negative effect on readers [@Shanmugasundaram-07:cansmooth, @Baudisch-06:phosphorexplaining].. Others counter that very fast animation might lead to higher error rates [@Heer-07:animatedtransitions]. This assumption has been refuted by Franconeri et al. [@Franconeri:2010ela] who showed that higher speeds have no impact on tracking performance when the distance between objects stays large enough.
 
 #### Direct manipulation {#sec:direct-manipulation}
 
@@ -323,7 +323,7 @@ The principle of congruence on the other hand has been shown to have a profound 
 
 ## Unfair comparisons
 
-Further doubts on reported benefits of animation come from the problem of *informational equivalence*. Some studies who have reported benefits of animated transitions have been criticized for involving "unfair comparisons". [@Tversky-02:animationcan] The animations presented contained information that was not easily deducible from the non-animated transitions.  Tversky et al. [@Tversky-02:animationcan, p. 251] put it like this:
+Further doubts on reported benefits of animation come from the problem of *informational equivalence*. Some studies who have reported benefits of animated transitions have been criticized for involving "unfair comparisons" [@Tversky-02:animationcan]. The animations presented contained information that was not easily deducible from the non-animated transitions.  Tversky et al. [@Tversky-02:animationcan, p. 251] put it like this:
 
 > Showing that students learn material better when it is presented than when it is not presented should not be a goal of empirical research.
 
@@ -395,7 +395,7 @@ Table:  Transition types are defined by how characters, attributes and context d
 
 ### Explore attributes
 
-![Two examples of transitions exploring different attributes of the same characters. On the left side from a story of TODO and on the right side a story of TODO  \label{technique-diffent-measure}](/Users/jonas/Desktop/P9/bericht/img/technique-different%20measure.pdf)
+![Two examples of transitions exploring different attributes of the same characters. On the left side from a New York Times story [@Badger-18:extensivedata] and on the right side from a story by "Die Zeit"[@Borgenheimer-14:germanunification].  \label{technique-diffent-measure}](/Users/jonas/Desktop/P9/bericht/img/technique-different%20measure.pdf)
 
 | Characters ![](img/char.pdf) | Attributes ![](img/attr.pdf) | Context ![](img/ctxt.pdf) |
 | ---------------------------- | ---------------------------- | ------------------------- |
@@ -415,7 +415,7 @@ The corresponding transition in Hullman et al. is a *measure walk* (see section 
 
 ### Contrast characters
 
-![technique-contrast \ref{technique-contrast}](/Users/jonas/Desktop/P9/bericht/img/technique-contrast.pdf)
+![Two examples of how characters are being contrasted. One from a Quartz article @Bauer-16:herewhy and the other from the New York Times [@Badger-18:extensivedata].](/Users/jonas/Desktop/P9/bericht/img/technique-contrast.pdf)
 
 | Characters ![](img/char.pdf) | Attributes ![](img/attr.pdf) | Context ![](img/ctxt.pdf) |
 | ---------------------------- | ---------------------------- | ------------------------- |
@@ -431,7 +431,7 @@ The corresponding transition in Hullman et al. is a *dimension walk* (see sectio
 
 ### Reconfigure
 
-![\label{technique-reconfigure}](/Users/jonas/Desktop/P9/bericht/img/technique-reconfigure.pdf)
+![Two examples of *reconfigure* transitions. On the left a *zoom* from a Bloomberg article [@Collins-15:whymeasles] and on the right a remapping of attributes to different visual variables found in an article by The Pudding [@Lambrechts-19:whyeua].\label{technique-reconfigure}](/Users/jonas/Desktop/P9/bericht/img/technique-reconfigure.pdf)
 
 | Characters ![](img/char.pdf) | Attributes ![](img/attr.pdf)                                 | Context ![](img/ctxt.pdf) |
 | ---------------------------- | ------------------------------------------------------------ | ------------------------- |
@@ -447,7 +447,7 @@ Reconfigure subsumes the *pan*, *zoom*, *reorder* and *visualization change* tra
 
 ### Split characters
 
-![technique-split](/Users/jonas/Desktop/P9/bericht/img/technique-split.pdf)
+![Examples of transitions where characters are being split. On the left by measles cases by year [@Collins-15:whymeasles] and on the right EU countries by regions [@Lambrechts-19:whyeua].\label{technique-reconfigure}](/Users/jonas/Desktop/P9/bericht/img/technique-split.pdf)
 
 | Characters ![](img/char.pdf)                     | Attributes ![](img/attr.pdf) | Context ![](img/ctxt.pdf) |
 | ------------------------------------------------ | ---------------------------- | ------------------------- |
@@ -495,7 +495,7 @@ Highlighting is the equivalent of a *filter* transition from the visualization-o
 | ------------------------------------ | ---------------------------- | ------------------------- |
 | More or more of them becomes visible | Stay the same                | Same                      |
 
-Similar to split and merge, this is the counterpart of highlighting. And similar, to merge it is a useful device for *ladder of abstraction*-storytelling. [@Victor-11:ladderabstraction] One version of this technique introduces new characters in the second chart as seen on the right in figure \ref{technique-disclosure}. Another variant shows more of the same character(s) in the second chart. The example on the left shows more and more of the course of the game between the Miami Heats ![](img/char.pdf) and the Houston Rockets ![](img/char.pdf) with each transition.
+Similar to split and merge, this is the counterpart of highlighting. And similar, to merge it is a useful device for *ladder of abstraction*-storytelling [@Victor-11:ladderabstraction]. One version of this technique introduces new characters in the second chart as seen on the right in figure \ref{technique-disclosure}. Another variant shows more of the same character(s) in the second chart. The example on the left shows more and more of the course of the game between the Miami Heats ![](img/char.pdf) and the Houston Rockets ![](img/char.pdf) with each transition.
 
 A particular case of progressive disclosure is what Hullman et al. call *spatial transitions*. A story might, for example, explore the mountainous terrain of the Alps and disclose more and more of it with each transition (see section [-@inductive-classification]). But it can also represent the removal of a filter according to the visualization-oriented classification (see section [-@sec:param-classification]).
 
@@ -740,7 +740,7 @@ Equally, if the participants reported weak and uncorrected vision, we could pote
 
 ![experiment-colorblindness](img/experiment-colorblindness.png)
 
-A final criterion we considered for explaining outliers was color blindness. We did not ask participants to report on their colorblindness because not all people who are colorblind know about it. Instead, we presented them three plates from the Ishihara colorblindness test  [@Ishihara-17:ishiharatest]. The plates we have selected, tested for red-green blindness. The most common form of colorblindness, that affects about 8% of men and 0.4% of women. [@-19:colorblindness]
+A final criterion we considered for explaining outliers was color blindness. We did not ask participants to report on their colorblindness because not all people who are colorblind know about it. Instead, we presented them three plates from the Ishihara colorblindness test  [@Ishihara-17:ishiharatest]. The plates we have selected, tested for red-green blindness. The most common form of colorblindness, that affects about 8% of men and 0.4% of women [@-19:colorblindness].
 
 The full survey can be found in appendix \ref{appendix-survey}.
 
@@ -900,19 +900,19 @@ This case is well illustrated by *Energy D* ([@sec:energy-d]) where the marks fo
 
 ### Animated axis interpolation
 
-In the first pilot study, we have included axis interpolation for some transitions according to the principles laid out in. [@Heer-07:animatedtransitions] But they were excluded from the final experiment as they introduced another confounder and were not directly related to the research question. In our analysis of transitions in narrative visualization, we have found several different approaches to animating axis interpolation. A topic that would certainly merit further research.
+In the first pilot study, we have included axis interpolation for some transitions according to the principles laid out in [@Heer-07:animatedtransitions]. But they were excluded from the final experiment as they introduced another confounder and were not directly related to the research question. In our analysis of transitions in narrative visualization, we have found several different approaches to animating axis interpolation. A topic that would certainly merit further research.
 
 ### Interpolation
 
 ![\label{design-interpolation}](/Users/jonas/Desktop/P9/bericht/img/Interpolation.png)
 
-For all interpolations, we implemented “slow-in-slow-out”-easing as recommended in [@Dragicevic-12:temporaldistortion]. For interpolating between colors, we used a perceptually uniform HCL-interpolation because it “intuitively looks right”. [@Sarifuddin-05:newperceptually] Notice in figure \ref{design-interpolation} how RGB and LAB tend to desaturate while HSL and CubeHelix tend to oversaturate, HCL strikes a good balance.
+For all interpolations, we implemented “slow-in-slow-out”-easing as recommended in [@Dragicevic-12:temporaldistortion]. For interpolating between colors, we used a perceptually uniform HCL-interpolation because it “intuitively looks right” [@Sarifuddin-05:newperceptually]. Notice in figure \ref{design-interpolation} how RGB and LAB tend to desaturate while HSL and CubeHelix tend to oversaturate, HCL strikes a good balance.
 
 
 
 ### Design process
 
-To refine the stories and their design, we have applied an iterative design process including user testing as described by Melican. [@Melican-04:userstudies] Each design iteration was implemented and presented to readers who had not previously seen the story. We observed them while they were making sense of the visualizations and asked them what they understood and where they experienced difficulties. While these tests have been very informal, they have again and again uncovered design flaws that were completely obvious in hindsight and led to the creation of a new version of the prototype. 
+To refine the stories and their design, we have applied an iterative design process including user testing as described by Melican [@Melican-04:userstudies]. Each design iteration was implemented and presented to readers who had not previously seen the story. We observed them while they were making sense of the visualizations and asked them what they understood and where they experienced difficulties. While these tests have been very informal, they have again and again uncovered design flaws that were completely obvious in hindsight and led to the creation of a new version of the prototype. 
 
 We observed, for example, that readers typically scrolled much faster than we expected. Knowing how our scrolling controlled animated transitions, we tended to scroll slowly when testing the visualizations. Readers who were unsuspecting were naturally less careful. Based on this observation we made the scroll distances longer and displayed a "Scroll slowly" at the beginning of each page. 
 
@@ -1034,7 +1034,7 @@ Many visualization tools have been created over the years and every tool address
 
  ![\label{code-abstraction}](img/code-abstraction.pdf)
 
-The number of useful chart types in data visualization is surprisingly limited. A review of some catalogs of chart type shows that it lies somewhere in the range between 40 and 200. [@Holtz:dataviz, @Ribecca:datavisualisation, @Schwabish:visualvocabulary, @:dataviz, @Russo-18:microsoftpower] When developing software for data visualization, an obvious approach is, therefore, to implement these basic chart types and make them configurable. A recent study on visualization tools [@Mei-18:designspace] shows that over the last three decades a majority of tools mentioned in the literature have used some sort of chart typology (see figure \ref{code-abstraction}). Graphic libraries inhabit the other end of the spectrum. They usually only provide functionality for drawing basic shapes. They are thus the most general and flexible visualization tools. But building visualization out of basic shapes is very laborious, which is the reason why "chart configurators" are so popular. More recently, visualization researchers have started to explore the middle ground: declarative, domain-specific languages (DSLs). [@Wickham-16:ggplot2elegant, @Heer-10:declarativelanguage, @Satyanarayan-16:vegalitegrammar] DSLs try to maintain a maximum of flexibility while significantly simplifying the creation process. [@Heer-10:declarativelanguage] One very recent example of a declarative language for visualization on the web is Vega-Lite. [@Satyanarayan-16:vegalitegrammar] Vega-Lite's DSL builds on JSON and the concept of the *Grammar of Graphics*. The grammar of graphics separates different parts of a visualization into separate "layers" which are independent and can be recombined as desired (see figure \ref{code-vega}) Vega-Lite also introduced a way to define interactive visualization in a declarative manner.
+The number of useful chart types in data visualization is surprisingly limited. A review of some catalogs of chart type shows that it lies somewhere in the range between 40 and 200 [@Holtz:dataviz, @Ribecca:datavisualisation, @Schwabish:visualvocabulary, @:dataviz, @Russo-18:microsoftpower]. When developing software for data visualization, an obvious approach is, therefore, to implement these basic chart types and make them configurable. A recent study on visualization tools [@Mei-18:designspace] shows that over the last three decades a majority of tools mentioned in the literature have used some sort of chart typology (see figure \ref{code-abstraction}). Graphic libraries inhabit the other end of the spectrum. They usually only provide functionality for drawing basic shapes. They are thus the most general and flexible visualization tools. But building visualization out of basic shapes is very laborious, which is the reason why "chart configurators" are so popular. More recently, visualization researchers have started to explore the middle ground: declarative, domain-specific languages (DSLs) [@Wickham-16:ggplot2elegant, @Heer-10:declarativelanguage, @Satyanarayan-16:vegalitegrammar]. DSLs try to maintain a maximum of flexibility while significantly simplifying the creation process [@Heer-10:declarativelanguage]. One very recent example of a declarative language for visualization on the web is Vega-Lite [@Satyanarayan-16:vegalitegrammar]. Vega-Lite's DSL builds on JSON and the concept of the *Grammar of Graphics*. The grammar of graphics separates different parts of a visualization into separate "layers" which are independent and can be recombined as desired (see figure \ref{code-vega}) Vega-Lite also introduced a way to define interactive visualization in a declarative manner.
 
 ![\label{code-vega}](img/code-vega.pdf) 
 
@@ -1042,9 +1042,9 @@ The number of useful chart types in data visualization is surprisingly limited. 
 
 ### Animated transitions between charts
 
-Even less research has been conducted on DSLs who describe animated transitions between visualizations. Heer and Bostock, who later went to create the already mentioned D3 [@Bostock-11:datadrivendocuments], have described one approach in an earlier paper. [@Heer-10:declarativelanguage] Their system is based on marks like lines and bars. To create animations, the author defines the data for the initial state and the data for the final state. Their tool then interpolates between the two to generate an animated transition.
+Even less research has been conducted on DSLs who describe animated transitions between visualizations. Heer and Bostock, who later went to create the already mentioned D3 [@Bostock-11:datadrivendocuments], have described one approach in an earlier paper [@Heer-10:declarativelanguage]. Their system is based on marks like lines and bars. To create animations, the author defines the data for the initial state and the data for the final state. Their tool then interpolates between the two to generate an animated transition.
 
-Very recently, Tableau, one of the largest providers of commercial visualization software has released a preview of their future implementation of animated transitions. [@Isaacs-18:tableaumotion] In their concept, animations are predetermined by the type of transition and not configurable by the author.
+Very recently, Tableau, one of the largest providers of commercial visualization software has released a preview of their future implementation of animated transitions [@Isaacs-18:tableaumotion]. In their concept, animations are predetermined by the type of transition and not configurable by the author.
 
 The tool that most closely addresses the problems of narrative visualization is *Ellipsis* by Satyanarayan and Heer [@Satyanarayan-14:authoringnarrative] Ellipsis is a tool to create narrative visualization through a graphical interface. It wraps existing visualizations and adds an *annotation* layer, *parameters* for dynamic queries (see section [-@sec:narr-vis]) and a layer for defining *transitions* between charts. Ellipsis thus effectively decouples the narrative structure from the individual charts and lets authors quickly explore alternative narrative structures.
 
@@ -1062,7 +1062,7 @@ Based on the requirements described in section [-@sec:requirements] and the revi
 
 ### Anatomy of a chart
 
-The first part of the DSL is concerned with defining the basic charts. The syntax is based on JSON and strongly inspired by Vega-Lite. [@Satyanarayan-16:vegalitegrammar] Vega-Lite is more powerful in inferring a multitude of chart types based solely on the configuration than our proposed solution. As we only required a very limited number of chart types, we resorted to the "Chart typology"-approach which is less flexible but much easier to implement. Two other differences to Vega-Lite are the focus on *characters* and the possibility to *annotate* them.
+The first part of the DSL is concerned with defining the basic charts. The syntax is based on JSON and strongly inspired by Vega-Lite [@Satyanarayan-16:vegalitegrammar]. Vega-Lite is more powerful in inferring a multitude of chart types based solely on the configuration than our proposed solution. As we only required a very limited number of chart types, we resorted to the "Chart typology"-approach which is less flexible but much easier to implement. Two other differences to Vega-Lite are the focus on *characters* and the possibility to *annotate* them.
 
 ![code-chart adsf](img/code-chart.pdf)
 
@@ -1071,7 +1071,7 @@ The first part of the DSL is concerned with defining the basic charts. The synta
 - ![](img/3.pdf)The path to a `CSV`-file with data. We don't implement any kind of data transformation functionality and expect the data to be in the right format. This is because our tool is presentation-oriented and there is no need to explore the data through filtering or other transformations.
 - ![](img/4.pdf)The chart title is implemented as an `annotation`. Annotations can be bound to different elements throughout the DSL and positioned relative to their `start` or `end` through the `offset`-property.
 - ![](img/5.pdf)In the axis-definitions, different attributes (`field`) of the data are mapped to different axes. The axes are identified by their `name` which can differ depending on the chart `type`. Slope charts, for example, have three axes:  `x`, `from` and `to`.  The advantage of defining each axis explicitly like this is, that, again, `annotations` can be bound to them.
-- ![](img/6.pdf)The `type`-property of an axis defines how the data that is mapped to this axis should be parsed. The data domain can either be continuous numbers (`quantitative`), ordered discrete values (`ordinal`), unordered discrete values (`categorical`), or timestamps (`temporal`). [@Munzner-15:visualizationanalysis, @Satyanarayan-16:vegalitegrammar] The `domain`-property defines the corresponding start and end values of the axis. Often, the minimal and maximal values in the data are used to determine the start and end of an axis. But when using visualization for storytelling, sometimes that author wants values to "overshoot" the axis, or to fix the axis at a certain domain for dramatic or clarity reasons, which is why we allowed explicit control of this parameter.
+- ![](img/6.pdf)The `type`-property of an axis defines how the data that is mapped to this axis should be parsed. The data domain can either be continuous numbers (`quantitative`), ordered discrete values (`ordinal`), unordered discrete values (`categorical`), or timestamps (`temporal`) [@Munzner-15:visualizationanalysis, @Satyanarayan-16:vegalitegrammar]. The `domain`-property defines the corresponding start and end values of the axis. Often, the minimal and maximal values in the data are used to determine the start and end of an axis. But when using visualization for storytelling, sometimes that author wants values to "overshoot" the axis, or to fix the axis at a certain domain for dramatic or clarity reasons, which is why we allowed explicit control of this parameter.
 - ![](img/7.pdf)Coherent with the model developed in section (>>Perception-oriented classification), we look at narrative visualization through the lens of characters. This is why our DSL contains an explicit declaration of the whole `cast` of characters in each chart. We assume that individual characters are identified by a `categorical` attribute in the data which is defined in the `field`-property.
 - ![](img/8.pdf)Because characters have such high importance in this view, they are defined individually:
 
@@ -1126,7 +1126,7 @@ Finally, the `director` contains a kind of "scroll-timeline" of charts. Based on
 
 A few remarks on how we have handled the interpolation described above. While previous work has usually interpolated between visualization parameters [@Heer-10:declarativelanguage, @Satyanarayan-14:authoringnarrative], our system interpolates between SVG-shapes. Thanks to this, our system can generate animated transitions between two completely different visualizations. The only condition is that a character needs to be represented by a single, closed SVG shape, a moderate constraint in our eyes. Other systems only permit transitions "within" the same chart.
 
-One problem when interpolating directly between SVG-shapes is that they need to have a one-to-one correspondence between their anchor points. If this is not the case, there needs to be some method to add points to the simpler shape. For this, we have used an algorithm that duplicates points of the simpler shape that are closest to the matching points in shape B. [@Beshai-16:improvingd3] This has produced visually good results in all our cases. But it had the downside of making the calculation of interpolated states slower.
+One problem when interpolating directly between SVG-shapes is that they need to have a one-to-one correspondence between their anchor points. If this is not the case, there needs to be some method to add points to the simpler shape. For this, we have used an algorithm that duplicates points of the simpler shape that are closest to the matching points in shape B [@Beshai-16:improvingd3]. This has produced visually good results in all our cases. But it had the downside of making the calculation of interpolated states slower.
 
 
 
