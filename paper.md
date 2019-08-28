@@ -140,7 +140,7 @@ The following section will therefore discuss the existing literature on how read
 
 ## How readers interpret transitions {#sec:transition-interpretation}
 
-In the previously discussed classifications, transitions are often classified according to the question: "What changes?". This implies that readers make sense of transitions through comparison. This section therefore gives a brief overview of the relevant work on comparison in visualization. Based on this, it discusses what makes transitions difficult for readers. It then introduces findings from cognitive load theory that help in understanding how these difficulties are linked to the cognitive abilities of readers. Based on this it will propose four propositions to simplify transitions, two of which can be implemented through animated transitions.
+In the previously discussed classifications, transitions are often classified according to the question: "What changes?". This implies that readers make sense of transitions through comparison. This section therefore gives a brief overview of the relevant work on comparison in visualization. Based on this, it discusses what makes transitions difficult for readers. It then introduces findings from cognitive load theory that help in understanding how these difficulties are linked to the cognitive abilities of readers.
 
 ### Comparison to understand transitions {#sec:comparison}
 
@@ -169,7 +169,7 @@ This uses the ability of the visual system to quickly and quite accurately calcu
 
 When a target or a set of targets have been identified in one of the charts, the reader proceeds to *locate* a corresponding target in the other chart. When all the targets are available, they are compared in the reader's mind. This often requires a considerable mental effort, which we will call the *transition cost*.
 
-#### Transition cost
+## Transition cost
 
 The transition cost describes how much mental effort it takes to do the necessary comparison(s) to understand a transition. Gleicher [@Gleicher-18:considerationsvisualizing] describes three factors that make comparisons challenging:
 
@@ -179,41 +179,169 @@ The transition cost describes how much mental effort it takes to do the necessar
 
 Cognitive load theory predicts that a maximum number of 9 targets can be held in working memory for processing [@Wong-12:cognitiveload, @Miller-56:magicalnumber]. Depending on the size of the targets and the complexity of the relationships, this number can get as low as 1. [@Alvarez-04:capacityvisual]  When the number of targets that are needed for a comparison exceed these limitations, the reader will forget some of them and the comparison fails. [@Wong-12:cognitiveload]
 
-### Reducing the transition cost
+When designing narrative visualization, the cost of the transitions should ideally stay within these boundaries to make the reading fluent. Animation is often proposed as a means to make transitions easier, but it is often not clear how exactly. The next section will therefore present the state of the art in animated 
 
-One of the goals of using animation to guide the reader through narrative visualization should be to *reduce the transition cost*. This can either be done by reducing the number of targets that need to be compared, the size of the targets or the complexity of relationships.
 
-#### Chunking 
 
-Cognitive load theory states, that when a comparison is successfully processed in working memory, the result is committed to long term memory. From there it is available for further processing at almost zero cost. Transitions that exceed working memory limits can therefore be split into multiple subtransitions where each individual subtransition stays within the limits of working memory while the information from previous subtransitions is available in long term memory.
+\part{Animated transitions}
 
-#### Highlighting
+# Strengths of animation {#sec:animation}
 
-Highlighting explicitly identifies the targets that the reader should compare (see section [-@sec:comparison]). It therefore also reduces the number of targets that need to be held in memory. Highlighting can be done through the means of narrative visualization (narration, annotations, color and animation) mentioned in [section -@sec:narr-vis]. It is especially efficient when done through pre-attentive attributes like color. In this case, elements with other colors are already being hidden by the visual system and don't even reach working memory. [@Franconeri-18:thinkingdata] (compare also "Visual feature" in  figure \label{comparison-identification}). There are strong indications that motion has a similar highlighting effect as color [@Munzner-15:visualizationanalysis, p. 95].
+Animation has been portrayed to provide many benefits to UX-design in general and visualization design in particular. Chevalier et al. [@Chevalier-16:animations25] have identified 23 different "purposes" of animation in visualization. Things like "Staying oriented during navigation" or "Hooking the user" which are finally classified into five meta-classes. Although this overview shows the popularity of animation in today's practice, it does not discuss any evidence that animation *actually* serves the given purposes.
 
-#### Object constancy
+To understand why designers might think that animation helps in these specific circumstances, we have mapped some lower-level strengths of animation described in Heer et al. [@Heer-07:animatedtransitions] to all each of the purposes (see figure \ref{animation-purposes}).
 
-Object constancy is a term often mentioned together with animated transition. There is some evidence that when the reader has rapid visual access to the targets (<300ms [@Rensink-02:changedetectiona]), changes will be detected before working memory is reached. The idea is that when one target is morphed into another, they are identified as being "the same" without having to do a comparison in working memory.
+![The purposes of animation found by Chevalier et al. [@Chevalier-14:notsostaggeringeffect] each employ one or more of the strenghts of animation.\label{animation-purposes}](img/animation-purposes.png)
 
-#### Explicitly show the relationship
 
-Complex relationships take multiple steps from the reader to understand through comparison. The intermediate results from these steps need to be stored in working memory. But intermediate results might be indicated through animation or via symbolic means.
+
+## Object constancy ![](img/A.pdf) {#sec:object-constancy}
+
+Object constancy describes the ability to identify two objects as being the same entity between two states. There is some evidence that when the reader has rapid visual access to the targets (<300ms [@Rensink-02:changedetectiona]), changes will be detected before working memory is reached. The idea is that when one target is morphed into another, they are identified as being "the same" without having to do a comparison in working memory. This is probably the strength most often invoked for animation [@Chalbi-18:understandingdesigning, @Wu-16:graphicalperception, @Bederson:doesanimation, @Heer-07:animatedtransitions].
+
+## Attract attention ![](img/B.pdf) {#sec:attract-attention}
+
+Movement very strongly attracts attention. This view is undisputed in the literature [@Munzner-15:visualizationanalysis, p. 238] and there is some solid evidence that motion is more effective in highlighting elements than other visual means [@Ware-04:motionsupport]. This ability to highlight elements can be very useful for storytelling. But it also poses the risk to distract the reader from important, non-moving elements of a visualization like axes or labels.
+
+## Communicate causality and intentionality ![](img/C.pdf) {#sec:causality}
+
+In nature, we observe a certain smooth flow of cause and effect. When a rolling billiard ball hits another, the second ball will smoothly continue its transition. This leads to the intuition that smooth animation would imply some sort of cause and effect relationship (see section [-@sec:congruence]). This is true when depicting naturalist phenomena like the formation of lightning. [@Betrancourt-08:displaykey]. Other authors have found that animation also conveys causality in more abstract displays but that it doesn't perform better than symbolic depictions of causality [@Kadaba-07:visualizingcausal].
+
+## Engage ![](img/D.pdf) {#sec:engage}
+
+Multiple authors have remarked how readers were "excited" about animation in interfaces and that it thus led to higher engagement [@Tversky-02:animationcan, @Heer-07:animatedtransitions]. The ability of animation to engage and excite is often presupposed based on anecdotal evidence. But few studies have used validated questionnaires to explicitly measure engagement. One study who did, found very mixed results [@Amini-18:hookeddata]. In their findings animation only led to higher engagement when coupled with pictorial representations of data. The main factor that led to higher engagement was "Aesthetics".  We suspect that in many cases there might be a "novelty" effect of animation that excites readers. There is little evidence that yesterdays fashionable animation still leads to higher engagement today. Furthermore, the novelty effect might lead readers and designers astray and they might confuse their positive feelings with actual benefits for understanding [@Hassenzahl-10:inferenceperceived, @Baudisch-06:phosphorexplaining].
+
+## Data encoding ![](img/E.pdf)
+
+Similar to color or shape, motion can be used to encode data. Although the precision in interpreting it is very limited. [@Munzner-15:visualizationanalysis, p. 95] This property of animation is not listed in Heer et al. [@Heer-07:animatedtransitions] but we have decided to include it because it is well studied and forms the basis of multiple of the purposes listed by Chevalier et al. [@Chevalier-16:animations25]
+
+While the listed strengths seem straightforward, the literature indicates that they are present only under certain circumstances.
+
+
+
+# Consideration when using animation
+
+Animation does not automatically make transitions easier. Its effectiveness is highly related to two sets of principles: *congruence* and *apprehension*. When these principles are being violated, the effect of animation on the transition cost might be negligible of even negative.
+
+## Congruence {#sec:congruence}
+
+![Congruence as defined by Tversky et al. [@Tversky-02:animationcan] means that the representation should correspond to the concepts that are conveyed. Apprehension means that the representation should be accurately perceived.](img/congruence-apprehension.png)
+
+The question if animation is a natural fit for certain types of transitions has been described as the principle of *congruence* in  [@Tversky-02:animationcan, p. 247]:
+
+> Effective graphics conform to the Congruence Principle according to which the content and format of the graphic should correspond to the content and format of the concepts to be conveyed.
+
+According to this view, showing *change over time* would be a congruent use of animation. The reasoning is that people perceive change over time as smooth transitions in their everyday lives. One study accordingly found that animation reduced the perceived cognitive load when showing change in networks. [@Bach-14:graphdiariesanimated] Other authors have not found such benefits [@Tversky-02:animationcan] naming a lack of *apprehension* as the potential reason.
+
+The second natural fit for animation are *viewport changes* like *pan* and *zoom*. These correspond to a person's natural movements through space, getting closer to objects, looking around, etc. Animated transitions have indeed been found to be superior to static transitions for *panning* [@Shanmugasundaram-07:cansmooth] as well as *zooming* [@Shanmugasundaram-08:effectanimated].
+
+As previously discussed, animation has also been shown to be congruent for communicating causality and intentionality (see section [-@sec:causality])
+
+![\ref{Amini-18-hookeddata}](img/Amini-18-hookeddata.png)
+
+Interestingly, multiple authors found that animation seems to be far less effective when used with abstract representations than when it is used with iconic representations. Amini et al. [@Amini-18:hookeddata] found that animated transitions in data visualization only led to higher engagement when coupled with iconic representations (see \ref{Amini-18-hookeddata}). A recent meta-analysis [@Berney-16:doesanimation] of 50 studies on animation and its effect on learning found, that animation only benefitted knowledge acquisition when used with "iconic representations" of the phenomena the needed to be studied. No effect was found for abstract representations.
+
+These findings indicate that the effectiveness of animation is strongly related to the amount of "realism" of the animation and even the visualization that it is being used on. But even when the use of animated transitions seems congruent, it may still fail. Tversky et al. cite a lack of *apprehension* for this [@Tversky-02:animationcan].
+
+## Apprehension
+
+Tversky et al. describe the apprehension principle like this [@Tversky-02:animationcan, p. 247]:
+
+> … graphics should be accurately perceived and appropriately conceived.
+
+It is therefore related to the basic perceptual abilities of the reader. Heer et al.[@Heer-07:animatedtransitions] define six design principles for animated transitions to improve apprehension: *similar transforms should be grouped*; *trajectories should be predictable*; *transformations* should be *simple*; to simplify complex transformations, *staging* should be used and the transition duration should be *long enough* to follow (but not longer). And although these principles seem to make sense intuitively, research on visual perception has shown to produce unintuitive results.
+
+### Visual tracking {#sec:visual-tracking}
+
+Research on visual tracking explores how people track objects when the objects are moving. Participants typically have to track the position of several individual objects (circles or rectangles) or a group of objects under different conditions. These experiments have revealed several, sometimes surprising, properties of the human perception:
+
+*Animation speed*: Higher animation speeds do not strongly influence tracking ability. [@Franconeri-10:trackingmultiple]   
+
+*Distance traveled*: Longer distances traveled make objects harder to track [@Franconeri-10:trackingmultiple]  
+
+*Number of objects*: In typical situations, four objects can be tracked in parallel. [@Yantis-92:multielementvisuala]
+
+*Unpredictable paths*: Have only a minimal impact on tracking performance. [@Chevalier-14:notsostaggeringeffect]
+
+*Occlusion*: Doesn't impair tracking when it can be interpreted as "one object disappears" behind another [@Scholl-99:trackingmultiple]
+
+*Crowding*: When objects that need to be tracked get close to each other, tracking performance is impaired.  [@Chevalier-14:notsostaggeringeffect]
+
+*Multiple objects are tracked as one convex area*: Deformation of this area as well as distractors entering the convex area lead to impaired tracking performance. [@Yantis-92:multielementvisuala, @Chevalier-14:notsostaggeringeffect]
+
+The above results show that object tracking happens through a complex interplay of the different levels of the visual system. While they give some indications on how the visual system processes information, the findings are hard to operationalize in animation designs because they will often be in conflict with the content that should be depicted. The *distance travelled* , for example, is often given by the data that is being depicted in two charts and can not be influenced. The next section will discuss a few concrete propositions to increase the apprehension of animated transitions. 
+
+
+
+### Animation techniques
+
+A number of techniques has been proposed in the literature to increase the apprehension of animation. A brief discussion will show that in practice congruence and the limits of working memory seem to be the more important than apprehension.
+
+#### Staggered animation
+
+Because only a limited number of objects can be tracked simultaneously (see section [-@sec:visual-tracking]), it has been proposed to animate objects in multiple steps (see figure \ref{staggered-animation}).
+
+![In staggered animation, some objects start to animate only with a delay. \ref{staggered-animation}](img/staggering.png)
+
+Staggered animation delays the start time of animations incrementally for some objects. An example: out of 7 objects, 4 will start to move right away, 3 other objects will start to move only a bit later. The delay between the starts is called *dwell*. A dwell of zero means no staggering.
+
+Staggered animation has been proposed to *reduce occlusion* as well as *complexity* during animation and therefore lead to a higher tracking performance  [@Heer-07:animatedtransitions]  but interestingly the effect is negligible [@Chevalier-14:notsostaggeringeffect].
+
+#### Staged animation {#sec:staged-animation}
+
+Staged animation splits complex animation into multiple steps. An animation then interpolates between positions as well as between two colors, might, for example, be split into two animation stages. One where the objects move from position a to position b. Another, where they change color.
+
+Heer et al. explicitly recommend the use of staged animation [@Heer-07:animatedtransitions] even though they found only modest benefits. In situations where staging led to complex and long animations, the authors found it even detrimental for tracking performance. This is also what cognitive load theory would predict because long, uninterrupted multi-stage animation will introduce elements into working memory but not leave the viewer time to organize them into long term memory. His working memory will therefore overflow and he will forget what he had seen before. This is called the *transient memory effect*. [@Wong-12:cognitiveload]
+
+#### Animation duration
+
+Multiple authors have observed that making animation slower has a negative effect on readers. [@Shanmugasundaram-07:cansmooth, @Baudisch-06:phosphorexplaining]. Others counter that very fast animation might lead to higher error rates [@Heer-07:animatedtransitions]. This assumption has been refuted by Franconeri et al. [@Franconeri:2010ela] who showed that higher speeds have no impact on tracking performance when the distance between objects stays large enough.
+
+#### Direct manipulation
+
+Readers typically perform better at recall and problem solving, when they can control animation themselves. Multiple authors have shown this for cases where readers could start and stop animated transitions [@Chan:2005vx, @Hasler:2007]. But here too, it is hard to separate different effects. Tversky et al. point out, that interaction has been shown to benefit learning in itself and just happens to be coupled with animation often [@Tversky-02:animationcan].
+
+#### Easing
+
+John Lasseter in his classic paper on the principles of computer animation [@Lasseter-87:principlestraditional] describes that animators developed a preference for "slow-in-slow-out" over linear easing over time. This recommendation has been confirmed in more formal experiments [@Dragicevic-12:temporaldistortion]. Because "slow-in-slow-out" motions are closer to what we experience in nature, this type of easing can be seen as more *congruent* than other forms (see section [-@sec:congruence]).
+
+### The role of apprehension
+
+The discussion the research on apprehension demonstrates that apprehension has probably limited importance in practice. The proposed technique often do not lead to the purported benefits, mostly because the easily lead to violations in other areas of apprehension, congruence or working memory.
+
+The only two techniques that have consistently shown to be beneficial are direct manipulation and "slow-in-slow-out" easing.
+
+ 
+
+## Unfair comparisons
+
+Finally, some studies who have reported benefits of animated transitions have been criticized for involving "unfair comparisons". [@Tversky-02:animationcan] The animations presented contained information that was not easily deducible from the non-animated transitions.  Tversky et al. [@Tversky-02:animationcan, p. 251] put it like this:
+
+> Showing that students learn material better when it is presented than when it is not presented should not be a goal of empirical research.
+
+Fair comparisons, in contrast, need to identify *informationally distinct* states very clearly and show them not just in the animated scenario but also in all the scenarios they are compared to. Tversky et al. find that in these experiments, purported benefits of animation often fail to materialize.
+
+
+
+## Summary
+
+Animation has been widely used in visualization for its purported strengths. But the principle of congruence evokes serious doubts that these benefits will apply to abstract visualization. It seems that the interpretation of animation is highly connected to the readers' real world experience of movements. In order for animated transitions to be effective the would have to have a certain "realism".
 
 
 
 # Perception-oriented classification
 
-The previous section has discussed how readers understand relationships by comparing targets in their working memory. This section reconceptualizes the transition types seen in previous chapters so that it is explicit what the reader compares. This will lead to different recommendations for each transition type on how to reduce the transition cost.
+The discussion of the literature in the previous sections has shown that readers understand relationships by comparing targets in their working memory and that animation is more beneficial when it is applied to objects close to reality. This section reconceptualizes the transition types seen in previous chapters so that it is explicit what the reader needs to compare. It also expresses the elements of comparison in terms of characters, attributes and context to favor an interpretation that is closer to real-life concepts to support congruent animation. This will lead to recommendations on how to use animation for the different transition types.
 
 ###  Core concepts {#sec:our-model}
 
-The central element of the proposed re-conceptualization is a target which will be called a character. The size of a character is defined by its attributes. Finally, the context is one factor that can make the relationship between characters more complex.
+The central element of the proposed re-conceptualization is the comparison target  which will be called a character. The size of a character is defined by its attributes. Finally, the context is one factor that can make the relationship between characters more complex (compare to section [-@sec:comparison]).
 
 (TODO:graphic)
 
 #### Characters
 
-A character is what we have called a target in the previous chapter. In its simplest form it takes up one slot in the reader working memory. Characters are clearly distinguishable and nameable visual entities in the chart. It can be a dot, a line or any other mark. In visualization, these entities are very often identified by one or more independent, categorical variables. For example countries, genders, age groups, etc. Even though this definition might seem abstract at first, it is in most cases very easy to identify characters in narrative visualization. That is because the narrative will often explicitly identify them. But characters can also be identified implicitly and through visual statistics.
+A character is what we have called a *target* (@sec:comparison). In its simplest form it takes up one slot in the readers' working memory. Characters are clearly distinguishable and nameable visual entities in the chart. It can be a dot, a line or any other mark. In visualization, these entities are very often identified by one or more independent, categorical variables. For example countries, genders, age groups, etc. Even though this definition might seem abstract at first, it is in most cases very easy to identify characters in narrative visualization. That is because the narrative will often explicitly identify them. But characters can also be identified implicitly and through visual statistics.
 
 This indicates that characters are only fully identified in the readers mind and can be dependent on concepts from long term memory. One example for this is, that multiple characters can be grouped into a unifying character. Switzerland, Italy, and France could form the group *European countries* while Japan, China, and Korea might be combined into *Asian countries*. Grouping is therefore one way to reduce the cognitive load by relying on long term memory.
 
@@ -385,9 +513,35 @@ This is probably the hardest transition for readers to follow as none of the ele
 
 
 
+
+
+
+
+# Reducing the transition cost {#sec:reducing-cost}
+
+One of the goals of using animation to guide the reader through narrative visualization should be to *reduce the transition cost*. This can either be done by reducing the number of targets that need to be compared, the size of the targets or the complexity of relationships.
+
+#### Chunking 
+
+Cognitive load theory states, that when a comparison is successfully processed in working memory, the result is committed to long term memory. From there it is available for further processing at almost zero cost. Transitions that exceed working memory limits can therefore be split into multiple subtransitions where each individual subtransition stays within the limits of working memory while the information from previous subtransitions is available in long term memory.
+
+#### Highlighting
+
+Highlighting explicitly identifies the targets that the reader should compare (see section [-@sec:comparison]). It therefore also reduces the number of targets that need to be held in memory. Highlighting can be done through the means of narrative visualization (narration, annotations, color and animation) mentioned in [section -@sec:narr-vis]. It is especially efficient when done through pre-attentive attributes like color. In this case, elements with other colors are already being hidden by the visual system and don't even reach working memory. [@Franconeri-18:thinkingdata] (compare also "Visual feature" in  figure \label{comparison-identification}). There are strong indications that motion has a similar highlighting effect as color [@Munzner-15:visualizationanalysis, p. 95].
+
+#### Object constancy
+
+
+
+#### Explicitly show the relationship
+
+Complex relationships take multiple steps from the reader to understand through comparison. The intermediate results from these steps need to be stored in working memory. But intermediate results might be indicated through animation or via symbolic means.
+
+
+
 ## Implications animated transitions
 
-The transition types in the previous section will be interpreted in different ways by the readers. While one type will require the reader to find out how the shape of a character has changed, another will require of him to identify characters that have similar shapes, and a third one will require him to create a relation at the conceptual level. Animation will therefore not be applicable to all of the or in the same way.
+The transition types in the previous section will be interpreted in different ways by the readers. While one type will require the reader to find out how the shape of a character has changed, another will require of him to identify characters that have similar shapes, and a third one will require him to create a relation at the conceptual level. Animation will therefore not be applicable to all of them in the same way and will have different potential benefits (@sec:reducing-cost).
 
 ### Morphing animation
 
@@ -398,147 +552,22 @@ A morphing animation changes one shape into another. Morphing one shape into a t
 
 In these cases animation might especially help with object constancy.
 
-In cases where there is a *one-to-many* or *many-to-one* relationship animation might be used to explicitly show this relationship along with the additional benefit of object constancy:
+In cases where there is a *one-to-many* or *many-to-one* relationship animation might be used to e*xplicitly show this relationship* along with the additional benefit of *object constancy*:
 
 * Split characters
 * Merge characters
 
+In all cases, the characters that are being animated will also be *highlighted*.
+
 ### Fading animation
 
-In all the other cases, 
+In all the other cases, morphing is not possible
 
 
 
 
 
-\part{Animated transitions}
 
-# Strengths of animation {#sec:animation}
-
-Animation has been portrayed to provide many benefits to UX-design in general and visualization design in particular. Chevalier et al. [@Chevalier-16:animations25] have identified 23 different "purposes" of animation in visualization. Things like "Staying oriented during navigation" or "Hooking the user" which are finally classified into five meta-classes. Although this overview shows the popularity of animation in today's practice, it does not discuss any evidence that animation *actually* serves the given purposes.
-
-To understand why designers might think that animation helps in these specific circumstances, we have mapped some lower-level "strengths" of animation described in Heer et al. [@Heer-07:animatedtransitions] to all each of the purposes (see figure \ref{animation-purposes}).
-
-![The purposes of animation found by Chevalier et al. [@Chevalier-14:notsostaggeringeffect] each employ one or more of the strenghts of animation.\label{animation-purposes}](/Users/jonas/Desktop/P9/bericht/img/animation-purposes.png)
-
-
-
-## Object constancy ![](img/A.pdf) {#sec:object-constancy}
-
-Object constancy describes the ability to identify two objects as being the same entity between two states.  This is probably the strength most often invoked for animation [@Chalbi-18:understandingdesigning, @Wu-16:graphicalperception, @Bederson:doesanimation, @Heer-07:animatedtransitions] It is also closely related to the previously presented model (section [-@sec:our-model]) and *characters*. If animation indeed supports object constancy, it would simplify the *location* of the target in the second state (see section [-@sec:comparison]) and this simplifies the essential comparison task.
-
-## Attract attention ![](img/B.pdf) {#sec:attract-attention}
-
-Movement very strongly attracts attention. This view is undisputed in the literature [@Munzner-15:visualizationanalysis, p. 238] and there is some solid evidence that motion is more effective in highlighting elements than other visual means [@Ware-04:motionsupport] This ability to highlight elements can be very useful for storytelling. But it also poses the risk to distract the reader from important, non-moving elements of a visualization like axes or labels.
-
-## Communicate causality and intentionality ![](img/C.pdf) {#sec:causality}
-
-In nature, we observe a certain smooth flow of cause and effect. When a rolling billiard ball hits another, the second ball will smoothly continue its transition. This leads to the intuition that smooth animation would imply some sort of cause and effect relationship (see section [-@sec:congruence]). This is true when depicting naturalist phenomena like the formation of lightning. [@Betrancourt-08:displaykey] Other authors have found that animation also conveys causality in more abstract displays but that it doesn't perform better than symbolic depictions of causality. [@Kadaba-07:visualizingcausal]
-
-## Engage ![](img/D.pdf) {#sec:engage}
-
-Multiple authors have remarked how readers were "excited" about animation in interfaces and that it thus led to higher engagement [@Tversky-02:animationcan, @Heer-07:animatedtransitions] The ability of animation to engage and excite is often presupposed based on anecdotal evidence. But few studies have used validated questionnaires to explicitly measure engagement. One study who did found very mixed results [@Amini-18:hookeddata]. In their findings animation only led to higher engagement when coupled with pictorial representations of data. The main factor that led to higher engagement was "Aesthetics".  We suspect that in many cases there might be a "novelty" effect of animation that excites readers. There is little evidence that yesterdays fashionable animation still leads to higher engagement today. Furthermore, the novelty effect might lead readers and designers astray and they might confuse their positive feelings with actual benefits for understanding.[@Hassenzahl-10:inferenceperceived, @Baudisch-06:phosphorexplaining]
-
-## Data encoding ![](img/E.pdf)
-
-Similar to color or shape, motion can be used to encode data. Although the precision in interpreting it is very limited. [@Munzner-15:visualizationanalysis, p. 95] This property of animation is not listed in Heer et al. but we have decided to include it because it is well studied and forms the basis of multiple of the purposes listed by Chevalier et al. [@Chevalier-16:animations25]
-
-
-
-# Properties of animation
-
-## Congruence {#sec:congruence}
-
-![Congruence as defined by Tversky et al. [@Tversky-02:animationcan] means that the representation should correspond to the concepts that are conveyed. Apprehension means that the representation should be accurately perceived.](/Users/jonas/Desktop/P9/bericht/img/congruence-apprehension.png)
-
-The question if animation is a natural fit for certain types of transitions has been described as the principle of *congruence* in  [@Tversky-02:animationcan, p. 247]:
-
-> Effective graphics conform to the Congruence Principle according to which the content and format of the graphic should correspond to the content and format of the concepts to be conveyed.
-
-According to this view, showing *change over time* would be a congruent use of animation. The reasoning is that people perceive change over time as smooth transitions in their everyday lives. One study accordingly found that animation reduced the perceived cognitive load when showing change in networks. [@Bach-14:graphdiariesanimated] Other authors have not found such benefits [@Tversky-02:animationcan] naming a lack of *apprehension* as the potential reason.
-
-The second natural fit for animation are *viewport changes* like *pan* and *zoom*. These correspond to a person's natural movements through space, getting closer to objects, looking around, etc. Animated transitions have indeed been found to be superior to static transitions for *panning* [@Shanmugasundaram-07:cansmooth] as well as *zooming*. [@Shanmugasundaram-08:effectanimated]
-
-As previously discussed, animation has also been shown to be congruent for communicating causality and intentionality (see section [-@sec:causality])
-
-![\ref{Amini-18-hookeddata}](/Users/jonas/Desktop/P9/bericht/img/Amini-18-hookeddata.png)
-
-Interestingly, multiple authors found that animation seems to be far less effective when used with abstract representations than when it is used with iconic representations. Amini et al. [@Amini-18:hookeddata] found that animated transitions in data visualization only led to higher engagement when coupled with iconic representations (see \ref{Amini-18-hookeddata}). A recent meta-analysis [@Berney-16:doesanimation] of 50 studies on animation and its effect on learning found, that animation only benefitted knowledge acquisition when used with "iconic representations" of the phenomena the needed to be studied. No effect was found for abstract representations.
-
-We believe that congruence is strongly linked to object constancy. Animations will, therefore, fail in abstract visualizations because they are not being used to establish object constancy. Looking at transitions as following characters through multiple states, exploring their attributes and contrasting them as proposed in our perception-based classification (see section [-@sec:our-model]) should help designers look at transitions in terms of object constancy. Which will lead to more congruent animation. Heer et al. also warn against the risk of misusing object constancy [@Heer-07:animatedtransitions, p. 1240]:
-
->  Object constancy can be abused if an object is transformed into a completely unrelated object, establishing a false relation.
-
-But even when the use of animated transitions is congruent, it may still fail to provide benefits over static
-transitions because of a lack of apprehension. [@Tversky-02:animationcan]
-
-## Apprehension
-
-Tversky et al. describe the apprehension principle like this [@Tversky-02:animationcan, p. 247]:
-
-> … graphics should be accurately perceived and appropriately conceived.
-
-Heer et al.[@Heer-07:animatedtransitions] define six design principles for animated transitions to improve apprehension: *similar transforms should be grouped*; *trajectories should be predictable*; *transformations* should be *simple*; to simplify complex transformations, *staging* should be used and the transition duration should be *long enough* to follow (but not longer). Although these principles seem to make sense intuitively, research on visual perception has shown to produce unintuitive results.
-
-### Visual tracking
-
-Research on visual tracking explores how people track objects when the objects are moving. Participants typically have to track the position of several individual objects (circles or rectangles) or a group of objects under different conditions. These experiments have revealed several, sometimes surprising, properties of the human perception:
-
-*Animation speed*: Higher animation speeds do not strongly influence tracking ability. [@Franconeri-10:trackingmultiple]   
-
-*Distance traveled*: Longer distances traveled make objects harder to track [@Franconeri-10:trackingmultiple]  
-
-*Number of objects*: In typical situations, four objects can be tracked in parallel. [@Yantis-92:multielementvisuala]
-
-*Unpredictable paths*: Have only a minimal impact on tracking performance. [@Chevalier-14:notsostaggeringeffect]
-
-*Occlusion*: Doesn't impair tracking when it can be interpreted as "one object disappears" behind another [@Scholl-99:trackingmultiple]
-
-*Crowding*: When objects that need to be tracked get close to each other, tracking performance is impaired.  [@Chevalier-14:notsostaggeringeffect]
-
-*Multiple objects are tracked as one convex area*: Deformation of this area as well as distractors entering the convex area lead to impaired tracking performance. [@Yantis-92:multielementvisuala, @Chevalier-14:notsostaggeringeffect]
-
-The last point also illustrates an important distinction in visual tracking tasks. Results are often different for cases where the identity of single objects needs to be tracked (*identity tracking*) or when a group of objects needs to be tracked (*group tracking*). In the example above, *group tracking* is worse when distractors enter the convex area formed by the objects of the group. *Identity tracking*, on the other hand, gets better in this case. [@Chevalier-14:notsostaggeringeffect]
-
-Multiple design approaches have therefore been proposed to increase apprehension.
-
-### Staggered animation
-
-![In staggered animation, some objects start to animate only with a delay. ](/Users/jonas/Desktop/P9/bericht/img/staggering.png)
-
-Staggered animation delays the start time animations incrementally for some objects. An example: out of 7 objects, 4 will start to move right away, 3 other objects will start to move only a bit later. The delay between the starts is called *dwell*. A dwell of zero means no staggering.
-
-Staggered animation has been proposed to *reduce occlusion* as well as *complexity* during animation and therefore lead to a higher tracking performance  [@Heer-07:animatedtransitions]  but the effect is negligible. [@Chevalier-14:notsostaggeringeffect]
-
-### Staged animation {#sec:staged-animation}
-
-Staged animation splits complex animations between multiple visual variables into stages. An animation then interpolates between positions as well as between two colors, might, for example, be split into two animation stages. One where the objects move from position a to position b. Another, where they change color.
-
-Heer et al. explicitly recommend the use of staged animation [@Heer-07:animatedtransitions] even though they found only modest benefits. In situations where staging led to complex and long animations, the authors found it even detrimental for tracking performance. This is also what cognitive load theory would predict because long, uninterrupted multi-stage animation will introduce elements into working memory but not leave the viewer time to organize them into long term memory. Her working memory will therefore overflow and she will forget what she had seen before.
-
-### Animation duration
-
-Multiple authors observe that the duration of animation has a major impact on perception. [@Shanmugasundaram-07:cansmooth] Animation that is too slow is strongly disliked by readers.[@Baudisch-06:phosphorexplaining] Others counter that very fast animation might lead to higher error rates [@Heer-07:animatedtransitions]. This assumption has been refuted by Franconeri et al. [@Franconeri:2010ela] who showed that higher speeds have no impact on tracking performance when the distance between objects stays large enough.
-
-### Direct manipulation
-
-Readers typically perform better at recall and problem solving, when they can control animation themselves. Multiple authors have shown this for cases where readers could start and stop animated transitions [@Chan:2005vx],[@Hasler:2007]. But here too, it is hard to separate different effects. Tversky et al. point out, that interaction has been shown to benefit learning in itself and just happens to be coupled with animation often. [@Tversky-02:animationcan]
-
-### Easing
-
-John Lasseter in his classic paper on the principles of computer animation [@Lasseter-87:principlestraditional] describes that animators developed a preference for "slow-in-slow-out" over linear easing over time. This recommendation has been confirmed in more formal experiments. [@Dragicevic-12:temporaldistortion]
-
-Most of these examples show how perceptual properties, which are often not intuitive in their most basic forms, interact to form phenomena which are very hard to generalize in real-world applications. The only things that seem pretty sure from the literature are that optimal animations should be short, user-controlled and involve no more than four objects.
-
-
-
-## Unfair comparisons
-
-Some studies who have reported benefits of animated transitions have been criticized for involving "unfair comparisons". [@Tversky-02:animationcan] The animations presented contained information that was not easily deducible from the non-animated transitions.  Tversky et al. [@Tversky-02:animationcan, p. 251] put it like this:
-
-> Showing that students learn material better when it is presented than when it is not presented should not be a goal of empirical research.
-
-Fair comparisons, in contrast, need to identify *informationally distinct* states very clearly and show them not just in the animated scenario but also in all the scenarios they are compared to. Tversky et al. find that in these experiments, purported benefits of animation often fail to materialize.
 
 
 
