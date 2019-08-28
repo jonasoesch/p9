@@ -36,12 +36,14 @@ This can be done via an accompanying narrative text, but visual methods like col
 
 
 
-## Research outline
+## Thesis outline
 
 The main question that motivates this thesis is: Do animated transitions help readers understand the relationships between charts? To find this out we have used the following methodology:
 
-1. The goal of the first part is to gain an understanding of the kind of relationships that exist between charts and how readers find them. For this we conduct a review of the existing literature and of examples from visualization practice.
-2. The goal of the second part is to understand how animated transitions can support readers in understanding the relationships described in part one.
+1. The first part presents the theoretical background on transitions and animation.
+2. The second part reconceptualizes the theory in order to link different types of transitions to different strengths of animation.
+3. The third part presents an experiment that we have proposed to find if and how animated transitions can help the reader understand transitions between charts.
+4. The fourth part presents our implementation of animated transitions based on the concepts presented in part two.
 
 
 
@@ -49,11 +51,13 @@ The main question that motivates this thesis is: Do animated transitions help re
 
 This work makes the following novel contributions:
 
-1. It refines previous work on transitions in narrative visualizations by connecting it to Gleicher's work on *comparison* [@Gleicher-18:considerationsvisualizing] and to *cognitive load theory* [@Sweller-11:emergingthemes]. This contributes to understanding why certain transitions are perceived as more difficult to understand than others by the reader. It also implies certain strategies to reduce the difficulty of transitions: *chunking*, *highlighting*, *supporting object constancy*
+1. It proposes a new way to look at transitions in narrative visualization by connecting the problem of understanding transitions to work on comparison and to cognitive load theory.
 2. It provides empirical evidence that animated transitions help with highlighting and object constancy. Our findings also support existing literature that shows that animated transitions do not lead to a better understanding of relationships nor to higher engagement for abstract representations of data.
-3. Based on the findings in part one and in support of the experiment in part two we propose a software library that permits the rapid implementation of visualizations with animated transitions. The main contribution is an abstraction that allows to quickly define charts and transitions.
+3. Based on the findings in part two and in support of the experiment in part three we propose a software library that permits the rapid implementation of visualizations with animated transitions. The main contribution is an abstraction that allows to quickly define charts and transitions.
 
+\newpage
 
+\part{Theoretical background}
 
 # Transitions
 
@@ -299,7 +303,7 @@ Heer et al. explicitly recommend the use of staged animation [@Heer-07:animatedt
 
 Multiple authors have observed that making animation slower has a negative effect on readers. [@Shanmugasundaram-07:cansmooth, @Baudisch-06:phosphorexplaining]. Others counter that very fast animation might lead to higher error rates [@Heer-07:animatedtransitions]. This assumption has been refuted by Franconeri et al. [@Franconeri:2010ela] who showed that higher speeds have no impact on tracking performance when the distance between objects stays large enough.
 
-#### Direct manipulation
+#### Direct manipulation {#sec:direct-manipulation}
 
 Readers typically perform better at recall and problem solving, when they can control animation themselves. Multiple authors have shown this for cases where readers could start and stop animated transitions [@Chan:2005vx, @Hasler:2007]. But here too, it is hard to separate different effects. Tversky et al. point out, that interaction has been shown to benefit learning in itself and just happens to be coupled with animation often [@Tversky-02:animationcan].
 
@@ -325,7 +329,9 @@ Further doubts on reported benefits of animation come from the problem of *infor
 
 Fair comparisons, in contrast, need to identify *informationally distinct* states very clearly and show them not just in the animated scenario but also in all the scenarios they are compared to. Tversky et al. find that in these experiments, purported benefits of animation often fail to materialize.
 
+\newpage
 
+\part{Reconceptualization of the theory}
 
 # Perception-oriented classification
 
@@ -337,17 +343,17 @@ The central element of the proposed re-conceptualization is the comparison targe
 
 (TODO:graphic)
 
-### Characters
+### Characters ![](img/char.pdf)
 
 A character is what we have called a *target* (@sec:comparison). In its simplest form it takes up one slot in the readers' working memory. Characters are clearly distinguishable and nameable visual entities in the chart. It can be a dot, a line or any other mark. In visualization, these entities are very often identified by one or more independent, categorical variables. For example countries, genders, age groups, etc. Even though this definition might seem abstract at first, it is in most cases very easy to identify characters in narrative visualization. That is because the narrative will often explicitly identify them. But characters can also be identified implicitly and through visual statistics.
 
 This indicates that characters are only fully identified in the readers mind and can be dependent on concepts from long term memory. One example for this is, that multiple characters can be grouped into a unifying character. Switzerland, Italy, and France could form the group *European countries* while Japan, China, and Korea might be combined into *Asian countries*. Grouping is therefore one way to reduce the cognitive load by relying on long term memory.
 
-### Attributes
+### Attributes ![](img/attr.pdf)
 
 Attributes define the shape of a character and therefore its complexity. Our classification uses the term to describe all the other variables encoded in the visualization in the form of position, size, shape, etc. Attributes are showing different aspects of the characters. Country-characters can have population numbers over time. Gender-characters might have differing PISA-test success rates or might marry at different ages.
 
-### Context
+### Context ![](img/ctxt.pdf)
 
 Finally, many charts typically have a context. The situation shown might be for a certain year, for a certain revision of the PISA-test or according to a certain source. The context is often depicted in the title. When the context changes between two charts, it makes the relationship between the characters more complex.
 
@@ -373,27 +379,27 @@ For each example, a screenshot of each chart was pasted on a canvas in order. Fi
 
 ## Transition types {#sec:corpus-analysis}
 
-|                        | Characters | Attributes   | Context    |
-| ---------------------- | ---------- | ------------ | ---------- |
-| Explore attributes     | Same       | Differ       | Same       |
-| Contrast characters    | Differ     | Same         | Same       |
-| Reconfigure            | Same       | Get remapped | Same       |
-| Split characters       | Split      | Same         | Same       |
-| Merge characters       | Merged     | Same         | Same       |
-| Highlighting           | Less       | Same         | Same       |
-| Progressive disclosure | More       | Same         | Same       |
-| Context                | Can differ | Same         | Differs    |
-| Semantic field         | Differ     | Differ       | Can differ |
+|                        | Characters ![](img/char.pdf) | Attributes ![](img/attr.pdf) | Context ![](img/ctxt.pdf) |
+| ---------------------- | ---------------------------- | ---------------------------- | ------------------------- |
+| Explore attributes     | Same                         | Differ                       | Same                      |
+| Contrast characters    | Differ                       | Same                         | Same                      |
+| Reconfigure            | Same                         | Get remapped                 | Same                      |
+| Split characters       | Split                        | Same                         | Same                      |
+| Merge characters       | Merged                       | Same                         | Same                      |
+| Highlighting           | Less                         | Same                         | Same                      |
+| Progressive disclosure | More                         | Same                         | Same                      |
+| Context                | Can differ                   | Same                         | Differs                   |
+| Semantic field         | Differ                       | Differ                       | Can differ                |
 
-Table:  (Transition types are defined by how characters, attributes and context differ between two charts.) \label{table-transition-types}
+Table:  Transition types are defined by how characters, attributes and context differ between two charts. \label{table-transition-types}
 
 ### Explore attributes
 
 ![Two examples of transitions exploring different attributes of the same characters. On the left side from a story of TODO and on the right side a story of TODO  \label{technique-diffent-measure}](/Users/jonas/Desktop/P9/bericht/img/technique-different%20measure.pdf)
 
-| Characters    | Attributes | Context |
-| ------------- | ---------- | ------- |
-| Stay the same | Differ     | Same    |
+| Characters ![](img/char.pdf) | Attributes ![](img/attr.pdf) | Context ![](img/ctxt.pdf) |
+| ---------------------------- | ---------------------------- | ------------------------- |
+| Stay the same                | Differ                       | Same                      |
 
 This is probably the most obvious transition type for storytelling. Here the author explores different aspects of the same character(s). In many cases, this will be done by mapping a different attribute to one of the axes, like on the left side of figure \ref{technique-diffent-measure}. Here the author compares incarceration rates  ![](img/attr.pdf) for black ![](img/char.pdf)and white men ![](img/char.pdf) by the income of their parents ![](img/attr.pdf) in the first chart. In the second, the incarceration rate ![](img/attr.pdf) gets replaced with the percentage of children who are married ![](img/attr.pdf). To show that you are more likely to get incarcerated and less likely to get married when you are from a black family.
 
@@ -411,9 +417,9 @@ The corresponding transition in Hullman et al. is a *measure walk* (see section 
 
 ![technique-contrast \ref{technique-contrast}](/Users/jonas/Desktop/P9/bericht/img/technique-contrast.pdf)
 
-| Characters | Attributes    | Context |
-| ---------- | ------------- | ------- |
-| Differ     | Stay the same | Same    |
+| Characters ![](img/char.pdf) | Attributes ![](img/attr.pdf) | Context ![](img/ctxt.pdf) |
+| ---------------------------- | ---------------------------- | ------------------------- |
+| Differ                       | Stay the same                | Same                      |
 
 We call this technique contrasting because it highlights the difference between characters. It's typical for these transitions to keep the same layout between two states and just switching characters. Only like this, a visual comparison is possible. This is the case for the example on the left in figure \ref{technique-contrast}. The income gap between black ![](img/char.pdf) and white men ![](img/char.pdf) becomes very clear in comparison to the obvious lack of the gap for women ![](img/char.pdf) when plotted in the same coordinate system.
 
@@ -427,9 +433,9 @@ The corresponding transition in Hullman et al. is a *dimension walk* (see sectio
 
 ![\label{technique-reconfigure}](/Users/jonas/Desktop/P9/bericht/img/technique-reconfigure.pdf)
 
-| Characters    | Attributes                                                   | Context |
-| ------------- | ------------------------------------------------------------ | ------- |
-| Stay the same | Stay the same but get remapped to different visual variables | Same    |
+| Characters ![](img/char.pdf) | Attributes ![](img/attr.pdf)                                 | Context ![](img/ctxt.pdf) |
+| ---------------------------- | ------------------------------------------------------------ | ------------------------- |
+| Stay the same                | Stay the same but get remapped to different visual variables | Same                      |
 
 The defining characteristic of this transition is, that no new information is shown from the first to the second state. The information is just shown in a different way to clarify different aspects. The left example in figure \ref{technique-reconfigure} first shows the reader just how much the cases of measles have been  reduced through vaccination. It then *zooms* in on the portion of the chart showing the cases in recent times. They were too small to be visible in the first chart but technically present. This sort of transition is a good replacement for a log-transformed axis which few people understand anyway (TODO:source)
 
@@ -443,9 +449,9 @@ Reconfigure subsumes the *pan*, *zoom*, *reorder* and *visualization change* tra
 
 ![technique-split](/Users/jonas/Desktop/P9/bericht/img/technique-split.pdf)
 
-| Characters                                       | Attributes    | Context |
-| ------------------------------------------------ | ------------- | ------- |
-| Visible characters are split into sub-characters | Stay the same | Same    |
+| Characters ![](img/char.pdf)                     | Attributes ![](img/attr.pdf) | Context ![](img/ctxt.pdf) |
+| ------------------------------------------------ | ---------------------------- | ------------------------- |
+| Visible characters are split into sub-characters | Stay the same                | Same                      |
 
 As described in ([-@sec:our-model]l) characters need not be atomic units. Groups of similar characters can be perceived as a character themselves. But sometimes the author wants to convey how characters in a group differ from each other and thus how (in-)homogeneous a group is.
 
@@ -457,9 +463,9 @@ Splitting characters is what Hullman et al. call a *general-to-specific* transit
 
 ![technique-merge](/Users/jonas/Desktop/P9/bericht/img/technique-merge.pdf)
 
-| Characters                    | Attributes    | Context |
-| ----------------------------- | ------------- | ------- |
-| Visible characters are merged | Stay the same | Same    |
+| Characters ![](img/char.pdf)  | Attributes ![](img/attr.pdf) | Context ![](img/ctxt.pdf) |
+| ----------------------------- | ---------------------------- | ------------------------- |
+| Visible characters are merged | Stay the same                | Same                      |
 
 Where there is splitting, there needs to be merging. But merging is conceptually more complicated than splitting. Splitting shows more information in the second chart while merging summarizes information from the first chart. In the second case, it is much more important for the reader to understand the summary operation that is being used. Is the new character the mean, the sum or even the difference of the characters previously seen? Both examples in figure \ref{technique-merge} illustrate this problem very well. Visually, the natural factors ![](img/char.pdf) presented in the second chart could very well be the mean of volcanic ![](img/char.pdf) , solar ![](img/char.pdf) and orbital change ![](img/char.pdf). But it's actually the sum. In the example on the right, the pink bars might well represent the sum of the dots on the left but it's actually the difference. TODO:[@Kim-19:designinganimated]
 
@@ -471,9 +477,9 @@ Hullman et al. call this transition *specific to general*  (see section [-@induc
 
 ![\label{technique-focus}](/Users/jonas/Desktop/P9/bericht/img/technique-focus.pdf)
 
-| Characters        | Attributes    | Context |
-| ----------------- | ------------- | ------- |
-| Get filtered down | Stay the same | Same    |
+| Characters ![](img/char.pdf) | Attributes ![](img/attr.pdf) | Context ![](img/ctxt.pdf) |
+| ---------------------------- | ---------------------------- | ------------------------- |
+| Get filtered down            | Stay the same                | Same                      |
 
 This technique again serves the very common *general-to-specific*-pattern (TODO:source). It focuses the reader on a specific character or a special group of characters. The most common way to do this is by hiding the other characters. An example of this can be found in the left example in figure \ref{technique-focus} where all the second chart only shows Hungary ![](img/char.pdf) from all the EU countries ![](img/char.pdf). In the example on the right side of figure \ref{technique-focus} the transition hides the other age groups ![](img/char.pdf) to highlight the 25 to 44 group ![](img/char.pdf) . Many other ways of highlighting one character are imaginable.
 
@@ -485,9 +491,9 @@ Highlighting is the equivalent of a *filter* transition from the visualization-o
 
 ![\label{technique-disclosure}](/Users/jonas/Desktop/P9/bericht/img/technique-disclosure.pdf)
 
-| Characters                           | Attributes    | Context |
-| ------------------------------------ | ------------- | ------- |
-| More or more of them becomes visible | Stay the same | Same    |
+| Characters ![](img/char.pdf)         | Attributes ![](img/attr.pdf) | Context ![](img/ctxt.pdf) |
+| ------------------------------------ | ---------------------------- | ------------------------- |
+| More or more of them becomes visible | Stay the same                | Same                      |
 
 Similar to split and merge, this is the counterpart of highlighting. And similar, to merge it is a useful device for *ladder of abstraction*-storytelling. [@Victor-11:ladderabstraction] One version of this technique introduces new characters in the second chart as seen on the right in figure \ref{technique-disclosure}. Another variant shows more of the same character(s) in the second chart. The example on the left shows more and more of the course of the game between the Miami Heats ![](img/char.pdf) and the Houston Rockets ![](img/char.pdf) with each transition.
 
@@ -499,13 +505,13 @@ A particular case of progressive disclosure is what Hullman et al. call *spatial
 
 ![technique-temporal](/Users/jonas/Desktop/P9/bericht/img/technique-temporal.pdf	)
 
-| Characters     | Attributes    | Context |
-| -------------- | ------------- | ------- |
-| Stay the same* | Stay the same | Changes |
+| Characters ![](img/char.pdf) | Attributes ![](img/attr.pdf) | Context ![](img/ctxt.pdf) |
+| ---------------------------- | ---------------------------- | ------------------------- |
+| Stay the same*               | Stay the same                | Changes                   |
 
-The interest of the context transition is to show how the "situation" (the form of characters according to the same attributes) changes when the context changes. The most common case is comparing the situation at different points in time. In the left example in figure \ref{technique-temporal}, the author wants to convey how China ![](img/char.pdf) made up most of the world's poor ![](img/attr.pdf) in the 90s and is now home to a large part of the worlds middle class ![](img/attr.pdf) .
+The interest of the context transition is to show how the "situation" (the form of characters according to the same attributes) changes when the context changes. The most common case is comparing the situation at different points in time. In the left example in figure \ref{technique-temporal}, the author wants to convey how China ![](img/char.pdf) made up most of the world's poor ![](img/attr.pdf) in the 90s ![](img/ctxt.pdf) and is now ![](img/ctxt.pdf) home to a large part of the worlds middle class ![](img/attr.pdf) .
 
-The example on the right shows how a changing context may lead to a change in characters. Here the formerly single large administrative region around Budapest ![](img/char.pdf) has split into the rich Budapest ![](img/char.pdf) and the poor Pest ![](img/char.pdf) (notice how poor Pest only gets half of the name).
+The example on the right shows how a changing context may lead to a change in characters. Here the formerly ![](img/ctxt.pdf) single large administrative region around Budapest ![](img/char.pdf) has now ![](img/ctxt.pdf)split into the rich Budapest ![](img/char.pdf) and the poor Pest ![](img/char.pdf) (notice how poor Pest only gets half of the name).
 
 Hullman et al. identified the very prevalent change in temporal context but did not generalize it. (see section [-@inductive-classification]) As contexts contain groups of characters, they can become characters themselves at certain points of the story. That is why *context* transitions have a close relationship to *contrasting character* transitions and the distinction is not always 100% clear.
 
@@ -513,9 +519,9 @@ Hullman et al. identified the very prevalent change in temporal context but did 
 
 ![technique-semantic](/Users/jonas/Desktop/P9/bericht/img/technique-semantic.pdf)
 
-| Characters | Attributes | Context    |
-| ---------- | ---------- | ---------- |
-| Differ     | Differ     | Can differ |
+| Characters ![](img/char.pdf) | Attributes ![](img/attr.pdf) | Context    |
+| ---------------------------- | ---------------------------- | ---------- |
+| Differ                       | Differ                       | Can differ |
 
 This is probably the hardest transition for readers to follow as none of the elements are shared between the charts. The only thing that connects the two charts is that their characters come from the same field of concepts as described by Cohn [@Cohn-12:peanuts]. The reader, therefore, needs to move up in the conceptual hierarchy to find the relationship between the characters depicted.  In the example on the left, the reader needs to understand how the job growth ![](img/attr.pdf) is related to hourly earnings ![](img/attr.pdf). This requires a rather sophisticated internal model of economics, or a textual explanation. The same is true for the example on the right. It is not possible without a lot of external knowledge how the rising discrepancy of profits ![](img/char.pdf) and wages ![](img/char.pdf) is related to the decline in union memberships ![](img/attr.pdf) .
 
@@ -571,7 +577,7 @@ Different from the other two, highlighting does not require characters to be sha
 
 
 
-## Research hypotheses {#sec:hypotheses}
+# Research hypotheses {#sec:hypotheses}
 
 Based on the discussion in the previous section, we believe that animated transitions have the potential to support readers in understanding the relationship between two charts. This is the main research question of this work as mentioned in the introduction [@sec:introduction]. H2 to H6 test more specific hypotheses based on the strengths of animation presented in section [-@sec:animation]. The hypotheses only apply to transition types where animation can theoretically provide a benefit (compare to section [-@sec:implications]).
 
@@ -599,7 +605,9 @@ Animated transitions will focus the reader on the characters the author intended
 
 Readers will be more engaged by the visualizations with animated transitions.
 
+\newpage
 
+\part{Experiment}
 
 # Research method {#sec:experiment}
 
@@ -607,102 +615,158 @@ To test the above hypotheses, we have conducted an experiment which will be desc
 
 
 
-## Setup
+## Overview
 
-  ![experiment-setup.pdf](img/experiment-setup.pdf) 
+In the experiment we presented two narrative visualizations (stories) to each participant: *mortality* and *energy*. Each story contained a total of five charts and four transitions. Each participant saw one of the stories with *animated* transitions and the other with *static* (non-animated) transitions.
 
-The experiment was conducted on Amazon Mechanical Turk [@:amazonmechanical] and had 56 participants. After an introductory screen that explained the task, the participants saw 10 screens with 8 mini-stories from two continuous narrative visualizations. Each story was introduced through an initial single chart followed by 4 mini-stories with two charts each. At the end of each mini-story, a questionnaire that asked about their conclusions and their perceived engagement was displayed. After the two stories, we presented a final survey and finally displayed an answer code to verify their participation in the experiment. We paid each participant a fixed amount of USD 9 for completing the experiment. On average, participants took 52 minutes to complete the experiment. This results in a mean hourly wage of USD 10.40 with a minimum of USD 5.56 for the slowest participant and eight participants being paid less than the minimum hourly wage for the U.S. (7.25 USD).
+To examine each transition individually, we have split each story into four separate screens which we called *mini-stories* (see figure \ref{experiment-setup}). Each mini-story contained one transition and the two corresponding charts.
+
+This setup has made made it so that second chart of each mini-story is the first chart of the next mini-story. Normally, this would not be true for the initial mini-story. Because we did not want the initial mini-story to differ from the others in this respect, we have introduced another screen before each mini-story where the first chart is presented (see figure \ref{experiment-setup})
+
+At the end of each mini-story we presented a questionnaire asking about the participants conclusion and their perceived engagement which will be presented in more detail in section [-@sec:questionnaire].![experiment-setup.pdf \label{experiment-setup}](img/experiment-setup.pdf) 
+
+The experiment was conducted on Amazon Mechanical Turk [@:amazonmechanical] and had 56 participants. An introductory screen explained to the participants what they had to do. After the two stories, we presented a final survey (will be discussed in section [-@sec:survey]) and finally displayed an answer code to verify their participation in the experiment. We paid each participant a fixed amount of USD 9 for completing the experiment. On average, participants took 52 minutes to complete the experiment. This results in a mean hourly wage of USD 10.40 with a minimum of USD 5.56 for the slowest participant and eight participants being paid less than the minimum hourly wage for the U.S. (7.25 USD).
 
  ![results-duration.pdf](img/results-duration.pdf)
 
-## Overview {#sec:experiment-overview}
 
-Before we will go on to discuss the specifics of the experiment, we will present the stimuli. Each of the mini-stories contained two charts and a transition between them. For one of the stories, this transition was *static*, for the other it was animated to have a full within-subject design. In a static transition, the participant would initially see the first chart. Upon scrolling, it would be replaced by the second chart. When scrolling further, the questionnaire would appear. Animated transitions did not simply replace one chart with the other but showed an animation for a certain scrolling distance. Participants could freely control transitions and animations through their scrolling. They could also scroll back up while answering the survey.
 
-### Mortality
+## Stimuli {#sec:experiment-overview}
 
-The first story is about the evolution of mortality rates in the U.S. It is a modification of an article published by Bloomberg in 2014.[@Klein-14:howamericans]
+Before we go on to discuss other specifics of the experiment we will present the stimuli, the *transitions* and the *stories* in more detail. This will make the presentation of the experiment in the following sections much clearer.
+
+### Transitions
+
+Each participant saw both stories and each story contained either *animated* or *static* (non-animated) transitions. This design ensured that the distinction between *static* and *animated* transitions had maximimal statistical power.
+
+In both cases the transitions where controlled by scrolling. Initially a participant would see the first chart of a mini-story. When he scrolled down, the first chart would be replaced by the second chart. When scrolling even further, the questionnaire would appear. In *animated* transitions, the chart would not simply be replaced but the transition was animated. The animation was fully controlled through scrolling and could be played forward and backwards. This ensured that the amount of *direct manipulation* would be the same for both transitions (compare to section [-@sec:direct-manipulation]).
+
+### Mortality story
+
+The first story is about the evolution of mortality rates in the U.S. It is a modification of an article published by Bloomberg in 2014 [@Klein-14:howamericans]. The individual charts are displayed in figure \ref{mortality-charts}.
+
+![\label{mortality-charts}](img/mortality.pdf)
 
 #### Mortality A {#sec:mortality-a}
 
-![mortality-demographics](/Users/jonas/Desktop/P9/bericht/img/mortality-demographics.pdf)
-
-The first mini-story in the mortality story contains a combined transition. It first *merges the characters* populatio
-
-transition and . It begins with a chart showing how the whole population ![](img/char.pdf) has gotten older ![](img/attr.pdf) over time ![](img/attr.pdf) . The following chart shows how the mortality rates ![](img/attr.pdf) of both genders ![](img/char.pdf) have been reduced drastically over the same period. The transition thus conveys how reducing mortality rate leads to an aging population. The transition is animated by merging all the age groups into the grey "Everyone"-line and shows the lines for men and women subsequently.
+It begins with a chart showing how the distribution of age groups ![](img/char.pdf)has changed resulting in an aging population ![](img/char.pdf) over time ![](img/attr.pdf) . The transition first *merges* the individual age groups ![](img/char.pdf) into an "Everyone" group ![](img/char.pdf) . And then it replaces the share of population ![](img/attr.pdf) with the "deaths per 100'000" ![](img/attr.pdf) . The next chart shows how "deaths per 100'000" have been reduced drastically over time ![](img/attr.pdf) . The transition thus conveys how reducing mortality rate leads to an aging population. 
 
 #### Mortality B {#sec:mortality-b}
 
-![mortality-absolute](/Users/jonas/Desktop/P9/bericht/img/mortality-absolute.png)
-
-The second mini-story contrasts the mortality rate ![](img/attr.pdf) of different characters ![](img/char.pdf) . It starts with the last chart from the previous transition showing the mean mortality rates for "Men" ![](img/char.pdf), "Women" ![](img/char.pdf) and "Everyone" ![](img/char.pdf). This is contrasted to the evolution of the mortality rates ![](img/attr.pdf) of different age groups ![](img/char.pdf). From this mini-story, the reader learns that the mortality rate is dominated (unsurprisingly) by elderly people. An apparent slowdown in mortality rate reduction in the first chart is therefore mostly due to to the development in the "Over 84" group. In the animated transition "Men" and "Women" characters are first hidden, the "Everyone" character is being split and morphed into the different age groups.
+The second transition *splits*  "Everyone" ![](img/char.pdf) again into the different age groups ![](img/char.pdf). From this mini-story, the reader learns that the mortality rate is dominated (unsurprisingly) by elderly people. An apparent slowdown in mortality rate reduction in the first chart is therefore mostly due to to the development in the "Over 84" group.
 
 #### Mortality C {#sec:mortality-c}
 
-![mortality-relative](/Users/jonas/Desktop/P9/bericht/img/mortality-relative.pdf)
-
-Again, this mini-story starts with the last chart of the previous mini-story. In the second chart, the same data is shown but with the mortality rate of each character normalized to its rate in 1968. Thanks to this it becomes apparent that even though the elderly have made the most progress in absolute numbers, the relative reduction is highest for younger age groups. This transition is animated by morphing each character into its new shape.
-
-
+The third transition *reconfigures* the x-axis to show the relative evolution of the mortality rate ![](img/attr.pdf) for each age group ![](img/char.pdf). Thanks to this it becomes apparent that even though the elderly have made the most progress in absolute numbers, the relative reduction is highest for younger age groups.
 
 #### Mortality D {#sec:mortality-d}
 
-![mortality-causes](/Users/jonas/Desktop/P9/bericht/img/mortality-causes.pdf)
-
-Some readers might have wondered why the mortality rate for "25–44" year olds ![](img/char.pdf) was rising  at the beginning of the 90s. This mini-story introduces their causes of death ![](img/char.pdf) in the second chart which quickly answers the question: it was precisely at this point that the AIDS-epidemic was at its peak and has most strongly affected this age group. The animation first hides all the other age groups, splits the "25–44"-line and morphs it into the different causes of death.
+Some readers might have wondered why the mortality rate for "25–44" year olds ![](img/char.pdf) was rising  at the beginning of the 90s. The fourth transition therefore *splits* this age group ![](img/char.pdf) into its individual causes of death ![](img/char.pdf). This answers the question: it was precisely at this point that the AIDS-epidemic was at its peak and has most strongly affected this age group. The animation first hides all the other age groups, splits the "25–44"-line and morphs it into the different causes of death.
 
 
 
-### Energy
+### Energy story
 
-This story talks about the evolution of energy sources in the U.S. since the beginning of the century. It combines a story from the New York Times  [@Popovich-18:howdoes] with one from Forbes [@Mahajan-18:plungingprices].
+This story talks about the evolution of energy sources in the U.S. since the beginning of the century. It combines a story from the New York Times  [@Popovich-18:howdoes] with one from Forbes [@Mahajan-18:plungingprices]. The individual charts are displayed in figure \ref{energy-charts}.
+
+![\label{energy-charts}](img/energy.pdf)
 
 #### Energy A {#sec:energy-a}
 
-![energy-A](/Users/jonas/Desktop/P9/bericht/img/energy-A.pdf)
-
-The energy story starts by showing the evolution of different energy sources ![](img/char.pdf) in the U.S in absolute numbers ![](img/attr.pdf). In the second chart, it shows how the proportions ![](img/attr.pdf) have changed over time. From comparing the two charts it becomes clear that while the absolute output has either risen or stagnated, coal has been used significantly less while the focus seems to be shifting to natural gas and the renewables. The animated transition morphs the lines into their respective areas in the second chart.
+The energy story starts by showing the evolution of different energy sources ![](img/char.pdf) in the U.S in absolute numbers ![](img/attr.pdf). The transition *reconfigures* these characters to show how the proportion of use ![](img/attr.pdf) for each energy source ![](img/char.pdf) has changed over time ![](img/attr.pdf). From comparing the two charts it becomes clear that while the absolute output has either risen or stagnated, coal ![](img/char.pdf) has been used significantly less while the focus seems to be shifting to natural gas and the renewables. The animated transition morphs the lines into their respective areas in the second chart.
 
 #### Energy B {#sec:energy-b}
 
-![energy-B](/Users/jonas/Desktop/P9/bericht/img/energy-B.pdf)
-
-As in the mortality narrative, the second mini-story starts with the last chart from the previous mini-story. In the second chart, it shows how wind ![](img/char.pdf) has become a major energy source ![](img/char.pdf) in certain (great plains) states ![](img/char.pdf) . The transition leads to the conclusion that, although the rise of wind energy looks unspectacular on a national scale, growth has been exponential in some places. The animation first hides everything except the area for "wind" which is then split and morphed into the lines of the individual states.
+The second transition *splits* wind energy ![](img/char.pdf) into different states ![](img/char.pdf). It shows how wind  has become a major energy source in certain (great plains) states and leads to the conclusion that, although the rise of wind energy looks unspectacular on a national scale, growth has been exponential in some places.
 
 #### Energy C {#sec:energy-c}
 
-
-
-![energy-C](/Users/jonas/Desktop/P9/bericht/img/energy-C.png)
-
-The third mini-story focuses on the strange stagnation of wind energy ![](img/ctxt.pdf) in California ![](img/char.pdf) after 2013. To find out where the focus might have shifted, the second chart shows the energy mix of California ![](img/ctxt.pdf) over time ![](img/attr.pdf). A marked rise in solar power ![](img/char.pdf) after 2013 implies that the state has decided to invest in this renewable instead of wind ![](img/char.pdf). The animation first highlights California and then expands it into the other sources.
+The third mini-story focuses on the strange stagnation of wind energy ![](img/ctxt.pdf) in California ![](img/char.pdf) after 2013. The third transition first *highlights* wind energy in California ![](img/char.pdf) and then *discloses* the usage proportions ![](img/attr.pdf) of other energy sources ![](img/char.pdf)  in the same state ![](img/ctxt.pdf). A marked rise in solar power ![](img/char.pdf) after 2013 implies that the state has decided to invest in this renewable instead of wind ![](img/char.pdf).
 
 #### Energy D {#sec:energy-d}
 
-![energy-D](/Users/jonas/Desktop/P9/bericht/img/energy-D.png)
-
-Finally, this transition explores one of the possible reasons for Californias ![](img/ctxt.pdf) decision to focus on solar energy from 2013 on. The second chart shows the price evolution ![](img/attr.pdf) of different energy sources ![](img/char.pdf). While wind energy ![](img/char.pdf) has been consistently inexpensive, the price of solar power ![](img/char.pdf) has fallen substantially over time. It even reached the price level of wind energy in 2013. Which implies that Californias focus on solar rather than wind energy might have economic reasons. The animation morphs the areas representing the share of different energy sources into the line showing its price evolution.
+The final transition *explores* one of the possible reasons for Californias ![](img/ctxt.pdf) decision to focus on solar energy from 2013 on. Instead of the shares ![](img/attr.pdf) of the individual energy sources  ![](img/char.pdf) it shows their cost ![](img/attr.pdf) . While wind energy ![](img/char.pdf) has been consistently inexpensive, the price of solar power ![](img/char.pdf) has fallen substantially over time. It even reached the price level of wind energy in 2013. Which implies that Californias focus on solar rather than wind energy might have economic reasons.
 
 
 
-## Independent variable and conditions
+## Conditions
 
-(TODO:illustration of the different transitions)
+The main goal of the experiment was to find differences between *animated* and *static* transitions. We, therefore, chose this to be the *independent variable*. We counterbalanced for some of the confounders like *topic* and visualization *design* by using the two different stories with difference designs presented before. This has resulted in the following within-subject design:
 
-The main concern of the experiment was finding differences between *animated* and *static* transitions. We, therefore, chose this to be the independent variable. We counterbalanced for some of the confounders like *topic* and visualization *design* by using the two different stories with difference designs presented before. This has resulted in the following within-subject design:
+| Condition | Story 1            | Story 2            |
+| --------- | ------------------ | ------------------ |
+| **1**     | Mortality static   | Energy animated    |
+| **2**     | Mortality animated | Energy static      |
+| **3**     | Energy static      | Mortality animated |
+| **4**     | Energy animated    | Mortality static   |
 
-| Condition 1                             | Condition 2                               | Condition 3                               | Condition 4                             |
-| --------------------------------------- | ----------------------------------------- | ----------------------------------------- | --------------------------------------- |
-| Mortality story with static transitions | Mortality story with animated transitions | Energy story with static transitions      | Energy story with animated transitions  |
-| Energy story with animated transitions  | Energy story with static transitions      | Mortality story with animated transitions | Mortality story with static transitions |
+By its nature, each story consisted of several different types of transitions which were not counterbalanced.
 
-By its nature, each story consisted of several different transitions but we did not counterbalance them.
 
-Initially, we intended to include another independent variable to more thoroughly test H4. This independent variable compared two different layouts: *superposed* and *juxtaposed*. The usual case for animated transitions in narrative visualization is that only one chart is visible at a time, which corresponds to a *superposed* layout. We believe that help with maintaining object constancy is only needed in this case. In the case where both charts are presented next to each other (*juxtaposed*) animation would rather be a distractor than a help and the number of participants who would interpret the relationship correctly would be lower for the animated transition.
 
-Finally, we decided to exclude this variable from the current experiment because it would have required two more stories for a within-subject design or an order of magnitude more participants to achieve the desired statistical power. For both of these, we lacked the resources.
+## Data collection
 
-Before each story, we added a screen that simply showed the initial chart of the first mini-story and asked the participant to report on her understanding of this single chart. This was to account for the fact that for mini-stories B to D, the participants had already seen the first chart in the previous mini-story and we did not want mini-story A to be an exception in this regard.
+### Questionnaire {#sec:questionnaire}
+
+#### Conclusion
+
+The questionnaire at the end of each mini-story asked participants the following question: "What is your overall conclusion from the two charts on this page?". It then provided a free-form text field for them to provide an answer. We asked for answers that were at least three sentences long. The wording was chosen so as to not hint at a relation between the two charts. We have included two other questions that served as attention and understanding checks. The full questionnaire can be found in appendix \ref{appendix-questionnaire}.
+
+#### Focused attention
+
+It also included a subset of the validated *user engagement scale* questionnaire. The scale measures multiple attributes like *focused attention*, *perceived usability*, *aesthetics* or *reward* that together form what is known as *engagement* in the literature [@Obrien-18:practicalapproach]. But even the short questionnaire contains twelve questions which would have been too long to ask after each transition. We, therefore, decided to use a sub-scale of the *user engagement scale* that measures *focused attention*. The reason to use *focused attention* was that it was found to be the factor that explained most of the variance in O'Brien et al.'s analysis [@Obrien-18:practicalapproach] Also, the questions skew towards the positive (compared to the other option, *perceived usability*) and we did not want to negatively prime the participants.
+
+### Survey
+
+The survey at the end of the experiment was introduced to get a sense of the demographics and some additional information that might help to explain outliers.
+
+#### Age
+
+In the final survey, we asked the participants about their age to better understand the diversity of the population that was participating in the experiment.
+
+#### Gender
+
+We equally asked the participants about their gender in the final survey to help us understand how diverse our population was.
+
+#### Level of education
+
+Also asked in the final survey, this would act as a rough proxy for visualization understanding. We assumed certain outliers might potentially be explained by a low level of education.
+
+#### Vision
+
+Equally, if the participants reported weak and uncorrected vision, we could potentially exclude them from the analysis if we found that the factor skewed the results.
+
+#### Colorblindness {#sec:colorblindness}
+
+![experiment-colorblindness](img/experiment-colorblindness.png)
+
+A final criterion we considered for explaining outliers was color blindness. We did not ask participants to report on their colorblindness because not all people who are colorblind know about it. Instead, we presented them three plates from the Ishihara colorblindness test  [@Ishihara-17:ishiharatest]. The plates we have selected, tested for red-green blindness. The most common form of colorblindness, that affects about 8% of men and 0.4% of women. [@-19:colorblindness]
+
+The full survey can be found in appendix \ref{appendix-survey}.
+
+### Passive data collection
+
+The participants actions on each page were continually monitored. We recorded scrolling, typing as information about the participants browser throughout the experiment.
+
+#### Scrolling
+
+Each scrolling interaction with a transition was recorded and timestamped so that we would be able to review how many times a participant saw a transition and how they played the animated transitions.
+
+#### Typing
+
+Each keystroke was recorded with a timestamp. This allowed us to separate viewing time from typing time.
+
+#### Start and end times
+
+Were recorded to know how much time each participant spent on each mini-story.
+
+#### Browser parameters
+
+Browser parameters like window size and user agent were collected as another way to explain outliers.
+
+A complete overview of the data that was collected passively can be found in appendix \ref{appendix-passivedata}.
+
+
 
 ## Dependent variables
 
@@ -728,7 +792,7 @@ If animated transitions would support object constancy, participants would need 
 
 #### H5: Engagement
 
-The literature suggests that animated transitions will lead to higher reader engagement. To measure this, we have used a subset of the validated *user engagement scale* questionnaire. The scale measures multiple attributes like *focused attention*, *perceived usability*, *aesthetics* or *reward* that together form what is known as *engagement* in the literature. [@Obrien-18:practicalapproach] But even the short questionnaire contains twelve questions which would have been too long to ask after each transition. We, therefore, decided to use a sub-scale of the *user engagement scale* that measures **focused attention**. The reason to use *focused attention* was that it was found to be the factor that explained most of the variance in O'Brien et al.'s analysis [@Obrien-18:practicalapproach] Also, the questions skew towards the positive (compared to the other option, *perceived usability*) and we did not want to negatively prime the participants.
+The literature suggests that animated transitions will lead to higher reader engagement. To measure this, we have used 
 
 We considered **word count** to be another proxy for engagement. As the participants were in a task-oriented setting, we generally expected them to not lose their time with long answers. If answers turn out to be considerably longer in one of the scenarios, we assumed that it was because it engaged them.
 
@@ -744,27 +808,7 @@ To exclude effects that would result from differences in layout and element size
 
 Equally, participants with browsers that did not support the technologies we used for the animated transitions were blocked from the experiment. This had the positive side-effect of equally blocking slower browsers.
 
-#### Age
 
-In the final survey, we asked the participants about their age to better understand the diversity of the population that was participating in the experiment.
-
-#### Gender
-
-We equally asked the participants about their gender in the final survey to help us understand how diverse our population was.
-
-#### Level of education
-
-Also asked in the final survey, this would act as a rough proxy for visualization understanding. We assumed certain outliers might potentially be explained by a low level of education.
-
-#### Vision
-
-Equally, if the participants reported weak and uncorrected vision, we could potentially exclude them from the analysis if we found that the factor skewed the results.
-
-#### Colorblindness {#sec:colorblindness}
-
-![experiment-colorblindness](/Users/jonas/Desktop/P9/bericht/img/experiment-colorblindness.png)
-
-A final criterion we considered for explaining outliers was color blindness. We did not ask participants to report on their colorblindness because not all people who are colorblind know about it. Instead, we presented them three plates from the Ishihara colorblindness test  [@Ishihara-17:ishiharatest]. The plates we have selected, tested for red-green blindness. The most common form of colorblindness, that affects about 8% of men and 0.4% of women. [@-19:colorblindness]
 
 
 
@@ -890,7 +934,7 @@ On all three dimensions, we did not find any significant differences between ani
 
 
 
-### Conclusions
+### Discussion
 
 Based on the literature and the above findings we arrive at several conclusions about the nature of transitions and animation. We came to believe that animation indeed guides the reader's eye between transitions and therefore supports object constancy and cueing at the level of perception. But the results also indicate that relationships are interpreted at a much higher level and perceptual differences don't directly influence this interpretation. Finally, we are still unsure about how animation precisely influences engagement but there are strong hints that its effect is not as universally positive as often portrayed in the literature.
 
@@ -902,7 +946,9 @@ Almost 20% of the participants saw animated transitions that we categorized as s
 
 The task was rather difficult.
 
+\newpage
 
+\part{Implementation}
 
 # Implementation
 
@@ -1022,7 +1068,7 @@ Finally, the `director` contains a kind of "scroll-timeline" of charts. Based on
 
 
 
-### Program generation and rendering process
+## Program generation and rendering process
 
 1. In a first step, the system generates objects for all the charts with their axes, characters, and annotations from the specification. Wherever something is not defined, it assumes a sensible default if possible or explains the failure otherwise.
 2. After the charts, the system generates the objects who represent the transitions which reference the chart objects.
@@ -1034,7 +1080,7 @@ Finally, the `director` contains a kind of "scroll-timeline" of charts. Based on
 
 
 
-### Interpolation
+## Interpolation
 
 A few remarks on how we have handled the interpolation described above. While previous work has usually interpolated between visualization parameters [@Heer-10:declarativelanguage, @Satyanarayan-14:authoringnarrative], our system interpolates between SVG-shapes. Thanks to this, our system can generate animated transitions between two completely different visualizations. The only condition is that a character needs to be represented by a single, closed SVG shape, a moderate constraint in our eyes. Other systems only permit transitions "within" the same chart.
 
@@ -1042,7 +1088,7 @@ One problem when interpolating directly between SVG-shapes is that they need to 
 
 
 
-### Performance
+## Performance
 
 ![\label{code-framerate}](img/code-framerate.png)
 
@@ -1066,7 +1112,7 @@ Finally, we could handle the rendering of the pixels ourselves by using HTML `ca
 
 
 
-### Logging
+## Logging
 
 Every interaction with the experiment was logged. Whenever the director detected scrolling, a log entry was created. Every keystroke too was recorded. And naturally, the participants answers where recorded. Logging is also the director's responsibility. Log entries are appended to a list which is sent to a server every 5 seconds as a CSV to minimize the potential for data loss. The data is also sent when the participant submits the answer form.
 
@@ -1074,11 +1120,7 @@ Every entry stores a timestamp, an identifier for the participant and the curren
 
 
 
-### Discussion
-
-TODO
-
-
+\part{Conclusion}
 
 # Conclusion
 
@@ -1086,7 +1128,7 @@ TODO
 
 
 
-## Future work
+# Future work
 
 * Validate the proposed transition types
 

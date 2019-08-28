@@ -9,6 +9,7 @@ FLAGS = -F pandoc-crossref \
 		--pdf-engine=xelatex \
 		-s \
 		-f markdown+yaml_metadata_block \
+		--include-after-body=appendix.tex \
 		--toc 
 
 FLAGS_PDF = --template=eisvogel.tex
