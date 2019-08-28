@@ -365,7 +365,7 @@ The three concept roughly mirror McCloud's [@Mccloud-93:understandingcomics] and
 
 ### Selection of examples
 
-The test the proposed model, we have applied it to a collection of transition techniques commonly found in narrative visualization. We have started by compiling a corpus of narrative visualizations from online sources. The corpus combines two collections from other authors [@Riche-18:datadrivenstorytelling, @Mckenna-17:visualnarrative] and our examples. The corpus thus includes 144 narrative visualizations published between 2008 and 2019 by a variety of news organizations as well as individuals.
+The test the proposed model, we have applied it to a collection of transition techniques commonly found in narrative visualization. We have started by compiling a corpus of narrative visualizations from online sources. The corpus combines two collections from other authors [@Riche-18:datadrivenstorytelling, @Mckenna-17:visualnarrative] and our examples. The corpus thus includes 144 narrative visualizations published between 2008 and 2019 by a variety of news organizations as well as individuals. The complete corpus can be found in appendix \ref{appendix-corpus}.
 
 From this corpus we selected a subset of 20 examples that were relevant to the current research and that we believed would be representative of the state of the art of narrative visualization in practice.
 
@@ -373,7 +373,7 @@ In a first step we excluded examples that were either not focused on data visual
 
 ### Analysis
 
-For each example, a screenshot of each chart was pasted on a canvas in order. First, we identified the characters in the first screenshot. For each transition, we annotated if the characters, scene or context changed from the previous state and how it changed. This was usually straightforward which was an encouraging sign. Finally, we unified very similar transitions into 9 categories as presented in table \ref{table-transition-types}.
+For each example, a screenshot of each chart was pasted on a canvas in order. First, we identified the characters in the first screenshot. For each transition, we annotated if the characters, scene or context changed from the previous state and how it changed. This was usually straightforward which was an encouraging sign. Finally, we unified very similar transitions into 9 categories as presented in table \ref{table-transition-types}. The complete analysis can be found in appendix \ref{appendix-transition-analysis}.
 
 
 
@@ -641,7 +641,7 @@ Each participant saw both stories and each story contained either *animated* or 
 
 In both cases the transitions where controlled by scrolling. Initially a participant would see the first chart of a mini-story. When he scrolled down, the first chart would be replaced by the second chart. When scrolling even further, the questionnaire would appear. In *animated* transitions, the chart would not simply be replaced but the transition was animated. The animation was fully controlled through scrolling and could be played forward and backwards. This ensured that the amount of *direct manipulation* would be the same for both transitions (compare to section [-@sec:direct-manipulation]).
 
-### Mortality story
+### Mortality story {#sec:mortality-story}
 
 The first story is about the evolution of mortality rates in the U.S. It is a modification of an article published by Bloomberg in 2014 [@Klein-14:howamericans]. The individual charts are displayed in figure \ref{mortality-charts}.
 
@@ -665,7 +665,7 @@ Some readers might have wondered why the mortality rate for "25–44" year olds 
 
 
 
-### Energy story
+### Energy story {#sec:energy-story}
 
 This story talks about the evolution of energy sources in the U.S. since the beginning of the century. It combines a story from the New York Times  [@Popovich-18:howdoes] with one from Forbes [@Mahajan-18:plungingprices]. The individual charts are displayed in figure \ref{energy-charts}.
 
@@ -708,11 +708,11 @@ By its nature, each story consisted of several different types of transitions wh
 
 ### Questionnaire {#sec:questionnaire}
 
-#### Conclusion
+#### Conclusion {#sec:qRelationship}
 
 The questionnaire at the end of each mini-story asked participants the following question: "What is your overall conclusion from the two charts on this page?". It then provided a free-form text field for them to provide an answer. We asked for answers that were at least three sentences long. The wording was chosen so as to not hint at a relation between the two charts. We have included two other questions that served as attention and understanding checks. The full questionnaire can be found in appendix \ref{appendix-questionnaire}.
 
-#### Focused attention
+#### Focused attention {#sec:focused-attention}
 
 It also included a subset of the validated *user engagement scale* questionnaire. The scale measures multiple attributes like *focused attention*, *perceived usability*, *aesthetics* or *reward* that together form what is known as *engagement* in the literature [@Obrien-18:practicalapproach]. But even the short questionnaire contains twelve questions which would have been too long to ask after each transition. We, therefore, decided to use a sub-scale of the *user engagement scale* that measures *focused attention*. The reason to use *focused attention* was that it was found to be the factor that explained most of the variance in O'Brien et al.'s analysis [@Obrien-18:practicalapproach] Also, the questions skew towards the positive (compared to the other option, *perceived usability*) and we did not want to negatively prime the participants.
 
@@ -767,36 +767,78 @@ Browser parameters like window size and user agent were collected as another way
 A complete overview of the data that was collected passively can be found in appendix \ref{appendix-passivedata}.
 
 
+## Measures
 
-## Dependent variables
+To test the hypotheses described in section [-@sec:hypotheses] and based on the data collected we have established several measures. 
 
-To test the hypotheses described in section [-@sec:hypotheses], we have established several measures. A part of them was based on the answers the participants gave to a questionnaire that was displayed at the end of each mini-story. We have included the whole questionnaire in the supplementary material.
+#### H1: Transitions understanding
 
-#### H1: Relationship
+The main hypothesis was that the combined benefits of animated transitions would support readers in understanding the relationships between charts. We therefore coded their conclusions [@sec:qRelationship] based on the relationship that was implied by each transition [@sec:mortality-story and @sec:energy-story]. This led to a measure called "**correct relationship**".
 
-After they had seen both charts, we asked participants what they concluded from them. If in their answer, they wondered, thought or assumed that something from the first chart was somehow related to something in the second chart, we coded the **relationship** measure as 1, otherwise as 0.
+#### H2: Relationship
 
-#### H2: Causality
+In addition to coding the *correct relationship*, we also coded if they assumed any kind of relationship between the two charts in their answer. This measure is called **relationship**.
 
-Whenever the participant perceived a relationship, we also coded if she indicated causality. If the participant used words like *due to*, *caused*, *because*, *led to* or similar, we coded a measure **causal** to be 1; 0 otherwise.
+#### H3: Causality
 
-#### H3: Cueing
+Whenever the participant perceived a relationship, we also coded if his answer indicated that he assumed a causal relationship. We called this measure **causal**.
 
-If animation has a cueing effect, it should focus the participant on certain characters. One first effect that we predict is that this will lead people to mention fewer characters in their conclusions. During the coding phase, we, therefore, counted the **number of characters mentioned**. We not only included characters that were directly visible but also groupings of characters like "green energy sources" to count as one. 
-
-Secondly, we predicted that guiding the reader's attention to the characters the author intended would lead participants to interpret relationships according to what the author wanted to convey. We called this measure "**correct relationship**". Whenever we found the mention of a *relationship* during the coding, we compared it with the story the author wanted to tell (see section [-@sec:experiment-overview]). When the participant came to the same conclusion, we coded this measure as 1 and otherwise as 0.
 
 #### H4: Object constancy
 
 If animated transitions would support object constancy, participants would need fewer transitions to come to their conclusion because their cognitive load would be reduced. We, therefore, measured the **number of transitions** between the two charts. When the transition was animated the participants needed to cross the 10% and then the 90% threshold successively (or the inverse) to be counted as one transition. 
 
-#### H5: Engagement
 
-The literature suggests that animated transitions will lead to higher reader engagement. To measure this, we have used 
+#### H5: Highlighting
+
+If animation has a cueing effect, it should focus the participant on certain characters. We predicted therefore that this will lead people to mention fewer characters in their conclusions. The **number of characters mentioned** in each coding was therefore coded. We not only included characters that were directly visible but also groupings of characters like "green energy sources" to count as one [@sec:our-model]. 
+
+
+#### H6: Engagement
+
+Engagement was measured by calculating the mean of the answers on the **focused attention** sub-scale of the *user engagement questionnaire* [@Obrien-18:practicalapproach].
 
 We considered **word count** to be another proxy for engagement. As the participants were in a task-oriented setting, we generally expected them to not lose their time with long answers. If answers turn out to be considerably longer in one of the scenarios, we assumed that it was because it engaged them.
 
+Finally, we have used *sentiment analysis* on the participants answers. We assumed, that if there was a difference in engagement, this might lead to a more confident or positive tone in the answers. To analyze the answers, we have used IBM Watson [@Kaminski-19:scienceservice] which gives ratings for different types of "tones" in the text. Watson identifies the degree to which a text is *analytical*, *confident*, *tentative*, *fearful*, *joyful* or *sad*.
 
+Because we would not expect highly emotional language in our answer, we decided to look further into the three dimensions: **analytical tone**, **confident tone**, and **tentative tone**.
+
+
+
+## Data analysis
+
+### Calculation of measures
+
+#### Total duration
+
+The duration was calculated by excluding times of inactivity. We considered timespans of more than 30 seconds without scrolling or typing to be *inactive time*.
+
+#### Typing time
+
+Typing time was calculated by summing all the times between recorded keystrokes (excluding *inactive time*).
+
+#### Viewing time
+
+This was defined as *total duration* minus *typing* and *inactive time*. 
+
+#### Scroll position
+
+The scroll position was normalized to the distance between the beginning of the first chart and the beginning of the second chart. 
+
+#### Transition count
+
+Transition count was calculated based on *scroll position* and *time*. Each time the scroll position passed from lower then 10% to greater than 90% (or the inverse), was counted as one transition.
+
+#### Drawing performance
+
+Each time a chart was redrawn during an animated transition was recorded (together with scrolling). To calculate the drawing performance we considered redraws within less than 0.5 seconds. We considered every timespan between redraws that was longer to be due to user inactivity. The mean of all shorter timespans was used to calculate the mean framerate per mini-story. Everything below 20 frames per second was considered *slow*.
+
+### Statistical evaluation
+
+To evaluate how the conditions differed, the *means* of the above measures where compared. To find if the conditions differed significantly a *two-sided t-test* was employed to calculate the *p-value*. Finally, the *means* with their respective *95% confidence intervals* were plotted against each other to give a clearer picture of the distributions. 
+
+The complete analysis can be found in appendix \ref{annex-dataanalysis}.
 
 ### Other factors considered
 
@@ -807,8 +849,6 @@ To exclude effects that would result from differences in layout and element size
 #### Browser capability
 
 Equally, participants with browsers that did not support the technologies we used for the animated transitions were blocked from the experiment. This had the positive side-effect of equally blocking slower browsers.
-
-
 
 
 
@@ -926,9 +966,11 @@ Participants who saw an animated transition didn't switch back and forth as ofte
 
 We were surprised to find that participants did not report a higher level of *focused attention* when they saw animated transitions. Especially because we enjoyed them a lot ourselves. One explanation might be the very task-oriented setting. Participants got paid a fixed amount for the experiment and were probably focused on efficiency. Interestingly, the participants who saw animated transitions wrote significantly longer answers (*answer length*) in the same amount of time (*typing duration*) when they saw animated transitions. Which may indicate that they were more engaged but that we have chosen the wrong sub-scale (*focused attention*) to be able to find it.
 
-To explore this discrepancy further, we have used *sentiment analysis* on the participants answers. We assumed, that if there was a difference in engagement, this might lead to a more confident or positive tone in the answers. To analyze the answers, we have used IBM Watson [@Kaminski-19:scienceservice] which gives ratings for different types "tones" in the text. Watson identifies the degree to which a text is *analytical*, *confident*, *tentative*, *fearful*, *joyful* or *sad*.
+To explore this discrepancy further, we 
 
-Because we would not expect highly emotional language in our answer, we decided to look further into the three dimensions: *analytical*, *confident*, and *tentative*. This decision is supported by the fact that they had the highest scores overall. We also found that more answers where classified as *tentative* than *confident* which confirms the analysis from before that the task was rather difficult.
+TODO
+
+ This decision is supported by the fact that they had the highest scores overall. We also found that more answers where classified as *tentative* than *confident* which confirms the analysis from before that the task was rather difficult.
 
 On all three dimensions, we did not find any significant differences between animated and static transitions. This lends support to the interpretation that the engagement truly did not differ between the conditions.
 
