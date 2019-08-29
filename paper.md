@@ -821,7 +821,9 @@ This was defined as *total duration* minus *typing* and *inactive time*.
 
 #### Scroll position
 
-The scroll position was normalized to the distance between the beginning of the first chart and the beginning of the second chart. 
+The scroll position was normalized to the distance between the beginning of the first chart and the beginning of the second chart.
+
+
 
 #### Transition count
 
@@ -931,7 +933,7 @@ It took participants on average 8 minutes to answer a mini-story. The maximal du
 
 On average, participants took 52 minutes to complete the experiment. This results in a mean hourly wage of USD 10.40 with a minimum of USD 5.56 for the slowest participant.
 
-We have also found that 7 participants experienced animations a drawing performance of less than 20 frames per second. The mean frame rate was 41 frames per second.
+We have also found that 7 participants experienced animations with a drawing performance of less than 20 frames per second in a total of 16 mini-stories with animated transitions. This corresponds to about 8% of the samples with animated transitions. The mean frame rate was 41 frames per second.
 
 ### Demographics of the participants
 
@@ -975,7 +977,7 @@ There were no clear differences in **focused attention** and **answer length** b
 
 We have calculated the *mean*, *95% confidence interval* and the *p-value* according to a two-sided t-test for each transition type and measure. The results are displayed in figure \label{hypotheses-results}.
 
- ![results-hypotheses.pdf \label{Means, confidence intervals and p-values for the different measures. \label{hypotheses-results}}](img/results-hypotheses.pdf) 
+ ![results-hypotheses.pdf \label{Means, confidence intervals and p-values for the different measures. \label{hypotheses-results}](img/results-hypotheses.pdf) 
 
 #### H1: Transition understanding
 
@@ -1021,7 +1023,11 @@ The highlighting effect of animation was not disputed in the literature and our 
 
 Although many authors are convinced that animation leads to higher *engagement* (see section [-@sec:engage]) we have found almost no evidence for this. Our results agree therefore with [@Amini-18:hookeddata] who was the only author who used a validated scale. Still, these results are counter-intuitive even for the author. One explanation might be that we have selected the wrong sub-scale. But the lack of a difference in *tone*, even with the reservations discussed, also indicates that the animation did indeed not affect the participants attitude or mood. A better explanation therefore might be that the participants were in a task-oriented setting and  the goal of "enjoying" the animation was secondary to them.
 
+An interesting observation is related to the results for individual mini-stories. It seems that transitions that communicate cause and effect relationships are much easier for readers to understand. This is even the case when the transition in itself is rather complex like in *mortality A*. This indicates that transitions are interpreted on a very conceptual level. 
+
 We conclude that while animated transitions facilitate object constancy and highlighting, it is not  easy to operationalize these two strengths to support understanding of transitions between charts. We believe that because charts and their relationships are abstract, animation is generally not congruent. Therefore, the pre-processing mechanisms that humans have for motion in the real world can not be used to facilitate the interpretation of abstract relationships.  
+
+
 
 
 
@@ -1029,51 +1035,13 @@ We conclude that while animated transitions facilitate object constancy and high
 
 The main limitation of the proposed experiment with regard to the transition types [@sec:corpus-analysis] and the propositions to reduce the transition cost [@reducing-cost] is that they are not fully implemented. The creation of the experiment and the development of the theory happened at the same time. This has led to transitions that combine multiple types like *mortality A* for example. This makes it hard to relate the results directly to the concepts that have been established in section [-@sec:perception-oriented].
 
-A second very important limitation is the high difficulty of the stories. Ideally, each story should have rates of about 60% for the **relationship** measure and around 40% for the **understanding** measure. Only three stories came close to these values.
+A second very important limitation is the high difficulty of the transitions in the experiment. Ideally, each story should have rates of about 60% for the **relationship** measure and around 40% for the **understanding** measure. Only three stories came close to these values.
 
+A third limitation is the selection of measures and the interpretation of the data. Most hypotheses could only be measured via a proxy variable. Object constancy for example via the transition count. this introduces ambiguity to the interpretation of the results. Additionally, many of the measures were based on a coders interpretation of the answer. At the time of writing most of the answers were only coded by a single person which introduces a lot of subjectivity (although we made sure that the coder did not know which transition an answer corresponded to).
 
+A fourth limitation is the performance of the animated transitions. We did not exclude the 7% of animated transition sessions that were classified as slow in our analysis because this would have strongly skewed that distribution between the groups. But it is highly likely that lagging transitions might have a negative impact on most of our measures.
 
-
-
-Much of the stories were designed before our conceptual understanding of transitions and animation was as clear as it is presented in this work. The types of transitions that are present in the experiment are therefore more strongly driven by the needs of the story than by our theoretical understanding of the properties of different transitions. This weakens the link between our results and the theoretical framework we have proposed.
-
-Almost 20% of the participants saw animated transitions that we categorized as slow. We decided to include these results anyway because most of the essential properties of the animation would still be present even when it was laggy. We also found that the results stayed the same even when we excluded *slow*-sessions but 
-
-The task was rather difficult.
-
-
-
-
-
-This is close enough to the 8% known in the literature (see section [-@sec:colorblindness]) to assume that the test worked properly.
-
-We only succeeded partially in this. The target was to design the stories so that about 40–50% of the participants would interpret them according to the author's intentions (**correct relationship**). Arguably this only worked for *energy D* and *mortality A* and *D*. Interestingly, these are also the mini-stories that contained a cause-and-effect relationship between the two charts. We wonder if readers are just more prone to talk about cause-and-effect relationships or if they truly notice them more readily.
-
-The most confusing story of all was *mortality C* where the characters were simply rescaled, which is a Reconfigure-transition according to our classification in section [-@sec:]. The difficulty of this transition is also visible in the unusually high transition count. The differences in *characters* mentioned are easy to explain: some mini-stories contained simply many more characters than others.
-
-Animated transitions did not lead the participants to assume a relationship between the two charts more often than the non-animated ones. H1 can, therefore, be rejected.
-
-Neither did we find that animated transitions in themselves implied a causal relationship. This is even more interesting than the refutation of H1 as other authors have found that animation can imply causality. We believe that the difference exists because their content was less abstract and contained bubbles that would grow and shrink because they exchanged matter. The finding would thus confirm (abstract vs. naturalistic) [@Berney-16:doesanimation]
-
-Participants who saw an animated transition didn't switch back and forth as often as the ones who saw the static transitions. The difference was highly significant. We conclude from this that animated transitions helped maintain object constancy between the charts. Interestingly, this did not lead to shorter but rather to longer viewing durations. This might either imply that the readers had difficulties to interpret animated transitions or that they were more engaging. Which leads us to the last hypothesis.
-
-We found that animation focused participants on a smaller group of characters. But this seemingly did not help them correctly interpret the relationship. One explanation might be that the animation design was not clear enough. Another explanation might be the following: interpreting the relationship between two charts is certainly a process that happens after identifying a relationship (see section [-@sec:comparison]). It is therefore even further removed from the levels of visual perception that are affected by the animated-static distinction. It would. therefore, be surprising to find a difference in this measure while not finding one in the *relationship*-measure.
-
-
-
-We were surprised to find that participants did not report a higher level of *focused attention* when they saw animated transitions. Especially because we enjoyed them a lot ourselves. One explanation might be the very task-oriented setting. Participants got paid a fixed amount for the experiment and were probably focused on efficiency. Interestingly, the participants who saw animated transitions wrote significantly longer answers (*answer length*) in the same amount of time (*typing duration*) when they saw animated transitions. Which may indicate that they were more engaged but that we have chosen the wrong sub-scale (*focused attention*) to be able to find it.
-
-To explore this discrepancy further, we 
-
-TODO
-
- This decision is supported by the fact that they had the highest scores overall. We also found that more answers where classified as *tentative* than *confident* which confirms the analysis from before that the task was rather difficult.
-
-On all three dimensions, we did not find any significant differences between animated and static transitions. This lends support to the interpretation that the engagement truly did not differ between the conditions.
-
-
-
-Based on the literature and the above findings we arrive at several conclusions about the nature of transitions and animation. We came to believe that animation indeed guides the reader's eye between transitions and therefore supports object constancy and cueing at the level of perception. But the results also indicate that relationships are interpreted at a much higher level and perceptual differences don't directly influence this interpretation. Finally, we are still unsure about how animation precisely influences engagement but there are strong hints that its effect is not as universally positive as often portrayed in the literature.
+The results are also limited by the demographic of the participants. They might not apply to readers from other cultural backgrounds and with a different level of education. Also, there were very few old people in the study. The results in a way therefore are only indicative for the "high performers": young, very well educated Americans.
 
 
 
