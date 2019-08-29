@@ -1058,7 +1058,6 @@ The results are also limited by the demographic of the participants. They might 
 
 
 
-
 \newpage
 \part{Implementation}
 
