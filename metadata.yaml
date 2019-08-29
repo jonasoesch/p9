@@ -1,5 +1,6 @@
 ---
 title: 'Lost in transition'
+subtitle: 'The effects of animation on the understanding of transitions in narrative visualization'
 author: Jonas Oesch
 supervisor: "Prof. Dr. Simon Schubiger"
 department: "MSc. in Engineering"
@@ -7,7 +8,7 @@ university: "University of Applied Sciences and Arts Northwestern Switzerland"
 thesistype: "Master's Thesis"
 logo: img/fhnw.eps
 title-image: img/title.pdf
-date: 2019
+date: August, 2019
 logo-width: 12cm
 titlepage-rule-color: "000000"
 titlepage-rule-height: "2"
@@ -25,17 +26,7 @@ babel-lang: english
 toc-own-page: yes
 titlepage: true 
 abstract: |
-   Although understanding the vast amounts of data that are available is becoming ever more important, data  seems hard to approach for most people. Data visualization has typically had the role of making data accessible to humans. But its focus has long been to maximize data throughput to the reader. This leads to visualization designs that are rich in information but tedious to read. On the other hand, communicators have long relied on sequential, narrative structures (stories) to reduce the cognitive burden. Recent practice and research show how charts can be embedded within a sequential narrative structure to facilitate the understanding of key aspects of the data. Instead of letting the reader explore the data himself, these *narrative visualzations* guide him through the key insights in the data.  This is done by showing a sequence of charts alongside a narrative. While such a guidance considerably reduces the mental burden of the reader, a new difficulty arises. The reader needs to understand how the individual charts are related to each other to follow the story.
-
-    The goal of this work is to better understand how readers understand these relationships and what supports the reader's understanding. It consists of three parts:
-
-    In the first part, we take a look at different classifications of transitions between charts. We propose a refined way to classify transitions based on cognitive load theory. We show that it can express the existing classification systems and that is applicable to narrative visualization in practice. Finally, we show how this theory can be translated to concrete design principles.
-
-    In the the second part, we discuss how animation can be used to facilitate transitions. We present an overview of the literature on animated transitions in visualization and learning theory. We formulate some ways how animation might support the reader in understanding the transitions and propose an experiment to test these. The results show that animated transitions have certain positive attributes but that they don't have a considerable impact on the final understanding of the relationships.
-
-    In the last part, we propose a visualization library that supports the implementation of the kind of animated transitions that were tested in the second part.
-
-    We conclude that while animated transitions provide some benefits they can not essentially simplify conceptually hard transitions between charts. 
-    
+   The present work researches how animation can support the interpretation of transitions in narrative visualizations. In narrative visualization charts are arranged in sequential order to make it easier for readers to process the information. But the sequential presentation introduces the difficulty that readers need to understand how subsequent charts are related. We show they do this by comparing elements from the individual charts. We identify 9 types of transitions that are typically used in practice by asking which of the elements change and how they change between two charts. We then link these transition types to the strengths of animation that are often cited in literature. These indicate that animation might support  understanding by providing *object constancy*, *explicitly showing complex relationship*s and *highlighting* important elements. We conducted an experiment with 56 participants to test wether animated transitions led to a better *understanding* in general, to higher *engagement* and if the three strengths described above surfaced. We have found that while animated transitions supported *object constancy* and *highlighting*, the participants overall understanding was not better. Also animated transitions did not imply *relationships* nor did they lead to higher *engagement*. These findings indicate that transitions between charts are interpreted at the conceptual level. For the experiment we have built a software library that allows the rapid creation of narrative visualization with animated transitions based on a declarative syntax which is also described in the last part. 
+   
 ...
 
