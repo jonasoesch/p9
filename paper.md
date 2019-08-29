@@ -36,14 +36,28 @@ This can be done via an accompanying narrative text, but visual methods like col
 
 
 
+## Problem defintion
+
+The main objective of the present thesis is to find out if animated transitions help readers understand the relationship between two charts in the context of narrative visualization.
+
+The answer this question, the following sub-questions need to be answered first:
+
+* How do readers interpret transitions between charts?
+* What benefits could animation provide to this process?
+
+A secondary objective of the present thesis is to introduce a software library that permits the **rapid creation of narrative visualization with animated transitions**.
+
+
+
 ## Thesis outline
 
-The main question that motivates this thesis is: Do animated transitions help readers understand the relationships between charts? To find this out we have used the following methodology:
+The thesis is organized five parts:
 
-1. The first part presents the theoretical background on transitions and animation.
-2. The second part reconceptualizes the theory in order to link different types of transitions to different strengths of animation.
-3. The third part presents an experiment that we have proposed to find if and how animated transitions can help the reader understand transitions between charts.
+1. The first part presents the theoretical background on transitions and animation. It gives indications on how readers interpret transitions.
+2. The second part reconceptualizes the theory in order to link different types of transitions to different strengths of animation. It thus responds the the question about the potential benefits of animation for transition understanding.
+3. The third part presents an experiment that we have proposed to find respond to the main research question.
 4. The fourth part presents our implementation of animated transitions based on the concepts presented in part two.
+5. The fifth part presents our conclusion and possibilities for future work.
 
 
 
@@ -64,7 +78,7 @@ Presenting charts in a logical, narrative sequence seems to be preferred by read
 
 
 
-## Existing classifications of transitions
+## Existing classifications of transitions {#sec:existing}
 
 Multiple authors have compiled classifications of transitions between charts. In this section, three different approaches to classifying transitions will be presented: visualization-focused, story-focused and inductive.
 
@@ -1029,13 +1043,11 @@ We conclude that while animated transitions facilitate object constancy and high
 
 
 
-
-
-##Limitations
+##Limitations {#sec:limitations}
 
 The main limitation of the proposed experiment with regard to the transition types [@sec:corpus-analysis] and the propositions to reduce the transition cost [@reducing-cost] is that they are not fully implemented. The creation of the experiment and the development of the theory happened at the same time. This has led to transitions that combine multiple types like *mortality A* for example. This makes it hard to relate the results directly to the concepts that have been established in section [-@sec:perception-oriented].
 
-A second very important limitation is the high difficulty of the transitions in the experiment. Ideally, each story should have rates of about 60% for the **relationship** measure and around 40% for the **understanding** measure. Only three stories came close to these values.
+A second very important limitation is the high difficulty of the transitions in the experiment. Ideally, each story should have rates of about 60% for the **relationship** measure and around 40% for the **understanding** measure. Only three stories came close to these values. We have also found ordering effects in the results. It is therefore not ensured the all mini-stories are comparable.
 
 A third limitation is the selection of measures and the interpretation of the data. Most hypotheses could only be measured via a proxy variable. Object constancy for example via the transition count. this introduces ambiguity to the interpretation of the results. Additionally, many of the measures were based on a coders interpretation of the answer. At the time of writing most of the answers were only coded by a single person which introduces a lot of subjectivity (although we made sure that the coder did not know which transition an answer corresponded to).
 
@@ -1188,7 +1200,7 @@ One problem when interpolating directly between SVG-shapes is that they need to 
 
 
 
-## Performance
+## Performance {#sec:performance}
 
 ![\label{code-framerate}](img/code-framerate.png)
 
@@ -1218,17 +1230,21 @@ Every interaction with the experiment was logged. Whenever the director detected
 
 Every entry stores a timestamp, an identifier for the participant and the current mini-story, the URL, the scroll position and information about the participant's browser like window size or user agent (>> full documentation in supplementary material)
 
-
 \newpage
 \part{Conclusion}
 
-# Conclusion
+# Conclusions and future work
 
-TODO
+In the present work we have asked if animated transitions help readers understand transitions in narrative visualization. 
 
+We have found that there was some work on transitions non proposed a clear concept of how readers interpreted transitions. We have adressed this gap in section [-@sec:perception-oriented] by reconceptualizing three existing views with a focus on narrative visualization. We have successfully applied this reconceptualization to examples from practice which has resulted in the identification of 9 transition types. These types map well to classifications that have been proposed by other authors (see section [-@sec:existing]). Nonetheless, a future study should explore this formulation more in-depth. Especially, it should examine wether it helps to give a more formal definition of the *transition cost* (described in section [-@sec:transition-cost]). Such a formalization would be highly useful for designers of narrative visualization. They could use it to keep the transition cost within certain boundaries and ensure that a majority of readers would understand the stories.
 
+In our review of the literature on animation [@sec:animation] we have discussed the *congruence* and the *apprehension*-principle. The existing research indicates that *congruence* is much more important in practice than *apprehension*.  While techniques that aim to increase apprehension often fail, animations that are close to the movement of objects in real world consistently improve understanding. A future study should clarify how these two principles are linked to different levels of human perception. This might support designers in judging the situation when animation is useful and when it should be avoided.
 
-# Future work
+We were also surprised to find how little evidence there was in visualization research for the claim that animation increases engagement. While our results support previous research [@Amini-18:hookeddata], much more work is needed to get a clear picture.
 
-* Validate the proposed transition types
+The results of our experiment indicate animated transitions do not support readers in understanding transitions. This responds negatively to our main research hypothesis and confirms findings of previous researchers [@Berney-16:doesanimation] but will be rather unintuitive for visualization designers. It is therefore clear that these findings might be criticized and criticism will most probably by directed at the research method. The discussion of the limitations [@sec:limitations] give many indications on how a better experiment could be designed. We plan to implement and conduct such an experiment in the future.
 
+If, against all odds, future research would find that animated transitions provide any kind of benefits for readers, our work on declaratively defining transitions has certainly a lot of potential. Because it's syntax is inspired by the very popular Vega-Lite[@Satyanarayan-16:vegalitegrammar], it might be adapted to integrate into Vega-Lite as a plugin. This would make it easy to link two charts defined in Vega-Lite via an animated transition. This would be interesting because there are currently no visualization tools that implement animated transitions at the given level of abstraction. The designer either has to implement them himself or he can select from a given set of predefined transitions with little control.
+
+A small improvement to the proposed library would be to use more of the techniques presented to improve rendering performance. [@sec:performance]
