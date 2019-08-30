@@ -127,7 +127,7 @@ Splitting characters is what Hullman et al. call a *general-to-specific* transit
 
 ### Merge characters {#sec:transition-merge}
 
-![technique-merge \label{technique-merge}](/Users/jonas/Desktop/P9/bericht/img/technique-merge.pdf)
+![Different ways how characters are merged. On the left a transition where characters are "summed" from from Bloomberg [@Roston-15:whatreally] and on the right a transition where characters are "subtracted" from *The pudding* [@Dworkin-18:whytech]. \label{technique-merge}](/Users/jonas/Desktop/P9/bericht/img/technique-merge.pdf)
 
 | Characters ![](img/char.pdf)  | Attributes ![](img/attr.pdf) | Context ![](img/ctxt.pdf) |
 | ----------------------------- | ---------------------------- | ------------------------- |
@@ -140,7 +140,7 @@ Hullman et al. call this transition *specific to general*  (see section [-@induc
 
 ### Highlighting
 
-![\label{technique-focus}](/Users/jonas/Desktop/P9/bericht/img/technique-focus.pdf)
+![Two examples of *highlighting* transitions. On the left from The Pudding [@Lambrechts-19:whyeu] and on the right from Bloomberg [@Klein-14:howamericans]. \label{technique-focus}](/Users/jonas/Desktop/P9/bericht/img/technique-focus.pdf)
 
 | Characters ![](img/char.pdf) | Attributes ![](img/attr.pdf) | Context ![](img/ctxt.pdf) |
 | ---------------------------- | ---------------------------- | ------------------------- |
@@ -154,7 +154,7 @@ Highlighting is the equivalent of a *filter* transition from the visualization-o
 
 ### Progressive disclosure
 
-![\label{technique-disclosure}](/Users/jonas/Desktop/P9/bericht/img/technique-disclosure.pdf)
+![On the left an example of *progressive disclosure* by showing more characters from the Tampa Bay Times [@Nathaniel-15:howfive]. On the right an example where more of the same character is disclosed from The Pudding [@Daniels:usinghistorical]. \label{technique-disclosure}](/Users/jonas/Desktop/P9/bericht/img/technique-disclosure.pdf)
 
 | Characters ![](img/char.pdf)         | Attributes ![](img/attr.pdf) | Context ![](img/ctxt.pdf) |
 | ------------------------------------ | ---------------------------- | ------------------------- |
@@ -168,7 +168,7 @@ A particular case of progressive disclosure is what Hullman et al. call *spatial
 
 ### Context
 
-![a \label{technique-temporal}](/Users/jonas/Desktop/P9/bericht/img/technique-temporal.pdf	)
+![Two examples of transitions where the context changes. On the left from the New York Times [@Hernandez-18:americandream] and on the right from The Pudding [@Lambrechts-19:whyeu]. \label{technique-temporal}](/Users/jonas/Desktop/P9/bericht/img/technique-temporal.pdf	)
 
 | Characters ![](img/char.pdf) | Attributes ![](img/attr.pdf) | Context ![](img/ctxt.pdf) |
 | ---------------------------- | ---------------------------- | ------------------------- |
@@ -182,13 +182,13 @@ Hullman et al. identified the very prevalent change in temporal context but did 
 
 ### Semantic field
 
-![technique-semantic](/Users/jonas/Desktop/P9/bericht/img/technique-semantic.pdf)
+![Two examples where charts are only related by a common theme. On the left from FiveThirtyEight [@Casselman-15:stronghiring] and on the right from Vox [@Klein-14:obamaamerican]. \label{technique-semantic}](/Users/jonas/Desktop/P9/bericht/img/technique-semantic.pdf)
 
 | Characters ![](img/char.pdf) | Attributes ![](img/attr.pdf) | Context    |
 | ---------------------------- | ---------------------------- | ---------- |
 | Differ                       | Differ                       | Can differ |
 
-This might be the hardest transition for readers to follow as none of the elements are shared between the charts. The only thing that connects the two charts is that their characters come from the same field of concepts. The reader, therefore, needs to move up in the conceptual hierarchy to find the relationship between the characters depicted.  In the example on the left, the reader needs to understand how the job growth ![](img/attr.pdf) is related to hourly earnings ![](img/attr.pdf). This requires a rather sophisticated internal model of economics, or a textual explanation. The same is true for the example on the right. It is not possible without a lot of additional knowledge how the rising discrepancy of profits ![](img/char.pdf) and wages ![](img/char.pdf) is related to the decline in union memberships ![](img/attr.pdf).
+This might be the hardest transition for readers to follow as none of the elements are shared between the charts. The only thing that connects the two charts is that their characters come from the same field of concepts. The reader, therefore, needs to move up in the conceptual hierarchy to find the relationship between the characters depicted.  In the example on the left of figure \ref{technique-semantic} , the reader needs to understand how the job growth ![](img/attr.pdf) is related to hourly earnings ![](img/attr.pdf). This requires a rather sophisticated internal model of economics, or a textual explanation. The same is true for the example on the right. It is not possible without a lot of additional knowledge how the rising discrepancy of profits ![](img/char.pdf) and wages ![](img/char.pdf) is related to the decline in union memberships ![](img/attr.pdf).
 
 *Causal* and *Question & answer* transitions identified  by Hullman et al. would fall into that category (see section [-@sec:inductive-classification]).
 

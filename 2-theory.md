@@ -44,9 +44,7 @@ The strength of this kind of classification is, that types can relatively easily
 
 ### Story-focused classification {#sec:story-classification}
 
-The most-cited classification of transition types in comics is the one by McCloud [@Mccloud-93:understandingcomics]. It is also commonly referred to in narrative visualization [@Baudisch-06:phosphorexplaining; @Segel-10:narrativevisualization; @Amini-15:understandingdata; @Badawood-15:narrativeconstruction; @Bach-16:tellingstories] because comics are similar to narrative visualization in that they are *visual* and *sequential* [@Mccloud-93:understandingcomics, p. 16]. McCloud describes six types of transitions between comic panels:
-
-![The six transition types for comics proposed by McCloud based on the concepts of *subject*, *scene* and *time* [@Mccloud-93:understandingcomics].](/Users/jonas/Desktop/P9/bericht/img/transition-mccloud.png)
+The most-cited classification of transition types in comics is the one by McCloud [@Mccloud-93:understandingcomics]. It is also commonly referred to in narrative visualization [@Baudisch-06:phosphorexplaining; @Segel-10:narrativevisualization; @Amini-15:understandingdata; @Badawood-15:narrativeconstruction; @Bach-16:tellingstories] because comics are similar to narrative visualization in that they are *visual* and *sequential* [@Mccloud-93:understandingcomics, p. 16]. McCloud describes six types of transitions between comic panels (see figure \ref{fig-mccloud}):
 
 1. **Moment-to-moment**: Stepwise movement through time.
 2. **Action-to-action**: Movement through time-based on meaningful events.
@@ -55,7 +53,9 @@ The most-cited classification of transition types in comics is the one by McClou
 5. **Aspect-to-aspect**: Exploring a scene.
 6. **Non-sequitur**: Changes without an obvious relationship.
 
-In McCloud's classification, a transition is characterized by a change in either *subject*, *scene* and/or *time*. 
+In McCloud's classification, a transition is characterized by a change in either *subject*, *scene* and/or *time*.
+
+![The six transition types for comics proposed by McCloud based on the concepts of *subject*, *scene* and *time* [@Mccloud-93:understandingcomics]. \label{fig-mccloud}](/Users/jonas/Desktop/P9/bericht/img/transition-mccloud.png)
 
 Cohn [@Cohn-10:limitstime] refines on McCloud's transition types by introducing hierarchy to the interpretation of subject, scene and time. He argues that readers will first try to find the same subject in the subsequent panel. They will then move their attention to changes in the scene. Finally, they will shift their focus to changes in time. Cohn uses examples to show how a different order leads to interpretations that run counter to typical reading habits [@Cohn-10:limitstime, p. 143].
 

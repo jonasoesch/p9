@@ -15,7 +15,7 @@ This setup has made made it so that the second chart of each mini-story is the f
 
 At the end of each mini-story we presented a questionnaire asking about the participants conclusion and their perceived engagement. The questionnaire will be presented in more detail in section [-@sec:questionnaire].
 
-![experiment-setup.pdf \label{experiment-setup}](img/experiment-setup.pdf) 
+![The order of the 13 screens presented to the participants in the experiment. \label{experiment-setup}](img/experiment-setup.pdf) 
 
 The experiment was conducted on Amazon Mechanical Turk [@:amazonmechanical] and had 56 participants. An introductory screen instructed to the participants on what they would have to do and that they would receive USD 9 for completing the experiment. After the two stories, a final survey ([@sec:survey]) and finally an answer code to verify their participation was presented. We also limited participation to U.S.-citizens because the experiment was in English and concerned topics that treat the U.S.
 
@@ -36,7 +36,7 @@ In both cases the transitions where controlled by scrolling. Initially a partici
 
 The first story was about the evolution of mortality rates in the U.S. It is a modification of an article published by Bloomberg in 2014 [@Klein-14:howamericans]. The individual charts are displayed in figure \ref{mortality-charts}.
 
-![\label{mortality-charts}](img/mortality.pdf)
+![The charts and the transitions of the mortality story. \label{mortality-charts}](img/mortality.pdf)
 
 #### Mortality A {#sec:mortality-a}
 
@@ -60,7 +60,7 @@ Some readers might have wondered why the mortality rate for "25–44" year olds 
 
 This is a story about the evolution of energy sources in the U.S. since the beginning of the century. It combines a story from the New York Times [@Popovich-18:howdoes] with one from Forbes [@Mahajan-18:plungingprices]. The individual charts are presented in figure \ref{energy-charts}.
 
-![\label{energy-charts}](img/energy.pdf)
+![The charts and the transitions of the energy story. \label{energy-charts}](img/energy.pdf)
 
 #### Energy A {#sec:energy-a}
 
@@ -129,9 +129,9 @@ Equally, if the participants reported weak and uncorrected vision, we could pote
 
 #### Colorblindness {#sec:colorblindness}
 
-![experiment-colorblindness](img/experiment-colorblindness.png)
+![The three plates of the Ishihara colorblindness test [@Ishihara-17:ishiharatest] that were presented to participant in the final survey. \label{ishihara-plates}](img/experiment-colorblindness.png)
 
-A final factor we considered for explaining outliers was color blindness. We did not ask participants to report on their colorblindness because not all people who are colorblind know about it. Instead, we presented them three plates from the Ishihara colorblindness test  [@Ishihara-17:ishiharatest]. The plates we have selected, tested for red-green blindness. The most common form of colorblindness, that affects about 8% of men and 0.4% of women [@-19:colorblindness].
+A final factor we considered for explaining outliers was color blindness. We did not ask participants to report on their colorblindness because not all people who are colorblind know about it. Instead, we presented them the three plates from the Ishihara colorblindness test shown in figure \ref{ishihara-plates}. The plates we have selected, tested for red-green blindness. The most common form of colorblindness, that affects about 8% of men and 0.4% of women [@-19:colorblindness].
 
 The full survey can be found in appendix \ref{appendix-survey}.
 
@@ -290,7 +290,7 @@ We have also found that 7 participants experienced animations with a drawing per
 
 Figure \ref{results-demographics} gives an overview of the demographics of the participants.
 
-![\label{results-demographics}](img/results-demographics.pdf) 
+![An overview of the demographics of the experiment's participants. \label{results-demographics}](img/results-demographics.pdf) 
 
 Because the experiment was conducted on Amazon Mechanical Turk, the participants were quite varied though there was a tendency towards men and younger people. 70% of the respondents had a Bachelor's degree or higher. 
 

@@ -44,11 +44,11 @@ Many visualization tools have been created over the years and every tool address
 
 The number of useful chart types in data visualization is surprisingly limited. A review of some catalogs of chart type shows that it lies somewhere in the range between 40 and 200 [@Holtz:dataviz; @Ribecca:datavisualisation; @Schwabish:visualvocabulary; @:dataviz; @Russo-18:microsoftpower]. When developing software for data visualization, an obvious approach is, therefore, to implement these basic chart types and make them configurable. A recent study on visualization tools [@Mei-18:designspace] shows that over the last three decades a majority of tools mentioned in the literature have used some sort of chart typology (see figure \ref{code-abstraction}).
 
- ![\label{code-abstraction}](img/code-abstraction.pdf)
+ ![Visualization tools according to their level of abstraction and their year of introduction. \label{code-abstraction}](img/code-abstraction.pdf)
 
 Graphic libraries inhabit the other end of the spectrum. They usually only provide functionality for drawing basic shapes. They are thus the most general and flexible visualization tools. But building visualization out of basic shapes is very laborious, which is the reason why "chart configurators" are so popular. More recently, visualization researchers have started to explore the middle ground: declarative, domain-specific languages (DSLs) [@Wickham-16:ggplot2elegant; @Heer-10:declarativelanguage; @Satyanarayan-16:vegalitegrammar]. DSLs try to maintain a maximum of flexibility while significantly simplifying the creation process [@Heer-10:declarativelanguage]. One very recent example of a declarative language for visualization on the web is Vega-Lite [@Satyanarayan-16:vegalitegrammar]. Vega-Lite's DSL builds on JSON and the concept of the *Grammar of Graphics*. The grammar of graphics separates different parts of a visualization into separate "layers" which are independent and can be recombined as desired (see figure \ref{code-vega}). Vega-Lite also introduced a way to define interactive visualization in a declarative manner.
 
-![\label{code-vega}](img/code-vega.pdf) 
+![An example of how Vega-Lite representes the different layers of the Grammar of Graphics and how this is translates to a visualization. \label{code-vega}](img/code-vega.pdf) 
 
 
 
@@ -74,9 +74,9 @@ Based on the requirements described in section [-@sec:requirements] and the revi
 
 ### Anatomy of a chart
 
-The first part of the DSL is concerned with defining the basic charts. The syntax is based on JSON and strongly inspired by Vega-Lite [@Satyanarayan-16:vegalitegrammar]. Vega-Lite is more powerful in inferring a multitude of chart types based solely on the configuration than our proposed solution. As we only required a very limited number of chart types ([@sec:requirements]), we resorted to the "Chart typology"-approach which is less flexible but much easier to implement. Two other differences of the proposed syntax to Vega-Lite are the focus on *characters* and the possibility to *annotate* them.
+The first part of the DSL is concerned with defining the basic charts. The syntax is based on JSON and strongly inspired by Vega-Lite [@Satyanarayan-16:vegalitegrammar]. Vega-Lite is more powerful in inferring a multitude of chart types based solely on the configuration than our proposed solution. As we only required a very limited number of chart types ([@sec:requirements]), we resorted to the "Chart typology"-approach which is less flexible but much easier to implement. Two other differences of the proposed syntax to Vega-Lite are the focus on *characters* and the possibility to *annotate* them. An overview of the syntax is presented in figure \ref{code-chart}.
 
-![code-chart adsf](img/code-chart.pdf)
+![The code on the left leads to the generation of the chart on the right. On the top right an example of the type of data that is being used is shown. \label{code-chart}](img/code-chart.pdf)
 
 - ![](img/1.pdf) Each chart has a `name` which is used to identify it. If there is an HTML element with an ID that corresponds to this name it will be used to render the chart there. The chart dimensions as well es its position on the page are therefore completely defined by the layout of the surrounding page.
 - ![](img/2.pdf) The `type` defines the basic chart type that should be used. Behind the scenes, each chart type is implemented as a subclass of an abstract `Chart`-class that implements its own `draw`-method.
@@ -85,9 +85,9 @@ The first part of the DSL is concerned with defining the basic charts. The synta
 - ![](img/5.pdf)In the axis-definitions, different attributes (`field`) of the data are mapped to different axes. The axes are identified by their `name` which can differ depending on the chart `type`. Slope charts, for example, have three axes:  `x`, `from` and `to`.  The advantage of defining each axis explicitly like this is, that, again, `annotations` can be bound to them which provided a lot of flexibility.
 - ![](img/6.pdf)The `type`-property of an axis defines how the corresponding data should be parsed. The data domain can either be continuous numbers (`quantitative`), ordered discrete values (`ordinal`), unordered discrete values (`categorical`), or timestamps (`temporal`) [@Munzner-15:visualizationanalysis p.21; @Satyanarayan-16:vegalitegrammar]. The `domain`-property defines the corresponding start and end values of the axis. Often, the minimal and maximal values in the data are used to determine the start and end of an axis. But when using visualization for storytelling, sometimes the author wants values to "overshoot" the axis, or to fix the axis at a certain domain for dramatic or clarity reasons, which is why we allowed explicit control of this parameter.
 - ![](img/7.pdf)Coherent with the model developed in section (>>Perception-oriented classification), we look at narrative visualization through the lens of characters. This is why our DSL contains an explicit declaration of the whole `cast` of characters in each chart. We assume that individual characters are identified by a `categorical` attribute in the data which is defined in the `field`-property.
-- ![](img/8.pdf)Because characters have such high importance, they are defined individually:
+- ![](img/8.pdf)Because characters have such high importance, they are defined individually (figure \ref{code-characters}):
 
-![code-characters.pdf](img/code-characters.pdf)
+![An example of how individual characters are defined. \label{code-characters}](img/code-characters.pdf)
 
 - ![](img/8.1.pdf)In the three chart types that were implemented, characters are uniformly distinguished by `color` which is also what is often used in the narrative visualizations that were analyzed in section [@sec:corpus-analysis]. Other options like symbols or textures are naturally imaginable. The necessary data to `draw` each character is found via its `name` property.
 - ![](img/8.2.pdf) Shows an example of the use of multiple `annotations`. Two are used to indicate the initial and the final share of each energy source, the third one to label the energy source itself. This approach has proven to provide a lot of flexibility. Especially when coupled with CSS `class`es that make individual styling of characters possible.
@@ -98,9 +98,9 @@ The first part of the DSL is concerned with defining the basic charts. The synta
 
 ### Anatomy of a transition
 
-Together with the `director` ([@sec:director]), this is the main contribution in terms of software architecture. Because we have identified character and attribute changes as the main concern for transitions, the DSL focuses on them. Characters as well as axes (which represent attributes), can be mapped between two charts which will create a third transition chart that interpolates between them.
+Together with the `director` ([@sec:director]), this is the main contribution in terms of software architecture. Because we have identified character and attribute changes as the main concern for transitions, the DSL focuses on them. Characters as well as axes (which represent attributes), can be mapped between two charts which will create a third transition chart that interpolates between them (see figure \ref{code-transition}).
 
-![code-transition](img/code-transition.pdf) 
+![An example of how a *morphing* animation between individual characters from two charts can be declared. \label{code-transition}](img/code-transition.pdf) 
 
 - ![](img/1.pdf) A transition is not treated very differently from a chart. It also has a `name` and is rendered into an HTML element with the corresponding ID.
 - ![](img/2.pdf) + ![](img/3.pdf) A transition chart is solely defined by the charts it transitions between. This is done through the `from` and `to` properties.
@@ -112,9 +112,9 @@ Together with the `director` ([@sec:director]), this is the main contribution in
 
 ### Directing all of them {#sec:director}
 
-Finally, the `director` contains a kind of "scroll-timeline" of charts. Based on this it will show, hide and interpolate the appropriate charts at certain scroll positions.
+Finally, the `director` contains a kind of "scroll-timeline" of charts. Based on this it will show, hide and interpolate the appropriate charts at certain scroll positions. An example can be found in figure \ref{code-director}.
 
-![Director asdfa asdf asdf asdf asdf](img/code-director.pdf)
+![An example of how the sequence of charts and transitions can be defined in the `director`. \label{code-director}](img/code-director.pdf)
 
 * ![](img/1.pdf) The director's `name` is used in the experiment to identify the mini-story and the configuration the participant was looking at.
 * ![](img/2.pdf) The steps define a range of scroll positions and a chart or transition that should be displayed within this range. The `-1000` value is in there because some browsers permit scrolling above the start of the page, which would hide the first chart.
@@ -149,7 +149,7 @@ As presented in the results, the drawing performance was not above the defined t
 
 Animation on the web typically has very mediocre performance. But there are a few strategies to make it faster which will be discussed in this section.
 
-![\label{code-framerate}](img/code-framerate.pdf)
+![The mean frame rates by session in the experiment. \label{code-framerate}](img/code-framerate.pdf)
 
 
 #### Synchronize repaint timing
