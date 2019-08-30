@@ -233,7 +233,7 @@ The above results show that object tracking happens through a complex interplay 
 
 
 
-### Animation techniques
+### Animation techniques {sec:animation-techniques}
 
 A number of techniques have been proposed in the literature to increase the apprehension of animation. A brief discussion will show that in practice congruence and the limits of working memory seem to be more important than apprehension.
 

@@ -1,7 +1,7 @@
 \newpage
 \part{Implementation}
 
-# Implementation
+# Implementation {#sec:implementation}
 
 To quickly create narrative visualizations and animated transitions for the experiment, we have built a visualization tool that would simplify this task. The solution presented in this chapter might look simple, even obvious to the reader. But our first attempts to implement animated transitions resulted in a tangled mess of spaghetti code and attest that the problem does not have a straightforward solution. We conclude that the simplicity of the proposed solution is, therefore, more a sign of conceptual clarity than a sign for the mundanity of the problem.
 
