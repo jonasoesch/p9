@@ -103,12 +103,12 @@ In the previously discussed classifications, transitions are often classified ac
 
 Readers find and interpret relationships within and between charts by comparing targets from the charts in their head. This implies that interpreting relationships is related to the amount of targets that can be held in the reader's mind. 
 
-According to Brehmer et al.  [@Brehmer-13:multileveltypology], comparison is a fundamental task in visualization. Comparison is distinguished from other tasks like *identify* and *summarize* (see figure \ref{transition-topology}) by the number of *targets* it operates on. An *identify*-task uses a single target while a *summarize*-task uses all available targets. The *compare*-task requires multiple subgroups of targets to compare them.
+According to Brehmer et al.  [@Brehmer-13:multileveltypology], comparison is a fundamental task in visualization. Comparison is distinguished from other tasks like *identify* and *summarize* (see figure \ref{transition-topology}) by the number of *targets* it operates on. An *identify*-task uses a single target while a *summarize*-task uses all available targets. But the *compare*-task requires multiple targets to compare them.
 
 ![A topology of visualization tasks which synthesizes a large body of
 previous literature has been proposed by Brehmer et al. [@Brehmer-13:multileveltypology] \label{transition-topology}](img/comparison-taxonomoy.png)
 
-To identify and locate these targets, the comparison task is proceeded by tasks from the *search*-group (see figure ref{transition-topology}) that will identify and locate targets. In narrative visualization, this will most often be the *locate*-task to find targets explicitly mentioned in the narrative. But this is not the only case: 
+Before he is able to compare targets, the reader needs to *search* for an initial target (see figure \ref{transition-topology}). In narrative visualization this will usually be done by *locate* to find targets that are mentioned in the text. But this is not the only possibility:
 
 #### Explicit identification
 
@@ -275,7 +275,7 @@ The principle of congruence on the other hand has been shown to have a profound 
 
  
 
-## Unfair comparisons
+## Unfair comparisons {#sec:unfair-comparisons}
 
 Further doubts on reported benefits of animation come from the problem of *informational equivalence*. Some studies who have reported benefits of animated transitions have been criticized for involving "unfair comparisons" [@Tversky-02:animationcan]. The animations presented contained information that was not easily deducible from the non-animated transitions.  Tversky et al. [@Tversky-02:animationcan, p. 251] put it like this:
 

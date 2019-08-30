@@ -135,7 +135,7 @@ A final factor we considered for explaining outliers was color blindness. We did
 
 The full survey can be found in appendix \ref{appendix-survey}.
 
-### Passive data collection
+### Passive data collection {#sec:passive-data}
 
 The participants actions on each page were continually monitored. We recorded scrolling, typing and information about the participants browser throughout the experiment.
 
@@ -254,7 +254,7 @@ We have chosen very simple time series charts because participants should ideall
 
 ##### Transitions
 
-Transitions were designed so that they would ideally *highlight* the characters they were about morph them into the related characters in the second chart to support *object constancy*.
+Transitions were designed so that they would ideally *highlight* the characters they were about morph them into the related characters in the second chart to support *object constancy*. Other than that they did not contain any information to avoid *unfair comparisons* ([@sec:unfair-comparisons]).
 
 
 
@@ -384,9 +384,9 @@ We conclude that while animated transitions facilitate object constancy and high
 
 ## Limitations {#sec:limitations}
 
-The main limitation of the proposed experiment with regard to the transition types ([@sec:corpus-analysis]) and the propositions to reduce the transition cost ([@sec:reducing-cost]) is that they are not fully implemented. The creation of the experiment and the development of the theory happened at the same time. This has led to transitions that combine multiple types like *mortality A* ([@sec:mortality-story]). This makes it hard to relate the results directly to the concepts that have been established in section [-@sec:perception-oriented]. The experiment also does not looks into the predictions on the strengths of individual transition types. Another reason was a lack of resources.
+The main limitation of the proposed experiment is that it did not specifically consider the transition types described in  ([@sec:corpus-analysis]). This has led to transitions that combine multiple types like *mortality A* ([@sec:mortality-story]) and makes it hard to relate the results directly to the concepts that have been established in section [-@sec:perception-oriented]. It is therefore possible that animated transitions are indeed beneficial for very specific types of transitions. We did not test for specific transitions types, because this would have required a more complex experiment for which we lacked the resources. A second reason is, that the theory developed in parallel to the creation of the experiment, which resulted in a lack of time.
 
-A second very important limitation is the high difficulty of the transitions in the experiment. Ideally, each story should have rates of about 60% for the **relationship** measure and around 40% for the **understanding** measure. Only three stories came close to these values. We have also found ordering effects in the results. It is therefore not ensured the all mini-stories are comparable.
+A second very important limitation is the high difficulty of the transitions in the experiment. Ideally, each story should have rates of about 60% for the *relationship* measure and around 40% for the *understanding* measure. Only three stories came close to these values. We have also found ordering effects in the results. It is therefore not ensured the all mini-stories are comparable.
 
 A third limitation is the selection of measures and the interpretation of the data. Most hypotheses could only be measured via a proxy variable. Object constancy for example via the transition count. This introduces ambiguity to the interpretation of the results. Additionally, many of the measures were based on a coders interpretation of the answer. At the time of writing most of the answers were only coded by a single person which introduces a lot of subjectivity (although we made sure that the coder did not know which transition an answer corresponded to).
 
