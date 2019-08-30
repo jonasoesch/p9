@@ -847,6 +847,16 @@ $abstract$
 $endif$
 $endif$
 
+
+$if(acknowledgements)$
+\renewcommand{\abstractname}{Acknowledgements}
+\section*{Acknowledgements} 
+\begin{abstract}
+$acknowledgements$
+\end{abstract}
+\newpage
+$endif$
+
 $if(first-chapter)$
 \setcounter{chapter}{$first-chapter$}
 \addtocounter{chapter}{-1}
