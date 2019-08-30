@@ -1,0 +1,18 @@
+\newpage
+\part{Conclusion}
+
+# Conclusions and future work
+
+In the present work we have asked if animated transitions help readers understand transitions in narrative visualization. 
+
+We have found that there was some work on transitions non proposed a clear concept of how readers interpreted transitions. We have adressed this gap in section [-@sec:perception-oriented] by reconceptualizing three existing views with a focus on narrative visualization. We have successfully applied this reconceptualization to examples from practice which has resulted in the identification of 9 transition types. These types map well to classifications that have been proposed by other authors (see section [-@sec:existing]). Nonetheless, a future study should explore this formulation more in-depth. Especially, it should examine wether it helps to give a more formal definition of the *transition cost* (described in section [-@sec:transition-cost]). Such a formalization would be highly useful for designers of narrative visualization. They could use it to keep the transition cost within certain boundaries and ensure that a majority of readers would understand the stories.
+
+In our review of the literature on animation [@sec:animation] we have discussed the *congruence* and the *apprehension*-principle. The existing research indicates that *congruence* is much more important in practice than *apprehension*.  While techniques that aim to increase apprehension often fail, animations that are close to the movement of objects in real world consistently improve understanding. A future study should clarify how these two principles are linked to different levels of human perception. This might support designers in judging the situation when animation is useful and when it should be avoided.
+
+We were also surprised to find how little evidence there was in visualization research for the claim that animation increases engagement. While our results support previous research [@Amini-18:hookeddata], much more work is needed to get a clear picture.
+
+The results of our experiment indicate animated transitions do not support readers in understanding transitions. This responds negatively to our main research hypothesis and confirms findings of previous researchers [@Berney-16:doesanimation] but will be rather unintuitive for visualization designers. It is therefore clear that these findings might be criticized and criticism will most probably by directed at the research method. The discussion of the limitations [@sec:limitations] give many indications on how a better experiment could be designed. We plan to implement and conduct such an experiment in the future.
+
+If, against all odds, future research would find that animated transitions provide any kind of benefits for readers, our work on declaratively defining transitions has certainly a lot of potential. Because it's syntax is inspired by the very popular Vega-Lite[@Satyanarayan-16:vegalitegrammar], it might be adapted to integrate into Vega-Lite as a plugin. This would make it easy to link two charts defined in Vega-Lite via an animated transition. This would be interesting because there are currently no visualization tools that implement animated transitions at the given level of abstraction. The designer either has to implement them himself or he can select from a given set of predefined transitions with little control.
+
+A small improvement to the proposed library would be to use more of the techniques presented to improve rendering performance. [@sec:performance]
