@@ -9,7 +9,7 @@ FLAGS = -F pandoc-crossref \
 		--pdf-engine=xelatex \
 		-s \
 		-f markdown+yaml_metadata_block \
-		--include-after-body=texts/appendix.tex \
+		--include-after-body=appendix.tex \
 		--toc 
 
 FLAGS_PDF = --template=eisvogel.tex
@@ -17,7 +17,7 @@ FLAGS_PDF = --template=eisvogel.tex
 all: pdf
 
 pdf:
-	cat texts/*.md  > .paper.md; pandoc -o $(OUTPUT)/paper.pdf $(FLAGS) $(FLAGS_PDF) $(FILES)
+	cat *.md  > .paper.md; pandoc -o $(OUTPUT)/thesis-jonasOesch.pdf $(FLAGS) $(FLAGS_PDF) $(FILES)
 
 clean:
 	rm build/*

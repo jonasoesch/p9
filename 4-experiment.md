@@ -220,7 +220,7 @@ The scroll position was normalized to the distance between the beginning of the 
 
 
 
-#### Transition count
+#### Transition count
 
 Transition count was calculated based on *scroll position* and *time*. Each time the scroll position passed from lower then 10% to greater than 90% (or the inverse), was counted as one transition.
 
@@ -424,7 +424,7 @@ We conclude that while animated transitions facilitate object constancy and high
 
 
 
-##Limitations {#sec:limitations}
+## Limitations {#sec:limitations}
 
 The main limitation of the proposed experiment with regard to the transition types [@sec:corpus-analysis] and the propositions to reduce the transition cost [@reducing-cost] is that they are not fully implemented. The creation of the experiment and the development of the theory happened at the same time. This has led to transitions that combine multiple types like *mortality A* for example. This makes it hard to relate the results directly to the concepts that have been established in section [-@sec:perception-oriented].
 
