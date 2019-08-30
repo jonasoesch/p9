@@ -3,7 +3,7 @@
 
 # Implementation {#sec:implementation}
 
-To quickly create narrative visualizations and animated transitions for the experiment presented in the previous chaper, we have built a visualization tool that would simplify this task. The implementation builds on the concept of *characters* introduced in section [-@sec:our-model]. The following sections discuss how this contributes a new way of configuring animated transitions in visualization tools and give an overview of the implementation.
+To quickly create narrative visualizations and animated transitions for the experiment presented in the previous chapter, we have built a visualization tool that would simplify this task. The implementation builds on the concept of *characters* introduced in section [-@sec:our-model]. The following sections discuss how this contributes a new way of configuring animated transitions in visualization tools and give an overview of the implementation.
 
 ## Requirements {#sec:requirements}
 
@@ -38,9 +38,9 @@ Finally, the implementation needed to provide a reliable way to collect the pass
 
 ## Prior art
 
-Many visualization tools have been created over the years and every tool addresses a different set of requirements and has different strengths and weaknesses. This section presents a very brief overview of the state of the art in visualization tools with a focus on the use of domain specific languages and animated transitions. A more in-depth overview of the state of the artof visualization tools can be found in a very recent paper by Mei et al. [@Mei-18:designspace].
+Many visualization tools have been created over the years and every tool addresses a different set of requirements and has different strengths and weaknesses. This section presents a very brief overview of the state of the art in visualization tools with a focus on the use of domain-specific languages and animated transitions. A more in-depth overview of the state of the art of visualization tools can be found in a very recent paper by Mei et al. [@Mei-18:designspace].
 
-### Domain specific languages
+### Domain-specific languages for visualization
 
 The number of useful chart types in data visualization is surprisingly limited. A review of some catalogs of chart type shows that it lies somewhere in the range between 40 and 200 [@Holtz:dataviz; @Ribecca:datavisualisation; @Schwabish:visualvocabulary; @:dataviz; @Russo-18:microsoftpower]. When developing software for data visualization, an obvious approach is, therefore, to implement these basic chart types and make them configurable. A recent study on visualization tools [@Mei-18:designspace] shows that over the last three decades a majority of tools mentioned in the literature have used some sort of chart typology (see figure \ref{code-abstraction}).
 
@@ -56,7 +56,7 @@ Graphic libraries inhabit the other end of the spectrum. They usually only provi
 
 Even less research has been conducted on DSLs who describe animated transitions between visualizations. Heer and Bostock, who later went to create the already mentioned D3 [@Bostock-11:datadrivendocuments], have described one approach in an earlier paper [@Heer-10:declarativelanguage]. Their system is based on marks like lines and bars. To create animations, the author defines the data for the initial state and the data for the final state. Their tool then interpolates between the two to generate an animated transition.
 
-Very recently, Tableau, one of the largest providers of commercial visualization software has released a preview of their future implementation of animated transitions [@Isaacs-18:tableaumotion]. In their concept, animations are predetermined by the change in visualization paramters ([@sec:param-classification]) and not configurable by the author.
+Very recently, Tableau, one of the largest providers of commercial visualization software has released a preview of their future implementation of animated transitions [@Isaacs-18:tableaumotion]. In their concept, animations are predetermined by the change in visualization parameters ([@sec:param-classification]) and not configurable by the author.
 
 The tool that most closely addresses the problems of narrative visualization is *Ellipsis* by Satyanarayan and Heer [@Satyanarayan-14:authoringnarrative]. Ellipsis is a tool to create narrative visualization through a graphical interface. It wraps existing visualizations and adds an *annotation* layer, *parameters* for limited interaction (see section [-@sec:narr-vis]) and a layer for defining *transitions* between charts. Ellipsis thus effectively decouples the narrative structure from the individual charts and lets authors quickly explore alternative narrative structures.
 
@@ -80,7 +80,7 @@ The first part of the DSL is concerned with defining the basic charts. The synta
 
 - ![](img/1.pdf) Each chart has a `name` which is used to identify it. If there is an HTML element with an ID that corresponds to this name it will be used to render the chart there. The chart dimensions as well es its position on the page are therefore completely defined by the layout of the surrounding page.
 - ![](img/2.pdf) The `type` defines the basic chart type that should be used. Behind the scenes, each chart type is implemented as a subclass of an abstract `Chart`-class that implements its own `draw`-method.
-- ![](img/3.pdf)The path to a `CSV`-file with data. The syntax does not foresee any kind of data transformation functionality and expect the data to be in the right format. This is because the tool is presentation-oriented and there is no need to explore the data through filtering or other transformations.
+- ![](img/3.pdf)The path to a `CSV`-file with data. The syntax does not foresee any kind of data transformation functionality and expects the data to be in the right format. This is because the tool is presentation-oriented and there is no need to explore the data through filtering or other transformations.
 - ![](img/4.pdf)The chart title is implemented as an `annotation`. Annotations can be bound to different elements throughout the DSL and can be positioned relative to their `start` or `end` through the `offset`-property.
 - ![](img/5.pdf)In the axis-definitions, different attributes (`field`) of the data are mapped to different axes. The axes are identified by their `name` which can differ depending on the chart `type`. Slope charts, for example, have three axes:  `x`, `from` and `to`.  The advantage of defining each axis explicitly like this is, that, again, `annotations` can be bound to them which provided a lot of flexibility.
 - ![](img/6.pdf)The `type`-property of an axis defines how the corresponding data should be parsed. The data domain can either be continuous numbers (`quantitative`), ordered discrete values (`ordinal`), unordered discrete values (`categorical`), or timestamps (`temporal`) [@Munzner-15:visualizationanalysis p.21; @Satyanarayan-16:vegalitegrammar]. The `domain`-property defines the corresponding start and end values of the axis. Often, the minimal and maximal values in the data are used to determine the start and end of an axis. But when using visualization for storytelling, sometimes the author wants values to "overshoot" the axis, or to fix the axis at a certain domain for dramatic or clarity reasons, which is why we allowed explicit control of this parameter.
@@ -131,13 +131,13 @@ Finally, the `director` contains a kind of "scroll-timeline" of charts. Based on
 6. Objects of transition charts [characters, axes, annotations] implement their own interpolation methods and use them for rendering interpolated states.
 7. The `draw`-methods generate the necessary SVG-code and append it to an SVG that will finally be displayed in the HTML element for the chart.
 
-Our implementation of the described programm generator and rendering process is referenced in appendix \ref{appendix-implementation}
+Our implementation of the described program generator and rendering process is referenced in appendix \ref{appendix-implementation}
 
 
 
 ## Interpolation
 
-This section contains a few remarks on how the interpolation described above is being handeled in our implementation. While previous work has usually interpolated between visualization parameters [@Heer-10:declarativelanguage; @Satyanarayan-14:authoringnarrative], our system interpolates between SVG-shapes. Thanks to this, our system can generate animated transitions between two completely different chart types. The only condition is that a character needs to be represented by a single, closed SVG shape. Other systems only permit transitions "within" the same chart.
+This section contains a few remarks on how the interpolation described above is being handled in our implementation. While previous work has usually interpolated between visualization parameters [@Heer-10:declarativelanguage; @Satyanarayan-14:authoringnarrative], our system interpolates between SVG-shapes. Thanks to this, our system can generate animated transitions between two completely different chart types. The only condition is that a character needs to be represented by a single, closed SVG shape. Other systems only permit transitions "within" the same chart.
 
 One problem when interpolating directly between SVG-shapes is that they need to have a one-to-one correspondence between their anchor points. If this is not the case, there needs to be some method to add points to the simpler shape. For this, we have used an algorithm that duplicates points of the simpler shape that are closest to the matching points in the complex shape [@Beshai-16:improvingd3]. This has produced visually good results in all our cases. But it had the downside of making the calculation of interpolated states slower.
 
@@ -166,7 +166,7 @@ Because the system is highly decoupled, expensive calculations could easily be c
 
 #### Canvas or WebGL
 
-Finally, we could handle the rendering of the pixels directly by using HTML `canvas` instead of SVG. But with current browsers and on current hardware, rendering performance has been shown to be about equal [@Horak-18:comparingrendering]. WebGL on the other hand is clealy faster but would have complicated the rendering considerably [@Kee-12:comparinginteractive].
+Finally, we could handle the rendering of the pixels directly by using HTML `canvas` instead of SVG. But with current browsers and on current hardware, rendering performance has been shown to be about equal [@Horak-18:comparingrendering]. WebGL, on the other, hand is faster but would have made the implementation considerably more complicated [@Kee-12:comparinginteractive].
 
 
 ## Logging
