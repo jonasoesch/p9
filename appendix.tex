@@ -12,23 +12,200 @@ Hereby, I declare that I have composed the presented work Lost in transition ind
 &\textit{\large Windisch,}&&& \\
 &\textit{\large  \today}&&\large Jonas Oesch& 
 \end{tabular}
+\\
 
 \newpage
+\begin{flushleft}
 \section{Corpus of narrative visualizations} \label{appendix-corpus}
+
+The collection of 147 narrative visualizations from three collections. The collection is available on GitHub \url{https://github.com/jonasoesch/lostintransition} in the folder \texttt{supplementary/B-corpus}.
 
 \section{Analysis of narrative visualizations} \label{appendix-transition-analysis}
 
+The anlysis of of a selection of narrative visualizations to identify different transition types. The analysis is available on GitHub \url{https://github.com/jonasoesch/lostintransition} in the folder \texttt{supplementary/C-analysis}.
+
+
 \section{Stories} \label{appendix-story}
+
+The mortality and energy story that were used in the experiment. The stories are linked on GitHub \url{https://github.com/jonasoesch/lostintransition} in the folder \texttt{supplementary/D-stories}.
+
 
 \section{Experiment questionnaire} \label{appendix-questionnaire}
 
+The questionnaire that was presented after each mini-story. The questinnaire is available on GitHub \url{https://github.com/jonasoesch/lostintransition} in the folder \texttt{supplementary/E-questionnaire}.
+
+
 \section{Experiment survey} \label{appendix-survey}
+
+The survey that was presented to the participants at the end of the experiment. The survey is available on GitHub \url{https://github.com/jonasoesch/lostintransition} in the folder \texttt{supplementary/F-survey}.
+
 
 \section{Passive data collected in the experiment} \label{appendix-passivedata}
 
+The schema for the data that was collected passively during the experiment. The schema is available on GitHub \url{https://github.com/jonasoesch/lostintransition} in the folder \texttt{supplementary/G-passive-data}.
+
 \section{Data analysis} \label{appendix-dataanalysis}
 
-\section{Design choices} \label{appendix-designchoices}
+The jupyter notebooks that were used for the data analysis. The analysis is available on Github \url{https://github.com/jonasoesch/lostintransition} in the folder \texttt{supplementary/H-analysis}.
+
 
 \section{Implementation} \label{appendix-implementation}
 
+An implementation of a program generator that interprets the described syntax and produces a narrative visualization with animated transitions. The implementation is linked on Github \url{https://github.com/jonasoesch/lostintransition} in the folder \texttt{supplementary/I-implementation}.
+
+
+\newpage
+\section{Design choices} \label{appendix-designchoices}
+\ref{sec:narr-vis} and \ref{sec:comparison}) and the experiment did not provide an introduction to the topic. A story on paratransit (a special
+means of transport for disabled people in the U.S.) for example, was initially planned to be included but was soon removed because the topic
+was not familiar to most people.
+
+The stories also had to avoid highly controversial topics because we feared that implicit reader knowledge might interfere with the
+interpretation of the visualizations (see section \ref{sec:comparison}). We have seen this happen in both stories but it was less prevalent than we feared.
+
+Finally, the story needed to be told mainly through the visualizations.
+This turned out to be to most constraining factor. In most existing
+narrative visualization we have found, that the textual narration was
+essential to understand the story. The story on the evolution of
+mortality was chosen exactly because it contained very little
+text in its original version. The story about the energy sources was
+specifically created in a way that we hoped would be self-explanatory
+with very little text.
+
+\hypertarget{minimal-textual-narrative}{%
+\subsubsection{Minimal textual
+narrative}\label{minimal-textual-narrative}}
+
+Textual narrative was excluded from the experiment because it is a huge
+confounder. In typical narrative visualization, the story is
+presented through textual or audio narrative. The visualizations mostly
+serve to reinforce the point. But, when presented like this, relating
+the participants answers to any differences in the visualizations would
+be very difficult. On the other hand, charts are impossible to interpret
+without at least some text. We, therefore, decided to include labels as
+well as a chart title. But we made sure that nothing was hinting at a
+relationship in any of these. Each chart is completely self-contained
+and provides interesting information even without the other chart.
+
+\hypertarget{visualization-literacy}{%
+\subsubsection{Visualization literacy}\label{visualization-literacy}}
+
+\begin{figure}
+\centering
+\includegraphics{/Users/jonas/Desktop/P9/bericht/img/experiment-charttypes.png}
+\caption{Different chart types and their difficulty according to our tests. \label{experiment-charttypes}}
+\end{figure}
+
+Previous studies have found that the majority of people are unable to
+correctly interpret complex visualizations. (TODO:source) According to
+these authors, the ``safe'' visualizations are bar charts, line charts,
+scatterplots and maps (see section \ref{sec:vis-literacy}). This finding
+is supported by our analysis of narrative visualization in section
+\ref{sec:corpus-analysis} who also almost exclusively use these simpler
+visualizations As we did not want participants to fail because they were
+unable to read the individual charts, we have decided to limit the
+experiment to line charts and stacked area charts. In our pilot studies,
+these chart types have been ``safe'', even though the stacked area chart
+posed problems to some of the participants in the experiment (see
+\ref{sec:experiment-results}). One chart type that was excluded based on
+pilot data was the \emph{slope chart}. (see \ref{experiment-charttypes}
+)
+
+\hypertarget{reader-controlled-animation}{%
+\subsubsection{Reader-controlled
+animation}\label{reader-controlled-animation}}
+
+Another factor to consider was the amount of reader control or
+interactivity. Prior work has demonstrated positive effects of animated
+transitions often involved higher levels of interactivity compared to
+the static transitions. (TODO:source) But interactivity has been shown
+to have benefits in itself, for example for learning. (TODO:source) All
+transitions were therefore designed to be totally reader controlled. By
+scrolling down, readers could advance to the next chart, by scrolling
+up, they could go back to the previous chart.
+
+We also tried to avoid discussions about the proper duration of animated
+transitions by making the animations completely controllable through
+scrolling. Interestingly we have not found this to be common practice in
+our analysis of narrative visualizations. The most prevalent case is a
+fixed-duration animation that is triggered by scrolling to a certain
+point.
+
+\hypertarget{animation-design}{%
+\subsubsection{Animation design}\label{animation-design}}
+
+Three different kinds of animated transitions were used throughout the
+experiment which were all concerned with supporting \emph{object
+constancy} in different scenarios:
+
+\hypertarget{one-to-many}{%
+\paragraph{One-to-many}\label{one-to-many}}
+
+A good example of this case is \emph{Mortality D}
+(sec.~\ref{sec:mortality-d}). There, the animation needed to convey that
+the ``causes of death'' \includegraphics{img/char.pdf} in the second
+chart only concerned the ``25--44'' year old age group
+\includegraphics{img/ctxt.pdf} . This is done through a \emph{staged
+transition} (see section \ref{sec:staged-animation}). We first highlight
+the ``25--44'' year old age group by hiding all the others and then
+splitting and morphing this character into the different causes of
+death. The same approach was applied in \emph{Mortality B}
+(sec.~\ref{sec:mortality-b}), \emph{Energy B} (sec.~\ref{sec:energy-b})
+and \emph{Energy C} (sec.~\ref{sec:energy-c}).
+
+\hypertarget{many-to-one}{%
+\paragraph{Many-to-one}\label{many-to-one}}
+
+This case can only be found in \emph{Mortality A}
+(sec.~\ref{sec:mortality-a}). Here the different age groups
+\includegraphics{img/char.pdf} are being morphed into a single line that
+represents ``Everyone'' \includegraphics{img/char.pdf}. After the
+morphing was finished, the characters (``Men''
+\includegraphics{img/char.pdf} and ``Women''
+\includegraphics{img/char.pdf}) were shown.
+
+\hypertarget{many-to-many}{%
+\paragraph{Many-to-many}\label{many-to-many}}
+
+This case is well illustrated by \emph{Energy D}
+(sec.~\ref{sec:energy-d}) where the marks for proportions
+\includegraphics{img/attr.pdf} of different energy sources
+\includegraphics{img/char.pdf} were morphed to represent the price
+evolution \includegraphics{img/attr.pdf} of these same energy sources
+\includegraphics{img/char.pdf}. Many-to-many animations are also being
+used in \emph{Mortality C} (sec.~\ref{sec:mortality-c}) and \emph{Energy
+A} (sec.~\ref{sec:energy-a}).
+
+\hypertarget{animated-axis-interpolation}{%
+\subsubsection{Animated axis
+interpolation}\label{animated-axis-interpolation}}
+
+In the first pilot study, we have included axis interpolation for some
+transitions. But they
+were excluded from the final experiment as they introduced another
+confounder and were not directly related to the research question. In
+our analysis of transitions in narrative visualization, we have found
+several different approaches to animating axis interpolation. A topic
+that would certainly merit further research.
+
+\hypertarget{interpolation}{%
+\subsubsection{Interpolation}\label{interpolation}}
+
+\begin{figure}
+\centering
+\includegraphics{/Users/jonas/Desktop/P9/bericht/img/Interpolation.png}
+\caption{Different color interpolation mehthods compared. \label{design-interpolation}}
+\end{figure}
+
+For all interpolations, we implemented ``slow-in-slow-out''-easing. For interpolating between colors, we used a
+perceptually uniform HCL-interpolation because it ``intuitively looks
+right''. Notice in figure \ref{design-interpolation} how RGB and
+LAB tend to desaturate while HSL and CubeHelix tend to oversaturate, HCL
+strikes a good balance.
+\end{flushleft}
+\newpage
+
+
+\vspace*{\fill}
+The End.
+\vspace*{\fill}

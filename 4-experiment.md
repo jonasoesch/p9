@@ -270,7 +270,7 @@ Equally, participants with browsers that did not support the technologies we use
 
 
 
-## Results {#sec:experiment-results}
+# Results {#sec:experiment-results}
 
 173 participants started the experiment  and saw the initial explanations. From these 56 provided a final answer code to Amazon Mechanical Turk. But 3 of these participants did not finish the experiment and provided a wrong answer code. They were therefore excluded from the analysis. This leads to a slightly uneven distribution of participants between conditions. See table \ref{table-participants-conditions}.
 
@@ -286,7 +286,7 @@ On average, participants took 52 minutes to complete the experiment. This result
 
 We have also found that 7 participants experienced animations with a drawing performance of less than 20 frames per second in a total of 16 mini-stories with animated transitions. This corresponds to about 8% of the samples with animated transitions. The mean frame rate was 41 frames per second.
 
-### Demographics of the participants
+## Demographics of the participants
 
 Figure \ref{results-demographics} gives an overview of the demographics of the participants.
 
@@ -297,7 +297,7 @@ Because the experiment was conducted on Amazon Mechanical Turk, the participants
 There were no participants who did not have either normal or corrected to normal vision. The Ishihara plates found three colorblind participants. All of them men.
 
 
-### Differences between the stories {#sec:results-stories}
+## Differences between the stories {#sec:results-stories}
 
 As discussed in section [-@sec:story-selection], one of the main challenges was to design narrative visualizations that a large part of the participants would understand. Table \ref{table-story-difficulty}  therefore shows the results for different measures by mini-story. 
 
@@ -326,7 +326,7 @@ There were no clear differences in **focused attention** and **answer length** b
 
 
 
-### Hypotheses
+## Hypotheses
 
 We have calculated the *mean*, *95% confidence interval* and the *p-value* according to a two-sided t-test for each transition type and measure. The results are displayed in figure \ref{hypotheses-results}.
 
@@ -364,7 +364,7 @@ There was a slight and significant difference of *answer lengths* in favor of an
 
 
 
-## Discussion
+# Discussion
 
 As presented in section [-@sec:experiment-results], animation does not increase readers *understanding* of transitions between charts. This result is unintuitive for most people because animated transitions "feel" like they help. But our results are consistent with what previous authors found ([@sec:animation]). They found that animation only leads to better understanding when the display is not abstract (as our charts). Even though elements in the chart can be conceptualized as *characters* there is not natural way they should be animated for the types of transitions that we have tested in the experiment. We believe that for similar reasons, animated transitions did not specifically evoke  *relationship*s between abstract elements in charts.
 
@@ -382,7 +382,7 @@ We conclude that while animated transitions facilitate object constancy and high
 
 
 
-## Limitations {#sec:limitations}
+# Limitations {#sec:limitations}
 
 The main limitation of the proposed experiment is that it did not specifically consider the transition types described in  ([@sec:corpus-analysis]). This has led to transitions that combine multiple types like *mortality A* ([@sec:mortality-story]) and makes it hard to relate the results directly to the concepts that have been established in section [-@sec:perception-oriented]. It is therefore possible that animated transitions are indeed beneficial for very specific types of transitions. We did not test for specific transitions types, because this would have required a more complex experiment for which we lacked the resources. A second reason is, that the theory developed in parallel to the creation of the experiment, which resulted in a lack of time.
 

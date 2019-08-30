@@ -3,7 +3,7 @@
 
 # Transitions
 
-Presenting charts in a logical, narrative sequence seems to be preferred by readers [@Segel-10:narrativevisualization]. This implies that there is some information in the sequencing that is not present in the charts themselves. But what kind of information? This part reviews how previous work classifies transitions according to the kind of information that they transport. It then takes a deeper look into how readers interpret transitions in order to gain a better conceptual understanding of transitions and what makes them difficult. It then applies this conceptual understanding to examples of narrative visualization from practice to reformulate and synthesize the existing classifications. Finally, it discusses the implications of this sharpened understanding for designing animated transitions.
+Presenting charts in a logical, narrative sequence seems to be preferred by readers [@Segel-10:narrativevisualization]. This implies that there is some information in the sequencing that is not present in the charts themselves. But what kind of information? This part reviews how previous work classifies transitions according to the kind of information that they transport. It then takes a deeper look into how readers interpret transitions to gain a better conceptual understanding of transitions and what makes them difficult. It then applies this conceptual understanding to examples of narrative visualization from practice to reformulate and synthesize the existing classifications. Finally, it discusses the implications of this sharpened understanding for designing animated transitions.
 
 
 
@@ -31,8 +31,8 @@ Through this approach, four authors identify a total of 9 transition types. Beca
 Table: Comparison of transition types commonly identified by different authors for different purposes. The table shows that the agreement is relatively high for transitions that can be defined in terms of visualization parameters. What is often missing is the case where the underlying data changes. \label{visualization-focused-classification}
 
 * **Pan**: Moving a fixed image below a smaller viewport to see one part at a time. The most famous example of this is Google Maps [@Google:googlemaps].
-* **Zoom**: Geometric zooming in and out of a fixed image. This transition too, is used in Google Maps [@Google:googlemaps].
-* **Filter**: Hiding or showing elements based on some criteria. When reading a visualization on cars, filtering might for example hide all the data on American cars.
+* **Zoom**: Geometric zooming in and out of a fixed image. This transition too is used in Google Maps [@Google:googlemaps].
+* **Filter**: Hiding or showing elements based on some criteria. When reading a visualization on cars, filtering might, for example, hide all the data on American cars.
 * **Reorder**: Reordering axes according to a different criterion. Countries that are displayed in alphabetical order might, for example, be reordered according to their GDP.
 * **Substrate transformation**: Any distortion to the scale that is not addition or multiplication of a constant. For example a log transform or a lens-effect that resizes only a part of the coordinate system. The latter being something that is not often seen in real-world applications but seems to be a darling of visualization researchers [@Munzner-15:visualizationanalysis, pp. 327–338].
 * **Visualization change**: Showing the same data with a different visualization idiom. For example, showing a distribution as a boxplot to indicate mean, quantiles and outliers first and then transforming it into a histogram to give a better sense of its shape.
@@ -40,7 +40,7 @@ Table: Comparison of transition types commonly identified by different authors f
 * **Data schema change**: Mapping a different data dimension to one of the visual variables (position, color, etc.). A visualization might, for example, show the use of certain plant variants over time and show the occurrence of pests over the same period in the next state.
 * **Data change**: When new data is shown but the visualization and the axes stay the same. This is the generalization of the *timestep* transition.
 
-The strength of this kind of classification is, that types can relatively easily and coherently be determined  as the high overlap between different authors shows. It's weakness is that it characterizes a transition by its technical properties and not based on how the reader will interpret it, which makes it less useful for designers of narrative visualization. Other fields, especially the research on comics have done much more work in this regard.
+The strength of this kind of classification is, that types can relatively easily and coherently be determined as the high overlap between different authors shows. Its weakness is that it characterizes a transition by its technical properties and not based on how the reader will interpret it, which makes it less useful for designers of narrative visualization. Other fields, especially the research on comics have done much more work in this regard.
 
 ### Story-focused classification {#sec:story-classification}
 
@@ -59,7 +59,7 @@ In McCloud's classification, a transition is characterized by a change in either
 
 Cohn [@Cohn-10:limitstime] refines on McCloud's transition types by introducing hierarchy to the interpretation of subject, scene and time. He argues that readers will first try to find the same subject in the subsequent panel. They will then move their attention to changes in the scene. Finally, they will shift their focus to changes in time. Cohn uses examples to show how a different order leads to interpretations that run counter to typical reading habits [@Cohn-10:limitstime, p. 143].
 
-*Subject*, *scene* and *time* are reminiscent of journalisms famous *who/what*, *where* and *when* [@Wikipedia-19:fivews]. Such proximity to journalism indicates that McCloud's transition types might be useful outside of the domain of comics. While McClouds transitions based on *subject*, *scene* and *time* might be useful in traditional narratives that talk about people and events, it is not directly obvious how to apply them to abstract visualizations [@Badawood-15:narrativeconstruction, pp. 68-82]. 
+*Subject*, *scene* and *time* are reminiscent of journalisms famous *who/what*, *where* and *when* [@Wikipedia-19:fivews]. Such proximity to journalism indicates that McCloud's transition types might be useful outside of the domain of comics. While McCloud's transitions based on *subject*, *scene* and *time* might be useful in traditional narratives that talk about people and events, it is not directly obvious how to apply them to abstract visualizations [@Badawood-15:narrativeconstruction, pp. 68-82]. 
 
 ### Inductive classification {#sec:inductive-classification}
 
@@ -83,11 +83,11 @@ Hullman et al. further distinguish between *implicit transitions* that can only 
 
 ![Transition types identified by Hullman et al. [@Hullman-13:deeperunderstanding]. The explicit *dialogue* and *causal* transitions are quite rare. Also *spatial* transitions did not occur very often. \label{hullman-frequency}](/Users/jonas/Desktop/P9/bericht/img/transition-hullman-freq.pdf)
 
-The strength of Hullman et al.'s classification is, that it is directly linked to real world examples of narrative visualization. But because it has no underlying conceptual understanding, it is often not clear how to classify a transition according to their taxonomy.
+The strength of Hullman et al.'s classification is, that it is directly linked to real-world examples of narrative visualization. But because it has no underlying conceptual understanding, it is often not clear how to classify a transition according to their taxonomy.
 
 ### Limitations of existing classifications
 
-The *visualization-oriented* (@sec:param-classification) and the story-oriented (@sec:story-classification) classifications both provide a conceptual understanding of transitions based on the question: "What changes?". In the first case it is one of the visualization parameters. In the second case it is either *subject*, *scene* or *time*. This allows for the construction of theory around these transitions [@Heer-07:animatedtransitions; @Cohn-10:limitstime] because there is clarity about the basic concepts. But these classifications can not be directly applied to narrative visualization because they were intended for other contexts.
+The *visualization-oriented* (@sec:param-classification) and the story-oriented (@sec:story-classification) classifications both provide a conceptual understanding of transitions based on the question: "What changes?". In the first case, it is one of the visualization parameters. In the second case, it is either *subject*, *scene* or *time*. This allows for the construction of theory around these transitions [@Heer-07:animatedtransitions; @Cohn-10:limitstime] because there is clarity about the basic concepts. But these classifications can not be directly applied to narrative visualization because they were intended for other contexts.
 
 Hullman et al.'s inductive approach [@Hullman-13:deeperunderstanding] is interesting because it treats real-world examples of narrative visualization. But it has no theoretical concepts linked to it. It can, therefore, not be used to understand how readers understand transitions and how animation might support it.
 
@@ -97,22 +97,22 @@ The following section will, therefore, discuss the existing literature on how re
 
 ## How readers interpret transitions {#sec:transition-interpretation}
 
-In the previously discussed classifications, transitions are often classified according to the question: "What changes?". This implies that readers make sense of transitions through comparison. This section therefore gives a brief overview of the relevant work on comparison in visualization. Based on this, it discusses what makes transitions difficult for readers. It then introduces findings from cognitive load theory that help in understanding how these difficulties are linked to the cognitive abilities of readers.
+In the previously discussed classifications, transitions are often classified according to the question: "What changes?". This implies that readers make sense of transitions through comparison. This section, therefore, gives a brief overview of the relevant work on comparison in visualization. Based on this, it discusses what makes transitions difficult for readers. It then introduces findings from cognitive load theory that help in understanding how these difficulties are linked to the cognitive abilities of readers.
 
 ### Comparison to understand transitions {#sec:comparison}
 
-Readers find and interpret relationships within and between charts by comparing targets from the charts in their head. This implies that interpreting relationships is related to the amount of targets that can be held in the reader's mind. 
+Readers find and interpret relationships within and between charts by comparing targets from the charts in their head. This implies that interpreting relationships is related to the number of targets that can be held in the reader's mind. 
 
 According to Brehmer et al.  [@Brehmer-13:multileveltypology], comparison is a fundamental task in visualization. Comparison is distinguished from other tasks like *identify* and *summarize* (see figure \ref{transition-topology}) by the number of *targets* it operates on. An *identify*-task uses a single target while a *summarize*-task uses all available targets. But the *compare*-task requires multiple targets to compare them.
 
 ![A topology of visualization tasks which synthesizes a large body of
 previous literature has been proposed by Brehmer et al. [@Brehmer-13:multileveltypology] \label{transition-topology}](img/comparison-taxonomoy.png)
 
-Before he is able to compare targets, the reader needs to *search* for an initial target (see figure \ref{transition-topology}). In narrative visualization this will usually be done by *locate* to find targets that are mentioned in the text. But this is not the only possibility:
+Before he can to compare targets, the reader needs to *search* for an initial target (see figure \ref{transition-topology}). In narrative visualization, this will usually be done by *locate* to find targets that are mentioned in the text. But this is not the only possibility:
 
 #### Explicit identification
 
-Is aided by the author through labels, annotations, colors, and narrative. An example can be seen in in the first point of figure \ref{narrative-visualization}.
+Is aided by the author through labels, annotations, colors, and narrative. An example can be seen in the first point of figure \ref{narrative-visualization}.
 
 #### Identification through visual statistics
 
@@ -134,9 +134,9 @@ The transition cost describes how much mental effort it takes to do the necessar
 * Large targets. For example when comparing two very long time series.
 * Complex relationships. For example when there is not a one-to-one relationship.
 
-Cognitive load theory predicts that a maximum number of 9 targets can be held in working memory for processing [@Wong-12:cognitiveload; @Miller-56:magicalnumber]. Depending on the size of the targets and the complexity of the relationships, this number can get as low as 1 [@Alvarez-04:capacityvisual].  When the number of targets that are needed for a comparison exceed these limitations, the reader will forget some of them and the comparison fails [@Wong-12:cognitiveload].
+Cognitive load theory predicts that a maximum number of 9 targets can be held in working memory for processing [@Wong-12:cognitiveload; @Miller-56:magicalnumber]. Depending on the size of the targets and the complexity of the relationships, this number can get as low as 1 [@Alvarez-04:capacityvisual].  When the number of targets that are needed for a comparison exceeds these limitations, the reader will forget some of them and the comparison fails [@Wong-12:cognitiveload].
 
-When designing narrative visualization, the cost of the transitions should ideally stay within these boundaries to make the reading fluent. Animation is often proposed as a means to make transitions easier, but it is often not clear how exactly this works. The next chapter will therefore present the relevant research on the use of animation in visualization.
+When designing narrative visualization, the cost of the transitions should ideally stay within these boundaries to make the reading fluent. Animation is often proposed as a means to make transitions easier, but it is often not clear how exactly this works. The next chapter will, therefore, present the relevant research on the use of animation in visualization.
 
 
 
@@ -178,9 +178,9 @@ While the listed strengths seem straightforward, the literature indicates that t
 
 
 
-## Consideration when using animation
+## Considerations when using animation
 
-Animation does not automatically make transitions easier. Its effectiveness is highly related to two sets of principles: *congruence* and *apprehension*. When these principles are being violated, the effect of animation on the transition cost might be negligible of even negative.
+Animation does not automatically make transitions easier. Its effectiveness is highly related to two sets of principles: *congruence* and *apprehension*. When these principles are being violated, the effect of animation on the transition cost might be negligible or even negative.
 
 ### Congruence {#sec:congruence}
 
@@ -227,9 +227,9 @@ Research on visual tracking explores how people track objects when the objects a
 
 *Crowding*: When objects that need to be tracked get close to each other, tracking performance is impaired [@Chevalier-14:notsostaggeringeffect].
 
-*Multiple objects are tracked as one convex area*: Deformation of this area as well as distractors entering the convex area lead to impaired tracking performance [@Yantis-92:multielementvisuala; @Chevalier-14:notsostaggeringeffect].
+*Multiple objects are tracked as one convex area*: Deformation of this area, as well as distractors entering the convex area, lead to impaired tracking performance [@Yantis-92:multielementvisuala; @Chevalier-14:notsostaggeringeffect].
 
-The above results show that object tracking happens through a complex interplay of the different levels of the visual system. While they give some indications on how the visual system processes information, the findings are hard to operationalize in animation designs because they will often be in conflict with the content that should be depicted. The *distance travelled*, for example, is often given by the data that is being depicted in the two charts and can not be influenced. The next section will discuss a few concrete propositions tha have been made to increase the apprehension of animated transitions. 
+The above results show that object tracking happens through a complex interplay of the different levels of the visual system. While they give some indications on how the visual system processes information, the findings are hard to operationalize in animation designs because they will often conflict with the content that should be depicted. The *distance traveled*, for example, is often given by the data that is being depicted in the two charts and can not be influenced. The next section will discuss a few concrete propositions that have been made to increase the apprehension of animated transitions. 
 
 
 
@@ -255,7 +255,7 @@ Heer et al. explicitly recommend the use of staged animation [@Heer-07:animatedt
 
 #### Animation duration
 
-Multiple authors have observed that making animation slower has a negative effect on readers [@Shanmugasundaram-07:cansmooth; @Baudisch-06:phosphorexplaining]. Others counter that very fast animation might lead to higher error rates [@Heer-07:animatedtransitions]. This assumption has been refuted by Franconeri et al. [@Franconeri-10:trackingmultiple] who showed that higher speeds have no impact on tracking performance when the distance between objects stays large enough.
+Multiple authors have observed that making animation slower is perceived negatively by readers [@Shanmugasundaram-07:cansmooth; @Baudisch-06:phosphorexplaining]. Others counter that very fast animation might lead to higher error rates [@Heer-07:animatedtransitions]. This assumption has been refuted by Franconeri et al. [@Franconeri-10:trackingmultiple] who showed that higher speeds have no impact on tracking performance when the distance between objects stays large enough.
 
 #### Direct manipulation {#sec:direct-manipulation}
 
@@ -271,13 +271,13 @@ The discussion of the research in the previous section demonstrates that clever 
 
 The only two techniques that have consistently shown to be beneficial are direct manipulation and "slow-in-slow-out"-easing.
 
-The principle of congruence on the other hand has been shown to have a profound impact on the effectiveness of animation. The closer the objects and the motion are to the real world, the more positive the  effects of animation. This casts severe doubts on the usefulness of animation to support transitions between highly abstract visualizations.
+The principle of congruence, on the other hand, has been shown to have a profound impact on the effectiveness of animation. The closer the objects and the motion are to the real world, the more positive the effects of animation. This casts severe doubts on the usefulness of animation to support transitions between highly abstract visualizations.
 
  
 
 ## Unfair comparisons {#sec:unfair-comparisons}
 
-Further doubts on reported benefits of animation come from the problem of *informational equivalence*. Some studies who have reported benefits of animated transitions have been criticized for involving "unfair comparisons" [@Tversky-02:animationcan]. The animations presented contained information that was not easily deducible from the non-animated transitions.  Tversky et al. [@Tversky-02:animationcan, p. 251] put it like this:
+Further doubts on the reported benefits of animation come from the problem of *informational equivalence*. Some studies who have reported benefits of animated transitions have been criticized for involving "unfair comparisons" [@Tversky-02:animationcan]. The animations presented contained information that was not easily deducible from the non-animated transitions.  Tversky et al. [@Tversky-02:animationcan, p. 251] put it like this:
 
 > Showing that students learn material better when it is presented than when it is not presented should not be a goal of empirical research.
 
