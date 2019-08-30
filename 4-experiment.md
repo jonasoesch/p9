@@ -30,7 +30,7 @@ This section will present the stimuli, the *transitions* and the *stories* in mo
 
 Each participant saw both stories and each story contained either *animated* or *static* (non-animated) transitions. This design ensured that the distinction between *static* and *animated* transitions had maximimal statistical power.
 
-In both cases the transitions where controlled by scrolling. Initially a participant would see the first chart of a mini-story. When he scrolled down, the first chart would be replaced by the second chart. When scrolling even further, the questionnaire would appear. In *animated* transitions, the chart would not simply be replaced but morphed into the other. The animation was fully controlled through scrolling and could be played forward and backwards. This ensured that the amount of *direct manipulation* would be the same for both transitions ([@sec:animation-techniques). The animation was also implemented with "slow-in-slow-out"-easing which has been shown to work better than linear easing ([@sec:animation-techniques]).
+In both cases the transitions where controlled by scrolling. Initially a participant would see the first chart of a mini-story. When he scrolled down, the first chart would be replaced by the second chart. When scrolling even further, the questionnaire would appear. In *animated* transitions, the chart would not simply be replaced but morphed into the other. The animation was fully controlled through scrolling and could be played forward and backwards. This ensured that the amount of *direct manipulation* would be the same for both transitions ([@sec:animation-techniques]). The animation was also implemented with "slow-in-slow-out"-easing which has been shown to work better than linear easing ([@sec:animation-techniques]).
 
 ### Mortality story {#sec:mortality-story}
 
@@ -79,7 +79,7 @@ The third mini-story focuses on the strange stagnation of wind energy ![](img/ct
 The final transition *explores* one of the possible reasons for Californias ![](img/ctxt.pdf) decision to focus on solar energy from 2013 on. Instead of the shares ![](img/attr.pdf) of the individual energy sources  ![](img/char.pdf) it shows their cost ![](img/attr.pdf) . While wind energy ![](img/char.pdf) has been consistently inexpensive, the price of solar power ![](img/char.pdf) has fallen substantially over time. It even reached the price level of wind energy in 2013. Which implies that Californias focus on solar rather than wind energy might have economic reasons.
 
 
-The presented stories were implemented with web technologies and viewable in the broweser. A more in-depth discussion of the implementation can be found in chapter [-@sec:implementation].
+The presented stories were implemented with web technologies and viewable in the broweser. A more in-depth discussion of the implementation can be found in chapter [-@sec:implementation]. The online versions of the stories are referenced in appendix \ref{appendix-story}.
 
 
 
@@ -317,7 +317,7 @@ As discussed in section [-@sec:story-selection], one of the main challenges was 
 | **viewing duration**          | 160 s   | 146 s   | 124 s   | 135 s   | 144 s   | 132 s   | 131 s   | 148 s   |
 | **typing duration**           | 205 s   | 200 s   | 179 s   | 179 s   | 212 s   | 191 s   | 217 s   | 214 s   |
 
-Table: The measures for the mini-stories indicate very different difficulties. In the heading,  *e* stands for *energy* and *m* stands for *mortality*. \label{table-story-difficulty}]
+Table: The measures for the mini-stories indicate very different difficulties. In the heading,  *e* stands for *energy* and *m* stands for *mortality*. \label{table-story-difficulty}
 
 
 The mini-stories with the highest rate of success (**corrrect relationship** and **relationship**) were *energy D* , *mortality A* and *mortality D*. All of them had also very high rates for **causal** and depicted a cause and effect relationship ([@sec:mortality-story] and [@sec:energy-story]). *mortality C* had the lowest success rate and also the highest **transition count**. In general more **characters** were mentioned for the  *energy* story which did contain more characters in general ([@sec:energy-story]).
@@ -393,3 +393,5 @@ A third limitation is the selection of measures and the interpretation of the da
 A fourth limitation is the performance of the animated transitions. We did not exclude the 8% of animated transition sessions that were classified as slow in our analysis because this would have strongly skewed that distribution between the groups. But it is likely that lagging transitions had a negative impact on many of our measures.
 
 The results are also limited by the demographic of the participants. They might not apply to readers from other cultural backgrounds and with a different level of education. Also, there were very few old people in the study. The results in a way therefore are only indicative for the "high performers": young, very well educated Americans.
+
+Finally, although we have counterbalanced the designs, the results may not generalize to other visualization designs than the two time series charts tested.

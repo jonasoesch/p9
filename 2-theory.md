@@ -44,7 +44,7 @@ The strength of this kind of classification is, that types can relatively easily
 
 ### Story-focused classification {#sec:story-classification}
 
-The most-cited classification of transition types in comics is the one by McCloud [@Mccloud-93:understandingcomics]. It is also commonly referred to in narrative visualization [@Baudisch-06:phosphorexplaining, @Segel-10:narrativevisualization, @Amini-15:understandingdata, @Badawood-15:narrativeconstruction, @Bach-16:tellingstories] because comics are similar to narrative visualization in that they are *visual* and *sequential* [@Mccloud-93:understandingcomics, p. 16]. McCloud describes six types of transitions between comic panels:
+The most-cited classification of transition types in comics is the one by McCloud [@Mccloud-93:understandingcomics]. It is also commonly referred to in narrative visualization [@Baudisch-06:phosphorexplaining; @Segel-10:narrativevisualization; @Amini-15:understandingdata; @Badawood-15:narrativeconstruction; @Bach-16:tellingstories] because comics are similar to narrative visualization in that they are *visual* and *sequential* [@Mccloud-93:understandingcomics, p. 16]. McCloud describes six types of transitions between comic panels:
 
 ![The six transition types for comics proposed by McCloud based on the concepts of *subject*, *scene* and *time* [@Mccloud-93:understandingcomics].](/Users/jonas/Desktop/P9/bericht/img/transition-mccloud.png)
 
@@ -87,7 +87,7 @@ The strength of Hullman et al.'s classification is, that it is directly linked t
 
 ### Limitations of existing classifications
 
-The *visualization-oriented* (@sec:param-classification) and the story-oriented (@sec:story-classification) classifications both provide a conceptual understanding of transitions based on the question: "What changes?". In the first case it is one of the visualization parameters. In the second case it is either *subject*, *scene* or *time*. This allows for the construction of theory around these transitions [@Heer-07:animatedtransitions, @Cohn-10:limitstime] because there is clarity about the basic concepts. But these classifications can not be directly applied to narrative visualization because they were intended for other contexts.
+The *visualization-oriented* (@sec:param-classification) and the story-oriented (@sec:story-classification) classifications both provide a conceptual understanding of transitions based on the question: "What changes?". In the first case it is one of the visualization parameters. In the second case it is either *subject*, *scene* or *time*. This allows for the construction of theory around these transitions [@Heer-07:animatedtransitions; @Cohn-10:limitstime] because there is clarity about the basic concepts. But these classifications can not be directly applied to narrative visualization because they were intended for other contexts.
 
 Hullman et al.'s inductive approach [@Hullman-13:deeperunderstanding] is interesting because it treats real-world examples of narrative visualization. But it has no theoretical concepts linked to it. It can, therefore, not be used to understand how readers understand transitions and how animation might support it.
 
@@ -134,7 +134,7 @@ The transition cost describes how much mental effort it takes to do the necessar
 * Large targets. For example when comparing two very long time series.
 * Complex relationships. For example when there is not a one-to-one relationship.
 
-Cognitive load theory predicts that a maximum number of 9 targets can be held in working memory for processing [@Wong-12:cognitiveload, @Miller-56:magicalnumber]. Depending on the size of the targets and the complexity of the relationships, this number can get as low as 1 [@Alvarez-04:capacityvisual].  When the number of targets that are needed for a comparison exceed these limitations, the reader will forget some of them and the comparison fails [@Wong-12:cognitiveload].
+Cognitive load theory predicts that a maximum number of 9 targets can be held in working memory for processing [@Wong-12:cognitiveload; @Miller-56:magicalnumber]. Depending on the size of the targets and the complexity of the relationships, this number can get as low as 1 [@Alvarez-04:capacityvisual].  When the number of targets that are needed for a comparison exceed these limitations, the reader will forget some of them and the comparison fails [@Wong-12:cognitiveload].
 
 When designing narrative visualization, the cost of the transitions should ideally stay within these boundaries to make the reading fluent. Animation is often proposed as a means to make transitions easier, but it is often not clear how exactly this works. The next chapter will therefore present the relevant research on the use of animation in visualization.
 
@@ -154,7 +154,7 @@ To understand why designers might think that animation helps in these specific c
 
 ### Object constancy ![](img/A.pdf) {#sec:object-constancy}
 
-Object constancy describes the ability to identify two objects as being the same entity between two states. There is some evidence that when the reader has rapid visual access to the targets (less than 300ms [@Rensink-02:changedetectiona]), changes will be detected before working memory is reached. The idea is that when one target is morphed into another, they are identified as being "the same" without having to do a comparison in working memory. This is probably the strength most often invoked for animation [@Chalbi-18:understandingdesigning, @Wu-16:graphicalperception, @Bederson:doesanimation, @Heer-07:animatedtransitions].
+Object constancy describes the ability to identify two objects as being the same entity between two states. There is some evidence that when the reader has rapid visual access to the targets (less than 300ms [@Rensink-02:changedetectiona]), changes will be detected before working memory is reached. The idea is that when one target is morphed into another, they are identified as being "the same" without having to do a comparison in working memory. This is probably the strength most often invoked for animation [@Chalbi-18:understandingdesigning; @Wu-16:graphicalperception; @Bederson:doesanimation; @Heer-07:animatedtransitions].
 
 ### Highlighting ![](img/B.pdf) {#sec:attract-attention}
 
@@ -168,7 +168,7 @@ Animation has also been reported to have modest benefits when depicting aggregat
 
 ### Engage ![](img/D.pdf) {#sec:engage}
 
-Multiple authors have remarked how readers were "excited" about animation in interfaces and that it thus led to higher engagement [@Tversky-02:animationcan, @Heer-07:animatedtransitions]. The ability of animation to engage and excite is often presupposed based on anecdotal evidence. But few studies have used validated questionnaires to explicitly measure engagement. One study who did, found very mixed results [@Amini-18:hookeddata]. In their findings animation only led to higher engagement when coupled with pictorial representations of data. The main factor that led to higher engagement was "Aesthetics".  We suspect that in many cases there might be a "novelty" effect of animation that excites readers. There is little evidence that yesterdays fashionable animation still leads to higher engagement today. Furthermore, the novelty effect might lead readers and designers astray and they might confuse their positive feelings with actual benefits for understanding [@Hassenzahl-10:inferenceperceived, @Baudisch-06:phosphorexplaining].
+Multiple authors have remarked how readers were "excited" about animation in interfaces and that it thus led to higher engagement [@Tversky-02:animationcan; @Heer-07:animatedtransitions]. The ability of animation to engage and excite is often presupposed based on anecdotal evidence. But few studies have used validated questionnaires to explicitly measure engagement. One study who did, found very mixed results [@Amini-18:hookeddata]. In their findings animation only led to higher engagement when coupled with pictorial representations of data. The main factor that led to higher engagement was "Aesthetics".  We suspect that in many cases there might be a "novelty" effect of animation that excites readers. There is little evidence that yesterdays fashionable animation still leads to higher engagement today. Furthermore, the novelty effect might lead readers and designers astray and they might confuse their positive feelings with actual benefits for understanding [@Hassenzahl-10:inferenceperceived; @Baudisch-06:phosphorexplaining].
 
 ### Data encoding ![](img/E.pdf)
 
@@ -227,7 +227,7 @@ Research on visual tracking explores how people track objects when the objects a
 
 *Crowding*: When objects that need to be tracked get close to each other, tracking performance is impaired [@Chevalier-14:notsostaggeringeffect].
 
-*Multiple objects are tracked as one convex area*: Deformation of this area as well as distractors entering the convex area lead to impaired tracking performance [@Yantis-92:multielementvisuala, @Chevalier-14:notsostaggeringeffect].
+*Multiple objects are tracked as one convex area*: Deformation of this area as well as distractors entering the convex area lead to impaired tracking performance [@Yantis-92:multielementvisuala; @Chevalier-14:notsostaggeringeffect].
 
 The above results show that object tracking happens through a complex interplay of the different levels of the visual system. While they give some indications on how the visual system processes information, the findings are hard to operationalize in animation designs because they will often be in conflict with the content that should be depicted. The *distance travelled*, for example, is often given by the data that is being depicted in the two charts and can not be influenced. The next section will discuss a few concrete propositions tha have been made to increase the apprehension of animated transitions. 
 
@@ -255,11 +255,11 @@ Heer et al. explicitly recommend the use of staged animation [@Heer-07:animatedt
 
 #### Animation duration
 
-Multiple authors have observed that making animation slower has a negative effect on readers [@Shanmugasundaram-07:cansmooth, @Baudisch-06:phosphorexplaining]. Others counter that very fast animation might lead to higher error rates [@Heer-07:animatedtransitions]. This assumption has been refuted by Franconeri et al. [@Franconeri-10:trackingmultiple] who showed that higher speeds have no impact on tracking performance when the distance between objects stays large enough.
+Multiple authors have observed that making animation slower has a negative effect on readers [@Shanmugasundaram-07:cansmooth; @Baudisch-06:phosphorexplaining]. Others counter that very fast animation might lead to higher error rates [@Heer-07:animatedtransitions]. This assumption has been refuted by Franconeri et al. [@Franconeri-10:trackingmultiple] who showed that higher speeds have no impact on tracking performance when the distance between objects stays large enough.
 
 #### Direct manipulation {#sec:direct-manipulation}
 
-Readers typically perform better at recall and problem solving, when they can control animation themselves. Multiple authors have shown this for cases where readers could start and stop animated transitions [@Chan:2005vx, @Hasler:2007]. But here too, it is hard to separate different effects. Tversky et al. point out, that interaction has been shown to benefit learning in itself and just happens to be coupled with animation often [@Tversky-02:animationcan].
+Readers typically perform better at recall and problem solving, when they can control animation themselves. Multiple authors have shown this for cases where readers could start and stop animated transitions [@Chan-05:whencan; @Hasler-07:learnercontrol]. But here too, it is hard to separate different effects. Tversky et al. point out, that interaction has been shown to benefit learning in itself and just happens to be coupled with animation often [@Tversky-02:animationcan].
 
 #### Easing
 

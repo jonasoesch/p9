@@ -25,7 +25,7 @@ Attributes define the shape of a character and therefore its complexity. Our cla
 
 Finally, many charts typically have a context. The situation shown might be for a certain year, for a certain revision of the PISA-test or according to a certain source. The context is often depicted in the title. When the context changes between two charts, it makes the relationship between the characters more complex.
 
-The three concept roughly mirror McCloud's [@Mccloud-93:understandingcomics] and Cohn's [@Cohn-10:limitstime] *subject*, *scene* and *time*. Based on Cohn's work and the discussion in section [-@sec:comparison] we suspect that there is also a hierarchy in our proposed types: Readers will first identify the *characters* in a chart and look for the corresponding characters in the other chart. If they find them and they visually differ between the states, they will look for reasons. At first, they will assume that a different *attribute* of the character is shown and therefore check the axes. If they conclude that the changing appearance of the character is not due to different attributes being shown they will assume that a change of *context* has happened.
+The three concepts roughly mirror McCloud's [@Mccloud-93:understandingcomics] and Cohn's [@Cohn-10:limitstime] *subject*, *scene* and *time*. Based on Cohn's work and the discussion in section [-@sec:comparison] we suspect that there is also a hierarchy in our proposed types: Readers will first identify the *characters* in a chart and look for the corresponding characters in the other chart. If they find them and they visually differ between the states, they will look for reasons. At first, they will assume that a different *attribute* of the character is shown and therefore check the axes. If they conclude that the changing appearance of the character is not due to different attributes being shown they will assume that a change of *context* has happened.
 
 ## Case study method
 
@@ -33,7 +33,7 @@ The three concept roughly mirror McCloud's [@Mccloud-93:understandingcomics] and
 
 ### Selection of examples
 
-The test the proposed model, we have applied it to a collection of transition techniques commonly found in narrative visualization. We have started by compiling a corpus of narrative visualizations from online sources. The corpus combines two collections from other authors [@Riche-18:datadrivenstorytelling, @Mckenna-17:visualnarrative] and our examples. The corpus thus includes 144 narrative visualizations published between 2008 and 2019 by a variety of news organizations as well as individuals. The complete corpus can be found in appendix \ref{appendix-corpus}.
+The test the proposed model, we have applied it to a collection of transition techniques commonly found in narrative visualization. We have started by compiling a corpus of narrative visualizations from online sources. The corpus combines two collections from other authors [@Riche-18:datadrivenstorytelling; @Mckenna-17:visualnarrative] and our examples. The corpus thus includes 144 narrative visualizations published between 2008 and 2019 by a variety of news organizations as well as individuals. The complete corpus can be found in appendix \ref{appendix-corpus}.
 
 In a first step we excluded examples that were either not focused on data visualization or examples that did not contain any transitions. We also excluded videos and everything that was done in flash for practical purposes. From the remaining 79 examples we selected 20 examples that we felt were representative of the state of the art based on the following criteria: We preferred more recent examples to older ones. We preferred examples that were heavier on the visuals. And we included a variety of sources.
 
@@ -192,10 +192,13 @@ This might be the hardest transition for readers to follow as none of the elemen
 
 *Causal* and *Question & answer* transitions identified  by Hullman et al. would fall into that category (see section [-@sec:inductive-classification]).
 
+### Discussion
+
 The case studies in this section demonstrate how *characters*, *attributes* and *context* can be used to express a wide range of transitions in very different narrative visualization. It also shows that, even when transitions are looked at through this lens, similar transition types were identified as in Hullman et al.'s stuy ([@sec:inductive-classification]).
 
 Because *characters* link the marks that are present in the visualization with how the reader interprets them, they introduce the factor of reader knowledge ([@sec:comparison]) to the classifications typically used ([@sec:param-classification]) in visualization. We believe that this factor is essential in the context of narrative visualization.
 
+# Animation based on transition type
 
 ## Reducing the transition cost {#sec:reducing-cost}
 

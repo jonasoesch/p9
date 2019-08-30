@@ -20,7 +20,7 @@ Visualization that is intended to communicate therefore can ill afford to burden
 
 
 
-After a few years of experimentation with including interactive, explorative visualization in their stories, multiple online newspapers have found that users don't click on them, except when the authors make it abundantly clear why they should interact [@Stabe-16:whyft, @Tse-16:whywe]. Archie Tse from the New York Times puts it like this [@Tse-16:whywe]: 
+After a few years of experimentation with including interactive, explorative visualization in their stories, multiple online newspapers have found that users don't click on them, except when the authors make it abundantly clear why they should interact [@Stabe-16:whyft; @Tse-16:whywe]. Archie Tse from the New York Times puts it like this [@Tse-16:whywe]: 
 
 > If you make the reader click or do anything other than scroll, something spectacular has to happen.
 
@@ -30,7 +30,7 @@ A recent field of research, called *narrative visualization*, is precisely conce
 
 As the name implies, narrative visualization puts charts into a narrative sequence. Such logical sequences are highly desirable when communicating as they lead to better understanding and higher recall of the information presented [@Thorndyke-77:cognitivestructures]. But simply putting charts into a narrative. logical sequence is not enough. The author needs to somehow communicate how the individual charts are related, to link them [@Riche-18:datadrivenstorytelling, p. 92].
 
-This can be done via an accompanying narrative text, but visual methods like color and animation have also been used in practice (see number 4 in figure \ref{narrative-visualization}). But while animated transitions between charts have quickly gained popularity in recent times ([@sec:corpus-analysis]), existing research does not necessarily indicate that animated transitions provide any benefits [@Tversky-02:animationcan, @Berney-16:doesanimation]. This motivates the present research on animated transitions in narrative visualization.
+This can be done via an accompanying narrative text, but visual methods like color and animation have also been used in practice (see number 4 in figure \ref{narrative-visualization}). But while animated transitions between charts have quickly gained popularity in recent times ([@sec:corpus-analysis]), existing research does not necessarily indicate that animated transitions provide any benefits [@Tversky-02:animationcan; @Berney-16:doesanimation]. This motivates the present research on animated transitions in narrative visualization.
 
 
 
@@ -40,10 +40,10 @@ The main objective of the present thesis is to find out if animated transitions 
 
 To answer this question, the following sub-questions need to be answered first:
 
-* How do readers interpret transitions between charts?
-* What benefits could animation provide to this process?
+* How do readers interpret transitions between charts in narrative visualizations?
+* How could animation support this process?
 
-A secondary objective of the present thesis is to introduce a software library that permits the **rapid creation of narrative visualization with animated transitions**.
+In order to create an experiment to answer the main research question, a software needs to be developed that supports the creation of narrative visualizations with animated transitions.
 
 
 
@@ -51,18 +51,8 @@ A secondary objective of the present thesis is to introduce a software library t
 
 The thesis is organized five parts:
 
-1. The first part presents the theoretical background on transitions and animation. It gives indications on how readers interpret transitions.
-2. The second part reconceptualizes the theory in order to link different types of transitions to different strengths of animation. It thus responds to the the question about the potential benefits of animation for transition understanding.
-3. The third part presents an experiment that we have proposed to find respond to the main research question.
-4. The fourth part presents our implementation of animated transitions based on the concepts presented in part two. This represents the secondary objective of the present thesis.
+1. The first part presents the theoretical background on transitions and animation. It shows strengths and weaknesses of existing classifications of transitions and discusses how readers interpret transitions. The review of the literature on animation presents five strengths of animation and discusses two important principles for animation design.
+2. The second part introduces the a reconceptualization of the existing literature to operationalize it for animated transitions in narrative visualizations. It goes on to show that the reconceptualization is applicable to narrative visualization from practice and reformulates the existing classifications. Based on this reformulation, it discusses how the strengths of animation presented in part one might be applied to different transition types. This leads to the formulation of six research hypotheses.
+3. The third part presents an experiment that was conducted to answer the research hypotheses in part two.
+4. The fourth part presents a declarative syntax based on the reconceptualization in part two that was used to design the narrative visualizations for the experiment in part three.
 5. The fifth part presents our conclusions and possibilities for future work.
-
-
-
-## Contributions
-
-This work makes the following novel contributions:
-
-1. It proposes a new way to look at transitions in narrative visualization by connecting the problem of understanding transitions to work on comparison and to cognitive load theory.
-2. It provides empirical evidence that animated transitions help with highlighting and object constancy. Our findings also support existing literature that shows that animated transitions do not lead to a better understanding of relationships nor to higher engagement for abstract representations of data.
-3. Based on the findings in part two and in support of the experiment in part three we propose a software library that permits the rapid implementation of visualizations with animated transitions. The main contribution is an abstraction that allows to quickly define charts and transitions.
