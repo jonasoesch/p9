@@ -142,7 +142,7 @@ When designing narrative visualization, the cost of the transitions should ideal
 
 # Animation {#sec:animation}
 
-## Strengths of animation
+## Strengths of animation {sec:animation-strengths}
 
 Animation has been portrayed to provide many benefits to UX-design in general and visualization design in particular. Chevalier et al. [@Chevalier-16:animations25] have identified 23 different "purposes" of animation in visualization. Things like "Staying oriented during navigation" or "Hooking the user" which are finally classified into five meta-classes. Although this overview shows the popularity of animation in today's practice, it does not discuss any evidence that animation *actually* serves the given purposes.
 

@@ -426,7 +426,7 @@ We conclude that while animated transitions facilitate object constancy and high
 
 ## Limitations {#sec:limitations}
 
-The main limitation of the proposed experiment with regard to the transition types [@sec:corpus-analysis] and the propositions to reduce the transition cost [@reducing-cost] is that they are not fully implemented. The creation of the experiment and the development of the theory happened at the same time. This has led to transitions that combine multiple types like *mortality A* for example. This makes it hard to relate the results directly to the concepts that have been established in section [-@sec:perception-oriented].
+The main limitation of the proposed experiment with regard to the transition types [@sec:corpus-analysis] and the propositions to reduce the transition cost [@sec:reducing-cost] is that they are not fully implemented. The creation of the experiment and the development of the theory happened at the same time. This has led to transitions that combine multiple types like *mortality A* for example. This makes it hard to relate the results directly to the concepts that have been established in section [-@sec:perception-oriented]. The experiment also does not looks into the predictions on the strengths of individual transition types.
 
 A second very important limitation is the high difficulty of the transitions in the experiment. Ideally, each story should have rates of about 60% for the **relationship** measure and around 40% for the **understanding** measure. Only three stories came close to these values. We have also found ordering effects in the results. It is therefore not ensured the all mini-stories are comparable.
 

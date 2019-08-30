@@ -113,29 +113,28 @@ Reconfigure subsumes the *pan*, *zoom*, *reorder* and *visualization change* tra
 
 ### Split characters
 
-![Examples of transitions where characters are being split. On the left by measles cases by year [@Collins-15:whymeasles] and on the right EU countries by regions [@Lambrechts-19:whyeua].\label{technique-reconfigure}](/Users/jonas/Desktop/P9/bericht/img/technique-split.pdf)
+![Examples of transitions where characters are being split. On the left measles cases by year [@Collins-15:whymeasles] and on the right EU countries by regions [@Lambrechts-19:whyeua].\label{technique-reconfigure}](/Users/jonas/Desktop/P9/bericht/img/technique-split.pdf)
 
 | Characters ![](img/char.pdf)                     | Attributes ![](img/attr.pdf) | Context ![](img/ctxt.pdf) |
 | ------------------------------------------------ | ---------------------------- | ------------------------- |
 | Visible characters are split into sub-characters | Stay the same                | Same                      |
 
-As described in ([-@sec:our-model]l) characters need not be atomic units. Groups of similar characters can be perceived as a character themselves. But sometimes the author wants to convey how characters in a group differ from each other and thus how (in-)homogeneous a group is.
+As described in section [-@sec:our-model], characters need not be atomic units. Groups of similar characters can be perceived as a character themselves. But sometimes the author wants to convey how characters in a group differ from each other and thus how (in-)homogeneous a group is.
 
 Splitting characters is an essential device in narrative visualization because it nicely fits the general-to-specific pattern often used in storytelling (TODO:source). When splitting characters, the attributes will usually stay the same to serve as a frame of reference. A kind of shadow or contour of the "parent"-group will often remain too for reference. This is the case for both examples in figure \ref{technique-split} one who splits measles cases by states ![](img/char.pdf)  and years ![](img/attr.pdf) and one who splits European countries ![](img/char.pdf) into regions ![](img/char.pdf).
 
-Splitting characters is what Hullman et al. call a *general-to-specific* transition (see section [-@inductive-classification]).
+Splitting characters is what Hullman et al. call a *general-to-specific* transition (see section [-@sec:inductive-classification]).
 
-### Merge characters
+### Merge characters {#sec:transition-merge}
 
-![technique-merge](/Users/jonas/Desktop/P9/bericht/img/technique-merge.pdf)
+![technique-merge \label{technique-merge}](/Users/jonas/Desktop/P9/bericht/img/technique-merge.pdf)
 
 | Characters ![](img/char.pdf)  | Attributes ![](img/attr.pdf) | Context ![](img/ctxt.pdf) |
 | ----------------------------- | ---------------------------- | ------------------------- |
 | Visible characters are merged | Stay the same                | Same                      |
 
-Where there is splitting, there needs to be merging. But merging is conceptually more complicated than splitting. Splitting shows more information in the second chart while merging summarizes information from the first chart. In the second case, it is much more important for the reader to understand the summary operation that is being used. Is the new character the mean, the sum or even the difference of the characters previously seen? Both examples in figure \ref{technique-merge} illustrate this problem very well. Visually, the natural factors ![](img/char.pdf) presented in the second chart could very well be the mean of volcanic ![](img/char.pdf) , solar ![](img/char.pdf) and orbital change ![](img/char.pdf). But it's actually the sum. In the example on the right, the pink bars might well represent the sum of the dots on the left but it's actually the difference. TODO:[@Kim-19:designinganimated]
-
-Although merging is complex it can be very useful for a storytelling approach that has been called *ladder of abstraction*-storytelling [@Victor-11:ladderabstraction]. It starts with very concrete, down to earth characters (like volcanoes ![](img/char.pdf) or skill importance ![](img/char.pdf) ) and moves "up" towards more abstract concepts (like natural factors ![](img/char.pdf)  or skill importance difference ![](img/char.pdf) ).
+Where there is splitting, there needs to be merging. But merging is conceptually more complicated than splitting. Splitting shows more information in the second chart while merging summarizes information from the first chart. In the second case, it is much more important for the reader to understand the summary operation that is being used. Is the new character the *mean*, the *sum* or even the *difference* of the characters previously seen? Both examples in figure \ref{technique-merge} illustrate this problem very well. Visually, the natural factors ![](img/char.pdf) presented in the second chart could very well be the *mean* of volcanic ![](img/char.pdf), solar ![](img/char.pdf) and orbital change ![](img/char.pdf). But it's actually the *sum*. In the example on the right, the pink bars might well represent the *sum* of the dots on the left but it's actually the difference.
+Although merging is complex it can be very useful for a storytelling approach that has been called *ladder of abstraction*-storytelling [@Victor-11:ladderabstraction]. It starts with very concrete, down to earth characters (like volcanoes ![](img/char.pdf) or skill importance ![](img/char.pdf) ) and moves "up" towards more abstract concepts (like natural factors ![](img/char.pdf)  or skill importance difference ![](img/char.pdf)). Previous authors have had some success with depicting such operations through animation [@Kim-19:designinganimated].
 
 Hullman et al. call this transition *specific to general*  (see section [-@inductive-classification]).
 
@@ -147,7 +146,7 @@ Hullman et al. call this transition *specific to general*  (see section [-@induc
 | ---------------------------- | ---------------------------- | ------------------------- |
 | Get filtered down            | Stay the same                | Same                      |
 
-This technique again serves the very common *general-to-specific*-pattern (TODO:source). It focuses the reader on a specific character or a special group of characters. The most common way to do this is by hiding the other characters. An example of this can be found in the left example in figure \ref{technique-focus} where all the second chart only shows Hungary ![](img/char.pdf) from all the EU countries ![](img/char.pdf). In the example on the right side of figure \ref{technique-focus} the transition hides the other age groups ![](img/char.pdf) to highlight the 25 to 44 group ![](img/char.pdf) . Many other ways of highlighting one character are imaginable.
+This technique again serves the very common *general-to-specific*-pattern (TODO:source). It focuses the reader on a specific character or a special group of characters. The most common way to do this is by hiding the other characters. An example for this can be found on the left in figure \ref{technique-focus} where the second chart only shows Hungary ![](img/char.pdf) from all the EU countries ![](img/char.pdf). In the example on the right side of figure \ref{technique-focus} the transition hides the other age groups ![](img/char.pdf) to highlight the 25 to 44 group ![](img/char.pdf). Many other ways of highlighting one character are imaginable.
 
 Highlighting is the equivalent of a *filter* transition from the visualization-oriented transitions (see section [-@sec:param-classification]).
 
@@ -161,25 +160,25 @@ Highlighting is the equivalent of a *filter* transition from the visualization-o
 | ------------------------------------ | ---------------------------- | ------------------------- |
 | More or more of them becomes visible | Stay the same                | Same                      |
 
-Similar to split and merge, this is the counterpart of highlighting. And similar, to merge it is a useful device for *ladder of abstraction*-storytelling [@Victor-11:ladderabstraction]. One version of this technique introduces new characters in the second chart as seen on the right in figure \ref{technique-disclosure}. Another variant shows more of the same character(s) in the second chart. The example on the left shows more and more of the course of the game between the Miami Heats ![](img/char.pdf) and the Houston Rockets ![](img/char.pdf) with each transition.
+Similar to *split* and *merge*, this is the counterpart of *highlighting*. And similar, to *merge* it is a useful device for *ladder of abstraction*-storytelling [@Victor-11:ladderabstraction]. One version of this technique introduces new characters in the second chart as seen on the left in figure \ref{technique-disclosure}. Another variant shows more of the same character(s) in the second chart. The example on the right shows more and more of the course of the game between the Miami Heats ![](img/char.pdf) and the Houston Rockets ![](img/char.pdf) with each transition.
 
-A particular case of progressive disclosure is what Hullman et al. call *spatial transitions*. A story might, for example, explore the mountainous terrain of the Alps and disclose more and more of it with each transition (see section [-@inductive-classification]). But it can also represent the removal of a filter according to the visualization-oriented classification (see section [-@sec:param-classification]).
+A particular case of progressive disclosure is what Hullman et al. call *spatial transitions*. A story might, for example, explore the mountainous terrain of the Alps and disclose more and more of it with each transition (see section [-@sec:inductive-classification]). But it can also represent the removal of a filter according to the visualization-oriented classification (see section [-@sec:param-classification]).
 
 
 
 ### Context
 
-![technique-temporal](/Users/jonas/Desktop/P9/bericht/img/technique-temporal.pdf	)
+![a \label{technique-temporal}](/Users/jonas/Desktop/P9/bericht/img/technique-temporal.pdf	)
 
 | Characters ![](img/char.pdf) | Attributes ![](img/attr.pdf) | Context ![](img/ctxt.pdf) |
 | ---------------------------- | ---------------------------- | ------------------------- |
 | Stay the same*               | Stay the same                | Changes                   |
 
-The interest of the context transition is to show how the "situation" (the form of characters according to the same attributes) changes when the context changes. The most common case is comparing the situation at different points in time. In the left example in figure \ref{technique-temporal}, the author wants to convey how China ![](img/char.pdf) made up most of the world's poor ![](img/attr.pdf) in the 90s ![](img/ctxt.pdf) and is now ![](img/ctxt.pdf) home to a large part of the worlds middle class ![](img/attr.pdf) .
+The interest of the context transition is to show how the "situation" (the form of characters) changes when the context changes. The most common case is comparing the situation at different points in time. In the left example in figure \ref{technique-temporal}, the author wants to convey how China ![](img/char.pdf) made up most of the world's poor ![](img/attr.pdf) in the 90s ![](img/ctxt.pdf) and is now ![](img/ctxt.pdf) home to a large part of the worlds middle class ![](img/attr.pdf) .
 
 The example on the right shows how a changing context may lead to a change in characters. Here the formerly ![](img/ctxt.pdf) single large administrative region around Budapest ![](img/char.pdf) has now ![](img/ctxt.pdf)split into the rich Budapest ![](img/char.pdf) and the poor Pest ![](img/char.pdf) (notice how poor Pest only gets half of the name).
 
-Hullman et al. identified the very prevalent change in temporal context but did not generalize it. (see section [-@inductive-classification]) As contexts contain groups of characters, they can become characters themselves at certain points of the story. That is why *context* transitions have a close relationship to *contrasting character* transitions and the distinction is not always 100% clear.
+Hullman et al. identified the very prevalent change in temporal context but did not generalize it (see section [-@sec:inductive-classification]). As contexts contain groups of characters, they can become characters themselves at certain points of the story. That is why *context* transitions have a close relationship to *contrasting character* transitions and the distinction is not always 100% clear.
 
 ### Semantic field
 
@@ -189,45 +188,52 @@ Hullman et al. identified the very prevalent change in temporal context but did 
 | ---------------------------- | ---------------------------- | ---------- |
 | Differ                       | Differ                       | Can differ |
 
-This is probably the hardest transition for readers to follow as none of the elements are shared between the charts. The only thing that connects the two charts is that their characters come from the same field of concepts as described by Cohn [@Cohn-12:peanuts]. The reader, therefore, needs to move up in the conceptual hierarchy to find the relationship between the characters depicted.  In the example on the left, the reader needs to understand how the job growth ![](img/attr.pdf) is related to hourly earnings ![](img/attr.pdf). This requires a rather sophisticated internal model of economics, or a textual explanation. The same is true for the example on the right. It is not possible without a lot of external knowledge how the rising discrepancy of profits ![](img/char.pdf) and wages ![](img/char.pdf) is related to the decline in union memberships ![](img/attr.pdf) .
+This might be the hardest transition for readers to follow as none of the elements are shared between the charts. The only thing that connects the two charts is that their characters come from the same field of concepts. The reader, therefore, needs to move up in the conceptual hierarchy to find the relationship between the characters depicted.  In the example on the left, the reader needs to understand how the job growth ![](img/attr.pdf) is related to hourly earnings ![](img/attr.pdf). This requires a rather sophisticated internal model of economics, or a textual explanation. The same is true for the example on the right. It is not possible without a lot of additional knowledge how the rising discrepancy of profits ![](img/char.pdf) and wages ![](img/char.pdf) is related to the decline in union memberships ![](img/attr.pdf).
 
-*Causal* and *Question & answer* transitions identified  by Hullman et al. would fall into that category (see section [-@inductive-classification]).
+*Causal* and *Question & answer* transitions identified  by Hullman et al. would fall into that category (see section [-@sec:inductive-classification]).
 
+The case studies in this section demonstrate how *characters*, *attributes* and *context* can be used to express a wide range of transitions in very different narrative visualization. It also shows that, even when transitions are looked at through this lens, similar transition types were identified as in Hullman et al.'s stuy ([@sec:inductive-classification]).
+
+Because *characters* link the marks that are present in the visualization with how the reader interprets them, they introduce the factor of reader knowledge ([@sec:comparison]) to the classifications typically used ([@sec:param-classification]) in visualization. We believe that this factor is essential in the context of narrative visualization.
 
 
 ## Reducing the transition cost {#sec:reducing-cost}
 
-One of the goals of using animation to guide the reader through narrative visualization should be to *reduce the transition cost* . This can either be done by reducing the number of targets that need to be compared, the size of the targets or the complexity of relationships (@sec:transition-cost). This section will discuss how the strengths of animation can help to reduce the transition cost (@sec:reducing-cost). It will then show how different transition types might benefit from different strengths of animation.
+One of the goals of using animation to guide the reader through narrative visualization should be to *reduce the transition cost*. This can either be done by reducing the number of targets that need to be compared, the size of the targets or the complexity of relationships (@sec:transition-cost). This section will discuss how the strengths of animation (@sec:animation-strength) might help to reduce the transition cost. It will then show how different transition types might benefit from different strengths of animation.
 
 ### Object constancy
 
-Object constancy should make it easier to locate the corresponding target in the second chart. Fluent animation should be a way to offload the task of identifying two objects as "the same" from working memory to the visual system. This in turn would considerable reduce cognitive load.
+Object constancy should make it easier to locate the corresponding target in the second chart. Fluent animation should be a way to offload the task of identifying two objects as "the same" from working memory to the visual system. This in turn should considerable reduce cognitive load.
 
 ### Explicitly show complex relationships
 
-Complex relationships take multiple steps from the reader to understand through comparison. The intermediate results from these steps need to be stored in working memory. Animation might be used to indicate the type of relationship. It might for example be used to indicate characters are grouped in a merge transition.
+Complex relationships take multiple steps from the reader to understand through comparison. The intermediate results from these steps need to be stored in working memory. Animation might be used to indicate the type of relationship. It might for example be used to indicate characters are grouped in a merge transition ([@sec:merge-transition]).
 
 ### Highlighting
 
-Highlighting explicitly identifies the targets that the reader should compare (see section [-@sec:comparison]). It therefore also reduces the number of targets that need to be held in working memory. Highlighting can be done through the means of narrative visualization (narration, annotations, color and animation) mentioned in [section -@sec:narr-vis]. When highlighting is done through pre-attentive attributes like color, objects of another color are already being hidden in the visual system and don't even reach working memory [@Franconeri-18:thinkingdata] (compare also "Visual feature" in  figure \label{comparison-identification}). Something similar might happen when using animation to highlight certain targets.
+Highlighting explicitly identifies the targets that the reader should compare (see section [-@sec:comparison]). It therefore also reduces the number of targets that need to be held in working memory. Highlighting can be done through the means of narrative visualization (narration, annotations, color and animation) mentioned in section [-@sec:narr-vis]. When highlighting is done through pre-attentive attributes like color, for example, objects of different color are already being hidden in the visual system and do not even reach working memory [@Franconeri-18:thinkingdata] (compare also "Visual feature" in  figure \label{comparison-identification}). Something similar might happen when using animation to highlight certain targets.
+
+### Engagement
+
+While higher engagement might not directly lead to a reduction of the transition cost, it might motivate the reader to focus on the story and therefore still lead to higher rates of understanding. As discussed in section [-@sec:congruence], higher engagement has also been found to be related to congruence.
 
 ## Implications for transition types {#sec:implications}
 
-The transition types presented in section [-@sec:corpus-analysis] will be interpreted in different ways by the readers. While one type will require the reader to find out how the shape of a character has changed, another will require of him to identify characters that have similar shapes, and a third one will require him to create a relation at the conceptual level. Not all of them will therefore see the same benefits from animation. (@sec:reducing-cost).
+The transition types presented in section [-@sec:corpus-analysis] will be interpreted in different ways by the readers. While one type will require the reader to find out how the shape of a character has changed, another will require of him to identify characters that have similar shapes, and a third one will require of him to create a relation at the conceptual level. Not all of them will therefore benefit from animation in the same way (@sec:reducing-cost). Table \ref{table-strengths-types}, therefore, links the strengths of animation to the different transition types.
 
-|                        | Object constancy | Explicitly show  relationship | Highlighting |
-| ---------------------- | ---------------- | ----------------------------- | ------------ |
-| Explore attributes     | ✓                |                               | ✓            |
-| Contrast characters    |                  |                               | ✓            |
-| Reconfigure            | ✓                |                               |              |
-| Split characters       |                  | ✓                             | ✓            |
-| Merge characters       |                  | ✓                             | ✓            |
-| Highlighting           |                  |                               | ✓            |
-| Progressive disclosure |                  |                               | ✓            |
-| Context                | ✓                |                               | ✓            |
-| Semantic field         |                  |                               | ✓            |
+|                        | Object constancy | Explicitly show  relationship | Highlighting | Engagement |
+| ---------------------- | ---------------- | ----------------------------- | ------------ | ---------- |
+| Explore attributes     | ✓                |                               | ✓            | ✓          |
+| Contrast characters    |                  |                               | ✓            |            |
+| Reconfigure            | ✓                |                               |              |            |
+| Split characters       |                  | ✓                             | ✓            | ✓          |
+| Merge characters       |                  | ✓                             | ✓            | ✓          |
+| Highlighting           |                  |                               | ✓            |            |
+| Progressive disclosure |                  |                               | ✓            |            |
+| Context                | ✓                |                               | ✓            | ✓          |
+| Semantic field         |                  |                               | ✓            |            |
 
-Table:  How different transition types can benefit from animation.
+Table:  How different transition types can benefit from animation. \label{table-strengths-types}
 
 #### Object constancy
 
@@ -235,38 +241,45 @@ Requires a that characters are shared between charts but that they change their 
 
 #### Explicitly show complex relationship
 
-When the relationship between the characters in the two charts is not one-to-one, the reader may benefit from explicitly showing the relationship. This is true for *split characters* and *merge characters* transitions.
+When the relationship between the characters in the two charts is not one-to-one, the reader may benefit from explicitly showing the relationship through animation. This is true for *split characters* and *merge characters* transitions.
 
 #### Highlighting
 
-Different from the other two, highlighting does not require characters to be shared between the states. All transitions can therefore potentially benefit from highlighting. The exception are *reconfigure* transitions because the typically concern all the characters.
+Different f§rom the other two benefits, highlighting does not require characters to be shared between the states. All transitions can therefore potentially benefit from highlighting. The exception are *reconfigure* transitions because they typically concern all the characters. No highlighting needed.
+
+
+#### Engagement
+
+Because in previous studies, only congruent animation have been shown to lead to higher engagement. Animation for higher engagement would therefore preseume some kind of natural motion between characters. This excludes *contrast characters* and *semantic field* transitions. Animation for *progressive disclosure* also has not led to higher reader engagement in a previous study [@Amini-18:hookeddata]. *Reconfigure* transitions are by nature very abstract and animation would therefore most probably not lead to higher engagement.
 
 
 
 # Research hypotheses {#sec:hypotheses}
 
-Based on the discussion in the previous section, we believe that animated transitions have the potential to support readers in understanding the relationship between two charts. This is the main research question of this work as mentioned in the introduction [@sec:introduction]. H2 to H6 test more specific hypotheses based on the strengths of animation presented in section [-@sec:animation]. The hypotheses only apply to transition types where animation can theoretically provide a benefit (compare to section [-@sec:implications]).
+Based on the discussion in the previous section ([@sec:implications]), we believe that animated transitions have the potential to support readers in understanding the relationship between two charts. This is the main research question of this work as mentioned in the introduction ([@sec:introduction]). H2 to H6 test more specific hypotheses based on the strengths of animation presented in section [-@sec:animation]. The hypotheses only apply to transition types where animation can theoretically provide a benefit (compare to section [-@sec:implications]).
 
 #### H1: Animation makes understanding transitions easier
 
-Based on the widespread use of animation to help readers understand transitions the discussion in this chapter, we believe that animation will reduce the cognitive load of readers. Because they will have more available working memory capacity, we hypothesize that they will more likely interpret a transition correctly.
+Based on the widespread use of animation in practice and based on the the discussion in this chapter, we hypothesize that animation would reduce the cognitive load of readers. Because they would have more available working memory capacity, we hypothesized that they would more likely interpret a transition correctly.
 
 #### H2: Animation implies a relationship
 
-Based on the findings that animation can communicate relationships (see section [-@sec:causality]), we believe that animated transitions might imply a relationship in a more general sense. We hypothesize that animated transitions will more often lead participants to assume a relationship between two charts.
+Based on the findings that animation can communicate relationships (see section [-@sec:causality]), we hypothesized that animated transitions might imply a relationship in a more general sense. We hypothesized that animated transitions would more often lead participants to assume a relationship between two charts.
 
 #### H3: Animation implies a causal relationship
 
-Extending H2 and based on findings discussed in section [-@sec:causality], we believe that when readers assume a relationship between two charts, they will more often conclude that the relationship is causal when the transition is animated.
+Based on the finding that animation can imply causality ([@sec:causality]) we proposed this as an extension to H2. We hypothesized, that when readers assumed a relationship between two charts they would often specifically assume a cause and effect relationship when they saw an animated transition.
+
 
 #### H4: Animation leads to object constancy
 
-We hypothesize that animated transitions will support the reader through object constancy. 
+We hypothesized that animated transitions would support the reader through object constancy. 
 
 #### H5: Animation highlights characters
 
-Animated transitions will focus the reader on the characters the author intended because it attracts attention (see section [-@sec:attract-attention]). This will lead them to more often interpret the relationship between the charts as the author intended and to talk about the characters the author wants.
+The discussion in section [-@sec:attract-attention] has shown that the literature agrees that animation would have a highlighting effect. We, therefore, assumed that this would hold for animated transitions in narrative visualizations. Our hypothesis was that animation would focus the reader on the characters that were being animated.
+
 
 #### H6: Animation leads to higher engagement
 
-Readers will be more engaged by the visualizations with animated transitions.
+Even if it might not directly contribute to transition understanding, we hypothesized that animated transition would lead to higher reader engagement. This hypothesis is mostly based on anecdotal evidence, as discussed in section [-@sec:engage].
